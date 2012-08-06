@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<audacityproject projname="cat_data" version="1.1.0" audacityversion="1.2.5" sel0="3.9473922902" sel1="7.0240362812" vpos="0" h="0.0000000000" zoom="86.1328125000" rate="44100.000000" >
+	<tags title="" artist="" album="" track="-1" year="" genre="-1" comments="" id3v2="1" />
+	<wavetrack name="Wildcat" channel="0" linked="1" offset="0.00000000" rate="44100.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="279140" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00100.au' len='262144' min='-1.000000' max='1.000000' rms='0.253671'/>
+			</waveblock>
+			<waveblock start="262144" >
+				<simpleblockfile filename='b00101.au' len='16996' min='-0.086071' max='0.084171' rms='0.012381'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="Wildcat" channel="1" linked="0" offset="0.00000000" rate="44100.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="279140" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00102.au' len='262144' min='-0.936752' max='1.000000' rms='0.231983'/>
+			</waveblock>
+			<waveblock start="262144" >
+				<simpleblockfile filename='b00103.au' len='16996' min='-0.092130' max='0.088359' rms='0.011534'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+</audacityproject>

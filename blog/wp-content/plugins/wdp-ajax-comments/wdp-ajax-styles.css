@@ -1,0 +1,21 @@
+/** WDP AJAX Comments Default stylesheet
+http://webdeveloperplus.com/wordpress/new-wordpress-plugin-wdp-ajax-comments/ **/
+.wdpajax-error{ 
+	border:1px solid #f9d9c9; 
+	padding:5px; 
+	color:#ff3311; 
+}
+.wdpajax-success{ 
+	border:1px solid #339933; 
+	padding:5px; 
+	color:#339933; 
+}
+.wdpajax-loading{
+	background:#f0f0f0;
+	padding:5px;
+}
+label.error{ 
+	float:none !important; 
+	padding-left:5px; 
+	color:#ff3311; 
+}

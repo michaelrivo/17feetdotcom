@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-15 15:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: custom-morelink.php:128
+msgid "Cheatin’ uh?"
+msgstr ""
+
+#: custom-morelink.php:145
+msgid "Customize More Link"
+msgstr ""
+
+#: custom-morelink.php:146
+msgid ""
+"Customize the WordPress \"Read more\" link displayed on bottom of your "
+"posts. With this plugin \n"
+"        you can add custom attributes such as the \"<code>nofollow</code>\" "
+"relation, add custom XHTML tags surrounding the link or remove the \n"
+"        <code>#-number</code> anchor added by WordPress. If you like this "
+"plugin please consider giving a backlink to <a href=\"http://www.cywhale.de/"
+"\" title=\"Link to the authors website\">http://www.cywhale.de/</a> or \n"
+"        <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-"
+"xclick&hosted_button_id=454273\" title=\"Make a donation via this Link"
+"\">making a donation</a> via PayPal. Thank you very much for using this "
+"plugin."
+msgstr ""
+
+#: custom-morelink.php:150
+msgid "Usage"
+msgstr ""
+
+#: custom-morelink.php:151
+msgid "Use the following tags to build your custom more link:"
+msgstr ""
+
+#: custom-morelink.php:153
+msgid "The permalink provided by WordPress to the full post"
+msgstr ""
+
+#: custom-morelink.php:154
+msgid "The anchortext provided by WordPress (default: #more-number)"
+msgstr ""
+
+#: custom-morelink.php:155
+msgid "The default CSS class provided by WordPress (default: more-link)"
+msgstr ""
+
+#: custom-morelink.php:156
+msgid "The linktext provided by WordPress"
+msgstr ""
+
+#: custom-morelink.php:162
+msgid "The new more link pattern could not be saved, sorry. "
+msgstr ""
+
+#: custom-morelink.php:171
+msgid "Custom more link pattern updated."
+msgstr ""
+
+#: custom-morelink.php:183
+msgid "More Link Pattern"
+msgstr ""
+
+#: custom-morelink.php:193
+msgid "Save Changes"
+msgstr ""

@@ -1,0 +1,8 @@
+17.10.2008
+Version 0.2
+- Bugfix, preg_match initiated error message with some php versions
+
+15.10.2008
+Version 0.1
+- First version release
+
