@@ -232,7 +232,7 @@ class MultiCommentNotifications {
 					}
 			 ?>
 					<tr class="alternate">
-					 <td><input type="checkbox" name="mcn[emails][]" value="<?php echo $user_detail[3];?>" <? echo $user_chk;?> /></td>
+					 <td><input type="checkbox" name="mcn[emails][]" value="<?php echo $user_detail[3];?>" <?php echo $user_chk;?> /></td>
 					 <td><?php echo $user_detail[1];?></td>
 					 <td><?php echo $user_detail[2];?></td>
 					 <td><?php echo $user_detail[3];?></td>

@@ -147,7 +147,7 @@ table {
 
 // Links
 @linkColor:         #0069d6;
-@linkColorHover:    darken(@linkColor, 10);
+@linkColorHover:    saturate(@linkColor, 20%);
 
 // Grays
 @black:             #000;
@@ -491,7 +491,7 @@ select,
   display: inline-block;
   width: 210px;
   padding: 6px 7px;
-  
+  margin:.5em 0;
   line-height: @baseline;
   height: @baseline;
   color: @gray;
@@ -556,6 +556,7 @@ form div.error {
   input[type=text],
   input[type=password],
   textarea {
+	
     border-color: @error-text;
     .box-shadow(0 0 3px rgba(171,41,32,.25));
     &:focus {
@@ -862,9 +863,9 @@ a{
 		color:@blue;//#e85200;
 		text-decoration:none;
 	}
-	&:visited	{ color: darken(@blue, 5%); }
-	&:hover		{ color: lighten(@blue, 15%); }
-	&:active	{ color: lighten(@blue, 5%); }
+	&:visited	{ color: @blue; }
+	&:hover		{ color: saturate(@blue, 25%); }
+	&:active	{ color: saturate(@blue, 15%); }
 }
 
 strong{font-weight:bold}
@@ -1369,9 +1370,9 @@ a.carat{
 	a{
 		&:link{color:@blue; font-weight:bold}
 		&:visited{color: desaturate(@blue, 15%); }
-		&:hover{color: darken(@blue, 10%); }
-		&:focus{color: darken(@blue, 10%);}
-		&:active{ color: #FFF}
+		&:hover{color: #FFF; }
+		&:focus{color: #FFF; }
+		&:active{ color: #eee; }
 	}
 
 	 .blog, .music, .weather{ // .twitter,
@@ -1710,8 +1711,40 @@ hr.down{
 		bottom:0;
 		left:0
 	}
-
-	.facebook{ 
+	
+	.simraceway{ 
+		background-image: url('../imgs/thumbs/simraceway.png');
+		width: 269px;
+		height: 219px;
+		bottom:-5px;
+		left:15px;
+	}
+	
+	.salesforce-foundation{ 
+		background-image: url('../imgs/thumbs/salesforce-foundation.png');
+		width: 260px;
+		height: 240px;
+		left:6px;
+		bottom:-20px;
+	}
+	
+	.onelogin{ 
+		background-image: url('../imgs/thumbs/onelogin.png');
+		width: 260px;
+		height: 240px;
+		left:6px;
+		bottom:-20px;
+	}
+	
+	.pac-12{ 
+		background-image: url('../imgs/thumbs/pac-12.png');
+		width: 260px;
+		height: 240px;
+		left:6px;
+		bottom:-20px;
+	}
+	
+	.webos-facebook{ 
 		background-image: url('../imgs/thumbs/facebook.png');
 		width: 314px;
 		height: 238px;
@@ -1735,7 +1768,7 @@ hr.down{
 		left:-19px;
 	}
 	
-	.luna { 
+	.clif-bar-lunachix { 
 		background-image: url('../imgs/thumbs/luna.png');
 		width: 260px;
 		height: 240px;
@@ -1767,7 +1800,7 @@ hr.down{
 		left:8px;
 	}
 	
-	.app-mag{ 
+	.hp-magazine-concepts{ 
 		background-image: url('../imgs/thumbs/app-mag.png');
 		width: 346px;
 		height: 244px;
@@ -1775,7 +1808,7 @@ hr.down{
 		bottom:-30px;
 	} 
 	
-	.zune { 
+	.microsoft-zune { 
 		background-image: url('../imgs/thumbs/zune.png');
 		width: 269px;
 		height: 219px;
@@ -2050,14 +2083,14 @@ blockquote{
 	.transition(all, .1s, ease-in-out);
 
 		&:link, &:visited {color: #FFF;}
-		&:hover {color: #FFF; background-color:lighten(@blue,4%);}
+		&:hover {color: #FFF; background-color:saturate(@blue,20%);}
 		&:focus{
 			@shadow: inset 0 1px 3px rgba(0,0,0,.3), 0 0 8px rgba(105, 170, 186,.6);
 			  .box-shadow(@shadow);
 		}
 		&:active {
 			color:#FFF;
-			background-color:darken(@blue, 5%);
+			background-color:saturate(@blue, 15%);
 			text-shadow:0 1px 1px rgba(0,0,0,.5);
 			.inset_shadow(0px, 2px, 3px, 0px, rgba(0,0,0,.5) );
 		}

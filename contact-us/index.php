@@ -49,7 +49,7 @@
 			</script>
 		</p>
 		
-		<a href="http://maps.google.com/maps?q=17feet+256+Sutter+St+%235+San+Francisco,+CA+94108&um=1&ie=UTF-8&sa=N&hl=en&tab=wl" title="17feet on Google Maps"><img class="map"  src="http://maps.google.com/maps/api/staticmap?center=37.789824,-122.404788&zoom=16&markers=color:blue|37.789824,-122.404788&size=350x140&sensor=false" /></a>
+		<a href="http://maps.google.com/maps?q=17feet+256+Sutter+St+%235+San+Francisco,+CA+94108&um=1&ie=UTF-8&sa=N&hl=en&tab=wl" title="17feet on Google Maps"><img class="map"  src="http://maps.google.com/maps/api/staticmap?center=37.789824,-122.404788&zoom=16&markers=icon:http://17feet.com/imgs/map-pin-4.png%7Cshadow:false|37.789824,-122.404788&size=350x140&sensor=false" /></a>
 				
 	</div>
 	

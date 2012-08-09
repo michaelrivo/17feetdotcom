@@ -57,17 +57,17 @@ if( $_SERVER['SCRIPT_NAME'] == '/index.php'){
 	
 	<!-- <?php  print_r($_SERVER);  ?> -->
 </head>
-<body <? echo ($isiPad ? "class='ipad'": '');?> >
+<body <?php echo ($isiPad ? "class='ipad'": '');?> >
 	<div id="body">
 	<div id="header">
 		<div class="container">
-			<h1 id="logo" class="span-2"><a href="<? echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
+			<h1 id="logo" class="span-2"><a href="<?php echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
 			<ul class="span-8" id="nav">
-				<li><a href="<? echo $ROOT; ?>/our-work">Our Work</a></li>
-				<li><a href="<? echo $ROOT; ?>/about-us">About Us</a></li>
-				<li><a href="<? echo $ROOT; ?>/join">Join the Team!</a></li>
-				<li><a href="<? echo $ROOT; ?>/blog">Our Blog</a></li>
-				<li><a href="<? echo $ROOT; ?>/contact-us">Contact Us!</a></li>
+				<li><a href="<?php echo $ROOT; ?>/our-work">Our Work</a></li>
+				<li><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>
+				<li><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
+				<li><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
+				<li><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
 			</ul>
 			<div class="span-2 last"><a href="http://twitter.com/17feet" target="_blank" class="twitter">We're on Twitter</a></div>
 		</div>

@@ -246,6 +246,7 @@ select,
   display: inline-block;
   width: 210px;
   padding: 6px 7px;
+  margin: .5em 0;
   line-height: 18px;
   height: 18px;
   color: #808080;
@@ -626,13 +627,13 @@ a:link {
   text-decoration: none;
 }
 a:visited {
-  color: #58a0b2;
+  color: #69aaba;
 }
 a:hover {
-  color: #9dc8d2;
+  color: #4ebbd5;
 }
 a:active {
-  color: #7ab4c2;
+  color: #59b4ca;
 }
 strong {
   font-weight: bold;
@@ -1173,13 +1174,13 @@ slider .item,
   color: #79a0aa;
 }
 #footer a:hover {
-  color: #4c93a4;
+  color: #FFF;
 }
 #footer a:focus {
-  color: #4c93a4;
+  color: #FFF;
 }
 #footer a:active {
-  color: #ffffff;
+  color: #eee;
 }
 #footer .blog h5,
 #footer .music h5,
@@ -1569,7 +1570,35 @@ hr.down {
   bottom: 0;
   left: 0;
 }
-.container .project .facebook {
+.container .project .simraceway {
+  background-image: url('../imgs/thumbs/simraceway.png');
+  width: 269px;
+  height: 219px;
+  bottom: -5px;
+  left: 15px;
+}
+.container .project .salesforce-foundation {
+  background-image: url('../imgs/thumbs/salesforce-foundation.png');
+  width: 260px;
+  height: 240px;
+  left: 6px;
+  bottom: -20px;
+}
+.container .project .onelogin {
+  background-image: url('../imgs/thumbs/onelogin.png');
+  width: 260px;
+  height: 240px;
+  left: 6px;
+  bottom: -20px;
+}
+.container .project .pac-12 {
+  background-image: url('../imgs/thumbs/pac-12.png');
+  width: 260px;
+  height: 240px;
+  left: 6px;
+  bottom: -20px;
+}
+.container .project .webos-facebook {
   background-image: url('../imgs/thumbs/facebook.png');
   width: 314px;
   height: 238px;
@@ -1590,7 +1619,7 @@ hr.down {
   bottom: 0;
   left: -19px;
 }
-.container .project .luna {
+.container .project .clif-bar-lunachix {
   background-image: url('../imgs/thumbs/luna.png');
   width: 260px;
   height: 240px;
@@ -1618,14 +1647,14 @@ hr.down {
   bottom: -30px;
   left: 8px;
 }
-.container .project .app-mag {
+.container .project .hp-magazine-concepts {
   background-image: url('../imgs/thumbs/app-mag.png');
   width: 346px;
   height: 244px;
   left: -30px;
   bottom: -30px;
 }
-.container .project .zune {
+.container .project .microsoft-zune {
   background-image: url('../imgs/thumbs/zune.png');
   width: 269px;
   height: 219px;
@@ -1952,7 +1981,7 @@ blockquote:after {
 .blueBtn a:hover,
 .blueBtn input:hover {
   color: #FFF;
-  background-color: #77b2c0;
+  background-color: #53b7d0;
 }
 .blueBtn a:focus,
 .blueBtn input:focus {
@@ -1963,7 +1992,7 @@ blockquote:after {
 .blueBtn a:active,
 .blueBtn input:active {
   color: #FFF;
-  background-color: #58a0b2;
+  background-color: #59b4ca;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
@@ -2658,7 +2687,7 @@ ul.tags li a:active span.end {
 #nav-below .nav-previous input:hover,
 #nav-below .nav-next input:hover {
   color: #FFF;
-  background-color: #77b2c0;
+  background-color: #53b7d0;
 }
 #nav-below .nav-previous a:focus,
 #nav-below .nav-next a:focus,
@@ -2673,7 +2702,7 @@ ul.tags li a:active span.end {
 #nav-below .nav-previous input:active,
 #nav-below .nav-next input:active {
   color: #FFF;
-  background-color: #58a0b2;
+  background-color: #59b4ca;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
