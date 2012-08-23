@@ -17,12 +17,12 @@ $(function() {
 			
 			//$('body').append($('<p id="console">test</p>'));
 			
-			var slider = new Lectric({animateDuration: 3000 , slideThreshold: 20, toss:true});
+			var slider = new Lectric({animateDuration: 2000 , slideThreshold: 20, toss:true});
 			
 			slider.init('#slider');	
 			var numSlides = $('#slider .item').length;
-			var slideInterval = 5000;
-			window.autoplay = false;
+			//var slideInterval = 5000;
+			//window.autoplay = false;
 			// Add slide indicators
 			
 			var sliderNav = $("#slider-nav");
@@ -31,16 +31,16 @@ $(function() {
 				$("#slider-nav li").removeClass("selected").eq(page).addClass("selected");
 			}
 			
-			function advance(){
-				var currentSlide = slider.page();
-				if(currentSlide +1 >= numSlides){
-					slider.to(0);
-				} else {
-					slider.to(currentSlide+1);
-				}
-				if(window.autoplay){ setTimer() }
-				//alert(window.autoplay)
-			}
+			// function advance(){
+			// 	var currentSlide = slider.page();
+			// 	if(currentSlide +1 >= numSlides){
+			// 		slider.to(0);
+			// 	} else {
+			// 		slider.to(currentSlide+1);
+			// 	}
+			// 	if(window.autoplay){ setTimer() }
+			// 	//alert(window.autoplay)
+			// }
 			
 			for(i=0; i < numSlides; i++){
 				
@@ -48,7 +48,7 @@ $(function() {
 					
 					slider.to($(this).attr('index'));
 					updateSelected(slider.page());
-					window.autoplay = false;
+					//window.autoplay = false;
 					})
 				);
 			}
@@ -57,25 +57,27 @@ $(function() {
 			//sliderNav.css({ backgroundColor: '#F00'});
 			$('.second-tier').css({overflow: 'visible'});
 			
-			function setTimer(){
-
-				var page = slider.page();
-				updateSelected(page);
-				//console.log('timer'+ window.autoplay);
-				window.setTimeout(function(){
-					if(window.autoplay){ advance(); /* alert('repeating autoplay trigger') */ }
-				}, slideInterval);
-
-			}
-
-			setTimer();
+			// function setTimer(){
+			// 
+			// 	var page = slider.page();
+			// 	updateSelected(page);
+			// 	//console.log('timer'+ window.autoplay);
+			// 	window.setTimeout(function(){
+			// 		if(window.autoplay){ advance(); /* alert('repeating autoplay trigger') */ }
+			// 	}, slideInterval);
+			// 
+			// }
+			// 
+			// setTimer();
 			
-			document.getElementById("slider").addEventListener("touchstart", touchHandler, false);
-
-			function touchHandler(e){
-				//alert('touchhandler'); // works
-				window.autoplay = false;
-			}
+			updateSelected(0);
+			
+			// document.getElementById("slider").addEventListener("touchstart", touchHandler, false);
+			// 
+			// function touchHandler(e){
+			// 	//alert('touchhandler'); // works
+			// 	//window.autoplay = false;
+			// }
 			
 			
 			slider.subscribe('animationEnd', function(s, event) {
@@ -114,9 +116,9 @@ $(function() {
 	    });
 
 
-	$('.bird').hover( function(){
-		$this = $(this);
-
+	$('#footer .bird').hover( function(){
+		$this = $('.bird');
+		
 		$this.addClass('animating');
 		$this.bind('webkitAnimationEnd', function() { 
 		   $(this).removeClass('animating');

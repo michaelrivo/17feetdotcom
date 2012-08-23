@@ -872,6 +872,7 @@ strong{font-weight:bold}
 a.external{ 
 	padding-right:17px; 
 	background:transparent url(../imgs/external-link.png) no-repeat right center;
+	margin-right: 3px;
 }
 
 a.carat{
@@ -1268,7 +1269,7 @@ a.carat{
 	h4{ 
 		font-weight:300; 
 		font-size:1.6em; 
-		margin-bottom:7px; 
+		margin-bottom:12px; 
 		color: #252525;//darken(@blue, 15%); //@blue
 		text-shadow:0 1px 0 #FFF;
 	}
@@ -1290,9 +1291,9 @@ a.carat{
 	.thumb{ height:230px;}
 	
 	.recent-news .thumb{
-		background: transparent url(../imgs/loyal3-latest-news-thumb.png) no-repeat 0 center;
+		background: transparent url(../imgs/pac-12-recent-news.png) no-repeat 0 -3px;
 		position:relative;
-		@offset: 42px;
+		@offset: 20px;
 		left:-@offset;
 				
 		.date{ margin-left: @offset;}
@@ -1307,6 +1308,93 @@ a.carat{
 	
 }
 
+#foot{ position:relative; }
+
+.collapse{
+	
+	position:absolute;
+	width:100%;
+	top:0;
+	z-index:0; 
+	height:0px;
+	.container{
+		padding-top:50px;
+		
+	}
+	.pad{ margin-right:15px; position:relative; }
+	.span-3{ position:relative; }
+	.twitter .bird{ z-index:0; }
+}
+
+
+
+.twitter .bird{ 
+	
+	display:block;
+	width:44px;
+	height:44px;
+	
+	position:absolute;
+	z-index:10000000;
+	top:9px;
+	right:30px;
+	
+	background:transparent url(../imgs/currently-footer-icons.png) no-repeat -15px 0;
+	.opacity(100);
+	
+	&.animating{
+		-webkit-animation: flyaway 2s;
+		-webkit-animation-direction: normal;
+		-webkit-animation-timing-function: ease-in-out;
+		//-webkit-animation-timing-function: cubic-bezier(.75, .30, .25, .70); //(.35, 0, .65, 1); //ease-in-out;
+		-webkit-animation-fill-mode: forwards;
+		
+		-webkit-transition-duration:1.7s;
+		-webkit-transition-timing-function: ease-in-out; 
+		-webkit-transform:rotate(-370deg);
+		
+	}
+}
+.collapse .twitter .bird{
+	background:transparent url(../imgs/currently-footer-icons.png) no-repeat -15px -539px;
+}
+
+@xpos:30px;
+@ypos:9px;
+	
+// Take off animation
+@-webkit-keyframes flyaway {  
+    0% {
+		top:@ypos;
+		right:@xpos;
+	}
+	
+	// first loop
+	
+	//right
+	20%{ right: -80px + @xpos; }
+	
+	//top
+    35% { top:-180px + @ypos; }
+	
+	//left 
+	50%{ right: 0 + @xpos; }
+	
+	// back to bottom
+	65%{ top: -120px + @ypos; }
+	
+	// begin fade out
+	70%{ .opacity(100); }
+	
+	
+	//90%{  .opacity(0);}
+	
+	100%{
+		top:-300px + @ypos;
+		right: -650px + @xpos;
+		.opacity(0);
+	}
+  }
 
 
 #footer{
@@ -1314,6 +1402,9 @@ a.carat{
 	background: #303030 url(../imgs/footer-bg.png) repeat center center;
 	//height:216px;
 	padding:50px 0;
+	position:relative;
+	overflow:hidden;
+	z-index:1;
 		
 	.span-3{
 		position:relative;		
@@ -1346,12 +1437,6 @@ a.carat{
 		background-position:0 125px;
 		margin-bottom:20px;
 		position:relative;
-		.bird{
-			position:absolute;
-			z-index:10000000;
-			top:9px;
-			right:30px;
-		}
 		
 		span.currently{
 			//.opacity(55);
@@ -1377,67 +1462,8 @@ a.carat{
 
 	 .blog, .music, .weather{ // .twitter,
 		h5{	background:transparent url(../imgs/currently-footer-icons.png) no-repeat 0 0 }
-	}
+	}	
 	
-	@xpos:30px;
-	@ypos:9px;
-		
-		// Take off animation
-		@-webkit-keyframes flyaway {  
-		    0% {
-				top:@ypos;
-				right:@xpos;
-			}  
-			15% {
-				right: -60px + @xpos; // right
-				//-webkit-transform:rotate(-35deg);
-			}
-
-		    30% {
-				top:-120px + @ypos; //top
-				//-webkit-transform:rotate(-160deg);
-		    }
-
-			45%{
-				right: 60px + @xpos; //left
-				//-webkit-transform:rotate(-280deg);
-			}
-
-			60%{
-				top: -40px + @ypos; // back to bottom
-				-webkit-transform:rotate(-350deg);
-			}
-
-			80%{
-				//right:-260px + @xpos;
-			}
-
-			85%{
-				.opacity(100);
-			}
-			100%{
-				top:-55px;
-				right: -700px;
-				.opacity(0);
-				-webkit-transform:rotate(-355deg);
-			}
-		  }
-	
-	.twitter .bird{ 
-		display:block;
-		background:transparent url(../imgs/currently-footer-icons.png) no-repeat -15px 0;
-		width:44px;
-		height:44px;
-		.opacity(100);
-		
-		&.animating{
-			-webkit-animation: flyaway 2.5s;
-			-webkit-animation-direction: normal;
-			-webkit-animation-timing-function: ease-in-out;
-			//-webkit-animation-timing-function: cubic-bezier(.75, .30, .25, .70); //(.35, 0, .65, 1); //ease-in-out;
-			-webkit-animation-fill-mode: forwards;
-		}
-	}
 	
 	.blog h5	{ background-position: 120px -63px; }
 	.music h5	{ background-position: 120px -123px; }

@@ -85,10 +85,10 @@
 		
 			<h3>Recent News</h3>
 		
-			<div class="thumb"><div class="date">June 01, 2012</div></div>
+			<div class="thumb"><div class="date">August 15, 2012</div></div>
 		
-			<h4>LOYAL3 launches first Customer<br/>Stock Ownership Plan</h4>
-			<p>We're proud to announce that LOYAL3 has launched their Customer Stock Ownership Platform. For the first time consumers can buy stock directly via brand Facebook pages and pay no fees, ever.<br/><a href="http://www.loyal3.com" class="external">Visit LOYAL3</a></p>
+			<h4>Pac-12 Launches</h4>
+			<p>Congrats to the Pac-12 on the launch of the Pac-12 Networks. We're honored to be part of the team that helped create a fantastic new site. And we're particularly excited about this awesome <a href="http://video.pac-12.com/video/gxZXdtNTo-lSFrM2w3jiu2-8xeVdrUv4" target="_blank">promo</a> for our beautifully designed schedule. Hip hip hooray!<br/><a href="http://www.pac-12.org" class="external">Visit Site</a></p>
 		
 		</div>
 	

@@ -10,7 +10,7 @@ function get_status($twitter_id) {
 	if( curl_getinfo($c, CURLINFO_HTTP_CODE) < 400 ){
 		return $src;
 	} else {
-		echo curl_getinfo($c, CURLINFO_HTTP_CODE). ' error';
+		//echo curl_getinfo($c, CURLINFO_HTTP_CODE). ' error';
 		return false;
 	}
 

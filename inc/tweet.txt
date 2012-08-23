@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <statuses type="array">
 <status>
-  <created_at>Mon Aug 06 20:39:17 +0000 2012</created_at>
-  <id>232576599705395200</id>
-  <text>From the 17feet Blog: Monday Tunes http://t.co/IQ4dWcek</text>
+  <created_at>Wed Aug 15 22:33:00 +0000 2012</created_at>
+  <id>235866708370415617</id>
+  <text>From the 17feet Blog: Pac-12 Launches http://t.co/WxdSdnxt</text>
   <source>&lt;a href=&quot;http://www.17feet.com&quot; rel=&quot;nofollow&quot;&gt;17feet Blog&lt;/a&gt;</source>
   <truncated>false</truncated>
   <favorited>false</favorited>
@@ -22,12 +22,12 @@
     <profile_image_url_https>https://si0.twimg.com/profile_images/1598182517/bigfoot-avatar_normal.png</profile_image_url_https>
     <url>http://www.17feet.com/</url>
     <protected>false</protected>
-    <followers_count>96</followers_count>
-    <profile_background_color>ffffff</profile_background_color>
+    <followers_count>97</followers_count>
+    <profile_background_color>FFFFFF</profile_background_color>
     <profile_text_color>242424</profile_text_color>
-    <profile_link_color>00afef</profile_link_color>
-    <profile_sidebar_fill_color>ffffff</profile_sidebar_fill_color>
-    <profile_sidebar_border_color>e3e3e3</profile_sidebar_border_color>
+    <profile_link_color>00AFEF</profile_link_color>
+    <profile_sidebar_fill_color>FFFFFF</profile_sidebar_fill_color>
+    <profile_sidebar_border_color>E3E3E3</profile_sidebar_border_color>
     <friends_count>34</friends_count>
     <created_at>Mon Mar 16 20:24:32 +0000 2009</created_at>
     <favourites_count>2</favourites_count>
@@ -41,7 +41,7 @@
     <geo_enabled>true</geo_enabled>
     <verified>false</verified>
     <following></following>
-    <statuses_count>85</statuses_count>
+    <statuses_count>86</statuses_count>
     <lang>en</lang>
     <contributors_enabled>false</contributors_enabled>
     <follow_request_sent></follow_request_sent>
@@ -58,4 +58,4 @@
   <contributors/>
 </status>
 </statuses>
-<request_time>1344533450</request_time>
+<request_time>1345745386</request_time>

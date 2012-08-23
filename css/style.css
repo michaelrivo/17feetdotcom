@@ -641,6 +641,7 @@ strong {
 a.external {
   padding-right: 17px;
   background: transparent url(../imgs/external-link.png) no-repeat right center;
+  margin-right: 3px;
 }
 a.carat {
   padding-right: 20px;
@@ -1068,7 +1069,7 @@ slider .item,
 .third-tier h4 {
   font-weight: 300;
   font-size: 1.6em;
-  margin-bottom: 7px;
+  margin-bottom: 12px;
   color: #252525;
   text-shadow: 0 1px 0 #FFF;
 }
@@ -1092,12 +1093,12 @@ slider .item,
   height: 230px;
 }
 .third-tier .recent-news .thumb {
-  background: transparent url(../imgs/loyal3-latest-news-thumb.png) no-repeat 0 center;
+  background: transparent url(../imgs/pac-12-recent-news.png) no-repeat 0 -3px;
   position: relative;
-  left: -42px;
+  left: -20px;
 }
 .third-tier .recent-news .thumb .date {
-  margin-left: 42px;
+  margin-left: 20px;
 }
 .third-tier .past-project {
   position: relative;
@@ -1106,9 +1107,105 @@ slider .item,
 .third-tier .past-project .thumb {
   background: transparent url(../imgs/past-project-thumb.png) no-repeat 0 center;
 }
+#foot {
+  position: relative;
+}
+.collapse {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 0;
+  height: 0px;
+}
+.collapse .container {
+  padding-top: 50px;
+}
+.collapse .pad {
+  margin-right: 15px;
+  position: relative;
+}
+.collapse .span-3 {
+  position: relative;
+}
+.collapse .twitter .bird {
+  z-index: 0;
+}
+.twitter .bird {
+  display: block;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  z-index: 10000000;
+  top: 9px;
+  right: 30px;
+  background: transparent url(../imgs/currently-footer-icons.png) no-repeat -15px 0;
+  filter: alpha(opacity=100);
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  filter: alpha(opacity=80);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+}
+.twitter .bird.animating {
+  -webkit-animation: flyaway 2s;
+  -webkit-animation-direction: normal;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-transition-duration: 1.7s;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transform: rotate(-370deg);
+}
+.collapse .twitter .bird {
+  background: transparent url(../imgs/currently-footer-icons.png) no-repeat -15px -539px;
+}
+@-webkit-keyframes flyaway {
+  0% {
+    top: 9px;
+    right: 30px;
+  }
+  20% {
+    right: -50px;
+  }
+  35% {
+    top: -171px;
+  }
+  50% {
+    right: 30px;
+  }
+  65% {
+    top: -111px;
+  }
+  70% {
+    filter: alpha(opacity=100);
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=80);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+  100% {
+    top: -291px;
+    right: -620px;
+    filter: alpha(opacity=0);
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+  }
+}
 #footer {
   background: #303030 url(../imgs/footer-bg.png) repeat center center;
   padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 #footer .span-3 {
   position: relative;
@@ -1149,12 +1246,6 @@ slider .item,
   margin-bottom: 20px;
   position: relative;
 }
-#footer h5 .bird {
-  position: absolute;
-  z-index: 10000000;
-  top: 9px;
-  right: 30px;
-}
 #footer h5 span.currently {
   color: #999;
   font: 500 0.6em/100% museo-sans, "Helvetica Nueue", Helvetica, Arial, sans-serif;
@@ -1186,68 +1277,6 @@ slider .item,
 #footer .music h5,
 #footer .weather h5 {
   background: transparent url(../imgs/currently-footer-icons.png) no-repeat 0 0;
-}
-@-webkit-keyframes flyaway {
-  0% {
-    top: 9px;
-    right: 30px;
-  }
-  15% {
-    right: -30px;
-  }
-  30% {
-    top: -111px;
-  }
-  45% {
-    right: 90px;
-  }
-  60% {
-    top: -31px;
-    -webkit-transform: rotate(-350deg);
-  }
-  85% {
-    filter: alpha(opacity=100);
-    -khtml-opacity: 1;
-    -moz-opacity: 1;
-    opacity: 1;
-    filter: alpha(opacity=80);
-    -moz-opacity: 1;
-    -khtml-opacity: 1;
-    opacity: 1;
-  }
-  100% {
-    top: -55px;
-    right: -700px;
-    filter: alpha(opacity=0);
-    -khtml-opacity: 0;
-    -moz-opacity: 0;
-    opacity: 0;
-    filter: alpha(opacity=80);
-    -moz-opacity: 0;
-    -khtml-opacity: 0;
-    opacity: 0;
-    -webkit-transform: rotate(-355deg);
-  }
-}
-#footer .twitter .bird {
-  display: block;
-  background: transparent url(../imgs/currently-footer-icons.png) no-repeat -15px 0;
-  width: 44px;
-  height: 44px;
-  filter: alpha(opacity=100);
-  -khtml-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
-  filter: alpha(opacity=80);
-  -moz-opacity: 1;
-  -khtml-opacity: 1;
-  opacity: 1;
-}
-#footer .twitter .bird.animating {
-  -webkit-animation: flyaway 2.5s;
-  -webkit-animation-direction: normal;
-  -webkit-animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: forwards;
 }
 #footer .blog h5 {
   background-position: 120px -63px;
