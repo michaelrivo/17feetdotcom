@@ -70,6 +70,7 @@
 						<div class="song"></div>
 						<div class="album"></div>
 						
+						<div class="clear"></div>
 						<p class="via api-link"><a href="http://www.last.fm/user/seventeenfeet" target="_blank">Last.fm</a></p>
 						
 					</div>						

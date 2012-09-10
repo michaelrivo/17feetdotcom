@@ -11,80 +11,24 @@ $(function() {
 		rootFolder = 'http://192.168.1.246/17feet/';
 	}
 	
-	if($('#slider .item').length > 1){
+	if($('#slider .item').length > 1 && $(window).width() > 940){
 			
-			//$('#slider').append('<p id="debug" style="position:absolute; top:100px; color:#FFF;z-index:1000;"></p>');
-			
+			//$('#slider').append('<pre id="debug" style="position:absolute; top:20px; color:#FFF;z-index:1000;background-color: rgba(0,0,0,.5);padding:10px"></pre>');
 			//$('body').append($('<p id="console">test</p>'));
 			
-			var slider = new Lectric({animateDuration: 2000 , slideThreshold: 20, toss:true});
+			var slider = new Lectric();
 			
-			slider.init('#slider');	
-			var numSlides = $('#slider .item').length;
-			//var slideInterval = 5000;
-			//window.autoplay = false;
-			// Add slide indicators
+			slider.init('#slider',{animateDuration: 600, slideThreshold: 20, reverse:true, next:'.next', previous: '.prev'});
 			
-			var sliderNav = $("#slider-nav");
-			
-			function updateSelected (page){
-				$("#slider-nav li").removeClass("selected").eq(page).addClass("selected");
-			}
-			
-			// function advance(){
-			// 	var currentSlide = slider.page();
-			// 	if(currentSlide +1 >= numSlides){
-			// 		slider.to(0);
-			// 	} else {
-			// 		slider.to(currentSlide+1);
-			// 	}
-			// 	if(window.autoplay){ setTimer() }
-			// 	//alert(window.autoplay)
-			// }
-			
-			for(i=0; i < numSlides; i++){
+			$(window).resize(function(){
+				// on window resize
+				slider.opts.animateDuration = ( $(window).width()-940 )/2 + 600;
+				slider.position.x = slider.pageNum * slider.itemWidth();
+				console.log(slider.position.x);
+				//console.log(slider.opts.animateDuration);
 				
-				sliderNav.append( $('<li>').attr('index', i).click(function(){
-					
-					slider.to($(this).attr('index'));
-					updateSelected(slider.page());
-					//window.autoplay = false;
-					})
-				);
-			}
-			
-			
-			//sliderNav.css({ backgroundColor: '#F00'});
-			$('.second-tier').css({overflow: 'visible'});
-			
-			// function setTimer(){
-			// 
-			// 	var page = slider.page();
-			// 	updateSelected(page);
-			// 	//console.log('timer'+ window.autoplay);
-			// 	window.setTimeout(function(){
-			// 		if(window.autoplay){ advance(); /* alert('repeating autoplay trigger') */ }
-			// 	}, slideInterval);
-			// 
-			// }
-			// 
-			// setTimer();
-			
-			updateSelected(0);
-			
-			// document.getElementById("slider").addEventListener("touchstart", touchHandler, false);
-			// 
-			// function touchHandler(e){
-			// 	//alert('touchhandler'); // works
-			// 	//window.autoplay = false;
-			// }
-			
-			
-			slider.subscribe('animationEnd', function(s, event) {
-				var page = slider.page();
-				updateSelected(page);
-				//console.log('We just moved! Our current position is:' + s.position.x);
-			});
+			}).trigger('resize');	
+
 			
 			$('.banner').click(function(event){
 				event.preventDefault();
@@ -105,7 +49,7 @@ $(function() {
 	      url: rootFolder+"inc/twitter-status.php",
 
 	      success: function(data) {
-	        console.log(data);
+	        //console.log(data);
 			$('.twitter .content').html(data);
 			
 			showWidget($('#footer .twitter'));
@@ -223,7 +167,7 @@ $(function() {
       success: function(data) {
 	
 		var song = data.recenttracks.track;
-		console.log(song);
+		//console.log(song);
 		
 		if(song.length > 1){
 			// weird multiple objects returned use second one
@@ -323,6 +267,15 @@ $(function() {
 		});
 	}
 	
+	// Mobile Site
+	
+	$('#menu-toggle').click( function(){
+
+		$( $(this).attr('data-toggle') ).slideToggle('slow');
+		//console.log( $(this) );
+	});
+	
+	
 	// Form submission
 	
 	addPortfolioFormEvents();
@@ -344,6 +297,7 @@ $(function() {
 				window.location = $('.next-project a').attr('href');
 		    }
 		});
+		
 	}
 	
 	function addPortfolioFormEvents() {

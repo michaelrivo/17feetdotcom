@@ -22,7 +22,7 @@
 	 	?>
 		
 		<div class="project span-4 <?php echo ($rowEnd ? 'last': '') ?>">
-			<div><a href="<?php echo $projectArr[$i][0] ?>" class="<?php echo $projectArr[$i][0] ?>"></a></div>
+			<div><a href="<?php echo $projectArr[$i][0] ?>" class="<?php echo $projectArr[$i][0] ?>"><img src="../imgs/thumbs/<?php echo $projectArr[$i][0] ?>.png" /></a></div>
 			<h5><?php echo $projectArr[$i][1] ?></h5>
 			<p><?php echo $projectArr[$i][2] ?></p>
 		</div>

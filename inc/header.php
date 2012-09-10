@@ -28,14 +28,17 @@ if( $_SERVER['SCRIPT_NAME'] == '/index.php'){
 	<meta http-equiv="content-script-type" content="text/javascript" /> 
 	<meta http-equiv="content-style-type" content="text/css" /> 
 	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-	
+	<?php if( $isiPad ){ ?>
+		<meta name="viewport" content="width=1024"> 
+		<?php } else { ?>
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1"> 
+	<?php } ?>
 	<title>17feet</title>
 	<?php //print_r($_SERVER); ?>
 	<!-- Framework CSS --> 
 	<link rel="stylesheet" href="<?php echo $ROOT ?>/css/screen.css" type="text/css" media="screen, projection, print"> 
 	<!--[if lt IE 9]><link rel="stylesheet" href="<?php echo $ROOT ?>/css/ie.css" type="text/css" media="screen, projection, print"><![endif]-->
 	<link rel="stylesheet" href="<?php echo $ROOT ?>/css/style.css" type="text/css" media="screen, projection, print"> 
-
 	<link rel="shortcut icon" href="<?php echo $ROOT ?>/imgs/favicon.ico" />
 
 	<!-- Scripts -->
@@ -55,20 +58,29 @@ if( $_SERVER['SCRIPT_NAME'] == '/index.php'){
 	
 	<script src="<?php echo $ROOT ?>/js/init.js" type="text/javascript" charset="utf-8"></script>
 	
-	<!-- <?php  print_r($_SERVER);  ?> -->
+	<!-- <?php // print_r($_SERVER);  ?> -->
 </head>
 <body <?php echo ($isiPad ? "class='ipad'": '');?> >
-	<div id="body">
+	<div id="body" <?php echo ($parentPage ? "class='$parentPage'": '');  ?>>
 	<div id="header">
 		<div class="container">
+			
+			<div class="hide-full">
+				<button class="mobile-btn" id="menu-toggle" data-toggle="#nav">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			
 			<h1 id="logo" class="span-2"><a href="<?php echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
 			<ul class="span-8" id="nav">
-				<li><a href="<?php echo $ROOT; ?>/our-work">Our Work</a></li>
-				<li><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>
-				<li><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
-				<li><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
-				<li><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
+				<li class="our-work"><a href="<?php echo $ROOT; ?>/our-work">Our Work</a></li>
+				<li class="about-us"><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>
+				<li class="join"><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
+				<li class="blog"><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
+				<li class="contact-us"><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
 			</ul>
-			<div class="span-2 last"><a href="http://twitter.com/17feet" target="_blank" class="twitter">We're on Twitter</a></div>
+			<div class="span-2 last twitter hide-tablet"><a href="http://twitter.com/17feet" target="_blank">We're on Twitter</a></div>
 		</div>
 	</div>

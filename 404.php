@@ -1,12 +1,11 @@
-<?php require('inc/header.php'); ?>
+<?php 
+$parentPage = 'mobile-menu';
+require('inc/header.php'); 
+?>
 
-<div class="container project error404">
+<div class="container error404">
 	
-	<div class="span-7 prepend-5 last" style="height:700px; position:relative;margin-top:140px;">
-		<div id="darth">
-			<div class="head"></div>
-			<div class="body"></div>
-		</div>
+	<div class="span-7 prepend-5 last relative" >
 		
 		<h3 class="bottom">This is not the page you are looking for.</h3>
 		<p>We don't know how you got here, but if you insist you got here through no error of your own, please send a detailed message to <script type="text/javascript">
@@ -28,6 +27,13 @@
 		//-->
 		//]]>
 		</script>.</p>
+		
+		<div class="no-overflow">
+			<div id="darth">
+				<div class="head"></div>
+				<div class="body"></div>
+			</div>
+		</div>
 		
 	</div>
 	

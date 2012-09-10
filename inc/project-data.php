@@ -2,9 +2,9 @@
 	
 	$projectArr = array(
 		
-		array( 'pac-12', 			'Pac-12', 				'College athletic conference' ),	
-		array( 'simraceway', 		'Simraceway', 			'Online racing world' ),
-		array( 'salesforce-foundation', 'Salesforce Foundation', 	'The philanthropic arm of Salesforce' ),
+		array( 'pac-12', 			'Pac-12', 				'College athletic conference'),	
+		array( 'simraceway', 		'Simraceway', 			'Online racing world'),
+		array( 'salesforce-foundation', 'Salesforce Foundation', 	'The philanthropic arm of Salesforce'),
 		array( 'onelogin', 			'OneLogin', 			'Enterprise single sign-on' ),
 			
 		

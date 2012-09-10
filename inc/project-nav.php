@@ -33,12 +33,24 @@ while( true && $ct < 20){
 
 	<hr class="up nav-divider" />	
 	
-	<div class="span-3 prev-project blueBtn">
-		<a href="<?php echo "../$prevLink" ?>" title="Previous Project (Left Arrow Key)" ><!-- <span></span> -->Previous</a>
+	<!-- <div class="span-12 last">
+	 -->
+	
+	<div class="project-controls hide-mobile">		
+		<a class="next absolute posRight block" href="<?php echo "../$nextLink" ?>" title="Next Project (Right Arrow Key)"></a>
+		<a class="prev absolute posLeft block" href="<?php echo "../$prevLink" ?>" title="Previous Project (Left Arrow Key)"></a>
 	</div>
 	
-	<p class="span-6" style="padding:0; text-align:center"><a href="../" class="view-all">View All Work</a></p>
+	<div class="container" style="padding:0;">
+		<div class="prev-project blueBtn">
+			<a href="<?php echo "../$prevLink" ?>" title="Previous Project (Left Arrow Key)" ><!-- <span></span> -->Previous</a>
+		</div>
+		
+		<div class="next-project blueBtn last">
+			<a href="<?php echo "../$nextLink" ?>" title="Next Project (Right Arrow Key)">Next<!-- <span></span> --></a>
+		</div>
 	
-	<div class="span-3 next-project blueBtn last">
-		<a href="<?php echo "../$nextLink" ?>" title="Next Project (Right Arrow Key)">Next<!-- <span></span> --></a>
+		<p class="view-all-work relative" style="text-align:center"><a href="../">View All Work</a></p>
+	
 	</div>
+	<!-- </div> -->

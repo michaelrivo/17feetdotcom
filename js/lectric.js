@@ -61,7 +61,7 @@
   // 
   // Returns nothing.
   BaseSlider.prototype.init = function(target, opts) {
-    this.opts = $.extend({
+	this.opts = $.extend({
       reverse: false,
       next: undefined, 
       previous: undefined,
@@ -79,14 +79,19 @@
     this.startPosition = new Position(this.position);
     this.lastPosition = new Position(this.position);
 	this.pageNum = 0;
+	this.animating = false;
+	
+	console.log(this);
   
     // Set up the styling of the slider
     var element = $('<div/>', {
       'class': this.opts.itemWrapperClassName
     });
-    element.css('width', '1000000px');
 
+    element.css('width', '1000000px');
+	
     var itemSelector = '.' + this.opts.itemClassName;
+	
     var itemWrapperSelector = '.' + this.opts.itemWrapperClassName;
 
     $(target).css('overflow', 'hidden');
@@ -95,22 +100,34 @@
     this.element = $(target).find(itemWrapperSelector);
     this.element.itemSelector = itemSelector;
     this.element.itemWrapperSelector = itemWrapperSelector;
+	//this.element.slides = $(this.element).children();
 
+	this.numItems = this.itemCount();
+	
     var self = this;
     
     var type = supportsTouch ? 'touchstart' : 'click';
     $(this.opts.next).bind(type, function(e) {
-      e.preventDefault();
-      var page = self.page();
-      self.to(page + 1);
-      self.element.trigger('nextButton.lectric');
+		e.preventDefault();
+		if(!self.animating){
+			self.animating = true;
+			var page = self.page();
+			//console.log('curr page '+page);
+			self.to(page + 1);
+			self.element.trigger('nextButton.lectric');
+		}
     });
 
     $(this.opts.previous).bind(type, function(e) {
-      e.preventDefault();
-      var page = self.page();
-      self.to(page - 1);
-      self.element.trigger('previousButton.lectric');
+		e.preventDefault();
+		if(!self.animating){
+			self.animating = true;
+			var page = self.page();
+			//console.log('curr page '+page);
+			self.to(page - 1);
+			
+			self.element.trigger('previousButton.lectric');
+		}
     });
     
     // Keep clicks from doing what they do if
@@ -125,11 +142,6 @@
       });
     } else {
 		var self = this;
-		// $(window).resize( function(){
-		// 	//console.log(self);	
-		// 	self.holdPage();
-		// });
-		//console.log('ran it');
 	}
     
     // Bind callbacks passed in at initialization
@@ -142,6 +154,11 @@
         self.subscribe(name, fn);
       }
     });
+		
+	// move last to beginning so looping is smooth
+	// MUST have at least three slides
+	$(this.element).children().last().css({ left: '-100%' })
+		.remove().insertBefore( $(this.element).children().first() );
 
     this.element.trigger('init.lectric');
   };
@@ -154,23 +171,25 @@
   // 
   // Returns nothing.
   BaseSlider.prototype.update = function(opts) {
-    var options = $.extend({animate: true, triggerSlide: true}, opts);
+    var options = $.extend({animate: true, triggerSlide: true, direction:0}, opts);
 
 	//console.log('update');
     var self = this;
     var after = function() {
       self.element.trigger('animationEnd.lectric');
-      $(this).dequeue();
+      self.animating = false;
+	  self.position.x = self.pageNum * self.itemWidth();
+	  //console.log(self.position.x+ ' self.position.x')
+	  $(this).dequeue();
     };
-
-	//console.log(this.pageNum+ ' "update" func')
-	
+	console.log(options.direction + ' options.direction');
+	self.cycleSlides( options.direction );
+	//console.log(this.opts.animateDuration);
     if (options.animate) {
-      this.element.animate({left: "-"+this.pageNum + '00%'}, 
+      this.element.animate({left: (-1* parseInt(this.pageNum)) + '00%' }, 
 			this.opts.animateDuration, 
 			this.opts.animateEasing
       ).queue(after);
-	 //this.pageNum = this.page();
     } else {
       this.element.css({left: "-"+this.pageNum + '00%'}).queue(after);
     }
@@ -178,6 +197,24 @@
     if (options.triggerSlide) { this.element.trigger('slide.lectric'); }
   };
 
+  // Subscribe a callback function to a hook.
+  //
+  // self - The String name of the hook.
+  // direction - 1, 0 or -1 indicates direction slider is currently moving
+  // 
+  // Returns the Function callback that was bound to the hook.
+  BaseSlider.prototype.cycleSlides = function( direction ) {
+	//alert('cycleSlides');
+	var slides = $(this.element).children();
+	
+	if(direction > 0){
+		slides.first().css({ left: (parseFloat( slides.first().css('left')) + (this.numItems * 100)) + '%' })
+			.remove().insertAfter( slides.last() );
+	} else if (direction < 0 ){
+		slides.last().css({ left: (parseFloat( slides.last().css('left')) - (this.numItems * 100)) + '%' })
+			.remove().insertBefore( slides.first() );
+	}
+  }
 
   // Subscribe a callback function to a hook.
   //
@@ -221,7 +258,8 @@
   // 
   // Returns the Integer page number of the slider.
   BaseSlider.prototype.page = function() {
-    return Math.abs(Math.round(this.position.x / this.itemWidth()));
+	//console.log( this.position.x+ ' :this.position.x'+ this.itemWidth()+' itemwidth'+ ' pos.x/iWidth' +(this.position.x / this.itemWidth()) );
+    return /* -1 * */Math.round(this.position.x / this.itemWidth());
   };
 
   // Move to a specific page number.
@@ -232,11 +270,17 @@
   BaseSlider.prototype.to = function(page) {
 	//console.log(this.pageNum+ ' "to" func, page: "value",  '+ page);
     var previous = this.position.x;
-    this.position.x = this.limitXBounds(this.xForPage(page));
+	
+    //this.position.x = this.limitXBounds(this.xForPage(page));
+	this.position.x = this.xForPage(page);
+	//console.log(typeof(this.position.x));
+	//console.log(typeof(previous));
 
     if (this.pageNum !== page) {
+		var updateDirection = ( previous < this.position.x ? 1 : -1 );
+		//console.log(updateDirection + ' updateDirection  { ' +previous+ ' :previous } {'+ this.position.x + ' :this.position.x }'+ (previous < this.position.x)+ ' previous < this.position.x?'  );
 		this.pageNum = page;
-      this.update();
+      	this.update({direction: updateDirection});
     }
   };
 
@@ -320,6 +364,7 @@
   // 
   // Returns nothing.
   TouchSlider.prototype.init = function(target, opts) {
+
     TouchSlider.superobject.init.call(this, target, opts);
     this.opts = $.extend({
       tossFunction: function(x, dx, dt) {
@@ -354,11 +399,14 @@
     var options = $.extend({animate: true, triggerSlide: true}, opts);
     if (options.animate) { this.decayOn(); }
 	
-	//alert(this.element.attr('style'));
-	this.element.css('left', '-'+this.pageNum + '00%'); 
+	//alert('update '+ this.pageNum);
 	
-	//alert('update via %'+this.pageNum);
-    if (options.triggerSlide) { this.element.trigger('slide.lectric'); }
+	
+	this.element.css('left', -this.pageNum + '00%'); 
+	
+	//$('#debug').text( this.element.attr('style') );
+	
+    //if (options.triggerSlide) { this.element.trigger('slide.lectric'); }
   };
 
 
@@ -373,15 +421,11 @@
     var options = $.extend({animate: true, triggerSlide: true}, opts);
     if (options.animate) { this.decayOn(); }
 	
-	//alert( (this.position.x / this.itemWidth()) +'px');
-	//$('.footer h3').text(this.position.x / this.itemWidth() * 100 +'%');
 	this.element.css('left', this.position.x / this.itemWidth() * 100 +'%');
-	//this.element.css('left', (this.position.x / this.itemWidth()) + 'px');
 	
 
     if (options.triggerSlide) { this.element.trigger('slide.lectric'); }
   };
-
 
   // Turn off CSS3 animation decay.
   // 
@@ -420,6 +464,7 @@
     },
 
     touchstart: function(e) {
+
       this.currentTarget = e.currentTarget;
       this.startPosition.x = e.touches[0].pageX - this.position.x;
       this.startPosition.y = e.touches[0].pageY - this.position.y;
@@ -437,85 +482,90 @@
     },
 
     touchmove: function(e) {
+	
       if (this.gesturing) { return false; }
-
+	
+	  // if first touch and we're moving enough not to be a tap, kill default tap event
       if (!this.moved) {
         var deltaY = e.touches[0].pageY - this.startPosition.y;
         var deltaX = e.touches[0].pageX - this.startPosition.x;
 
-		// touch of less than 15 vertical... don't scroll page
-        if (Math.abs(deltaY) < 8) {
+		// touch of less than 12 vertical... don't scroll page
+        if (Math.abs(deltaY) < 12) {
 	//$('#debug').text('prevent '+ deltaY);
           e.preventDefault();
         }
 
         this.element.trigger('firstSlide.lectric');
       }
-
+	 
+	  // constantly refresh these values
       this.moved = true;
       this.lastPosition.x = this.position.x;
       this.lastPosition.y = this.position.y;
       this.lastMoveTime = new Date();
 	
       // limits ends
+	//this.position.x = this.limitXBounds(e.touches[0].pageX - this.startPosition.x);
+	
+	//allows for bounce at ends
 	  this.position.x = e.touches[0].pageX- this.startPosition.x;
+	//$('#debug').text(this.position.x);
+	  // animate = false (so we only use webkit for this)
 	
       this.updateTouch({animate: false});
     },
 
     touchend: function(e) {
+	
       window.removeEventListener('gesturestart', this, false);
       window.removeEventListener('gestureend', this, false);
       window.removeEventListener('touchmove', this, false);
       window.removeEventListener('touchend', this, false);
-
+	
       if (this.moved) {
+	
+		// generate the speed of the end of the gesture
         var dx = this.position.x - this.lastPosition.x;
         var dt = (new Date()) - this.lastMoveTime + 1; 
         
         var width = this.itemWidth();
 		
         if (this.opts.tossing) {
+		  //We're not using this
           var tossedX = this.limitXBounds(this.opts.tossFunction(this.position.x, dx, dt));
           this.position.x = Math.round(tossedX / width) * width;
-		  this.updateTouch();
 		  //$('#debug').text('this.opts.tossing');
         } else {
-          var page = this.page();
-		  var itemCt = this.itemCount(); 
-		//$('#debug').text('dx: '+dx +'slideThreshold: '+ this.opts.slideThreshold+ ' page: '+page);
-        
-			//$('#debug').text(dx < -this.opts.slideThreshold && page < (itemCt-1));
+		//$('#debug').text('no tossing');
+		  var prev_page = this.pageNum;
+          var page = -this.page();
+		  var itemCt = this.itemCount();
+		  var direction = 0;
 
-  		  if (dx > this.opts.slideThreshold && page > 0){
-	
-			this.pageNum = page-1;
-			//$('#debug').text('moving left');
-          }
-          else if (dx < -this.opts.slideThreshold && page < (itemCt-1)) {
-			// if 
-			this.pageNum = page +1;
-			//$('#debug').text('moving right');
-          }
-          else{
-	//$('#debug').text('not tossed hard enough '+ dx);
-			if (page < (itemCt-1)){
-				this.pageNum = page;
-			} else{
-				//keeps from swiping to non-existant slide at end 
-				this.pageNum = itemCt-1;
-			}
-          }
-			//$('#debug').text(this.pageNum);
-			
-			this.position.x = -this.pageNum*this.itemWidth();
+
+			this.pageNum = page;
+
+			this.position.x =  -this.pageNum * width;
+			//$('#debug').text('dx: '+dx +' \nthis.position.x: '+ this.position.x+ ' \npage: '+page + ' \nthis.pageNum: '+this.pageNum);
 			this.update();
+			
+			if(prev_page != this.pageNum){
+				if( dx > 0 ){
+					//$('#debug').text('direction -1');
+					this.cycleSlides( -1 ); 
+				} else if(dx < 0 ) {
+					//$('#debug').text('direction +1');
+					this.cycleSlides( 1 ); 
+				}
+			}
+			
         }
 
         
         this.element.trigger('end.lectric');
       } else {
-	
+		//$('#debug').text('no slide');
         this.element.trigger('endNoSlide.lectric');
       }
 
