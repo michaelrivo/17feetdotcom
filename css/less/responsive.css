@@ -1,0 +1,1061 @@
+/*!
+ * Bootstrap Responsive v2.1.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+.visible-phone {
+  display: none !important;
+}
+.visible-tablet {
+  display: none !important;
+}
+.hidden-desktop {
+  display: none !important;
+}
+.visible-desktop {
+  display: inherit !important;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important ;
+  }
+  .visible-tablet {
+    display: inherit !important;
+  }
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important;
+  }
+  .visible-phone {
+    display: inherit !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (max-width: 959px) {
+  .container {
+    width: 92%;
+    padding: 0 4%;
+  }
+  #header .twitter {
+    display: none;
+  }
+  br {
+    display: none;
+  }
+  br.hold {
+    display: inherit;
+  }
+  #footer br {
+    display: inherit;
+  }
+  #footer .span3 {
+    width: 44.680851063829785%;
+    margin-left: 4.25531914893617%;
+    padding-bottom: 40px;
+  }
+  #footer .span3 .pad {
+    padding: 0;
+  }
+  #footer .blog:after {
+    height: 1px;
+    width: 210%;
+    clear: both;
+    border-bottom: 1px solid #4D4D4D;
+    right: 0;
+    bottom: 10px;
+    top: inherit;
+  }
+}
+@media (min-width: 481px) and (max-width: 959px) {
+  .row {
+    width: 100%;
+  }
+  #nav {
+    display: block !important;
+  }
+  #logo {
+    width: 110px;
+  }
+  .twitter .bird.animating {
+    -webkit-animation: flyaway 2s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-transition-duration: 1.7s;
+    -webkit-transition-timing-function: ease-in-out;
+    -webkit-transform: rotate(-370deg);
+  }
+  #nav {
+    float: right;
+    overflow: hidden;
+    width: auto;
+    margin: 0;
+  }
+  #nav li {
+    float: right;
+  }
+  /*  #grid > .core(@gridColumnWidth768, @gridGutterWidth768);
+  
+    // Fluid grid
+    #grid > .fluid(@fluidGridColumnWidth768, @fluidGridGutterWidth768);
+  
+    // Input grid
+    #grid > .input(@gridColumnWidth768, @gridGutterWidth768);*/
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.icon-bar {
+  height: 2px;
+  width: 18px;
+  margin: 3px 0;
+  display: block;
+  background-color: #FFF;
+}
+.mobile-btn {
+  border: 1px solid #000;
+  background-color: #0a0a0a;
+  background-image: -moz-linear-gradient(top, #111111, #000000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
+  background-image: -webkit-linear-gradient(top, #111111, #000000);
+  background-image: -o-linear-gradient(top, #111111, #000000);
+  background-image: linear-gradient(to bottom, #111111, #000000);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
+  background-color: #0a0a0a;
+  background-image: -moz-linear-gradient(top, #111111, #000000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
+  background-image: -webkit-linear-gradient(top, #111111, #000000);
+  background-image: -o-linear-gradient(top, #111111, #000000);
+  background-image: linear-gradient(to bottom, #111111, #000000);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
+  background-color: #0a0a0a;
+  background-image: -moz-linear-gradient(top, #111111, #000000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
+  background-image: -webkit-linear-gradient(top, #111111, #000000);
+  background-image: -o-linear-gradient(top, #111111, #000000);
+  background-image: linear-gradient(to bottom, #111111, #000000);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
+  box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+  -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+  -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+  -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+  border: 1px solid #000;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  float: left;
+  margin: 12px 0 0 0;
+  padding: 7px 8px;
+}
+.mobile-btn:link {
+  color: #FFF;
+}
+.mobile-btn:hover {
+  color: #69AABA;
+}
+.mobile-btn:visited {
+  color: #FFF;
+}
+.mobile-btn:active {
+  color: #69AABA;
+}
+.responsive-transition {
+  -webkit-transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
+  -moz-transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
+  -o-transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
+  transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
+  -webkit-transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
+  -moz-transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
+  -o-transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
+  transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
+  -webkit-transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
+  -moz-transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
+  -o-transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
+  transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
+}
+@media (max-width: 767px) {
+  .hide-tablet {
+    display: none !important;
+  }
+  #slider .project-control {
+    display: none;
+  }
+  #slider .slide0 h3 {
+    font-size: 115%;
+  }
+  #slider .slide0 h3 .cta {
+    background-image: none;
+  }
+  .banner {
+    height: 340px;
+  }
+  #slider .item,
+  #slider {
+    height: 380px;
+  }
+  #slider .item .bg {
+    height: 340px;
+    background-size: contain;
+  }
+  #slider .item .graphic {
+    margin-top: 10%;
+  }
+  .container.project .what-it-is p {
+    display: block;
+    margin-top: 45px;
+  }
+  /*	@fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
+  	@fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);*/
+  .twitter .bird.animating {
+    -webkit-animation: flyawayMobile 2s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-transition-duration: 1.7s;
+    -webkit-transition-timing-function: ease-in-out;
+    -webkit-transform: rotate(-370deg);
+  }
+  @-webkit-keyframes flyawayMobile {
+    0% {
+      top: 3px;
+      left: 130px;
+    }
+    20% {
+      left: 210px;
+      background-color: transparent;
+    }
+    35% {
+      top: -177px;
+    }
+    50% {
+      left: 130px;
+      background-color: transparent;
+    }
+    65% {
+      top: -117px;
+    }
+    70% {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      opacity: 1;
+      filter: alpha(opacity=100);
+      opacity: 1;
+      filter: alpha(opacity=100);
+    }
+    100% {
+      top: -257px;
+      left: 310px;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      filter: alpha(opacity=0);
+    }
+  }
+  /*  // Padding to set content in a bit
+    body {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    // Negative indent the now static "fixed" navbar
+    .navbar-fixed-top,
+    .navbar-fixed-bottom,
+    .navbar-static-top {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+    // Remove padding on container given explicit padding set on body
+    .container-fluid {
+      padding: 0;
+    }
+  
+    // TYPOGRAPHY
+    // ----------
+    // Reset horizontal dl
+    .dl-horizontal {
+      dt {
+        float: none;
+        clear: none;
+        width: auto;
+        text-align: left;
+      }
+      dd {
+        margin-left: 0;
+      }
+    }
+  
+    // GRID & CONTAINERS
+    // -----------------
+    // Remove width from containers
+    .container {
+      width: auto;
+    }
+    // Fluid rows
+    .row-fluid {
+      width: 100%;
+    }
+    // Undo negative margin on rows and thumbnails
+    .row,
+    .thumbnails {
+      margin-left: 0;
+    }
+    .thumbnails > li {
+      float: none;
+      margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
+    }
+    // Make all grid-sized elements block level again
+    [class*="span"],
+    .row-fluid [class*="span"] {
+      float: none;
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      .box-sizing(border-box);
+    }
+    .span12,
+    .row-fluid .span12 {
+      width: 100%;
+      .box-sizing(border-box);
+    }
+  
+    // FORM FIELDS
+    // -----------
+    // Make span* classes full width
+    .input-large,
+    .input-xlarge,
+    .input-xxlarge,
+    input[class*="span"],
+    select[class*="span"],
+    textarea[class*="span"],
+    .uneditable-input {
+      .input-block-level();
+    }
+    // But don't let it screw up prepend/append inputs
+    .input-prepend input,
+    .input-append input,
+    .input-prepend input[class*="span"],
+    .input-append input[class*="span"] {
+      display: inline-block; // redeclare so they don't wrap to new lines
+      width: auto;
+    }
+    .controls-row [class*="span"] + [class*="span"] {
+      margin-left: 0;
+    }
+  
+    // Modals
+    .modal {
+      position: fixed;
+      top:   20px;
+      left:  20px;
+      right: 20px;
+      width: auto;
+      margin: 0;
+      &.fade.in { top: auto; }
+    }*/
+}
+@media (max-width: 480px) {
+  .hide-tablet {
+    display: block !important;
+  }
+  .hide-mobile {
+    display: none !important;
+  }
+  /*  Begin Nav */
+  #header .twitter {
+    display: none;
+    background-position: right 16px;
+  }
+  .row,
+  .row-fluid {
+    margin-left: 0;
+  }
+  .row [class*="span"],
+  .row-fluid [class*="span"] {
+    width: 100%;
+    float: none;
+    position: static;
+    margin-left: 0;
+  }
+  #logo {
+    float: none;
+    width: 100px;
+    margin: 0 auto;
+  }
+  #logo a {
+    background-position: center center;
+  }
+  #nav li {
+    display: none !important;
+  }
+  #nav {
+    -webkit-box-shadow: 0 4px 25px #000000;
+    -moz-box-shadow: 0 4px 25px #000000;
+    box-shadow: 0 4px 25px #000000;
+    -webkit-box-shadow: 0 4px 25px #000000;
+    -moz-box-shadow: 0 4px 25px #000000;
+    box-shadow: 0 4px 25px #000000;
+    -webkit-box-shadow: 0 4px 25px #000000;
+    -moz-box-shadow: 0 4px 25px #000000;
+    box-shadow: 0 4px 25px #000000;
+  }
+  #menu-toggle {
+    display: none;
+  }
+  .mobile-menu #menu-toggle {
+    display: block;
+  }
+  .mobile-menu #nav {
+    clear: both;
+    width: 100%;
+    display: none;
+  }
+  .mobile-menu #nav li {
+    display: block;
+    float: none;
+    background: #000;
+    border-bottom: 1px solid #222;
+  }
+  .mobile-menu #nav li a {
+    font-size: 1.2em;
+    color: #FFF;
+  }
+  .project-control {
+    display: none;
+  }
+  /* Our Work */
+  .back .back-btn {
+    display: block;
+  }
+  #nav {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 10px;
+  }
+  .our-work #nav li.our-work {
+    display: block !important;
+  }
+  .our-work #nav li.our-work a {
+    border: 1px solid #000;
+    background-color: #0a0a0a;
+    background-image: -moz-linear-gradient(top, #111111, #000000);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
+    background-image: -webkit-linear-gradient(top, #111111, #000000);
+    background-image: -o-linear-gradient(top, #111111, #000000);
+    background-image: linear-gradient(to bottom, #111111, #000000);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
+    background-color: #0a0a0a;
+    background-image: -moz-linear-gradient(top, #111111, #000000);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
+    background-image: -webkit-linear-gradient(top, #111111, #000000);
+    background-image: -o-linear-gradient(top, #111111, #000000);
+    background-image: linear-gradient(to bottom, #111111, #000000);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
+    background-color: #0a0a0a;
+    background-image: -moz-linear-gradient(top, #111111, #000000);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
+    background-image: -webkit-linear-gradient(top, #111111, #000000);
+    background-image: -o-linear-gradient(top, #111111, #000000);
+    background-image: linear-gradient(to bottom, #111111, #000000);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
+    box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+    -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+    -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+    -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+    -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+    -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+    -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
+    border: 1px solid #000;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    float: left;
+    margin: 12px 0 0 0;
+    padding: 7px 8px;
+    font-size: 1.1em;
+    margin-top: 11px;
+    padding: 6px 8px;
+  }
+  .our-work #nav li.our-work a:link {
+    color: #FFF;
+  }
+  .our-work #nav li.our-work a:hover {
+    color: #69AABA;
+  }
+  .our-work #nav li.our-work a:visited {
+    color: #FFF;
+  }
+  .our-work #nav li.our-work a:active {
+    color: #69AABA;
+  }
+  #nav {
+    width: auto;
+  }
+  .hero,
+  .hero .project {
+    height: auto !important;
+  }
+  * {
+    float: none;
+  }
+  .projects h2,
+  .project h2 {
+    font-size: 2.5em;
+    font-weight: 500;
+  }
+  .projects h3,
+  .project h3 {
+    font-size: 1.1em;
+    padding-right: 0;
+  }
+  .projects h3 br,
+  .project h3 br {
+    display: none;
+  }
+  .projects h4,
+  .project h4,
+  .projects p,
+  .project p {
+    padding: 0px !important;
+  }
+  .what-it-is {
+    display: none;
+  }
+  /* End Nav */
+  .hide-mobile {
+    display: none;
+  }
+  .hide-full {
+    display: block;
+  }
+  .absolute {
+    position: static;
+  }
+  .mobile-width {
+    padding: 0px !important;
+    margin: 0px !important;
+    width: 100% !important;
+  }
+  /* Home Page */
+  .banner {
+    width: auto;
+  }
+  #slider .item,
+  #slider .banner {
+    height: auto;
+  }
+  #slider .item {
+    position: static;
+  }
+  #slider {
+    height: auto;
+  }
+  #slider .slide0 h3 {
+    margin: 0;
+    font-size: 1.3em;
+  }
+  #slider .slide0 .slide-ttl {
+    margin: -10px 0 -25px -8%;
+    max-width: 110%;
+  }
+  #slider .slide0 .graphic {
+    position: static;
+    margin: 15px 5% 0 8%;
+    max-width: 80%;
+    float: none;
+  }
+  #slider .slide0 .cta {
+    background-image: none;
+  }
+  #slider .slide0 br {
+    display: none;
+  }
+  .second-tier h2 {
+    font-size: 2.3em;
+  }
+  .second-tier .span4 {
+    padding: 0;
+    margin: 8px 0;
+  }
+  .second-tier .span4 div {
+    padding: 5% 6% 4% 6%;
+  }
+  .second-tier .cta {
+    margin: 15px 0 0 0;
+  }
+  .third-tier .thumb-wrap {
+    height: auto;
+  }
+  .third-tier p {
+    padding: 0;
+  }
+  .third-tier .past-project {
+    position: static;
+    padding: 0;
+    margin-top: 50px;
+  }
+  .second-tier,
+  .third-tier {
+    padding-bottom: 30px;
+  }
+  /* Work overview */
+  .container .project {
+    height: auto;
+    margin-bottom: 1em;
+  }
+  .container .project h5 {
+    margin-top: .5em;
+  }
+  .container .project div {
+    height: auto;
+  }
+  .container .project a {
+    position: relative !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  /* Project Pages */
+  .shim-40,
+  .shim-80,
+  .shim-120,
+  .shim-160 {
+    display: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  #hero-graphic {
+    position: static;
+    margin: inherit auto;
+  }
+  .project.copy {
+    padding: 20px 0;
+  }
+  .project.copy p {
+    font-size: 105%;
+    line-height: 165%;
+  }
+  .project.copy .span1,
+  .project.copy .span2,
+  .project.copy .span3,
+  .project.copy .span4,
+  .project.copy .span5,
+  .project.copy .span6,
+  .project.copy .span7,
+  .project.copy .span8,
+  .project.copy .span9,
+  .project.copy .span10,
+  .project.copy .span11,
+  .project.copy .span12 {
+    margin: 1.5em 0 0 0;
+    height: auto !important;
+  }
+  .project.copy .clear-pad {
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+  blockquote {
+    font-size: 1.75em;
+  }
+  .project.copy .cite {
+    height: auto !important;
+    background-image: none;
+    padding: 0 !important;
+  }
+  .project.copy .cite br {
+    display: none;
+  }
+  .project.copy .cite span {
+    margin: 0;
+  }
+  .project.copy .cite span,
+  .project.copy .cite a {
+    position: static;
+  }
+  .project.copy .cite a {
+    margin-left: 10px;
+  }
+  .container.copy.project .next-project,
+  .container.copy.project .prev-project {
+    margin-top: 0;
+    width: 35% !important;
+  }
+  .container.copy.project .next-project a,
+  .container.copy.project .prev-project a {
+    width: 100% !important;
+  }
+  .container.copy.project .next-project {
+    float: right;
+  }
+  .container.copy.project .view-all-work {
+    clear: both;
+    width: 100%;
+    top: 15px;
+    margin: 0;
+  }
+  .graphic,
+  #hero-graphic {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  /*	.span1, .span2, .span3, .span4, 
+  	.span5, .span6, .span7, .span8, 
+  	.span9, .span10, .span11, .span12{
+  		width:90%;
+  		margin: 0;
+  		//float:none;
+  		padding: 0 5%;
+  	}*/
+  hr.up.nav-divider {
+    margin-top: 20px;
+    background-size: 100% 50%;
+  }
+  /* Footer */
+  #footer,
+  .collapse .container {
+    padding: 15px 0;
+  }
+  #footer .span3 {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 15px;
+  }
+  #footer .span3 .content {
+    height: auto;
+  }
+  #footer .span3:after {
+    width: 100%;
+    height: 1px;
+    border-right: none;
+    border-bottom: 1px solid #4D4D4D;
+    top: inherit;
+    bottom: 0;
+  }
+  #footer .twitter .tweet-wrap {
+    width: auto;
+  }
+  #footer .twitter #tweet-txt {
+    height: auto;
+  }
+  #footer .api-link {
+    position: static;
+    clear: both;
+    padding: 10px 0;
+  }
+  #sub-footer form {
+    display: none;
+  }
+  /* 404 Page */
+  .error404 h3,
+  .error404 p {
+    padding: 0;
+  }
+  .error404 p {
+    font-size: 1.15em;
+  }
+  .error404 h3 {
+    margin-top: 30px;
+    font-size: 2.25em;
+  }
+  .error404 #darth {
+    position: static;
+    transform: scale(0.55, 0.55);
+    -ms-transform: scale(0.55, 0.55);
+    /* IE 9 */
+  
+    -webkit-transform: scale(0.55, 0.55);
+    /* Safari and Chrome */
+  
+    -o-transform: scale(0.55, 0.55);
+    /* Opera */
+  
+    -moz-transform: scale(0.55, 0.55);
+    /* Firefox */
+  
+    transform: scale(0.55, 0.55);
+    -ms-transform: scale(0.55, 0.55);
+    /* IE 9 */
+  
+    -webkit-transform: scale(0.55, 0.55);
+    /* Safari and Chrome */
+  
+    -o-transform: scale(0.55, 0.55);
+    /* Opera */
+  
+    -moz-transform: scale(0.55, 0.55);
+    /* Firefox */
+  
+    transform: scale(0.55, 0.55);
+    -ms-transform: scale(0.55, 0.55);
+    /* IE 9 */
+  
+    -webkit-transform: scale(0.55, 0.55);
+    /* Safari and Chrome */
+  
+    -o-transform: scale(0.55, 0.55);
+    /* Opera */
+  
+    -moz-transform: scale(0.55, 0.55);
+    /* Firefox */
+  
+    transform-origin: left top;
+    -ms-transform-origin: left top;
+    /* IE 9 */
+  
+    -webkit-transform-origin: left top;
+    /* Safari and Chrome */
+  
+    -o-transform-origin: left top;
+    /* Opera */
+  
+    -moz-transform-origin: left top;
+    /* Firefox */
+  
+    transform-origin: left top;
+    -ms-transform-origin: left top;
+    /* IE 9 */
+  
+    -webkit-transform-origin: left top;
+    /* Safari and Chrome */
+  
+    -o-transform-origin: left top;
+    /* Opera */
+  
+    -moz-transform-origin: left top;
+    /* Firefox */
+  
+    transform-origin: left top;
+    -ms-transform-origin: left top;
+    /* IE 9 */
+  
+    -webkit-transform-origin: left top;
+    /* Safari and Chrome */
+  
+    -o-transform-origin: left top;
+    /* Opera */
+  
+    -moz-transform-origin: left top;
+    /* Firefox */
+  
+  }
+  /*
+  	// Original bootstrap styles
+  	
+    // Smooth out the collapsing/expanding nav
+    .nav-collapse {
+      -webkit-transform: translate3d(0, 0, 0); // activate the GPU
+    }
+  
+    // Block level the page header small tag for readability
+    .page-header h1 small {
+      display: block;
+      line-height: @baseLineHeight;
+    }
+  
+    // Update checkboxes for iOS
+    input[type="checkbox"],
+    input[type="radio"] {
+      border: 1px solid #ccc;
+    }
+  
+    // Remove the horizontal form styles
+    .form-horizontal {
+      .control-label {
+        float: none;
+        width: auto;
+        padding-top: 0;
+        text-align: left;
+      }
+      // Move over all input controls and content
+      .controls {
+        margin-left: 0;
+      }
+      // Move the options list down to align with labels
+      .control-list {
+        padding-top: 0; // has to be padding because margin collaspes
+      }
+      // Move over buttons in .form-actions to align with .controls
+      .form-actions {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  
+    // Modals
+    .modal {
+      top:   10px;
+      left:  10px;
+      right: 10px;
+    }
+    .modal-header .close {
+      padding: 10px;
+      margin: -10px;
+    }
+  
+    // Carousel
+    .carousel-caption {
+      position: static;
+    } */
+}

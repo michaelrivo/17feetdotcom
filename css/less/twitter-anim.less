@@ -1,0 +1,65 @@
+.twitter .bird{ 
+
+	&.animating{
+		-webkit-animation: flyawayMobile 2s;
+		-webkit-animation-direction: normal;
+		-webkit-animation-timing-function: ease-in-out;
+		-webkit-animation-fill-mode: forwards;
+
+		-webkit-transition-duration:1.7s;
+		-webkit-transition-timing-function: ease-in-out; 
+		-webkit-transform:rotate(-370deg);
+	}
+}
+
+@xpos:130px;
+@ypos:3px;
+
+@-webkit-keyframes flyawayMobile {  
+    0% {
+		top:@ypos;
+		left:@xpos;
+	}
+
+	// first loop
+
+	//right
+	// go 80 to right
+	20%{ 
+		left: 80px + @xpos;
+		background-color:transparent;
+	} //20
+
+	//top
+	//go 160 up
+    35% { 
+		top:-180px + @ypos;
+		//background-color:#F00;
+	 } //35
+
+	//left
+	// go 160 left (half from origin)
+	50%{ 
+		left: 0 + @xpos; 
+		background-color:transparent;
+	} //50
+
+	// back to bottom
+	//
+	65%{ 
+		top: -120px + @ypos; 
+		//background-color:#F00;
+	 } //65
+
+	// begin fade out
+	70%{ .opacity(100); } //70
+
+
+	//90%{  .opacity(0);}
+
+	100%{
+		top:-260px + @ypos;
+		left: 180px + @xpos;
+		.opacity(0);
+	}
+}
