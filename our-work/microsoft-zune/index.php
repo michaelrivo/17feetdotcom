@@ -28,12 +28,12 @@
 <div class="hero dark">
 	<div class="container project header">
 		
-		<div class="span-9">
+		<div class="span9">
 			<h2>Microsoft Zune</h2>
 			<h3>We designed and built a Flash application supporting both customization and commerce. We worked hand in hand with Microsoft over several product iterations, campaigns and feature sets.</h3>
 		</div>
 	
-		<div class="span-3 last what-it-is">
+		<div class="span3 last what-it-is">
 			<p>What it is</p>
 			<abbr class="tablet" title="Touch devices"></abbr>
 			<abbr class="mobile " title="Mobile devices"></abbr>
@@ -48,14 +48,14 @@
 	
 	<div class="shim-120"></div>
 	
-	<div class="prepend-1 span-9 more-pad append-2">
+	<div class="prepend-1 span9 more-pad append-2">
 		<h4>Create Your Own</h4>
 		
 		<p>Zune Originals lets users customize any Zune device with their own imagery. Users upload a picture, tweak it with our application, have it instantly etched, and a week later it arrives at your doorstep. Pretty sweet. The site also supports custom &ldquo;tattoos&rdquo; that have been commissioned by Microsoft. We worked closely with the design team to focus on simplifying the interaction design and purchase process, allowing users to quickly customize and purchase a device.</p>
 		
 	</div>
 	
-	<div class="span-12 last graphic" style="background:transparent url(../../imgs/projects/zune-2.png) no-repeat 70px 0 ; height:669px;top:-15px"><div id="rawr"></div></div>
+	<div class="span12 last graphic" style="background:transparent url(../../imgs/projects/zune-2.png) no-repeat 70px 0 ; height:669px;top:-15px"><div id="rawr"></div></div>
 	
 	<audio preload="auto" id="cat">
 	  <source src="../../sound/cat.ogg" type="audio/ogg"></source>
@@ -87,7 +87,7 @@
 	
 	<!-- row -->
 	
-	<div class="span-4 last no-pad append-8 " style="background:transparent url(../../imgs/projects/zune-3.png) no-repeat right 0; height:828px;">
+	<div class="span4 last no-pad append-8 " style="background:transparent url(../../imgs/projects/zune-3.png) no-repeat right 0; height:828px;">
 		<h4 style="margin-top:60px">Zune Store</h4>
 
 		<p style="padding-right:45px">The success of the Zune Originals site led to the development of the Zune Store. Working with the design team in Redmond, we designed the store to work in tandem with new Zune.net. The store supports the sale of devices, accessories, Zune Points &amp; Zune passes. We also created limited edition pages for a Gears of War device and a Joy Division device that was timed with the release of a documentary on the band.</p>	

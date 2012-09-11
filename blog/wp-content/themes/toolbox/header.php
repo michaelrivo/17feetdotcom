@@ -98,19 +98,19 @@ if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 	<div id="body" class="blog">
 	<div id="header">
 		<div class="container">
-			<h1 id="logo" class="span-2"><a href="<?php echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
-			<ul class="span-8" id="nav">
+			<h1 id="logo" class="span2"><a href="<?php echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
+			<ul class="span8" id="nav">
 				<li><a href="<?php echo $ROOT; ?>/our-work">Our Work</a></li>
 				<li><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>
 				<li><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
 				<li><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
 				<li><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
 			</ul>
-			<div class="span-2 last"><a href="http://twitter.com/17feet" target="_blank" class="twitter">We're on Twitter</a></div>
+			<div class="span2 last"><a href="http://twitter.com/17feet" target="_blank" class="twitter">We're on Twitter</a></div>
 		</div>
 	</div>
 	<div class="container">
-		<div class="span-12 header">
+		<div class="span12 header">
 			<h2>17FEET Blog</h2>
 			<h3>Keep up with all things 17FEET</h3>
 			

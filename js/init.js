@@ -13,29 +13,28 @@ $(function() {
 	
 	if($('#slider .item').length > 1 && $(window).width() > 940){
 			
-			//$('#slider').append('<pre id="debug" style="position:absolute; top:20px; color:#FFF;z-index:1000;background-color: rgba(0,0,0,.5);padding:10px"></pre>');
-			//$('body').append($('<p id="console">test</p>'));
+		//$('#slider').append('<pre id="debug" style="position:absolute; top:20px; color:#FFF;z-index:1000;background-color: rgba(0,0,0,.5);padding:10px"></pre>');
+		//$('body').append($('<p id="console">test</p>'));
+		
+		var slider = new Lectric();
+		
+		slider.init('#slider',{animateDuration: 600, slideThreshold: 20, reverse:true, next:'.next', previous: '.prev'});
+		
+		$(window).resize(function(){
+			// on window resize
+			slider.opts.animateDuration = ( $(window).width()-940 )/2 + 600;
+			slider.position.x = slider.pageNum * slider.itemWidth();
+			console.log(slider.position.x);
+			//console.log(slider.opts.animateDuration);
 			
-			var slider = new Lectric();
-			
-			slider.init('#slider',{animateDuration: 600, slideThreshold: 20, reverse:true, next:'.next', previous: '.prev'});
-			
-			$(window).resize(function(){
-				// on window resize
-				slider.opts.animateDuration = ( $(window).width()-940 )/2 + 600;
-				slider.position.x = slider.pageNum * slider.itemWidth();
-				console.log(slider.position.x);
-				//console.log(slider.opts.animateDuration);
-				
-			}).trigger('resize');	
-
-			
-			$('.banner').click(function(event){
-				event.preventDefault();
-				window.location = $(this).attr('project');			
-			})
-			
-		}
+		}).trigger('resize');
+		
+	}
+	
+	$('.banner').click(function(event){
+		event.preventDefault();
+		window.location = $(this).attr('project');			
+	})
 	
 // FOOTER
 

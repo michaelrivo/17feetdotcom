@@ -16,7 +16,7 @@
 	<div id="footer">
 		<div class="container">
 			
-			<div class="span-3 twitter">
+			<div class="span3 twitter">
 				<div class="pad">
 					<h5><span class="currently">Currently</span> <br/>Tweeting</h5>
 					<div class="content">
@@ -26,7 +26,7 @@
 				</div>
 			</div>
 			
-			<div class="span-3 blog">
+			<div class="span3 blog">
 				<div class="pad">
 					<h5><span class="currently">Currently</span> <br/>Thinking</h5>
 					<div class="content">
@@ -36,7 +36,7 @@
 				</div>
 			</div>
 			
-			<div class="span-3 music">
+			<div class="span3 music">
 				<div class="pad">
 					<h5><span class="currently">Currently</span> <br/>Rocking</h5>
 					<div id="lastfm" class="content">
@@ -54,7 +54,7 @@
 				</div>
 			</div>
 			
-			<div class="span-3 weather last">
+			<div class="span3 weather last">
 				<div class="pad">
 					<h5><span class="currently">Currently</span> <br/><span id="weather-condition">Foggy</span></h5>
 					<div class="content">
@@ -69,11 +69,11 @@
 	</div>
 	<div id="sub-footer">
 		<div class="container">
-			<div class="span-3">
+			<div class="span3">
 				<a class="made-in-sf hide-txt" href="http://maps.google.com/maps?q=17feet+256+Sutter+St+%235+San+Francisco,+CA+94108&um=1&ie=UTF-8&sa=N&hl=en&tab=wl">Made in San Francisco</a>
 			</div>
 			
-			<form class="span-9 last" action="#" id="portfolio_form">
+			<form class="span9 last" action="#" id="portfolio_form">
 				<label for="portfolioLink"><strong>Want to join the team?</strong> Send us your online portfolio:</label>
 				
 				<input class="folio-url" type="text" value="http://" name="portfolioLink" title="http://" />

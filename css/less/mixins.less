@@ -256,6 +256,19 @@
           box-shadow: @props;
 }
 
+.cbox-shadow( @string){
+	box-shadow: @string;
+      -webkit-box-shadow: @string;
+      -moz-box-shadow: @string;
+}
+
+.inset-shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @spread:3px, @shadow_color:#888) {
+      box-shadow: inset @shadow_x @shadow_y @shadow_rad @spread @shadow_color;
+      -webkit-box-shadow: inset @shadow_x @shadow_y @shadow_rad @spread @shadow_color;
+      -moz-box-shadow:inset @shadow_x @shadow_y @shadow_rad @spread @shadow_color;
+}
+
+
 // Transitions
 .transition(@transition) {
   -webkit-transition: @transition;
@@ -271,6 +284,15 @@
 }
 
 // Transformations
+
+.transform(@string){
+	transform: @string;
+	-ms-transform: @string; /* IE 9 */
+	-webkit-transform: @string; /* Safari and Chrome */
+	-o-transform: @string; /* Opera */
+	-moz-transform: @string; /* Firefox */
+}
+
 .rotate(@degrees) {
   -webkit-transform: rotate(@degrees);
      -moz-transform: rotate(@degrees);
@@ -305,6 +327,17 @@
        -o-transform: translate3d(@x, @y, @z);
           transform: translate3d(@x, @y, @z);
 }
+
+.transform-origin( @string ){
+	transform-origin:  @string ;
+	-ms-transform-origin:  @string ; /* IE 9 */
+	-webkit-transform-origin:  @string ; /* Safari and Chrome */
+	-o-transform-origin:  @string ; /* Opera */
+	-moz-transform-origin:  @string ; /* Firefox */
+}
+
+
+
 
 // Backface visibility
 // Prevent browsers from flickering when using CSS 3D transforms.

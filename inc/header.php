@@ -38,7 +38,9 @@ if( $_SERVER['SCRIPT_NAME'] == '/index.php'){
 	<!-- Framework CSS --> 
 	<link rel="stylesheet" href="<?php echo $ROOT ?>/css/screen.css" type="text/css" media="screen, projection, print"> 
 	<!--[if lt IE 9]><link rel="stylesheet" href="<?php echo $ROOT ?>/css/ie.css" type="text/css" media="screen, projection, print"><![endif]-->
-	<link rel="stylesheet" href="<?php echo $ROOT ?>/css/style.css" type="text/css" media="screen, projection, print"> 
+	<link rel="stylesheet" href="<?php echo $ROOT ?>/css/style.css" type="text/css" media="screen, projection, print">
+	<link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 960px)' href='<?php echo $ROOT ?>/css/less/responsive.css' />
+	
 	<link rel="shortcut icon" href="<?php echo $ROOT ?>/imgs/favicon.ico" />
 
 	<!-- Scripts -->
@@ -73,14 +75,22 @@ if( $_SERVER['SCRIPT_NAME'] == '/index.php'){
 				</button>
 			</div>
 			
-			<h1 id="logo" class="span-2"><a href="<?php echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
-			<ul class="span-8" id="nav">
-				<li class="our-work"><a href="<?php echo $ROOT; ?>/our-work">Our Work</a></li>
-				<li class="about-us"><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>
-				<li class="join"><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
-				<li class="blog"><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
-				<li class="contact-us"><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
-			</ul>
-			<div class="span-2 last twitter hide-tablet"><a href="http://twitter.com/17feet" target="_blank">We're on Twitter</a></div>
+			<div class="back-btn">
+				<button class="mobile-btn">Back</button>
+			</div>
+			
+			<div class="row-fluid">
+			
+				<h1 id="logo" class="span2"><a href="<?php echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
+				<ul class="span7" id="nav">
+					<li class="contact-us"><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
+					<li class="blog hide-tablet"><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
+					<li class="join hide-tablet"><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
+					<li class="about-us"><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>
+					<li class="our-work"><a href="<?php echo $ROOT; ?>/our-work">Our Work</a></li>
+				</ul>
+				<div class="span3 last twitter hide-tablet hide-mobile"><a href="http://twitter.com/17feet" target="_blank">We're on Twitter</a></div>
+			
+			</div>
 		</div>
 	</div>

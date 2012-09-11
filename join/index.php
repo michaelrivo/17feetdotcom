@@ -7,7 +7,7 @@
 	</div>
 	<hr class="up" />
 
-	<div class="span-4 openings">
+	<div class="span4 openings">
 		
 		<h4>Open Positions</h4>
 		<div id="picker-wrapper">
@@ -22,7 +22,7 @@
 		
 	</div>
 	
-	<div class="span-8 last job-wrapper">
+	<div class="span8 last job-wrapper">
 		
 		<div class="jobs"> 
 			<!-- Senior Interactive Developer --> 

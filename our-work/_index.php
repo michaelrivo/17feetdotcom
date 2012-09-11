@@ -2,7 +2,7 @@
 
 <div class="container projects">
 	
-	<div class="span-10 append-2 last">
+	<div class="span10 append-2 last">
 		
 		<h2>Our Work</h2>
 		
@@ -21,7 +21,7 @@
 		$rowEnd = ( ($i+1) % 3 == 0? true : false  );
 	 	?>
 		
-		<div class="project span-4 <?php echo ($rowEnd ? 'last': '') ?>">
+		<div class="project span4 <?php echo ($rowEnd ? 'last': '') ?>">
 			<div><a href="<?php echo $projectArr[$i][0] ?>" class="<?php echo $projectArr[$i][0] ?>"></a></div>
 			<h5><?php echo $projectArr[$i][1] ?></h5>
 			<p><?php echo $projectArr[$i][2] ?></p>

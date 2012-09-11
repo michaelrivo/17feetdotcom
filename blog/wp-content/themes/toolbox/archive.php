@@ -16,7 +16,7 @@ get_header(); ?>
 
 		<div class="container">
 			
-			<div id="blog-content" role="main" class="span-8 append-1">
+			<div id="blog-content" role="main" class="span8 append-1">
 
 			<?php if ( have_posts() ) : ?>
 

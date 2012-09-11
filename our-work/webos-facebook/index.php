@@ -5,8 +5,6 @@ require('../../inc/header.php'); ?>
 
 <style type="text/css">
 	#hero-graphic{
-		position:relative;
-		left:-28px;
 		margin: 0 auto;
 	}
 	.hero{
@@ -19,16 +17,18 @@ require('../../inc/header.php'); ?>
 
 <div class="hero dark">
 	<div class="container project header">
-		<div class="span-9">
-			<h2>WebOS Facebook</h2>
-			<h3>Working with HP, we designed a tablet experience that maximizes <br/>the best of what Facebook and WebOS have to offer.</h3>
-		</div>
+		<div class="row">
+			<div class="span9">
+				<h2>WebOS Facebook</h2>
+				<h3>Working with HP, we designed a tablet experience that maximizes <br/>the best of what Facebook and WebOS have to offer.</h3>
+			</div>
 	
-		<div class="span-3 last what-it-is">
-			<p>What it is</p>
-			<abbr class="tablet on" title="Touch devices"></abbr>
-			<abbr class="mobile" title="Mobile devices"></abbr>
-			<abbr class="web" title="Web"></abbr>
+			<div class="span3 last what-it-is tablet-hide mobile-hide">
+				<p>What it is</p>
+				<abbr class="tablet on" title="Touch devices"></abbr>
+				<abbr class="mobile" title="Mobile devices"></abbr>
+				<abbr class="web" title="Web"></abbr>
+			</div>
 		</div>
 		
 		<img src="../../imgs/projects/facebook-1.png" id="hero-graphic" />
@@ -40,34 +40,36 @@ require('../../inc/header.php'); ?>
 	
 	<div class="shim-40" style="height:220px;"></div>
 	
-	<div class="span-12 last relative">
-		<img src="../../imgs/projects/facebook-2.png" class="hide-mobile absolute posLeft" style="top:" />
-		<blockquote class="span-7 prepend-2 mobile-width">&hellip;this is the most <strong>highly interactive</strong> version of Facebook we've ever seen&hellip; It's <strong>mighty good looking</strong>.</blockquote>
-		<div class="span-3 last">
-			<p class="cite span-3 last" style="height:150px"><span>&mdash;PC Magazine</span> <br/><a class="external nowrap" href="http://www.pcmag.com/article2/0,2817,2387970,00.asp" target="_blank">View Article</a></p>
+	<div class="row-fluid relative">
+		<div class="span2">
+			<img src="../../imgs/projects/facebook-2.png" class="hide-mobile" style="margin:20px" />
+		</div>
+		<blockquote class="span7 mobile-width">&hellip;this is the most <strong>highly interactive</strong> version of Facebook we've ever seen&hellip; It's <strong>mighty good looking</strong>.</blockquote>
+		<div class="span3">
+			<p class="cite last" style="height:150px"><span>&mdash;PC Magazine</span> <br/><a class="external nowrap" href="http://www.pcmag.com/article2/0,2817,2387970,00.asp" target="_blank">View Article</a></p>
 		</div>
 	</div>
 	
 	<div class="shim-80"></div>
 	
-	
-	<div class="span-6 prepend-6 last more-pad relative">
-		<h4>A Multi-App, Application</h4>
+	<div class="row-fluid relative">
+		
+		<div class="span6">
+			<img class="absolute posLeft posTop" src="../../imgs/projects/facebook-3.png">
+		</div>
+		
+		<div class="span6 offset6 relative">
+			<h4>A Multi-App, Application</h4>
 
-		<p style="padding-right:15px;">From News Feed to Places, Events to Photos, Facebook is a suite of tightly integrated applications that half a billion people already know how to use. Working closely with HP's development team we quickly iterated and prototyped a variety of user interaction models to find a user experience that works beautifully across the breadth of Facebook.</p>
+			<p style="padding-right:15px;">From News Feed to Places, Events to Photos, Facebook is a suite of tightly integrated applications that half a billion people already know how to use. Working closely with HP's development team we quickly iterated and prototyped a variety of user interaction models to find a user experience that works beautifully across the breadth of Facebook.</p>			
 		
-		
-		<img class="absolute posLeft posTop" src="../../imgs/projects/facebook-3.png">
+		</div>
 		
 	</div>
+		
+	<div class="shim-120"></div>
 	
-	
-	
-	<!-- row -->
-	
-	<div class="shim-40" style="height:60px;"></div>
-	
-	<div class="span-12 last relative">
+	<div class="relative">
 		<img src="../../imgs/projects/facebook-4.png" class="hide-mobile"/>
 		<div class="last absolute posTop posLeft mobile-width" style="width:300px;" >
 			<div class="shim-80"></div>
@@ -78,15 +80,15 @@ require('../../inc/header.php'); ?>
 		</div>
 	</div>
 	
-	<!-- row -->
 	
 	<div class="shim-40"></div>
 	
-	<div class="span-8 append-4 last no-pad" >
-		<h4>Visualizing the Status Update</h4>
+	<div class="row-fluid">
+		<div class="span8 append-4 last no-pad" >
+			<h4>Visualizing the Status Update</h4>
 
-		<p>Another innovation was to re-think the experience when the TouchPad was docked. We developed a visually rich exhibition mode that displays status updates in real-time that looks great on your desk or all the way across the room.</p>
-
+			<p>Another innovation was to re-think the experience when the TouchPad was docked. We developed a visually rich exhibition mode that displays status updates in real-time that looks great on your desk or all the way across the room.</p>
+		</div>
 	</div>
 	
 	<div class="shim-40"></div>
@@ -95,32 +97,36 @@ require('../../inc/header.php'); ?>
 	
 	<div class="shim-40"></div>
 	
-	<div class="span-6 graphic no-marg"><img src="../../imgs/projects/facebook-6.jpg" /></div>
-	<div class="span-6 graphic last no-marg"><img src="../../imgs/projects/facebook-7.jpg"/></div>
-	<div class="span-12 no-pad last"><em>Alternative Exhibition Mode designs</em></div>
-		
-	<div class="shim-120"></div>
-
-	<div class="span-4 no-pad">
-		<h4>Take It All Apart and Put It Back Together</h4>
-
-		<p>HP's goal in creating the first Facebook tablet application wasn't to simply recreate Facebook in a new form factor. They wanted to create a showcase for the hardware and the software with an application people will use everyday. Armed with that knowledge, we focused on identifying distinct user experiences within Facebook that would be enhanced using the conventions of WebOS.</p>
-		
-		<p>It was our distinct pleasure to develop the user experience with the help of our friends at <a href="http://uearchitects.com/" target="_blank" class="external">UE Architects</a>.</p>
-		
+	<div class="row-fluid">
+		<div class="span6 graphic no-marg"><img src="../../imgs/projects/facebook-6.jpg" /></div>
+		<div class="span6 graphic last no-marg"><img src="../../imgs/projects/facebook-7.jpg"/></div>
 	</div>
 	
-	<div class="span-8 last">
-		<img src="../../imgs/projects/facebook-8.jpg" class="right" />
+	<div class="no-pad"><em>Alternative Exhibition Mode designs</em></div>
 		
-		<div class="shim-40" style="height:10px"></div>
+	<div class="shim-120"></div>
+	
+	
+	<div class="row-fluid">
+		<div class="span4 no-pad">
+			<h4>Take It All Apart and Put It Back Together</h4>
+
+			<p>HP's goal in creating the first Facebook tablet application wasn't to simply recreate Facebook in a new form factor. They wanted to create a showcase for the hardware and the software with an application people will use everyday. Armed with that knowledge, we focused on identifying distinct user experiences within Facebook that would be enhanced using the conventions of WebOS.</p>
 		
-		<img class="graphic hide-mobile right" src="../../imgs/projects/facebook-10.png" />
+			<p>It was our distinct pleasure to develop the user experience with the help of our friends at <a href="http://uearchitects.com/" target="_blank" class="external">UE Architects</a>.</p>
 		
+		</div>
+	
+		<div class="span8 last">
+			<img src="../../imgs/projects/facebook-8.jpg" class="right" />
+		
+			<div class="shim-40" style="height:10px"></div>
+		
+			<img class="graphic hide-mobile right" src="../../imgs/projects/facebook-10.png" />
+		
+		</div>
 	</div>
-	<!--
-	<script type="text/javascript" src="http://player.ooyala.com/player.js?embedCode=gxZXdtNTo-lSFrM2w3jiu2-8xeVdrUv4&amp;height=545&amp;playerId=ooyala_player&amp;width=970&amp;autoplay=1&amp;wmode=transparent&amp;callback=receiveOoyalaEvent"></script>
-	-->
+
 	<div class="clear"></div>
 	
 	

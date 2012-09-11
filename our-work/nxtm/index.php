@@ -2,12 +2,12 @@
 
 <div class="container project header">
 	
-	<div class="span-9 ">
+	<div class="span9 ">
 		<h2>NXTM</h2>
 		<h3>NXTM's WhoozNXT is a web application designed to help bands get more fans. We developed the user experience and visual presentation as well as the strategy for engaging new users.</h3>
 	</div>
 	
-	<div class="span-3 last what-it-is">
+	<div class="span3 last what-it-is">
 		<p>What it is</p>
 		<abbr class="tablet" title="Touch devices"></abbr>
 		<abbr class="mobile" title="Mobile devices"></abbr>
@@ -17,13 +17,13 @@
 
 <div class="container copy project">
 	
-	<div class="span-12" style="background:transparent url(../../imgs/projects/nxtm-1.png) no-repeat 0 center; height:524px;"></div>
+	<div class="span12" style="background:transparent url(../../imgs/projects/nxtm-1.png) no-repeat 0 center; height:524px;"></div>
 	
 	<div class="shim-40"></div>
 	
 	<!-- row -->
 	
-	<div class="span-5 append-7 last no-pad" style="height:520px;background:transparent url(../../imgs/projects/nxtm-2.png) no-repeat right bottom;">
+	<div class="span5 append-7 last no-pad" style="height:520px;background:transparent url(../../imgs/projects/nxtm-2.png) no-repeat right bottom;">
 		<div style="position:relative;top:65px;left:65px;">
 			<h4>Quick Iteration</h4>
 
@@ -34,7 +34,7 @@
 	<!-- row -->
 	<div class="shim-160"></div>
 	
-	<div class="span-5 prepend-7 last no-pad" style="background: transparent url(../../imgs/projects/nxtm-3.png) no-repeat 30px 0; height:364px; ">
+	<div class="span5 prepend-7 last no-pad" style="background: transparent url(../../imgs/projects/nxtm-3.png) no-repeat 30px 0; height:364px; ">
 		<h4>Interactive Prototypes</h4>
 
 		<p>Once the system was established, we created clickable prototypes preserving the flexibility of&nbsp;sketching while moving into an actionable wireframe&nbsp;system for testing and for development&nbsp;documentation.</p>
@@ -45,7 +45,7 @@
 	
 	<!-- row -->
 	
-	<div class="prepend-1 span-9 append-2 last">
+	<div class="prepend-1 span9 append-2 last">
 		
 		<h4>Rock Star Visuals</h4>
 		
@@ -53,13 +53,13 @@
 		
 	</div>
 	
-	<div class="span-12 last" style="background: transparent url(../../imgs/projects/nxtm-4.png) no-repeat 31% 0;  height:1021px;position:relative; top:-40px;"></div>
+	<div class="span12 last" style="background: transparent url(../../imgs/projects/nxtm-4.png) no-repeat 31% 0;  height:1021px;position:relative; top:-40px;"></div>
 	
 	<!-- row -->
 	
 	<div class="shim-40"></div>
 	
-	<div class="append-3 span-9 last">
+	<div class="append-3 span9 last">
 		<div style="padding-left:70px;">
 		<h4>Data &mdash; Hot Rockin&rsquo; Data</h4>
 		
@@ -74,7 +74,7 @@
 	
 	<div class="shim-80"></div>
 	
-	<div class="span-6 prepend-6 last no-pad" style="background:transparent url(../../imgs/projects/nxtm-6.png) no-repeat 60px 0;height:280px;">
+	<div class="span6 prepend-6 last no-pad" style="background:transparent url(../../imgs/projects/nxtm-6.png) no-repeat 60px 0;height:280px;">
 		
 		<h4>Documenting the Design</h4>
 		
@@ -82,7 +82,7 @@
 		
 	</div>
 	
-	<div class="span-12 last" style="background:transparent url(../../imgs/projects/nxtm-7.png) no-repeat 57px 0;height:573px;"></div>
+	<div class="span12 last" style="background:transparent url(../../imgs/projects/nxtm-7.png) no-repeat 57px 0;height:573px;"></div>
 	
 	<div class="shim-80"></div>
 	

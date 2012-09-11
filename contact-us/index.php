@@ -7,7 +7,7 @@
 	</div>
 	<hr class="up" />
 			
-	<div class="span-6" style="position:relative;height:400px;">
+	<div class="span6" style="position:relative;height:400px;">
 		
 		<form action="#" id="contact_form" method="POST">
 			<div>
@@ -21,7 +21,7 @@
 		</form>		
 	</div>
 	
-	<div class="span-6 last" >
+	<div class="span6 last" >
 		<p class="address">
 			<strong><img src="../imgs/17feet-logo-black.png" width="76" height="13" alt="17feet Logo Black"></strong><br/>
 			256 Sutter Street, 5th Floor<br/>

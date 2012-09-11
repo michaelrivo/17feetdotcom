@@ -2,12 +2,12 @@
 
 <div class="container project header">
 	
-	<div class="span-9">
+	<div class="span9">
 		<h2>Greatest Hits</h2>
 		<h3>Over the years we've been able to do some really fun work, from a website <br/>that talks back to you, to &ldquo;the worlds stupidest website.&rdquo; All in a days work.</h3>
 	</div>
 	
-	<div class="span-3 last what-it-is header">
+	<div class="span3 last what-it-is header">
 		<p>What it is</p>
 		<abbr class="tablet" title="Touch devices"></abbr>
 		<abbr class="mobile " title="Mobile devices"></abbr>
@@ -18,7 +18,7 @@
 
 <div class="container copy project">
 	
-	<div class="span-7 append-5 last no-pad" style="height:671px;position:relative;">
+	<div class="span7 append-5 last no-pad" style="height:671px;position:relative;">
 		
 		<div style="background:transparent url(../../imgs/projects/mikes-lemonade.png) no-repeat scroll 0 0; width:995px; height:671px;position:absolute; right:-40px; top: -15px;z-index:-1"></div>
 		
@@ -37,7 +37,7 @@
 	
 	<!-- row -->
 	
-	<div class="span-6 prepend-6 last more-pad" style="height:552px;position:relative;">
+	<div class="span6 prepend-6 last more-pad" style="height:552px;position:relative;">
 		
 		<div style="background:transparent url(../../imgs/projects/eagle-eye.png) no-repeat scroll 0 0;height:552px; width:847px;position:absolute;left:-20px;top:0;z-index:-1;"></div>
 		
@@ -56,7 +56,7 @@
 	
 	<div class="shim-40"></div>
 	
-	<div class="span-6 append-6 more-pad" style="height:360px; background: transparent url(../../imgs/projects/spanish-quarter.png) no-repeat top right;">
+	<div class="span6 append-6 more-pad" style="height:360px; background: transparent url(../../imgs/projects/spanish-quarter.png) no-repeat top right;">
 		<h4 style="margin-top:5px">The Spanish Quarter</h4>
 
 		<p>Working with branding and design agency Voicebox Creative, we created an immersive experience for the launch of the Spanish Quarter Wine from Spanish wine giant Cordineu. Voicebox created a whimsical label that captured the warmth and friendliness of Spain with a richly illustrated storybook square incorporating unique Spanish icons such as the Columbus Statue as focal points. <a href="http://thespanishquarter.com/" target="_blank" class="external">Launch Site</a></p>
@@ -72,7 +72,7 @@
 	
 	<div class="shim-120"></div>
 	
-	<div class="span-5 prepend-7 last no-pad" style="background:transparent url(../../imgs/projects/yahoo.png) no-repeat top left; height:460px;">
+	<div class="span5 prepend-7 last no-pad" style="background:transparent url(../../imgs/projects/yahoo.png) no-repeat top left; height:460px;">
 		<h4>Yahoo!</h4>
 
 		<p>Video mash-ups may be very 2006 &mdash; but hey, it was 2006! When Olgivy Interactive and Ogilvy New York teamed up for an interactive microsite to accompany their &ldquo;Be a Better&rdquo; campaign they came to 17FEET.</p>

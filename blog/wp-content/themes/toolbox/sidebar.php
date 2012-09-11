@@ -7,7 +7,7 @@
  * @since Toolbox 0.1
  */
 ?>
-		<div id="secondary" class="widget-area span-3 last" role="complementary">
+		<div id="secondary" class="widget-area span3 last" role="complementary">
 			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 				<!-- <aside id="archives" class="widget">

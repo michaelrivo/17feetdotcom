@@ -6,10 +6,14 @@
 		
 		<div class="container">
 			
-			<div class="span-3 twitter">
+			<div class="row">
+			
+				<div class="span3 twitter">
 				
-				<div class="pad"><span class="bird"></span></div>
+					<div class="pad"><span class="bird"></span></div>
 					
+				</div>
+
 			</div>
 			
 		</div>
@@ -21,81 +25,85 @@
 		
 		<div class="container">
 			
-			<div class="span-3 twitter">
-				
-				<div class="pad">
-					
-					<h5><span class="currently">Currently</span> <br/>Tweeting<span class="bird"></span></h5>
-					
-					<div class="content">
-						
-						<div class="tweet-wrap"><div id="tweet-txt"></div><div class="carat"></div></div>
-						
-						<p class="via"><a href="http://twitter.com/17feet">@17feet</a>&nbsp;<span id="tweet-time"></span></p>
-						
-					</div>
-					
-				</div>
-				
-			</div>
+			<div class="row-fluid">
 			
-			<div class="span-3 blog">
+				<div class="span3 twitter">
 				
-				<div class="pad">
+					<div class="pad">
 					
-					<h5><span class="currently">Currently</span> <br/>Thinking</h5>
+						<h5><span class="currently">Currently</span> <br/>Tweeting<span class="bird"></span></h5>
 					
-					<div class="content">
+						<div class="content">
 						
-						<div class="post"></div>
+							<div class="tweet-wrap"><div id="tweet-txt"></div><div class="carat"></div></div>
 						
-						<p id="read-on" class="api-link"><a href="http://twitter.com/#!/17feet">Read On &raquo;</a></p>
+							<p class="via"><a href="http://twitter.com/17feet">@17feet</a>&nbsp;<span id="tweet-time"></span></p>
 						
+						</div>
+					
+					</div>
+				
+				</div>
+			
+				<div class="span3 blog">
+				
+					<div class="pad">
+					
+						<h5><span class="currently">Currently</span> <br/>Thinking</h5>
+					
+						<div class="content">
+						
+							<div class="post"></div>
+						
+							<p id="read-on" class="api-link"><a href="http://twitter.com/#!/17feet">Read On &raquo;</a></p>
+						
+						</div>
+					</div>
+				
+				</div>
+			
+				<div class="span3 music">
+				
+					<div class="pad">
+					
+						<h5><span class="currently">Currently</span> <br/>Rocking</h5>
+					
+						<div id="lastfm" class="content">
+						
+							<div class="frame"><img src="" width="79" height="79" alt="" /></div>
+						
+							<div class="artist"></div>
+							<div class="song"></div>
+							<div class="album"></div>
+						
+							<div class="clear"></div>
+							<p class="via api-link"><a href="http://www.last.fm/user/seventeenfeet" target="_blank">Last.fm</a></p>
+						
+						</div>						
 					</div>
 				</div>
-				
-			</div>
 			
-			<div class="span-3 music">
+				<div class="span3 weather last">
 				
-				<div class="pad">
+					<div class="pad">
 					
-					<h5><span class="currently">Currently</span> <br/>Rocking</h5>
+						<h5><span class="currently">Currently</span> <br/><span id="weather-condition">Foggy</span></h5>
 					
-					<div id="lastfm" class="content">
+						<div class="content">
 						
-						<div class="frame"><img src="" width="79" height="79" alt="" /></div>
+							<div id="temp"></div>
 						
-						<div class="artist"></div>
-						<div class="song"></div>
-						<div class="album"></div>
+							<div id="hi-low"></div>
 						
-						<div class="clear"></div>
-						<p class="via api-link"><a href="http://www.last.fm/user/seventeenfeet" target="_blank">Last.fm</a></p>
+							<p class="via api-link"><a href="http://weather.yahoo.com/united-states/california/san-francisco-12797159/" target="_blank">Yahoo Weather</a> for San Francisco</p>
 						
-					</div>						
-				</div>
-			</div>
-			
-			<div class="span-3 weather last">
-				
-				<div class="pad">
+						</div>
 					
-					<h5><span class="currently">Currently</span> <br/><span id="weather-condition">Foggy</span></h5>
-					
-					<div class="content">
-						
-						<div id="temp"></div>
-						
-						<div id="hi-low"></div>
-						
-						<p class="via api-link"><a href="http://weather.yahoo.com/united-states/california/san-francisco-12797159/" target="_blank">Yahoo Weather</a> for San Francisco</p>
-						
 					</div>
-					
-				</div>
 				
-			</div>
+				</div>
+			
+			</div> <!-- row -->
 			
 		</div>
 		
@@ -105,21 +113,25 @@
 		
 		<div class="container">
 			
-			<div class="span-3">
+			<div class="row">
+			
+				<div class="span3">
 				
-				<a class="made-in-sf hide-txt" href="http://maps.google.com/maps?q=17feet+256+Sutter+St+%235+San+Francisco,+CA+94108&um=1&ie=UTF-8&sa=N&hl=en&tab=wl" target="_blank">Made in San Francisco</a>
+					<a class="made-in-sf hide-txt" href="http://maps.google.com/maps?q=17feet+256+Sutter+St+%235+San+Francisco,+CA+94108&um=1&ie=UTF-8&sa=N&hl=en&tab=wl" target="_blank">Made in San Francisco</a>
+				
+				</div>
+			
+				<form class="span9" action="#" id="portfolio_form">
+				
+					<label for="portfolioLink"><strong>Want to join the team?</strong> Send us your online portfolio:</label>
+				
+					<input class="folio-url" type="text" value="http://" name="portfolioLink" title="http://" />
+				
+					<input type="submit" name="Submit" id="submit" value="Send">
+				
+				</form>
 				
 			</div>
-			
-			<form class="span-9 last" action="#" id="portfolio_form">
-				
-				<label for="portfolioLink"><strong>Want to join the team?</strong> Send us your online portfolio:</label>
-				
-				<input class="folio-url" type="text" value="http://" name="portfolioLink" title="http://" />
-				
-				<input type="submit" name="Submit" id="submit" value="Send">
-				
-			</form>
 			
 		</div>
 		

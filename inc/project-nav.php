@@ -33,7 +33,7 @@ while( true && $ct < 20){
 
 	<hr class="up nav-divider" />	
 	
-	<!-- <div class="span-12 last">
+	<!-- <div class="span12 last">
 	 -->
 	
 	<div class="project-controls hide-mobile">		

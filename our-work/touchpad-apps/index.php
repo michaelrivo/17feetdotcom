@@ -31,12 +31,12 @@
 <div class="hero dark">
 	<div class="container project header">
 	
-		<div class="span-9">
+		<div class="span9">
 			<h2>WebOS Native Apps</h2>
-			<h3 class="span-8 append-1">We worked with HP to quickly create the visual experience for the music player, photo app and app store interfaces for the Touchpad.</h3>
+			<h3 class="span8 append-1">We worked with HP to quickly create the visual experience for the music player, photo app and app store interfaces for the Touchpad.</h3>
 		</div>
 	
-		<div class="span-3 last what-it-is">
+		<div class="span3 last what-it-is">
 			<p>What it is</p>
 			<abbr class="tablet on" title="Touch devices"></abbr>
 			<abbr class="mobile " title="Mobile devices"></abbr>
@@ -49,18 +49,18 @@
 <div class="container copy project" >
 	<div class="shim-120"></div>
 	
-	<div class="span-10 append-2 last no-pad">
+	<div class="span10 append-2 last no-pad">
 		<h4>Iterative and Collaborative</h4>
 
 		<p>Given the quick nature of the project, 17FEET deployed a team to work in Sunnyvale, directly integrating with the Human Interactions team to iterate fast and get great results. With a small focused team we were able to get the designs into development in a matter of weeks helping the HI team get a big win.</p>
 		
 	</div>
 	
-	<div class="span-12 last graphic" style="background: transparent url(../../imgs/projects/hp-apps-2.png) no-repeat center center; height:460px;"></div>
+	<div class="span12 last graphic" style="background: transparent url(../../imgs/projects/hp-apps-2.png) no-repeat center center; height:460px;"></div>
 	
 	<!-- row -->
 	
-	<div class="span-5 prepend-7 push-down" style="background: transparent url(../../imgs/projects/hp-apps-3.png) no-repeat left top; height:790px;">
+	<div class="span5 prepend-7 push-down" style="background: transparent url(../../imgs/projects/hp-apps-3.png) no-repeat left top; height:790px;">
 		<div style="padding-left:60px;">
 			<div style="background:transparent url(../../imgs/projects/hp-apps-4.gif) no-repeat left center; height:160px;"></div>
 		
