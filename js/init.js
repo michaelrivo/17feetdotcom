@@ -1,8 +1,9 @@
 if (!window.console) console = {log: function() {}};
 
+
 $(function() {
 	// IF slider initialize it
-	
+	//alert($('html').width());
 	var rootFolder = 'http://www.17feet.com/';
 	var prevHash;
 	//console.log('prevhash '+ prevHash);
@@ -11,7 +12,7 @@ $(function() {
 		rootFolder = 'http://192.168.1.246/17feet/';
 	}
 	
-	if($('#slider .item').length > 1 && $(window).width() > 940){
+	if($('#slider .item').length > 1 && $(window).width() >= 768){
 			
 		//$('#slider').append('<pre id="debug" style="position:absolute; top:20px; color:#FFF;z-index:1000;background-color: rgba(0,0,0,.5);padding:10px"></pre>');
 		//$('body').append($('<p id="console">test</p>'));

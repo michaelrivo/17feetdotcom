@@ -1,0 +1,201 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (max-width: 959px) {
+  .container {
+    max-width: 728px;
+    margin: 0 auto;
+  }
+  .hero {
+    height: 480px;
+  }
+  .hero h2 {
+    font-size: 4.5em;
+  }
+  .hero h2.long-ttl {
+    font-size: 4em;
+  }
+  #header .twitter {
+    display: none;
+  }
+  br {
+    display: none;
+  }
+  br.hold {
+    display: inherit;
+  }
+  #footer br {
+    display: inherit;
+  }
+  #footer .span3 {
+    width: 50%;
+    margin: 0;
+    padding: 0 0 40px 0;
+  }
+  #footer .span3 .pad {
+    padding: 0;
+  }
+  #footer .blog .pad,
+  #footer .weather .pad {
+    margin-left: 6.382978723404255%;
+  }
+  #footer .blog:after {
+    height: 1px;
+    width: 200%;
+    clear: both;
+    border-bottom: 1px solid #4D4D4D;
+    right: 0;
+    bottom: 10px;
+    top: inherit;
+  }
+  .container.project .what-it-is p {
+    display: block;
+    margin: 45px 0 0 0;
+  }
+  img {
+    max-width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px !important;
+  }
+  .next-project,
+  .prev-project {
+    margin-top: 0;
+    width: 120px !important;
+  }
+  .next-project a,
+  .prev-project a {
+    width: 100% !important;
+    margin: 0 !important;
+    font-size: 150%;
+  }
+  .next-project {
+    float: right;
+  }
+  .view-all-work {
+    width: 100%;
+    margin: 0;
+  }
+  .bg-cover {
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+  }
+  .bg-contain {
+    -webkit-background-size: contain !important;
+    -moz-background-size: contain !important;
+    -o-background-size: contain !important;
+    background-size: contain !important;
+  }
+  #hero-graphic {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  hr.up,
+  hr.down {
+    -webkit-background-size: contain !important;
+    -moz-background-size: contain !important;
+    -o-background-size: contain !important;
+    background-size: contain !important;
+  }
+  .projects {
+    padding-bottom: 50px;
+  }
+  .projects .span4 {
+    height: 350px;
+    width: 44%;
+    margin-right: 6%;
+  }
+  .projects .span4:nth-child(even) {
+    margin-right: 0;
+  }
+  /* Home */
+  .second-tier {
+    padding-bottom: 60px;
+  }
+  .second-tier h2 {
+    margin-top: 0;
+    font-size: 3em;
+  }
+  .second-tier .span4 {
+    margin-bottom: 10px;
+  }
+  .second-tier .span4 h3 {
+    font-size: 1.7em;
+  }
+  .second-tier .span4 p {
+    font-size: 0.85em;
+  }
+  .second-tier .span4 div {
+    padding: 10px 20px 10px 20px;
+  }
+  /* About Us */
+  .about-us .header h3 {
+    font-size: 1.3em;
+  }
+  .about-us .service .pad {
+    padding: 10px 15px 25px 25px;
+  }
+  .about-us .service h3 {
+    font-size: 1.8em;
+  }
+  .about-us .clients {
+    /*width:620px;*/
+    -webkit-background-size: 95%;
+    -moz-background-size: 95%;
+    -o-background-size: 95%;
+    background-size: 95%;
+    width: auto;
+    /*height:175px;*/
+  }
+  .about-us .partners p {
+    margin-left: 110px;
+    margin-bottom: 30px;
+  }
+  .about-us .end p {
+    font-size: 1em;
+  }
+}
+@media (min-width: 481px) and (max-width: 959px) {
+  .row {
+    width: 100%;
+  }
+  #nav {
+    display: block !important;
+  }
+  #logo {
+    width: 110px;
+  }
+  #nav {
+    float: right;
+    overflow: hidden;
+    width: auto;
+    margin: 0;
+  }
+}

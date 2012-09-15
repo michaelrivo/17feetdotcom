@@ -1,0 +1,51 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (max-width: 320px) {
+  #logo {
+    float: right;
+    margin: 0;
+  }
+  .project h2,
+  .projects h2 {
+    font-size: 2.2em;
+  }
+  /* About Us */
+  .about-us .heart {
+    height: 1.1em;
+  }
+  .about-us .header h3 {
+    font-size: 1.1em;
+  }
+  .about-us .clients {
+    height: 155px;
+  }
+  .about-us .service .pad h3 {
+    font-size: 1.5em;
+    /*font-weight:500;*/
+  }
+}

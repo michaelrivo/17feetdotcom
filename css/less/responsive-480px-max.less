@@ -1,0 +1,408 @@
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@import 'mixins.less';
+@import 'variables.less';
+
+.icon-bar{
+	height:2px;
+	width:18px;
+	margin:3px 0;
+	display:block;
+	background-color:#FFF;
+}
+
+.mobile-btn{
+	border:1px solid #000;
+	#gradient .vertical(#111, #000);
+	@shadow: inset 0 1px 1px #555 , 0 0 0 1px rgba(255,255,255,0.15), 0 2px 6px  rgba(255,255,255,0.15);
+	.cbox-shadow(@shadow );
+	border:1px solid #000;
+	.border-radius(3px);
+	padding:7px 8px;
+	position:absolute;
+	top:11px;
+	left:5%;
+	
+ 	&:link{ color:#FFF; }
+	&:hover{ color:#69AABA; }
+	&:visited{ color:#FFF; }
+	&:active{ color:#69AABA; }
+}
+
+.responsive-transition{
+	@transition: height .15s ease-in-out, padding .15s ease-in-out, margin .15s ease-in-out;
+	.transition( @transition );
+}
+
+@media (max-width: 600px) { 
+	
+	/* Deactivate Slider */
+	
+	#slider .item { display: none; }
+	#slider .init-slide{ display:block; }
+	.container{ width:90%; margin:0 5%; }
+	
+	/* Project Pages */
+	
+	.hero{ 
+		height: 360px; 
+		h2{ font-size: 3.75em; }
+		h2.long-ttl{ font-size: 3.25em;}
+		h3{ font-size: 1.2em; }
+	}
+	
+	.project-control{ display:none; }
+	#header .span7{ width:auto; }
+	.projects .span4{
+		a{	}
+	}
+	
+	.shim-40, .shim-80, .shim-120, .shim-160{ height:20px !important; }
+	.shim-40, .shim-80, .shim-120, .shim-160{ 
+		&.hold{ height:40px !important; }
+	}
+	
+	hr.up{ margin: 15px 0; }
+	
+	.project.copy{
+		.row, .row-fluid{ margin-left:0;}
+
+		.row [class*="span"], 
+		.row-fluid [class*="span"]{ 
+			width:100%; float:none; position:static;
+			margin-left:0;
+		}
+		
+		img, .absolute { position:static !important; }
+	}
+	
+
+	
+	
+	/* Our Work */
+	
+	.projects .span4{ 
+		height:315px; 		
+		img{ max-width:115%}
+		div{ height:200px !important; }
+		p{ white-space: normal !important; }
+	}
+	
+	*{ float:none; }
+	img{ margin: 5px auto !important; max-width:100% !important; }
+	
+	
+	.about-us{
+		
+		.service .pad{
+			.graphic{ display:none; }
+			h3,p,ul{ margin-left: 0; }
+		}
+		
+		.clients{ /*width: 306px;*/ .background-size(127%); }
+	}
+}
+
+@media (max-width: 480px) {
+	
+	#header .twitter{ display:none;}
+	.hide-tablet{ display:block !important; }
+	.hide-mobile{ display:none !important; }
+	
+	/*  Begin Nav */
+
+	#logo{ 
+		float:none; width:100px; margin:0 auto;
+		a{ background-position:center center;}
+	}
+	#nav li{ display:none !important; }
+		
+	#menu-toggle{ display:none; }
+	.mobile-menu #menu-toggle{ display:block; }
+	.mobile-menu #nav{ 
+		clear:both;
+		width:100%;
+		display:none;
+		margin:0;
+		position:static;
+	}
+	
+	.mobile-menu #nav li{
+		display:block !important;
+		float:none;
+		background:#000;
+		border-bottom:1px solid #222;
+		
+		a{
+			font-size:1.2em;
+			color:#FFF;
+		}
+	}
+	
+	/* Our Work */
+	
+	.back, .our-work, .mobile-menu {
+		//#nav{ .cbox-shadow(none); }
+	} 
+	
+	.back .back-btn{ display:block; }
+	
+	#nav{ 
+		.box-shadow( 0 4px 25px #000 );
+		float:none;
+		position:absolute;
+		top:0;
+		left:10px;		
+	}
+	
+	.our-work #nav li.our-work{ 
+		display:block !important; 
+		a{
+			.mobile-btn;
+			position:relative;
+			left:3%; 
+			top:0px;
+			
+			font-size:1em;
+			font-weight:500;
+			margin-top:11px;
+			padding:6px 8px;
+		}
+	}
+	
+	#nav{ width:auto; }
+
+	
+	.projects, .project{
+		h2{ font-size:3em; font-weight:300; }
+		h3{
+			font-size:1.15em; 
+			padding-right:0;		
+		}
+		h4, p{ padding:0px !important; }
+		
+		img{ margin: 10px 0;}
+	}
+	
+	/* About Us */
+	
+	.about-us{
+		.service .pad{ padding:15px 20px; }
+		.partners { padding:20px 0; }
+		.partners p{ margin-left:0; }
+		.clients{ .background-size(170%); height:200px;}
+	}
+	
+	/* End Nav */
+	
+	.hide-mobile{ display:none; }
+	.hide-full {  display:block; }
+	
+	
+	/* Home Page */
+	
+	.banner{ width: auto; }
+	
+	#slider .item, #slider .banner{ height:auto; }
+	#slider .item { position:static; }
+	#slider{ height:auto; margin-bottom:20px; }	
+	
+	#slider .slide0{
+		h3{ margin:0; font-size:1.3em }
+		.slide-ttl{ margin:-10px 0 -25px -8%; max-width:110%; }
+		.graphic{ position: static; margin:15px 5% 0 8%; max-width:80%; float:none; }
+		.cta{ background-image:none;}
+		
+	}
+	
+	.second-tier{ 
+		
+		h2{ font-size: 2.3em; margin-bottom:18px;}
+		.span4{ 
+			padding:0;
+			margin: 8px 0;
+			div{ padding:5% 6% 4% 6%; }
+		}
+		
+		.cta{ margin: 15px 0 0 0; }
+	}
+	
+	.third-tier{
+		
+		.thumb-wrap{ height: auto; }
+		p{ padding:0; font-size: 1em; }
+		
+		.past-project{ position:static; padding:0; margin-top: 50px; }
+	}
+	
+	.second-tier, .third-tier{ padding-bottom:30px;}
+	
+	
+	/* Work overview */
+		
+	.projects .span4{ 
+		height:auto !important; 
+		margin-top:35px;
+		
+		width:100%;
+		margin-left:0;
+		
+		img{ max-width:100%; margin:0px auto !important; display:block; }
+		div{ height:auto !important; }
+		a{ position:relative; left:inherit !important; }
+		h5{ margin-top:8px; }
+		h5,p{ padding-left: 10% !important;}
+	}
+
+	
+	/* Project Pages */
+	.shim-40, .shim-80, .shim-120, .shim-160{ display:none; }
+	
+	#hero-graphic { position:static; margin:inherit auto;}
+	
+	.hero{ 
+		height: 320px; 
+		h2{ font-size: 3.25em; }
+		h2.long-ttl{ font-size: 2.5em;}
+		h3{ font-size: 1.2em; }
+	}
+	
+	.project.copy{ 
+		padding: 10px 0 30px 0; 
+		
+		img{ position:static !important; }
+		
+		p{ font-size: 105%; line-height: 165%; }
+		
+		.span1, .span2, .span3, .span4, 
+		.span5, .span6, .span7, .span8, 
+		.span9, .span10, .span11, .span12{
+			margin: 1.5em 0 0 0;
+			height:auto !important;
+		}
+		.clear-pad{ padding:0px !important; margin:0px !important; }		
+	}
+	
+	
+
+
+	hr.up.nav-divider{
+		margin-top:20px;
+		background-size:100% 50%;
+	}
+	
+	.next-project, .prev-project{ 
+		margin-top:0;
+		
+		width:35% !important;
+		a{ font-size:135%; line-height:180%; font-weight:300; }
+	}
+	.view-all-work{ display:none; }	
+	
+	/* Footer */
+	
+	#footer, .collapse .container{ padding: 15px 0; }
+	
+	#footer{
+		
+		.span3{
+			width:100%;
+			margin:0;
+			padding-bottom:15px;
+			.pad{ margin:0 !important; }
+			.content{ height: auto; }
+			&:after{
+				width:100%;
+				height:1px;
+				border-right:none;
+				border-bottom:1px solid #4D4D4D;
+				top:inherit;
+				bottom:0;
+			}
+		}
+		.twitter{ 
+			.tweet-wrap{ width:auto; }
+			#tweet-txt { height:auto; }
+		}
+		
+		.api-link{ position:static; clear:both; padding:10px 0; }
+	}
+	
+	
+	#sub-footer{ 
+		form{ display: none; }
+	}
+	/* 404 Page */
+	
+	.error404{
+		h3,p{ padding:0;}
+		p{ font-size: 1.15em}
+		h3{ margin-top:30px; font-size:2.25em }
+		#darth{
+			position:static;
+			.transform( scale(.55,.55) );
+			.transform-origin( left top );
+		}
+	}
+	
+	/*
+	// Original bootstrap styles
+	
+  // Smooth out the collapsing/expanding nav
+  .nav-collapse {
+    -webkit-transform: translate3d(0, 0, 0); // activate the GPU
+  }
+
+  // Block level the page header small tag for readability
+  .page-header h1 small {
+    display: block;
+    line-height: @baseLineHeight;
+  }
+
+  // Update checkboxes for iOS
+  input[type="checkbox"],
+  input[type="radio"] {
+    border: 1px solid #ccc;
+  }
+
+  // Remove the horizontal form styles
+  .form-horizontal {
+    .control-label {
+      float: none;
+      width: auto;
+      padding-top: 0;
+      text-align: left;
+    }
+    // Move over all input controls and content
+    .controls {
+      margin-left: 0;
+    }
+    // Move the options list down to align with labels
+    .control-list {
+      padding-top: 0; // has to be padding because margin collaspes
+    }
+    // Move over buttons in .form-actions to align with .controls
+    .form-actions {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  // Modals
+  .modal {
+    top:   10px;
+    left:  10px;
+    right: 10px;
+  }
+  .modal-header .close {
+    padding: 10px;
+    margin: -10px;
+  }
+
+  // Carousel
+  .carousel-caption {
+    position: static;
+  } */
+
+}

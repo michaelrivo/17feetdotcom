@@ -1,13 +1,14 @@
-<?php require('../inc/header.php'); ?>
+<?php 
+$parentPage = 'mobile-menu';
+require('../inc/header.php'); 
+?>
 
 <div class="container projects">
 	
-	<div class="row">
-		<div class="span10">
-		
-			<h2>Our Work</h2>
-		
-			<h3>We work with companies of all sizes to create digital products and experiences.<br/>Have a look at some of our favorite projects.</h3>
+	<div class="row width-lg-tablet">
+		<div class="span10 ">
+			<h2>Our Work</h2>		
+			<h3>We work with companies of all sizes to create digital products and experiences. <br/>Have a look at some of our favorite projects.</h3>
 	
 		</div>
 	</div>
