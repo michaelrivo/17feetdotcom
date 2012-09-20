@@ -73,6 +73,44 @@
   transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
 }
 @media (max-width: 600px) {
+  /*  Begin Nav */
+  .hide-full {
+    display: block;
+  }
+  #logo {
+    float: none;
+    width: 100px;
+    margin: 0 auto;
+  }
+  #logo a {
+    background-position: 50% 45%;
+  }
+  #nav li {
+    display: none !important;
+  }
+  #menu-toggle {
+    display: none;
+  }
+  .mobile-menu #menu-toggle {
+    display: block;
+  }
+  .mobile-menu #nav {
+    clear: both;
+    width: 100%;
+    display: none;
+    margin: 0;
+    position: static;
+  }
+  .mobile-menu #nav li {
+    display: block !important;
+    float: none;
+    background: #000;
+    border-bottom: 1px solid #222;
+  }
+  .mobile-menu #nav li a {
+    font-size: 1.2em;
+    color: #FFF;
+  }
   /* Deactivate Slider */
   #slider .item {
     display: none;
@@ -134,89 +172,10 @@
     position: static !important;
   }
   /* Our Work */
-  .projects .span4 {
-    height: 315px;
-  }
-  .projects .span4 img {
-    max-width: 115%;
-  }
-  .projects .span4 div {
-    height: 200px !important;
-  }
-  .projects .span4 p {
-    white-space: normal !important;
-  }
-  * {
-    float: none;
-  }
-  img {
-    margin: 5px auto !important;
-    max-width: 100% !important;
-  }
-  .about-us .service .pad .graphic {
-    display: none;
-  }
-  .about-us .service .pad h3,
-  .about-us .service .pad p,
-  .about-us .service .pad ul {
-    margin-left: 0;
-  }
-  .about-us .clients {
-    /*width: 306px;*/
-    -webkit-background-size: 127%;
-    -moz-background-size: 127%;
-    -o-background-size: 127%;
-    background-size: 127%;
-  }
-}
-@media (max-width: 480px) {
-  #header .twitter {
-    display: none;
-  }
-  .hide-tablet {
-    display: block !important;
-  }
-  .hide-mobile {
-    display: none !important;
-  }
-  /*  Begin Nav */
-  #logo {
-    float: none;
-    width: 100px;
-    margin: 0 auto;
-  }
-  #logo a {
-    background-position: center center;
-  }
-  #nav li {
-    display: none !important;
-  }
-  #menu-toggle {
-    display: none;
-  }
-  .mobile-menu #menu-toggle {
-    display: block;
-  }
-  .mobile-menu #nav {
-    clear: both;
-    width: 100%;
-    display: none;
-    margin: 0;
-    position: static;
-  }
-  .mobile-menu #nav li {
-    display: block !important;
-    float: none;
-    background: #000;
-    border-bottom: 1px solid #222;
-  }
-  .mobile-menu #nav li a {
-    font-size: 1.2em;
-    color: #FFF;
-  }
-  /* Our Work */
-  .back .back-btn {
-    display: block;
+  .our-work #nav {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
   }
   #nav {
     -webkit-box-shadow: 0 4px 25px #000000;
@@ -271,9 +230,82 @@
   .our-work #nav li.our-work a:active {
     color: #69AABA;
   }
+  .back .back-btn {
+    display: block;
+  }
+  .back .back-btn {
+    display: block !important;
+    float: left;
+  }
+  .back .back-btn a {
+    display: block;
+    font-family: museo-sans, "Helvetica Nueue", Helvetica, Arial, sans-serif;
+    position: relative;
+    left: 4%;
+    top: 0px;
+    color: #FFF;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-top: 9px;
+    padding: 5px 7px;
+  }
+  .back .back-btn a:link {
+    color: #FFF;
+  }
   #nav {
     width: auto;
   }
+  .projects .span4 {
+    height: 315px;
+  }
+  .projects .span4 img {
+    max-width: 115%;
+  }
+  .projects .span4 div {
+    height: 200px !important;
+  }
+  .projects .span4 p {
+    white-space: normal !important;
+  }
+  * {
+    float: none;
+  }
+  img {
+    margin: 5px auto !important;
+    max-width: 100% !important;
+  }
+  .about-us .service .pad .graphic {
+    display: none;
+  }
+  .about-us .service .pad h3,
+  .about-us .service .pad p,
+  .about-us .service .pad ul {
+    margin-left: 0;
+  }
+  .about-us .clients {
+    /*width: 306px;*/
+    -webkit-background-size: 127%;
+    -moz-background-size: 127%;
+    -o-background-size: 127%;
+    background-size: 127%;
+  }
+  /* Blog */
+  #comments form input,
+  #comments form textarea {
+    width: 95%;
+  }
+}
+@media (max-width: 480px) {
+  #header .twitter {
+    display: none;
+  }
+  .hide-tablet {
+    display: block !important;
+  }
+  .hide-mobile {
+    display: none !important;
+  }
+  /* Our Work */
   .projects h2,
   .project h2 {
     font-size: 3em;
@@ -314,9 +346,6 @@
   /* End Nav */
   .hide-mobile {
     display: none;
-  }
-  .hide-full {
-    display: block;
   }
   /* Home Page */
   .banner {
@@ -481,6 +510,54 @@
   .collapse .container {
     padding: 15px 0;
   }
+  #footer .twitter .bird {
+    left: inherit;
+    right: 0;
+  }
+  #footer .blog h5 {
+    background-position: right -63px;
+  }
+  #footer .music h5 {
+    background-position: right -123px;
+  }
+  #footer .weather h5 {
+    background-position: 1000px 1000px;
+  }
+  #footer .weather.sunny h5 {
+    background-position: right -363px;
+  }
+  #footer .weather.foggy h5 {
+    background-position: right -183px;
+  }
+  #footer .weather.cloudy h5 {
+    background-position: right -423px;
+  }
+  #footer .weather.stormy h5 {
+    background-position: right -243px;
+  }
+  #footer .weather.partly h5 {
+    background-position: right -303px;
+  }
+  #footer .weather.rainy h5 {
+    background-position: right -483px;
+  }
+  #footer #lastfm .frame {
+    width: 40%;
+  }
+  #footer #lastfm img {
+    margin: 0 !important;
+  }
+  #footer #lastfm .details {
+    width: 60%;
+  }
+  #footer #lastfm .details div {
+    margin-left: 8%;
+    width: auto;
+  }
+  #footer #lastfm .details .song,
+  #footer #lastfm .details .album {
+    -webkit-mask-box-image: none;
+  }
   #footer .span3 {
     width: 100%;
     margin: 0;
@@ -554,6 +631,43 @@
     -moz-transform-origin: left top;
     /* Firefox */
   
+  }
+  /* Blog */
+  .blog .container {
+    margin-bottom: 0;
+  }
+  .blog .header h2 {
+    font-size: 3em;
+    font-weight: 300;
+  }
+  .blog .header h3 {
+    font-size: 1.15em;
+  }
+  h1.entry-title {
+    font-size: 1.75em;
+  }
+  .entry-meta .social_btns {
+    display: none;
+  }
+  .entry-content p {
+    font-size: 100%;
+  }
+  #nav-below .meta-nav {
+    display: none !important;
+  }
+  #nav-below {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #nav-below .nav-previous,
+  #nav-below .nav-next {
+    width: 40%;
+  }
+  #nav-below .nav-previous a,
+  #nav-below .nav-next a {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
   }
   /*
   	// Original bootstrap styles

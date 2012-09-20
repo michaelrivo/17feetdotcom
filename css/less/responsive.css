@@ -84,10 +84,8 @@
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
-.width-stacking img {
-  margin: 10px auto;
-  display: block;
-  float: none !important;
+.width-stacking * {
+  position: static !important;
 }
 .width-stacking div {
   margin: 10px 0 !important;
@@ -105,10 +103,8 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-  .width-tablet img {
-    margin: 10px auto;
-    display: block;
-    float: none !important;
+  .width-tablet * {
+    position: static !important;
   }
   .width-tablet div {
     margin: 10px 0 !important;
@@ -119,8 +115,7 @@
   }
   .width-tablet [class*="span"] {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 15px 0;
   }
   .hidden-desktop {
     display: inherit !important;
@@ -134,6 +129,14 @@
   .hidden-phone {
     display: none !important;
   }
+  .copy .width-tablet img {
+    margin: 10px auto;
+    display: block;
+    float: none !important;
+  }
+  .copy .width-tablet .push-down {
+    padding: 0 !important;
+  }
 }
 @media (max-width: 480px) {
   .width-mobile {
@@ -144,10 +147,8 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-  .width-mobile img {
-    margin: 10px auto;
-    display: block;
-    float: none !important;
+  .width-mobile * {
+    position: static !important;
   }
   .width-mobile div {
     margin: 10px 0 !important;
@@ -161,6 +162,14 @@
     margin-left: 0;
     margin-right: 0;
   }
+  .copy .width-mobile img {
+    margin: 10px auto;
+    display: block;
+    float: none !important;
+  }
+  .copy .width-mobile .push-down {
+    padding: 0 !important;
+  }
 }
 @media (max-width: 959px) {
   .width-lg-tablet {
@@ -171,10 +180,8 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-  .width-lg-tablet img {
-    margin: 10px auto;
-    display: block;
-    float: none !important;
+  .width-lg-tablet * {
+    position: static !important;
   }
   .width-lg-tablet div {
     margin: 10px 0 !important;
@@ -193,6 +200,14 @@
   }
   img.width-lg-tablet {
     margin: 15px 0;
+  }
+  .copy .width-lg-tablet img {
+    margin: 15px auto;
+    display: block;
+    float: none !important;
+  }
+  .copy .width-lg-tablet .push-down {
+    padding: 0 !important;
   }
 }
 .clearfix {
@@ -249,7 +264,21 @@
     font-size: 4em;
   }
   #header .twitter {
+    width: 30px;
+    float: right;
+  }
+  #header .twitter span {
     display: none;
+  }
+  #header .twitter a {
+    height: 51px;
+    padding: 0;
+    width: 30px;
+  }
+  #nav {
+    overflow: hidden;
+    width: auto;
+    margin-left: 5%;
   }
   br {
     display: none;
@@ -287,8 +316,6 @@
   }
   img {
     max-width: 100%;
-    margin-top: 15px;
-    margin-bottom: 15px !important;
   }
   .next-project,
   .prev-project {
@@ -470,22 +497,49 @@
   .about-us .end p {
     font-size: 1em;
   }
+  /* Blog */
+  .blog br {
+    display: block;
+  }
+  #secondary {
+    width: 29%;
+    margin-left: 5%;
+  }
+  #secondary .widget-title {
+    margin-bottom: 3px;
+    font-weight: 300;
+  }
+  #secondary #searchform #s {
+    float: left;
+    width: 60%;
+    margin: 0 4px 0 0 ;
+  }
+  #secondary #searchform .blueBtn input {
+    float: left;
+    width: auto;
+    font-size: 1.2em;
+    height: auto;
+    line-height: 160%;
+    font-weight: 500;
+    padding: 5px 6px 4px 6px;
+  }
 }
 @media (min-width: 481px) and (max-width: 959px) {
   .row {
     width: 100%;
   }
-  #nav {
-    display: block !important;
-  }
   #logo {
     width: 110px;
   }
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .about-us .service {
+    min-height: 500px;
+  }
+}
+@media (min-width: 601px) and (max-width: 959px) {
   #nav {
-    float: right;
-    overflow: hidden;
-    width: auto;
-    margin: 0;
+    display: block !important;
   }
 }
 .clearfix {
@@ -557,12 +611,30 @@
   transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
 }
 @media (max-width: 767px) {
+  #header .twitter {
+    display: none;
+  }
+  #logo {
+    width: 95px;
+  }
+  #nav {
+    float: right;
+    margin: 0;
+  }
+  #nav li a {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 100%;
+  }
   .container {
     width: 560px;
     margin: 0 auto;
   }
-  .hero .what-it-is {
-    display: none;
+  .project.header .span9 {
+    width: 100%;
+  }
+  .what-it-is {
+    display: none !important;
   }
   .hero .span9 {
     width: 100%;
@@ -645,6 +717,67 @@
   }
   .projects .span4 p {
     white-space: normal !important;
+  }
+  /* Join Page */
+  .join-us .openings {
+    margin-bottom: 0;
+  }
+  .join-us .openings .selector {
+    display: none;
+  }
+  .join-us .openings li {
+    margin: 10px 0;
+  }
+  .join-us .openings li,
+  .join-us .openings li.first {
+    border: none;
+  }
+  .join-us .openings a {
+    padding: 10px 16px;
+    font-weight: bold;
+    background-color: #FFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  .join-us .openings a:link,
+  .join-us .openings a:visited {
+    color: #69aaba;
+  }
+  .join-us .openings a:hover {
+    color: #FFF;
+    background-color: #59b4ca;
+    border-color: transparent;
+  }
+  .join-us .openings a:focus {
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 8px rgba(105, 170, 186, 0.6);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 8px rgba(105, 170, 186, 0.6);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 8px rgba(105, 170, 186, 0.6);
+  }
+  .join-us .openings a:active {
+    color: #FFF;
+    border-color: transparent;
+    background-color: #59b4ca;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+  }
+  .join-us .openings a.active {
+    background-color: #69aaba;
+    border-color: transparent;
+  }
+  .join-us .openings a.active:link,
+  .join-us .openings a.active:visited {
+    color: #FFF;
   }
   /* About Us */
   .about-us .service .pad {
@@ -748,107 +881,70 @@
       filter: alpha(opacity=0);
     }
   }
-  /*  // Padding to set content in a bit
-    body {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
+  /* 404 Page */
+  .error404 .span7 {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+  .error404 h3,
+  .error404 p {
+    margin-left: 0;
+    padding-left: 0 !important;
+  }
+  .error404 .no-overflow {
+    position: static;
+  }
+  .error404 #darth {
+    transform: scale(0.75, 0.75);
+    -ms-transform: scale(0.75, 0.75);
+    /* IE 9 */
   
-    // Negative indent the now static "fixed" navbar
-    .navbar-fixed-top,
-    .navbar-fixed-bottom,
-    .navbar-static-top {
-      margin-left: -20px;
-      margin-right: -20px;
-    }
-    // Remove padding on container given explicit padding set on body
-    .container-fluid {
-      padding: 0;
-    }
+    -webkit-transform: scale(0.75, 0.75);
+    /* Safari and Chrome */
   
-    // TYPOGRAPHY
-    // ----------
-    // Reset horizontal dl
-    .dl-horizontal {
-      dt {
-        float: none;
-        clear: none;
-        width: auto;
-        text-align: left;
-      }
-      dd {
-        margin-left: 0;
-      }
-    }
+    -o-transform: scale(0.75, 0.75);
+    /* Opera */
   
-    // GRID & CONTAINERS
-    // -----------------
-    // Remove width from containers
-    .container {
-      width: auto;
-    }
-    // Fluid rows
-    .row-fluid {
-      width: 100%;
-    }
-    // Undo negative margin on rows and thumbnails
-    .row,
-    .thumbnails {
-      margin-left: 0;
-    }
-    .thumbnails > li {
-      float: none;
-      margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
-    }
-    // Make all grid-sized elements block level again
-    [class*="span"],
-    .row-fluid [class*="span"] {
-      float: none;
-      display: block;
-      width: 100%;
-      margin-left: 0;
-      .box-sizing(border-box);
-    }
-    .span12,
-    .row-fluid .span12 {
-      width: 100%;
-      .box-sizing(border-box);
-    }
+    -moz-transform: scale(0.75, 0.75);
+    /* Firefox */
   
-    // FORM FIELDS
-    // -----------
-    // Make span* classes full width
-    .input-large,
-    .input-xlarge,
-    .input-xxlarge,
-    input[class*="span"],
-    select[class*="span"],
-    textarea[class*="span"],
-    .uneditable-input {
-      .input-block-level();
-    }
-    // But don't let it screw up prepend/append inputs
-    .input-prepend input,
-    .input-append input,
-    .input-prepend input[class*="span"],
-    .input-append input[class*="span"] {
-      display: inline-block; // redeclare so they don't wrap to new lines
-      width: auto;
-    }
-    .controls-row [class*="span"] + [class*="span"] {
-      margin-left: 0;
-    }
+    transform-origin: left top;
+    -ms-transform-origin: left top;
+    /* IE 9 */
   
-    // Modals
-    .modal {
-      position: fixed;
-      top:   20px;
-      left:  20px;
-      right: 20px;
-      width: auto;
-      margin: 0;
-      &.fade.in { top: auto; }
-    }*/
+    -webkit-transform-origin: left top;
+    /* Safari and Chrome */
+  
+    -o-transform-origin: left top;
+    /* Opera */
+  
+    -moz-transform-origin: left top;
+    /* Firefox */
+  
+  }
+  /* Blog */
+  #blog-content,
+  #secondary {
+    width: 100%;
+    margin: 0;
+  }
+  .widget_recent_entries,
+  .widget_most_popular_tags {
+    display: none;
+  }
+  #secondary hr {
+    display: block;
+  }
+  #secondary #searchform {
+    width: 100%;
+    max-width: 220px;
+    /*		 #s { }
+  		.blueBtn input{ } 
+  */
+  }
+  .blog .page-title {
+    font-size: 1.5em;
+  }
 }
 .clearfix {
   *zoom: 1;
@@ -1009,6 +1105,44 @@
   transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
 }
 @media (max-width: 600px) {
+  /*  Begin Nav */
+  .hide-full {
+    display: block;
+  }
+  #logo {
+    float: none;
+    width: 100px;
+    margin: 0 auto;
+  }
+  #logo a {
+    background-position: 50% 45%;
+  }
+  #nav li {
+    display: none !important;
+  }
+  #menu-toggle {
+    display: none;
+  }
+  .mobile-menu #menu-toggle {
+    display: block;
+  }
+  .mobile-menu #nav {
+    clear: both;
+    width: 100%;
+    display: none;
+    margin: 0;
+    position: static;
+  }
+  .mobile-menu #nav li {
+    display: block !important;
+    float: none;
+    background: #000;
+    border-bottom: 1px solid #222;
+  }
+  .mobile-menu #nav li a {
+    font-size: 1.2em;
+    color: #FFF;
+  }
   /* Deactivate Slider */
   #slider .item {
     display: none;
@@ -1070,105 +1204,22 @@
     position: static !important;
   }
   /* Our Work */
-  .projects .span4 {
-    height: 315px;
-  }
-  .projects .span4 img {
-    max-width: 115%;
-  }
-  .projects .span4 div {
-    height: 200px !important;
-  }
-  .projects .span4 p {
-    white-space: normal !important;
-  }
-  * {
-    float: none;
-  }
-  img {
-    margin: 5px auto !important;
-    max-width: 100% !important;
-  }
-  .about-us .service .pad .graphic {
-    display: none;
-  }
-  .about-us .service .pad h3,
-  .about-us .service .pad p,
-  .about-us .service .pad ul {
-    margin-left: 0;
-  }
-  .about-us .clients {
-    /*width: 306px;*/
-    -webkit-background-size: 127%;
-    -moz-background-size: 127%;
-    -o-background-size: 127%;
-    background-size: 127%;
-    -webkit-background-size: 127%;
-    -moz-background-size: 127%;
-    -o-background-size: 127%;
-    background-size: 127%;
-    -webkit-background-size: 127%;
-    -moz-background-size: 127%;
-    -o-background-size: 127%;
-    background-size: 127%;
-    -webkit-background-size: 127%;
-    -moz-background-size: 127%;
-    -o-background-size: 127%;
-    background-size: 127%;
-    -webkit-background-size: 127%;
-    -moz-background-size: 127%;
-    -o-background-size: 127%;
-    background-size: 127%;
-  }
-}
-@media (max-width: 480px) {
-  #header .twitter {
-    display: none;
-  }
-  .hide-tablet {
-    display: block !important;
-  }
-  .hide-mobile {
-    display: none !important;
-  }
-  /*  Begin Nav */
-  #logo {
-    float: none;
-    width: 100px;
-    margin: 0 auto;
-  }
-  #logo a {
-    background-position: center center;
-  }
-  #nav li {
-    display: none !important;
-  }
-  #menu-toggle {
-    display: none;
-  }
-  .mobile-menu #menu-toggle {
-    display: block;
-  }
-  .mobile-menu #nav {
-    clear: both;
-    width: 100%;
-    display: none;
-    margin: 0;
-    position: static;
-  }
-  .mobile-menu #nav li {
-    display: block !important;
-    float: none;
-    background: #000;
-    border-bottom: 1px solid #222;
-  }
-  .mobile-menu #nav li a {
-    font-size: 1.2em;
-    color: #FFF;
-  }
-  /* Our Work */
-  .back .back-btn {
-    display: block;
+  .our-work #nav {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
   }
   #nav {
     -webkit-box-shadow: 0 4px 25px #000000;
@@ -1291,9 +1342,98 @@
   .our-work #nav li.our-work a:active {
     color: #69AABA;
   }
+  .back .back-btn {
+    display: block;
+  }
+  .back .back-btn {
+    display: block !important;
+    float: left;
+  }
+  .back .back-btn a {
+    display: block;
+    font-family: museo-sans, "Helvetica Nueue", Helvetica, Arial, sans-serif;
+    position: relative;
+    left: 4%;
+    top: 0px;
+    color: #FFF;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-top: 9px;
+    padding: 5px 7px;
+  }
+  .back .back-btn a:link {
+    color: #FFF;
+  }
   #nav {
     width: auto;
   }
+  .projects .span4 {
+    height: 315px;
+  }
+  .projects .span4 img {
+    max-width: 115%;
+  }
+  .projects .span4 div {
+    height: 200px !important;
+  }
+  .projects .span4 p {
+    white-space: normal !important;
+  }
+  * {
+    float: none;
+  }
+  img {
+    margin: 5px auto !important;
+    max-width: 100% !important;
+  }
+  .about-us .service .pad .graphic {
+    display: none;
+  }
+  .about-us .service .pad h3,
+  .about-us .service .pad p,
+  .about-us .service .pad ul {
+    margin-left: 0;
+  }
+  .about-us .clients {
+    /*width: 306px;*/
+    -webkit-background-size: 127%;
+    -moz-background-size: 127%;
+    -o-background-size: 127%;
+    background-size: 127%;
+    -webkit-background-size: 127%;
+    -moz-background-size: 127%;
+    -o-background-size: 127%;
+    background-size: 127%;
+    -webkit-background-size: 127%;
+    -moz-background-size: 127%;
+    -o-background-size: 127%;
+    background-size: 127%;
+    -webkit-background-size: 127%;
+    -moz-background-size: 127%;
+    -o-background-size: 127%;
+    background-size: 127%;
+    -webkit-background-size: 127%;
+    -moz-background-size: 127%;
+    -o-background-size: 127%;
+    background-size: 127%;
+  }
+  /* Blog */
+  #comments form input,
+  #comments form textarea {
+    width: 95%;
+  }
+}
+@media (max-width: 480px) {
+  #header .twitter {
+    display: none;
+  }
+  .hide-tablet {
+    display: block !important;
+  }
+  .hide-mobile {
+    display: none !important;
+  }
+  /* Our Work */
   .projects h2,
   .project h2 {
     font-size: 3em;
@@ -1350,9 +1490,6 @@
   /* End Nav */
   .hide-mobile {
     display: none;
-  }
-  .hide-full {
-    display: block;
   }
   /* Home Page */
   .banner {
@@ -1516,6 +1653,54 @@
   #footer,
   .collapse .container {
     padding: 15px 0;
+  }
+  #footer .twitter .bird {
+    left: inherit;
+    right: 0;
+  }
+  #footer .blog h5 {
+    background-position: right -63px;
+  }
+  #footer .music h5 {
+    background-position: right -123px;
+  }
+  #footer .weather h5 {
+    background-position: 1000px 1000px;
+  }
+  #footer .weather.sunny h5 {
+    background-position: right -363px;
+  }
+  #footer .weather.foggy h5 {
+    background-position: right -183px;
+  }
+  #footer .weather.cloudy h5 {
+    background-position: right -423px;
+  }
+  #footer .weather.stormy h5 {
+    background-position: right -243px;
+  }
+  #footer .weather.partly h5 {
+    background-position: right -303px;
+  }
+  #footer .weather.rainy h5 {
+    background-position: right -483px;
+  }
+  #footer #lastfm .frame {
+    width: 40%;
+  }
+  #footer #lastfm img {
+    margin: 0 !important;
+  }
+  #footer #lastfm .details {
+    width: 60%;
+  }
+  #footer #lastfm .details div {
+    margin-left: 8%;
+    width: auto;
+  }
+  #footer #lastfm .details .song,
+  #footer #lastfm .details .album {
+    -webkit-mask-box-image: none;
   }
   #footer .span3 {
     width: 100%;
@@ -1694,6 +1879,43 @@
     -moz-transform-origin: left top;
     /* Firefox */
   
+  }
+  /* Blog */
+  .blog .container {
+    margin-bottom: 0;
+  }
+  .blog .header h2 {
+    font-size: 3em;
+    font-weight: 300;
+  }
+  .blog .header h3 {
+    font-size: 1.15em;
+  }
+  h1.entry-title {
+    font-size: 1.75em;
+  }
+  .entry-meta .social_btns {
+    display: none;
+  }
+  .entry-content p {
+    font-size: 100%;
+  }
+  #nav-below .meta-nav {
+    display: none !important;
+  }
+  #nav-below {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #nav-below .nav-previous,
+  #nav-below .nav-next {
+    width: 40%;
+  }
+  #nav-below .nav-previous a,
+  #nav-below .nav-next a {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
   }
   /*
   	// Original bootstrap styles

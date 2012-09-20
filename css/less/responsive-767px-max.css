@@ -39,12 +39,30 @@
   transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
 }
 @media (max-width: 767px) {
+  #header .twitter {
+    display: none;
+  }
+  #logo {
+    width: 95px;
+  }
+  #nav {
+    float: right;
+    margin: 0;
+  }
+  #nav li a {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 100%;
+  }
   .container {
     width: 560px;
     margin: 0 auto;
   }
-  .hero .what-it-is {
-    display: none;
+  .project.header .span9 {
+    width: 100%;
+  }
+  .what-it-is {
+    display: none !important;
   }
   .hero .span9 {
     width: 100%;
@@ -127,6 +145,67 @@
   }
   .projects .span4 p {
     white-space: normal !important;
+  }
+  /* Join Page */
+  .join-us .openings {
+    margin-bottom: 0;
+  }
+  .join-us .openings .selector {
+    display: none;
+  }
+  .join-us .openings li {
+    margin: 10px 0;
+  }
+  .join-us .openings li,
+  .join-us .openings li.first {
+    border: none;
+  }
+  .join-us .openings a {
+    padding: 10px 16px;
+    font-weight: bold;
+    background-color: #FFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  .join-us .openings a:link,
+  .join-us .openings a:visited {
+    color: #69aaba;
+  }
+  .join-us .openings a:hover {
+    color: #FFF;
+    background-color: #59b4ca;
+    border-color: transparent;
+  }
+  .join-us .openings a:focus {
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 8px rgba(105, 170, 186, 0.6);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 8px rgba(105, 170, 186, 0.6);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 8px rgba(105, 170, 186, 0.6);
+  }
+  .join-us .openings a:active {
+    color: #FFF;
+    border-color: transparent;
+    background-color: #59b4ca;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+  }
+  .join-us .openings a.active {
+    background-color: #69aaba;
+    border-color: transparent;
+  }
+  .join-us .openings a.active:link,
+  .join-us .openings a.active:visited {
+    color: #FFF;
   }
   /* About Us */
   .about-us .service .pad {
@@ -230,105 +309,68 @@
       filter: alpha(opacity=0);
     }
   }
-  /*  // Padding to set content in a bit
-    body {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
+  /* 404 Page */
+  .error404 .span7 {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+  .error404 h3,
+  .error404 p {
+    margin-left: 0;
+    padding-left: 0 !important;
+  }
+  .error404 .no-overflow {
+    position: static;
+  }
+  .error404 #darth {
+    transform: scale(0.75, 0.75);
+    -ms-transform: scale(0.75, 0.75);
+    /* IE 9 */
   
-    // Negative indent the now static "fixed" navbar
-    .navbar-fixed-top,
-    .navbar-fixed-bottom,
-    .navbar-static-top {
-      margin-left: -20px;
-      margin-right: -20px;
-    }
-    // Remove padding on container given explicit padding set on body
-    .container-fluid {
-      padding: 0;
-    }
+    -webkit-transform: scale(0.75, 0.75);
+    /* Safari and Chrome */
   
-    // TYPOGRAPHY
-    // ----------
-    // Reset horizontal dl
-    .dl-horizontal {
-      dt {
-        float: none;
-        clear: none;
-        width: auto;
-        text-align: left;
-      }
-      dd {
-        margin-left: 0;
-      }
-    }
+    -o-transform: scale(0.75, 0.75);
+    /* Opera */
   
-    // GRID & CONTAINERS
-    // -----------------
-    // Remove width from containers
-    .container {
-      width: auto;
-    }
-    // Fluid rows
-    .row-fluid {
-      width: 100%;
-    }
-    // Undo negative margin on rows and thumbnails
-    .row,
-    .thumbnails {
-      margin-left: 0;
-    }
-    .thumbnails > li {
-      float: none;
-      margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
-    }
-    // Make all grid-sized elements block level again
-    [class*="span"],
-    .row-fluid [class*="span"] {
-      float: none;
-      display: block;
-      width: 100%;
-      margin-left: 0;
-      .box-sizing(border-box);
-    }
-    .span12,
-    .row-fluid .span12 {
-      width: 100%;
-      .box-sizing(border-box);
-    }
+    -moz-transform: scale(0.75, 0.75);
+    /* Firefox */
   
-    // FORM FIELDS
-    // -----------
-    // Make span* classes full width
-    .input-large,
-    .input-xlarge,
-    .input-xxlarge,
-    input[class*="span"],
-    select[class*="span"],
-    textarea[class*="span"],
-    .uneditable-input {
-      .input-block-level();
-    }
-    // But don't let it screw up prepend/append inputs
-    .input-prepend input,
-    .input-append input,
-    .input-prepend input[class*="span"],
-    .input-append input[class*="span"] {
-      display: inline-block; // redeclare so they don't wrap to new lines
-      width: auto;
-    }
-    .controls-row [class*="span"] + [class*="span"] {
-      margin-left: 0;
-    }
+    transform-origin: left top;
+    -ms-transform-origin: left top;
+    /* IE 9 */
   
-    // Modals
-    .modal {
-      position: fixed;
-      top:   20px;
-      left:  20px;
-      right: 20px;
-      width: auto;
-      margin: 0;
-      &.fade.in { top: auto; }
-    }*/
+    -webkit-transform-origin: left top;
+    /* Safari and Chrome */
+  
+    -o-transform-origin: left top;
+    /* Opera */
+  
+    -moz-transform-origin: left top;
+    /* Firefox */
+  
+  }
+  /* Blog */
+  #blog-content,
+  #secondary {
+    width: 100%;
+    margin: 0;
+  }
+  .widget_recent_entries,
+  .widget_most_popular_tags {
+    display: none;
+  }
+  #secondary hr {
+    display: block;
+  }
+  #secondary #searchform {
+    width: 100%;
+    max-width: 220px;
+    /*		 #s { }
+  		.blueBtn input{ } 
+  */
+  }
+  .blog .page-title {
+    font-size: 1.5em;
+  }
 }

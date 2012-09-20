@@ -18,9 +18,22 @@
 	} 
 	
 	#header{
-		.twitter{ display:none; }
-		
+		.twitter{ 
+			width:30px;
+			float:right;
+			span{ display:none; } 
+			a{ height:51px; padding:0; width:30px; }
+		}
 	}
+	
+	#nav{
+		//float:right;
+		overflow:hidden;
+		width:auto;
+		margin-left:5%;
+		//li{ float:right; }
+	}
+	
 	
 	br{ display:none; }
 	br.hold{ display: inherit; }
@@ -53,7 +66,7 @@
 		.what-it-is p{ display:block; margin:45px 0 0 0; }
 	}
 	
-	img{ max-width:100%;margin-top:15px; margin-bottom:15px !important; }
+	img{ max-width:100%;}
 
 	
 	.next-project, .prev-project{ 
@@ -104,9 +117,9 @@
 		}
 		
 		.service{
+			
 			.pad{ padding:10px 15px 25px 25px; }
 			h3{ font-size: 1.8em; }
-			//p { font-size: .95em; }
 		}
 		
 		.clients{ /*width:620px;*/ .background-size(95%); width:auto; /*height:175px;*/}
@@ -122,23 +135,44 @@
 		
 	} 
 	
+	/* Blog */
+	.blog br{ display:block; }
+	#secondary{
+		
+		width: 29%;
+		margin-left: 5%; 
+		
+		
+		.widget-title{
+			margin-bottom:3px;
+			font-weight:300;
+		}
+
+		#searchform{
+			 
+			#s{ float:left; width:60%; margin:0 4px 0 0 ; }
+			.blueBtn input{
+				float:left;
+				width:auto;
+				font-size:1.2em;
+				height:auto;
+				line-height:160%;
+				font-weight:500;
+				padding:5px 6px 4px 6px;
+			}
+		}
+	}
 }
 
-
 @media (min-width: 481px) and (max-width: 959px) { // max-width:979px
-	
-	.row { width:100%;}
-	
-	#nav{ display:block !important; }
+	.row { width:100%;}	
 	#logo { width: 110px; }
-		
-	#nav{
-		float:right;
-		overflow:hidden;
-		width:auto;
-		margin:0;
-		//li{ float:right; }
-	}
+}
 
+@media (min-width:768px) and (max-width:959px) {
+	.about-us .service{ min-height: 500px; }
+}
 
+@media (min-width:601px) and (max-width: 959px){
+	#nav{ display:block !important; }
 }

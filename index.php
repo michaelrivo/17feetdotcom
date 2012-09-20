@@ -3,24 +3,27 @@ $parentPage = 'mobile-menu';
 require('inc/header.php'); 
 ?>
 
-<style>
+<style type="text/css">
 
 @media (max-width: 959px) { 
 	#slider, #slider .banner, #slider .item{ height:480px; }
 	.bg img{ height:100%%;}
 	#slider .slide4 h2{ margin-top: 5%; }
 	#slider .slide4 .banner .graphic{ right: inherit; }
-	#slider .slide4 img{ max-width:105% !important;}
+	#slider .slide4 img{ max-width:95% !important;}
 	#slider .slide1 .graphic{ margin-top:25%; }
 	#slider .slide2 h3{ margin: 54% 0 0 9%; }
 	#slider .slide3 .textShadow{ display:none; }
+	#slider .slide3 .glow{ margin-left:0; }
 }
 
 @media (max-width: 767px) { 
 	#slider, #slider .banner, #slider .item{ height:400px; }
 	#slider .slide4 h2{ font-size:2.8em; }
 	#slider .slide4 h3{ font-size:1.4em;  }
+	#slider .slide4 img{ max-width:85% !important; margin:0px auto !important;}
 	#slider a{ background-position: right 1px; }
+	
 }
 
 @media (max-width: 600px) { 

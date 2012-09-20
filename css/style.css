@@ -2207,11 +2207,11 @@ body {
   background: #000000 url(../imgs/facebook-slide-bg.png) repeat-x center 0;
 }
 #slider .slide0 .slide-ttl {
-  margin: 12% -10% -10% -12%;
+  margin: 12% -10% -10% -12% !important;
   max-width: 135%;
 }
 #slider .slide0 h3 {
-  margin: 15px 0 0 0;
+  margin: 0 0 0 0;
 }
 #slider .slide0 .graphic {
   float: right;
@@ -2231,7 +2231,7 @@ body {
 }
 #slider .slide1 .graphic {
   margin: 19% 0 -10% -2%;
-  max-width: 130%;
+  max-width: 100%;
 }
 #slider .slide2 .bg {
   background: #111111 url('../imgs/slide2-bg.png') repeat-x scroll 0 0;
@@ -2788,15 +2788,25 @@ body {
 #footer .hot {
   color: #dc3900;
 }
+#footer #lastfm .frame {
+  float: left;
+  width: 79px;
+}
 #footer #lastfm img {
+  max-width: 100%;
   border: 2px solid #FFF;
   float: left;
+}
+#footer #lastfm .details {
+  float: left;
+  width: 110px;
+}
+#footer #lastfm .details div {
+  margin-left: 10px;
 }
 #footer #lastfm .artist,
 #footer #lastfm .album,
 #footer #lastfm .song {
-  margin-left: 95px;
-  width: 110px;
   margin-bottom: 5px;
   font: italic normal 1em/120% "Helvetica Neue", Arial, sans-serif;
 }
@@ -3434,13 +3444,23 @@ blockquote:after {
 /** 
 **   Contact Form styles
 **/
+.contact-us .logo {
+  margin: 0 0 6px 0;
+}
+.contact-us .pin {
+  position: absolute;
+  left: 18px;
+}
 .contact-us .address {
   font: 300 1.1em/145% museo-sans, "Helvetica Nueue", Helvetica, Arial, sans-serif;
   padding-left: 55px;
-  background: transparent url(../imgs/map-pin.png) no-repeat 20px 4px;
 }
 .contact-us .map {
-  margin-left: 55px;
+  margin-top: 20px;
+}
+.contact-us #map_canvas {
+  width: 100%;
+  height: 200px;
 }
 .contact-us hr.up {
   margin-bottom: 50px;
@@ -3530,13 +3550,21 @@ textarea.error {
 .join-us hr.up {
   margin-bottom: 40px;
 }
-.join-us .picker {
+.join-us .picker,
+.join-us .selector {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-.join-us #job_form {
-  width: 400px;
+.join-us #job_form > div {
+  padding-right: 4%;
+}
+.join-us .openings {
+  overflow: visible;
+  /*li{ height: 49px; }
+				.selector { height:50px;}
+				*/
+
 }
 .join-us .openings h4 {
   text-transform: uppercase;
@@ -3544,24 +3572,21 @@ textarea.error {
   letter-spacing: .1em;
   font: 500 0.825em/100% museo-sans, "Helvetica Nueue", Helvetica, Arial, sans-serif;
 }
-.join-us .openings li,
-.join-us .openings li a,
-.join-us .openings .selector {
-  height: 49px;
+.join-us .openings li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .join-us .openings li,
 .join-us .openings a {
   cursor: pointer;
 }
-.join-us .openings .first a {
+.join-us .openings .first {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 .join-us .openings a {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  line-height: 360%;
-  padding-left: 16px;
+  line-height: 130%;
+  position: relative;
+  padding: 16px 0 16px 13px;
   display: block;
-  height: 48px;
 }
 .join-us .openings a.active {
   color: #FFF;
@@ -3569,22 +3594,25 @@ textarea.error {
 .join-us #picker-wrapper {
   position: relative;
 }
-.join-us #picker-wrapper .picker {
-  width: 210px;
-}
 .join-us #picker-wrapper .selector {
-  width: 232px;
-  height: 49px;
-  background: transparent url(../imgs/picker-selector.png) no-repeat 0 0;
   position: absolute;
+  background-color: #252525;
   top: 1px;
   left: 0;
   width: 100%;
   z-index: -1;
+  overflow: visible !important;
+}
+.join-us #picker-wrapper .selector .carat {
+  width: 18px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -18px;
+  background: transparent url(../imgs/picker-selector.png) no-repeat right center;
 }
 .join-us .job-wrapper {
   position: relative;
-  left: -35px;
 }
 .join-us .jobs .jobPosition {
   display: none;
@@ -3849,6 +3877,9 @@ textarea.error {
   float: left;
   margin-right: 12px;
 }
+.blog .container {
+  margin-bottom: 18px;
+}
 h1.entry-title {
   font: 500 2.5em/110% museo-sans, "Helvetica Nueue", Helvetica, Arial, sans-serif;
   margin: 0 0 .2em 0;
@@ -3908,7 +3939,12 @@ h1.entry-title a:hover {
 .entry-content {
   margin: 20px 0 0 0;
 }
-.entry-content object {
+.entry-content iframe,
+.entry-content object,
+.entry-content embed {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
   margin: 0 0 1.5em 0;
   display: block;
 }
@@ -3969,6 +4005,9 @@ ul.tags li a:hover span.end,
 ul.tags li a:active span.end {
   background-position: 0 -35px;
 }
+#secondary hr {
+  display: none;
+}
 #secondary .widget-title {
   margin-bottom: 3px;
   font-weight: 300;
@@ -3976,17 +4015,26 @@ ul.tags li a:active span.end {
 #secondary ul {
   list-style-type: none;
   padding: 0;
+  margin-left: 0;
 }
 #secondary #searchform #s {
+  float: left;
   width: 60%;
+  margin: 0 4px 0 0 ;
 }
 #secondary #searchform .blueBtn input {
+  float: left;
   width: auto;
   font-size: 1.2em;
   height: auto;
   line-height: 160%;
   font-weight: 500;
-  padding: 5px 6px 3px 6px;
+  padding: 5px 6px 4px 6px;
+}
+#secondary .social-links-sidebar {
+  margin-left: 0;
+  clear: both;
+  padding: 30px 0 15px 0;
 }
 #secondary .social-links-sidebar li,
 #secondary .social-links-sidebar a {
@@ -4021,7 +4069,7 @@ ul.tags li a:active span.end {
 }
 #nav-below {
   margin-top: 20px;
-  padding: 23px 10px 17px 10px;
+  padding: 23px 0 17px 0;
   position: relative;
   height: 40px;
 }
@@ -4308,8 +4356,7 @@ ul.tags li a:active span.end {
 ** Misc
 */
 #rawr {
-  background: transparent;
-  background: url('../imgs/lion.png') no-repeat scroll top left;
+  background: #ff0000 url('../imgs/lion.png') no-repeat scroll top left;
   width: 97px;
   height: 143px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -4349,7 +4396,7 @@ ul.tags li a:active span.end {
   background: #FFF none;
 }
 .mobile #logo {
-  background: transparent url(../imgs/17feet-logo.png) no-repeat center center;
+  background: transparent url(../imgs/17feet-logo.png) no-repeat 50% 50%;
   height: 32px;
 }
 .mobile #header {
@@ -4454,4 +4501,10 @@ ul.tags li a:active span.end {
 }
 .back-btn {
   display: none;
+}
+.row-fluid [class*="span"].left {
+  margin-left: 0;
+}
+.row-fluid [class*="span"].right {
+  margin-left: 2.127659574468085%;
 }

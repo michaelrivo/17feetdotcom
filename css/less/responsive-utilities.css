@@ -36,10 +36,8 @@
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
-.width-stacking img {
-  margin: 10px auto;
-  display: block;
-  float: none !important;
+.width-stacking * {
+  position: static !important;
 }
 .width-stacking div {
   margin: 10px 0 !important;
@@ -57,10 +55,8 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-  .width-tablet img {
-    margin: 10px auto;
-    display: block;
-    float: none !important;
+  .width-tablet * {
+    position: static !important;
   }
   .width-tablet div {
     margin: 10px 0 !important;
@@ -71,8 +67,7 @@
   }
   .width-tablet [class*="span"] {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 15px 0;
   }
   .hidden-desktop {
     display: inherit !important;
@@ -86,6 +81,14 @@
   .hidden-phone {
     display: none !important;
   }
+  .copy .width-tablet img {
+    margin: 10px auto;
+    display: block;
+    float: none !important;
+  }
+  .copy .width-tablet .push-down {
+    padding: 0 !important;
+  }
 }
 @media (max-width: 480px) {
   .width-mobile {
@@ -96,10 +99,8 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-  .width-mobile img {
-    margin: 10px auto;
-    display: block;
-    float: none !important;
+  .width-mobile * {
+    position: static !important;
   }
   .width-mobile div {
     margin: 10px 0 !important;
@@ -113,6 +114,14 @@
     margin-left: 0;
     margin-right: 0;
   }
+  .copy .width-mobile img {
+    margin: 10px auto;
+    display: block;
+    float: none !important;
+  }
+  .copy .width-mobile .push-down {
+    padding: 0 !important;
+  }
 }
 @media (max-width: 959px) {
   .width-lg-tablet {
@@ -123,10 +132,8 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-  .width-lg-tablet img {
-    margin: 10px auto;
-    display: block;
-    float: none !important;
+  .width-lg-tablet * {
+    position: static !important;
   }
   .width-lg-tablet div {
     margin: 10px 0 !important;
@@ -145,5 +152,13 @@
   }
   img.width-lg-tablet {
     margin: 15px 0;
+  }
+  .copy .width-lg-tablet img {
+    margin: 15px auto;
+    display: block;
+    float: none !important;
+  }
+  .copy .width-lg-tablet .push-down {
+    padding: 0 !important;
   }
 }

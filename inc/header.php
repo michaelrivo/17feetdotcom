@@ -9,14 +9,14 @@ if($_SERVER['HTTP_HOST'] == '192.168.1.246' || $_SERVER['HTTP_HOST'] == 'localho
 if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 	$ROOT = "/staging";
 }
-require('mobile_detect.php');
-
-if( $_SERVER['SCRIPT_NAME'] == '/index.php'){
-	if(ismobile() && $_COOKIE["ViewedMobile"] != 1){
-		setcookie("ViewedMobile",true, time()+3600*72);
-		header("Location: ".$ROOT.'/mobile/', true, 303);
-	}
-}
+// require('mobile_detect.php');
+// 
+// if( $_SERVER['SCRIPT_NAME'] == '/index.php'){
+// 	if(ismobile() && $_COOKIE["ViewedMobile"] != 1){
+// 		setcookie("ViewedMobile",true, time()+3600*72);
+// 		header("Location: ".$ROOT.'/mobile/', true, 303);
+// 	}
+// }
 ?>
 
 <!doctype html>
@@ -65,30 +65,30 @@ if( $_SERVER['SCRIPT_NAME'] == '/index.php'){
 	<div id="header">
 		<div class="container">
 			 <div class="hide-full">
-					<button class="mobile-btn" id="menu-toggle" data-toggle="#nav">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-		
-				<div class="back-btn">
-					<button class="mobile-btn">Back</button>
-				</div>
-		
-				<div class="row-fluid">
-		
-					<h1 id="logo" class="span2"><a href="<?php echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
-					<ul class="span8" id="nav">
-						<li class="our-work"><a href="<?php echo $ROOT; ?>/our-work">Our Work</a></li>
-						<li class="about-us"><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>						
-						<li class="join hide-tablet"><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
-						<li class="blog hide-tablet"><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
-						<li class="contact-us"><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
-						
-					</ul>
-					<div class="span2 last twitter hide-tablet hide-mobile"><a href="http://twitter.com/17feet" target="_blank">We're on Twitter</a></div>
-		
-				</div> 
+				<button class="mobile-btn" id="menu-toggle" data-toggle="#nav">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+	
+			<div class="back-btn">
+				<button class="mobile-btn">Back</button>
+			</div>
+	
+			<div class="row-fluid">
+	
+				<h1 id="logo" class="span2"><a href="<?php echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
+				<ul class="span8" id="nav">
+					<li class="our-work"><a href="<?php echo $ROOT; ?>/our-work">Our Work</a></li>
+					<li class="about-us"><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>						
+					<li class="join"><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
+					<li class="blog"><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
+					<li class="contact-us"><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
+					
+				</ul>
+				<div class="span2 last twitter"><a href="http://twitter.com/17feet" target="_blank"><span>We're on Twitter</span></a></div>
+	
+			</div> 
 		</div>
 	</div> <!-- .header -->	

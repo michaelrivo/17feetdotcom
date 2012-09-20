@@ -28,7 +28,7 @@
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h4 id="comments-title" class="shadow-heading">
+		<h4 id="comments-title" class="shadow-heading bg-contain">
 			<span>
 			<?php
 				printf( _n( '1 Comment', '%1$s Comments', get_comments_number(), 'toolbox' ),

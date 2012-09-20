@@ -61,14 +61,15 @@ $(function() {
 
 
 	$('#footer .bird').hover( function(){
-		$this = $('.bird');
+		if( $(window).width() > 480){
+			$this = $('.bird');
 		
-		$this.addClass('animating');
-		$this.bind('webkitAnimationEnd', function() { 
-		   $(this).removeClass('animating');
+			$this.addClass('animating');
+			$this.bind('webkitAnimationEnd', function() { 
+			   $(this).removeClass('animating');
 			
-		});
-		
+			});
+		}
 	})
 
 	// Weather API
@@ -271,7 +272,7 @@ $(function() {
 	
 	$('#menu-toggle').click( function(){
 
-		$( $(this).attr('data-toggle') ).slideToggle('slow');
+		$( $(this).attr('data-toggle') ).slideToggle(150);
 		//console.log( $(this) );
 	});
 	
@@ -652,7 +653,6 @@ $(function() {
 	if($('.picker').length > 0){
 		$('.jobs .active').hide();
 		prevHash = window.location.hash;
-		
 		senseHash();
 		
 		$('.picker a').click( function(event){
@@ -664,6 +664,16 @@ $(function() {
 	function senseHash() {
 		$(window).hashchange(function() { updateJob(location.hash) });
 		updateJob(location.hash);
+	}
+
+	if( $('.join-us').length ){
+		
+		$(window).resize(function(){
+			waitForFinalEvent(function(){
+			      //console.log('Resize...');
+			      movePicker(prevHash);
+			    }, 250, "updating picker");
+		});
 	}
 	
 	function updateJob(id) {
@@ -679,22 +689,10 @@ $(function() {
 
 			$('.jobs .active').fadeOut('normal').queue(
 				function(){	
-
-					$('.jobs .active').removeClass('active');
-					$('.jobPosition[job='+id.substring(1)+'], #job_form').addClass('active').fadeIn('normal'); 
-					
-					var pickerHeight = $('.picker li').innerHeight();
-					var index = $('a[href='+id+']').parent().index();
-
-					$('a.active').removeClass('active');
-
-					$('.selector').animate({top: (index*pickerHeight+1)+'px'}, 200, function(){
-						$('a[href='+id+']').addClass('active');
-					})
-					
+					updatePicker(id);
 					$(this).dequeue();
 				}
-			);	
+			);
 				
 			firstHashChange = false;
 			prevHash = id;
@@ -702,6 +700,41 @@ $(function() {
 		//update form		
 		$('#jobPosition').val(id);
 	}
+	
+	function updatePicker(id){
+		if( $(window).width() > 797 ){
+			$('.jobs .active').removeClass('active');
+		}
+		$('.jobPosition[job='+id.substring(1)+'], #job_form').addClass('active').fadeIn('normal'); 
+			
+		movePicker(id);
+		
+	}
+	
+	function movePicker(id){
+		var pickerHeight = $('.picker li').outerHeight()-1;
+		var position = $('a[href='+id+']').position();
+		var targetHeight = $('a[href='+id+']').outerHeight();
+		$('a.active').removeClass('active');
+		
+		$('.selector').animate({top: (position.top )+'px', height: targetHeight+'px' }, 200, function(){
+			$('a[href='+id+']').addClass('active');
+		});
+		
+	}
+	
+	var waitForFinalEvent = (function () {
+	  var timers = {};
+	  return function (callback, ms, uniqueId) {
+	    if (!uniqueId) {
+	      uniqueId = "Don't call this twice without a uniqueId";
+	    }
+	    if (timers[uniqueId]) {
+	      clearTimeout (timers[uniqueId]);
+	    }
+	    timers[uniqueId] = setTimeout(callback, ms);
+	  };
+	})();
 	
 	function onJobFormSubmit(event) {
 		event.preventDefault();

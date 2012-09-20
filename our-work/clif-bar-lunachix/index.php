@@ -5,22 +5,23 @@ require('../../inc/header.php');
 
 <style type="text/css">
 	#hero-graphic{
-		margin:-35% auto 0 auto;
-		max-width:130%;
+		margin:4% auto 0 auto;
 		display:block;
 	}
+	
 	.hero{
 		background:#2C3263 url(../../imgs/projects/luna-bg.png) repeat 0 center;
 		position:relative;
-		height:650px;
 	}
 	
 	@media all and (max-width: 959px){
+
 /*		.hero{ background-size: cover; }
 		#hero-graphic{ max-width:100%; left: 0; }*/
 	}
 
 	@media all and (max-width: 767px){
+		.hero{ margin-bottom:80px;	}
 	}
 
 	@media all and (max-width: 480px){
@@ -46,14 +47,15 @@ require('../../inc/header.php');
 				<abbr class="web on" title="Web"></abbr>
 			</div>
 		</div>
-		
+		<img src="../../imgs/projects/luna-1.png" id="hero-graphic" />
 	</div>
-	<img src="../../imgs/projects/luna-1.png" id="hero-graphic" />
+	
 </div>
 
 <div class="container copy project">
 	
 	<div class="shim-160" ></div>
+	<div class="shim-80 hide-lg-tablet" ></div>
 	
 	<div class="row-fluid">
 		<div class="span9 append-2 offset1 last">
@@ -77,8 +79,10 @@ require('../../inc/header.php');
 	<div class="row-fluid width-tablet">
 	
 		<div class="span6 right last more-pad" >
-		
-			<h4 style="margin-top:80px">Listen and Learn</h4>
+			
+			<div class="shim-80 hide-lg-tablet" ></div>
+			
+			<h4>Listen and Learn</h4>
 
 			<p>To get it right we started by listening. We interviewed Local Team Leaders, LUNA Pro Team members &amp; LUNA employees. Our research revealed that while all the members wanted to participate in creating digital content not everyone had the time or know-how to do so. We focused on creating a site with simple tools, making it easy for everyone to participate. We also knew that the site was going to be the public face of the LUNA Chix program and had to look great.</p>
 
@@ -86,24 +90,27 @@ require('../../inc/header.php');
 		
 		</div>
 		<div class="span6 left">
-			<img src="../../imgs/projects/luna-3.png" />
+			<img src="../../imgs/projects/luna-3.png" style="max-width:110%; margin-left:-5%;" />
 		</div>
 		
-		
 	</div>
-	<!-- row -->
 	
+	<div class="shim-80" ></div>
 	
-	
-	<div class="append-8 span4 last no-pad" style="height:420px;position:relative">
-		<h4 >Simple Tools for Everyone</h4>
+	<div class="row-fluid width-lg-tablet">
+		<div class="span4 last no-pad">
+			<h4 >Simple Tools for Everyone</h4>
 
-		<p>We embraced the use of a variety of existing tools to put the site together. We used Expression Engine as the backbone which provided a built-in content management system for team members to use. Using Flickr was an efficient way to add photo and video sharing as users are already familiar with the tools and it significantly reduced costs for development. The result is an easy to use platform that's helping build the LUNA Chix community.</p>
-	
-		<div style="background-image:url(../../imgs/projects/luna-4.png);width:617px;height:420px;position:absolute; right:-20px; top:0;"></div>
+			<p>We embraced the use of a variety of existing tools to put the site together. We used Expression Engine as the backbone which provided a built-in content management system for team members to use. Using Flickr was an efficient way to add photo and video sharing as users are already familiar with the tools and it significantly reduced costs for development. The result is an easy to use platform that's helping build the LUNA Chix community.</p>
+		
+		</div>
+		<div class="span8">
+			<img class="right" src="../../imgs/projects/luna-4.png" />
+		</div>
 	</div>
 	
-	<div class="shim-160"></div>
+	<div class="shim-80"></div>
+	<div class="shim-80 hide-lg-tablet"></div>
 	
 	<?php 
 	$currentProject = 'clif-bar-lunachix';

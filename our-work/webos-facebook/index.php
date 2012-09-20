@@ -10,18 +10,18 @@ require('../../inc/header.php'); ?>
 	}
 	
 	#hero-graphic{
-		position:absolute;
-		bottom:-34%;
-		left:2%;
-		max-width:105% !important;
+		position:relative;
+		right:4%;
+		max-width:108% !important;
+		margin:2% 0 0 0;
 	}
 	
 	@media all and (max-width: 959px){
-		#hero-graphic{ left: 0; }
+		#hero-graphic{ }
 	}
 	
 	@media all and (max-width: 767px){
-		#hero-graphic{ bottom:-30%; }
+		#hero-graphic{ }
 	}
 	
 	@media all and (max-width: 480px){
@@ -55,9 +55,8 @@ require('../../inc/header.php'); ?>
 <div class="container copy project">
 	
 	<div class="shim-120"></div>
-	<div class="shim-80 hold"></div>
 	
-	<div class="row-fluid relative ">
+	<div class="row-fluid relative " style="margin-top:100px;">
 		<div class="span2 hide-lg-tablet">
 			<img src="../../imgs/projects/facebook-2.png"  style="margin:20px" />
 		</div>
@@ -114,7 +113,7 @@ require('../../inc/header.php'); ?>
 	
 	<div class="shim-40"></div>
 	
-	<div class="row-fluid">
+	<div class="row-fluid width-tablet">
 		<div class="span6 graphic no-marg"><img src="../../imgs/projects/facebook-6.jpg" /></div>
 		<div class="span6 graphic last no-marg"><img src="../../imgs/projects/facebook-7.jpg"/></div>
 	</div>

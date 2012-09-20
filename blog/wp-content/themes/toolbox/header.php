@@ -11,8 +11,9 @@
 ?>
 <?php 
 $isiPad = (bool) strpos($_SERVER['HTTP_USER_AGENT'],'iPad'); 
+$isiPad = false;
 $ROOT = "http://www.17feet.com";
-if($_SERVER['HTTP_HOST'] == '192.168.1.158' ){
+if($_SERVER['HTTP_HOST'] == '192.168.1.246' || $_SERVER['HTTP_HOST'] == 'localhost' ){
 	$ROOT = "/17feet";
 }
 
@@ -40,7 +41,8 @@ if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 	<meta http-equiv="content-script-type" content="text/javascript" /> 
 	<meta http-equiv="content-style-type" content="text/css" /> 
 	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-	<?php  echo ($isiPad ? "<meta name=\"viewport\" width =\"1024\", user-scalable = \"no\" >" : "<meta name=\"viewport\" initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width />" ); ?>
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
 	
 <title><?php
 	/*
@@ -66,10 +68,12 @@ if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 
 <!-- Framework CSS --> 
-<link rel="stylesheet" href="<?php echo $ROOT ?>/css/screen.css" type="text/css" media="screen, projection"> 
+<!-- <link rel="stylesheet" href="<?php echo $ROOT ?>/css/screen.css" type="text/css" media="screen, projection">  -->
 <link rel="stylesheet" href="<?php echo $ROOT ?>/css/print.css" type="text/css" media="print"> 
 <!--[if lt IE 8]><link rel="stylesheet" href="<?php echo $ROOT ?>/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
 <link rel="stylesheet" href="<?php echo $ROOT ?>/css/style.css" type="text/css" media="screen, projection">
+
+<link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 960px)' href='<?php echo $ROOT ?>/css/less/responsive.css' />
 
 <!-- Scripts -->
 
@@ -94,23 +98,41 @@ if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 
 <?php wp_head(); ?>
 </head>
-<body <?php body_class($isiPad); ?> >
+<body <?php echo ($parentPage ? "class='$parentPage'": '');  ?> >
 	<div id="body" class="blog">
-	<div id="header">
-		<div class="container">
-			<h1 id="logo" class="span2"><a href="<?php echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
-			<ul class="span8" id="nav">
-				<li><a href="<?php echo $ROOT; ?>/our-work">Our Work</a></li>
-				<li><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>
-				<li><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
-				<li><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
-				<li><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
-			</ul>
-			<div class="span2 last"><a href="http://twitter.com/17feet" target="_blank" class="twitter">We're on Twitter</a></div>
-		</div>
-	</div>
+		<div id="header">
+			<div class="container">
+				 <div class="hide-full">
+					<button class="mobile-btn" id="menu-toggle" data-toggle="#nav">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<div class="back-btn">
+					<a class="mobile-btn" href="./">Back</a>
+				</div>
+
+				<div class="row-fluid">
+
+					<h1 id="logo" class="span2"><a href="<?php echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
+					<ul class="span8" id="nav">
+						<li class="our-work"><a href="<?php echo $ROOT; ?>/our-work">Our Work</a></li>
+						<li class="about-us"><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>						
+						<li class="join"><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
+						<li class="blog"><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
+						<li class="contact-us"><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
+
+					</ul>
+					<div class="span2 last twitter"><a href="http://twitter.com/17feet" target="_blank"><span>We're on Twitter</span></a></div>
+
+				</div> 
+			</div>
+		</div> <!-- .header -->
+
 	<div class="container">
-		<div class="span12 header">
+		<div class="header">
 			<h2>17FEET Blog</h2>
 			<h3>Keep up with all things 17FEET</h3>
 			
