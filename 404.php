@@ -3,9 +3,41 @@ $parentPage = 'mobile-menu';
 require('inc/header.php'); 
 ?>
 
+<style type="text/css">	
+
+	
+	
+	@media all and (max-width: 959px){
+		.error404 p{ font-size: 1.15em}
+		.error404 h3{ margin-top:80px; font-size:2.25em }
+		
+		.error404 h3, .error404 p{ padding:0 0 0 75px;}
+	}
+
+	@media all and (max-width: 767px){
+		.error404 h3{ padding-right:30%; margin-top:50px; }
+		.span7{ position:static !important; float:none !important; height:auto !important;	 }
+		.no-overflow{ height:600px;	}
+		
+	}
+	@media all and (max-width: 600px){
+		.error404 h3{ padding:0; margin-top:30px; }
+	}
+	@media all and (max-width: 480px){
+		.no-overflow{ height:470px;	}
+	}
+	
+	@media all and (max-width: 320px){
+
+	}
+	
+	
+
+</style>
+
 <div class="container error404">
 	
-	<div class="row relative">
+	<div class="row-fluid relative ">
 	
 		<div class="span7 offset5 last relative" >
 		

@@ -41,7 +41,7 @@ while( true && $ct < 20){
 		<a class="prev absolute posLeft block" href="<?php echo "../$prevLink" ?>" title="Previous Project (Left Arrow Key)"></a>
 	</div>
 	
-	<div class="container" style="padding:0;">
+	<div>
 		<div class="prev-project blueBtn">
 			<a href="<?php echo "../$prevLink" ?>" title="Previous Project (Left Arrow Key)" ><!-- <span></span> -->Previous</a>
 		</div>

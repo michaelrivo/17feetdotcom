@@ -1,5 +1,6 @@
 <?php 
 $isiPad = (bool) strpos($_SERVER['HTTP_USER_AGENT'],'iPad'); 
+$isiPad = false;
 $ROOT = "http://www.17feet.com";
 if($_SERVER['HTTP_HOST'] == '192.168.1.246' || $_SERVER['HTTP_HOST'] == 'localhost' ){
 	$ROOT = "/17feet";
@@ -8,14 +9,14 @@ if($_SERVER['HTTP_HOST'] == '192.168.1.246' || $_SERVER['HTTP_HOST'] == 'localho
 if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 	$ROOT = "/staging";
 }
-require('mobile_detect.php');
-
-if( $_SERVER['SCRIPT_NAME'] == '/index.php'){
-	if(ismobile() && $_COOKIE["ViewedMobile"] != 1){
-		setcookie("ViewedMobile",true, time()+3600*72);
-		header("Location: ".$ROOT.'/mobile/', true, 303);
-	}
-}
+// require('mobile_detect.php');
+// 
+// if( $_SERVER['SCRIPT_NAME'] == '/index.php'){
+// 	if(ismobile() && $_COOKIE["ViewedMobile"] != 1){
+// 		setcookie("ViewedMobile",true, time()+3600*72);
+// 		header("Location: ".$ROOT.'/mobile/', true, 303);
+// 	}
+// }
 ?>
 
 <!doctype html>
@@ -24,23 +25,21 @@ if( $_SERVER['SCRIPT_NAME'] == '/index.php'){
 <!--[if IE 8 ]>		<html class="no-js ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
-	<meta http-equiv="content-script-type" content="text/javascript" /> 
-	<meta http-equiv="content-style-type" content="text/css" /> 
-	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-	<?php if( $isiPad ){ ?>
-		<meta name="viewport" content="width=1024"> 
-		<?php } else { ?>
-		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1"> 
-	<?php } ?>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" > 
+	<meta http-equiv="content-script-type" content="text/javascript" > 
+	<meta http-equiv="content-style-type" content="text/css" > 
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
+
+	<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+	
 	<title>17feet</title>
 	<?php //print_r($_SERVER); ?>
 	<!-- Framework CSS --> 
-	<link rel="stylesheet" href="<?php echo $ROOT ?>/css/screen.css" type="text/css" media="screen, projection, print"> 
 	<!--[if lt IE 9]><link rel="stylesheet" href="<?php echo $ROOT ?>/css/ie.css" type="text/css" media="screen, projection, print"><![endif]-->
 	<link rel="stylesheet" href="<?php echo $ROOT ?>/css/style.css" type="text/css" media="screen, projection, print">
-	<link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 960px)' href='<?php echo $ROOT ?>/css/less/responsive.css' />
 	
+	<link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 960px)' href='<?php echo $ROOT ?>/css/less/responsive.css' />
+		
 	<link rel="shortcut icon" href="<?php echo $ROOT ?>/imgs/favicon.ico" />
 
 	<!-- Scripts -->
@@ -56,41 +55,40 @@ if( $_SERVER['SCRIPT_NAME'] == '/index.php'){
 	<script src="<?php echo $ROOT ?>/js/lectric.js" type="text/javascript" charset="utf-8"></script>
 	<script src="<?php echo $ROOT ?>/js/jquery.jsonp.js" type="text/javascript" charset="utf-8"></script>
 	<script src="<?php echo $ROOT ?>/js/hashchange.js" type="text/javascript" charset="utf-8"></script>
-	<!-- <script src="<?php echo $ROOT ?>/js/animate-enhanced.js" type="text/javascript" charset="utf-8"></script> -->
 	
 	<script src="<?php echo $ROOT ?>/js/init.js" type="text/javascript" charset="utf-8"></script>
 	
-	<!-- <?php // print_r($_SERVER);  ?> -->
+	
 </head>
-<body <?php echo ($isiPad ? "class='ipad'": '');?> >
+<body>
 	<div id="body" <?php echo ($parentPage ? "class='$parentPage'": '');  ?>>
 	<div id="header">
 		<div class="container">
-			
-			<div class="hide-full">
+			 <div class="hide-full">
 				<button class="mobile-btn" id="menu-toggle" data-toggle="#nav">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
 			</div>
-			
+	
 			<div class="back-btn">
 				<button class="mobile-btn">Back</button>
 			</div>
-			
+	
 			<div class="row-fluid">
-			
+	
 				<h1 id="logo" class="span2"><a href="<?php echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
-				<ul class="span7" id="nav">
-					<li class="contact-us"><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
-					<li class="blog hide-tablet"><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
-					<li class="join hide-tablet"><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
-					<li class="about-us"><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>
+				<ul class="span8" id="nav">
 					<li class="our-work"><a href="<?php echo $ROOT; ?>/our-work">Our Work</a></li>
+					<li class="about-us"><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>						
+					<li class="join"><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
+					<li class="blog"><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
+					<li class="contact-us"><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
+					
 				</ul>
-				<div class="span3 last twitter hide-tablet hide-mobile"><a href="http://twitter.com/17feet" target="_blank">We're on Twitter</a></div>
-			
-			</div>
+				<div class="span2 last twitter"><a href="http://twitter.com/17feet" target="_blank"><span>We're on Twitter</span></a></div>
+	
+			</div> 
 		</div>
-	</div>
+	</div> <!-- .header -->	

@@ -70,12 +70,15 @@
 					
 						<div id="lastfm" class="content">
 						
-							<div class="frame"><img src="" width="79" height="79" alt="" /></div>
-						
-							<div class="artist"></div>
-							<div class="song"></div>
-							<div class="album"></div>
-						
+							
+							<div class="frame"><img src="" alt="" /></div>
+							
+							<div class="details">
+								<div class="artist"></div>
+								<div class="song"></div>
+								<div class="album"></div>
+							</div>
+							
 							<div class="clear"></div>
 							<p class="via api-link"><a href="http://www.last.fm/user/seventeenfeet" target="_blank">Last.fm</a></p>
 						

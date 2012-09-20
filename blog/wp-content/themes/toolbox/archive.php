@@ -12,7 +12,8 @@
  * @since Toolbox 0.1
  */
 
-get_header(); ?>
+$parentPage = 'back';
+include("header.php"); ?>
 
 		<div class="container">
 			

@@ -21,7 +21,7 @@
 .visible-desktop   { display: inherit !important; }
 
 // Tablets & small desktops only
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 959px) {
   // Hide everything else
   .hidden-desktop    { display: inherit !important; }
   .visible-desktop   { display: none !important ; }
@@ -31,8 +31,27 @@
   .hidden-tablet     { display: none !important; }
 }
 
+.width-stacking{
+	width:100% !important; float:none; position:static; padding:0 !important; margin-left:0 !important; margin-right:0 !important;
+	
+	*{ position:static !important; }
+	div{ margin:10px 0 !important; }
+	h4,p{ padding:0 !important; }
+}
+
 // Phones only
 @media (max-width: 767px) {
+	
+  .width-tablet 	 { 
+		.width-stacking;
+		[class*="span"]{ 
+			width:100%; 
+			//margin-left:0; margin-right:0; 
+			margin:15px 0;
+			
+		}
+	}
+	
   // Hide everything else
   .hidden-desktop    { display: inherit !important; }
   .visible-desktop   { display: none !important; }
@@ -40,4 +59,38 @@
   .visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
   // Hide
   .hidden-phone      { display: none !important; }
+
+	.copy .width-tablet{
+		img { margin:10px auto; display:block; float:none !important; }
+		.push-down{ padding:0 !important; }
+	}
 }
+
+
+@media (max-width: 480px) {
+	.width-mobile{ 
+		.width-stacking; 
+		[class*="span"]{ width:100%; margin-left:0; margin-right:0; }
+	}
+	
+	.copy .width-mobile{
+		img { margin:10px auto; display:block; float:none !important; }
+		.push-down{ padding:0 !important; }
+	}
+}
+
+@media (max-width: 959px) {
+	.width-lg-tablet{ 
+		.width-stacking;
+		[class*="span"]{ width:100%; margin-left:0; margin-right:0; }
+	}
+	.hide-lg-tablet{ display: none !important; }
+	
+	img.width-lg-tablet{ margin:15px 0; }
+	
+	.copy .width-lg-tablet{
+		img { margin:15px auto; display:block; float:none !important; }
+		.push-down{ padding:0 !important; }
+	}
+}
+

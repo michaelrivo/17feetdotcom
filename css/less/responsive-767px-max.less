@@ -12,31 +12,35 @@
 	background-color:#FFF;
 }
 
-.mobile-btn{
-	border:1px solid #000;
-	#gradient .vertical(#111, #000);
-	@shadow: inset 0 1px 1px #555 , 0 0 0 1px rgba(255,255,255,0.15), 0 2px 6px  rgba(255,255,255,0.15);
-	.cbox-shadow(@shadow );
-	border:1px solid #000;
-	.border-radius(3px);
-	float:left;
-	margin:12px 0 0 0;
-	padding:7px 8px;
-	
- 	&:link{ color:#FFF; }
-	&:hover{ color:#69AABA; }
-	&:visited{ color:#FFF; }
-	&:active{ color:#69AABA; }
-}
-
-
-
 .responsive-transition{
 	@transition: height .15s ease-in-out, padding .15s ease-in-out, margin .15s ease-in-out;
 	.transition( @transition );
 }
 
 @media (max-width: 767px) {
+	
+	
+	#header .twitter{ display:none; }
+	#logo{ width:95px; }
+	#nav{
+		float:right;
+		margin:0;
+		li a{ padding-left:10px; padding-right:10px; font-size: 100%; }
+	}
+	
+	.container{
+		width: 560px;
+		margin:0 auto;
+	}
+
+ 	.project.header .span9 { width:100%;}
+
+	.what-it-is{ display:none !important; } 
+	
+	.hero{ 
+		.span9{ width:100%;}
+		h3{ padding-right:0; }
+	}
 	
 	.hide-tablet{ display:none !important; }
 	
@@ -46,457 +50,161 @@
 	 .cta{ background-image:none; }	
 	}
 	
-	@sliderHeight:340px;
-	.banner{ height:@sliderHeight; }
-	#slider .item, #slider { height: @sliderHeight + 40px; }
-	#slider .item {
-		.bg{ height:@sliderHeight; background-size:contain;}
-		.graphic{ margin-top:10%}
-	}
-
-	.container.project{
-		.what-it-is p{ display:block; margin-top:45px; }
-	}
-	
-/*	@fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
-	@fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);*/
-		
-	
-	@import "twitter-anim.less";
-	
-/*  // Padding to set content in a bit
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  // Negative indent the now static "fixed" navbar
-  .navbar-fixed-top,
-  .navbar-fixed-bottom,
-  .navbar-static-top {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-  // Remove padding on container given explicit padding set on body
-  .container-fluid {
-    padding: 0;
-  }
-
-  // TYPOGRAPHY
-  // ----------
-  // Reset horizontal dl
-  .dl-horizontal {
-    dt {
-      float: none;
-      clear: none;
-      width: auto;
-      text-align: left;
-    }
-    dd {
-      margin-left: 0;
-    }
-  }
-
-  // GRID & CONTAINERS
-  // -----------------
-  // Remove width from containers
-  .container {
-    width: auto;
-  }
-  // Fluid rows
-  .row-fluid {
-    width: 100%;
-  }
-  // Undo negative margin on rows and thumbnails
-  .row,
-  .thumbnails {
-    margin-left: 0;
-  }
-  .thumbnails > li {
-    float: none;
-    margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
-  }
-  // Make all grid-sized elements block level again
-  [class*="span"],
-  .row-fluid [class*="span"] {
-    float: none;
-    display: block;
-    width: 100%;
-    margin-left: 0;
-    .box-sizing(border-box);
-  }
-  .span12,
-  .row-fluid .span12 {
-    width: 100%;
-    .box-sizing(border-box);
-  }
-
-  // FORM FIELDS
-  // -----------
-  // Make span* classes full width
-  .input-large,
-  .input-xlarge,
-  .input-xxlarge,
-  input[class*="span"],
-  select[class*="span"],
-  textarea[class*="span"],
-  .uneditable-input {
-    .input-block-level();
-  }
-  // But don't let it screw up prepend/append inputs
-  .input-prepend input,
-  .input-append input,
-  .input-prepend input[class*="span"],
-  .input-append input[class*="span"] {
-    display: inline-block; // redeclare so they don't wrap to new lines
-    width: auto;
-  }
-  .controls-row [class*="span"] + [class*="span"] {
-    margin-left: 0;
-  }
-
-  // Modals
-  .modal {
-    position: fixed;
-    top:   20px;
-    left:  20px;
-    right: 20px;
-    width: auto;
-    margin: 0;
-    &.fade.in { top: auto; }
-  }*/
-
-}
-
-
-
-// UP TO LANDSCAPE PHONE
-// ---------------------
-
-@media (max-width: 480px) {
-	
-	.hide-tablet{ display:block !important; }
-	.hide-mobile{ display:none !important; }
-	
-	/*  Begin Nav */
-	#header .twitter{ display:none; background-position: right 16px;}
-	
-	.row, .row-fluid{ margin-left:0;}
-	
-	.row [class*="span"], 
-	.row-fluid [class*="span"]{ 
-		width:100%; float:none; position:static;
-		margin-left:0;
-	}
-	
-	#logo{ 
-		float:none; width:100px; margin:0 auto;
-		a{ background-position:center center;}
-	}
-	#nav li{ display:none !important; }
-	#nav{ .box-shadow( 0 4px 25px #000 ); }
-	
-	#menu-toggle{ display:none; }
-	.mobile-menu #menu-toggle{ display:block; }
-	.mobile-menu #nav{ 
-		clear:both;
-		width:100%;
-		display:none;
-	}
-	
-	.mobile-menu #nav li{
-		display:block;
-		float:none;
-		background:#000;
-		border-bottom:1px solid #222;
-		
-		a{
-			font-size:1.2em;
-			color:#FFF;
-		}
-	}
-	
-	.project-control{ display:none; }
-	
-
-	/* Our Work */
-	
-	
-	.back .back-btn{ display:block; }
-	
-	#nav{ 
-		.box-shadow(none);
-		float:none;
-		position:absolute;
-		top:0;
-		left:10px;		
-	}
-	
-	.our-work #nav li.our-work{ 
-		display:block !important; 
-		a{
-			.mobile-btn;
-			font-size:1.1em;
-			margin-top:11px;
-			//text-transform:uppercase;
-			//font-weight:500;
-			padding:6px 8px;
-		}
-	}
-	
-	#nav{ width:auto; }
-	
-	.hero, .hero .project{ height:auto !important; }
-
-	*{ float:none; }
-	.projects, .project{
-		h2{ font-size:2.5em; font-weight:500; }
-		h3{
-			font-size:1.1em; 
-			padding-right:0;		
-			br{ display:none; }
-		}
-		h4, p{ padding:0px !important; }
-	}
-	
-	.what-it-is{ display:none; }
-	
-	/* End Nav */
-	
-	.hide-mobile{ display:none; }
-	.hide-full {  display:block; }
-	.absolute { position:static; }
-	.mobile-width { 
-		padding:0px !important;
-		margin:0px !important; 
-		width:100% !important;
-	}
-	
-	
-	/* Home Page */
-	
-	.banner{ width: auto; }
-	
-	#slider .item, #slider .banner{ height:auto; }
-	#slider .item { position:static; }
-	#slider{ height:auto; }	
-	
-	#slider .slide0{
-		h3{ margin:0; font-size:1.3em }
-		.slide-ttl{ margin:-10px 0 -25px -8%; max-width:110%; }
-		.graphic{ position: static; margin:15px 5% 0 8%; max-width:80%; float:none; }
-		.cta{ background-image:none;}
-		
-		br{ display:none; }
-	}
-	
-	.second-tier{ 
-		
-		h2{ font-size: 2.3em; }
-		.span4{ 
-			padding:0;
-			margin: 8px 0;
-			div{ padding:5% 6% 4% 6%; }
-		}
-		
-		.cta{ margin: 15px 0 0 0; }
-	}
-	
-	.third-tier{
-		
-		.thumb-wrap{ height: auto; }
-		p{ padding:0; }
-		
-		.past-project{ position:static; padding:0; margin-top: 50px; }
-	}
-	
-	.second-tier, .third-tier{ padding-bottom:30px;}
-	
-	
-	/* Work overview */
-	
-	.container .project{ 
-		height:auto;
-		margin-bottom:1em;
-		h5{ margin-top:.5em; }
-		div{ height:auto; }
-		a{ 
-			position:relative !important;
-			width:auto !important;
-			height:auto !important;
-		}
-	}
-	
 	/* Project Pages */
-	.shim-40, .shim-80, .shim-120, .shim-160{ display:none; }
-	//.no-pad{ padding: inherit; }
+
+	.hero{ height:380px } //originally 535px, 480px, 380px
 	
-	img{ max-width:100%; }
-	
-	
-	#hero-graphic { position:static; margin:inherit auto;}
-	
-	.project.copy{ 
-		padding: 20px 0; 
-		
-		p{ font-size: 105%; line-height: 165%; }
-		
-		.span1, .span2, .span3, .span4, 
-		.span5, .span6, .span7, .span8, 
-		.span9, .span10, .span11, .span12{
-			margin: 1.5em 0 0 0;
-			height:auto !important;
-		}
-		.clear-pad{ padding:0px !important; margin:0px !important; }
-		
-		
+	.projects, .project{
+		h4{ font-size: 2em; }
+		p{ font-size: 100%; }
 	}
 	
-	blockquote{ 
+	.project.copy{
+		p,h4{ padding-right:0;}
+	}
+	
+	// put cite under quote
+	.project.copy .row-fluid blockquote{ 
 		font-size:1.75em; 
+		width:100%;
 	}
 	.project.copy .cite{ 
 		height:auto !important; 
 		background-image:none; 
 		padding:0 !important;
+		width:100% !important;
+		clear:left;
 		
-		br 	{ display: none; }
 		span{ margin:0; }
 		span, a{ position:static; }
 		a{ margin-left:10px;}
 	}
 	
-	.container.copy.project{
-		.next-project, .prev-project{ 
-			margin-top:0;
-			width:35% !important; 
-			a { width:100% !important; }
-		}
-		.next-project{ float:right; }
-		.view-all-work{ clear: both; width:100%; top:15px; margin:0; }
+	
+	.shim-40{ height:20px; }
+	.shim-80{ height:40px; }
+	.shim-120{ height:60px; }
+	.shim-160{ height:80px; }
+	
+	/* Our Work */
+	
+	
+	.projects .span4{ 
+		
+		height:345px; 
+		width: 40%; 
+		margin-right:10%;
+		
+		img{ max-width:110%}
+		div{ height:230px !important; }
+		p{ white-space: normal !important; }
 	}
 	
-	.graphic, #hero-graphic{ .background-size(cover); }
+	
+	/* Join Page */
+	
+		.join-us{
+			
+			.openings{
+				margin-bottom:0;
+				
+				.selector{ display:none; }
+				li{ margin:10px 0; }
+				li, li.first{ border:none;}
+				a{ 
+					padding:10px 16px;
+					font-weight:bold;					
+					background-color:#FFF;
+					.border-radius(5px);
+					border:1px solid #DDD;
+					.inset-shadow(0, 0, 0, 0, rgba(0,0,0,0) );
+					.transition(all .1s ease-in-out);
 
-/*	.span1, .span2, .span3, .span4, 
-	.span5, .span6, .span7, .span8, 
-	.span9, .span10, .span11, .span12{
-		width:90%;
-		margin: 0;
-		//float:none;
-		padding: 0 5%;
-	}*/
-	
-	
-	hr.up.nav-divider{
-		margin-top:20px;
-		background-size:100% 50%;
-	}
-	
-	
-	/* Footer */
-	
-	#footer, .collapse .container{ padding: 15px 0; }
-	
-	#footer{
-		
-		.span3{
-			width:100%;
-			margin:0;
-			padding-bottom:15px;
-			//.pad{ padding:10px 0; }
-			.content{ height: auto; }
-			&:after{
-				width:100%;
-				height:1px;
-				border-right:none;
-				border-bottom:1px solid #4D4D4D;
-				top:inherit;
-				bottom:0;
+					&:link, &:visited {color: @blue;}
+					&:hover{ color: #FFF; background-color:saturate(@blue,15%); border-color:transparent; }
+					&:focus{
+						@shadow: inset 0 1px 3px rgba(0,0,0,.3), 0 0 8px rgba(105, 170, 186,.6);
+						  .box-shadow(@shadow);
+					}
+					&:active {
+						color:#FFF;
+						border-color:transparent;
+						background-color:saturate(@blue, 15%);
+						text-shadow:0 1px 1px rgba(0,0,0,.5);
+						.inset-shadow(0px, 2px, 3px, 0px, rgba(0,0,0,.5) );
+					}
+				}
+				a.active{
+					//#gradient .vertical( @blue, rgba(105,170,186, 0) ); 
+					background-color: @blue;
+					border-color:transparent;
+					&:link, &:visited { color:#FFF; }
+				}
 			}
+						
 		}
-		.twitter{ 
-			.tweet-wrap{ width:auto; }
-			#tweet-txt { height:auto; }
-		}
+	
+	/* About Us */
+	
+	.about-us{
 		
-		.api-link{ position:static; clear:both; padding:10px 0; }
+		.service .pad{
+			padding: 25px;
+			.graphic{ 
+				float:left;
+				width:40%;
+				margin-left:0;
+			}
+			h3,p,ul{ margin-left:45%;}
+		}
+		.service{  margin: 0 0 15px 0; }
+		partners{ padding:20px 0; }
+		
+		.clients{ /*width: 463px;*/ .background-size(95%); height:180px; }
+		.end h3{ margin-top:20px; }
 	}
 	
+	/* Home */
 	
-	#sub-footer{ 
-		form{ display: none; }
-	}
+	.third-tier .past-project { padding-left:0; margin-top:40px; }
+	
+	@import "twitter-anim.less";
+	
+	
 	/* 404 Page */
 	
 	.error404{
-		h3,p{ padding:0;}
-		p{ font-size: 1.15em}
-		h3{ margin-top:30px; font-size:2.25em }
+		
+		.span7{ 
+			width:100%;
+			margin-left:0 !important;
+		}
+		
+		h3,p{ margin-left:0; padding-left:0 !important;}
+		
+		.no-overflow{ position:static; }
 		#darth{
-			position:static;
-			.transform( scale(.55,.55) );
+			.transform( scale(.75,.75) );
 			.transform-origin( left top );
 		}
 	}
 	
-	/*
-	// Original bootstrap styles
+	/* Blog */
 	
-  // Smooth out the collapsing/expanding nav
-  .nav-collapse {
-    -webkit-transform: translate3d(0, 0, 0); // activate the GPU
-  }
-
-  // Block level the page header small tag for readability
-  .page-header h1 small {
-    display: block;
-    line-height: @baseLineHeight;
-  }
-
-  // Update checkboxes for iOS
-  input[type="checkbox"],
-  input[type="radio"] {
-    border: 1px solid #ccc;
-  }
-
-  // Remove the horizontal form styles
-  .form-horizontal {
-    .control-label {
-      float: none;
-      width: auto;
-      padding-top: 0;
-      text-align: left;
-    }
-    // Move over all input controls and content
-    .controls {
-      margin-left: 0;
-    }
-    // Move the options list down to align with labels
-    .control-list {
-      padding-top: 0; // has to be padding because margin collaspes
-    }
-    // Move over buttons in .form-actions to align with .controls
-    .form-actions {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-
-  // Modals
-  .modal {
-    top:   10px;
-    left:  10px;
-    right: 10px;
-  }
-  .modal-header .close {
-    padding: 10px;
-    margin: -10px;
-  }
-
-  // Carousel
-  .carousel-caption {
-    position: static;
-  } */
-
+	#blog-content, #secondary{ width: 100%; margin:0; }
+	
+	.widget_recent_entries, .widget_most_popular_tags{
+		display:none;
+	}
+	#secondary hr{ display:block; }
+	#secondary #searchform{
+		width:100%;
+		max-width:220px;
+/*		 #s { }
+		.blueBtn input{ } 
+*/		
+	}
+	
+	.blog .page-title{ font-size: 1.5em; }
+	
 }

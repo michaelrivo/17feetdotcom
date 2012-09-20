@@ -217,7 +217,7 @@ function toolbox_posted_on() {
 	/*
 	<img src="<?php bloginfo('wpurl'); ?>/wp-content/images/authors/<?php the_author_firstname(); ?>.png" alt="" class="avatar"/>
 	*/
-	printf( __( '<img src=" %8$s/wp-content/images/authors/%9$s.png" alt="" class="avatar"/><p><span class="byline"> <span class="sep"></span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a>&nbsp;/&nbsp;%10$s</span></span><br/><time class="entry-date">Posted %4$s</time></p>', 'toolbox' ),
+	printf( __( '<img src=" %8$s/wp-content/images/authors/%9$s.png" alt="" class="avatar"/><p><span class="byline"> <span class="sep"></span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a>&nbsp;/&nbsp;%10$s</span></span><br class="hold"/><time class="entry-date">Posted %4$s</time></p>', 'toolbox' ),
 		esc_url( get_permalink() ), // 1 
 		esc_attr( get_the_time() ), // 2
 		esc_attr( get_the_date( 'c' ) ), // 3

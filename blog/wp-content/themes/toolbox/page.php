@@ -11,8 +11,8 @@
  * @subpackage Toolbox
  * @since Toolbox 0.1
  */
-
-get_header(); ?>
+$parentPage = 'back';
+include("header.php");  ?>
 
 		<div id="primary">
 			<div id="content" role="main">
