@@ -135,7 +135,6 @@ if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 		<div class="header">
 			<h2>17FEET Blog</h2>
 			<h3>Keep up with all things 17FEET</h3>
-			
 			<hr class="up" />
 		</div>
 	</div>

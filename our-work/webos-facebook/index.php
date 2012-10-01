@@ -26,6 +26,7 @@ require('../../inc/header.php'); ?>
 	
 	@media all and (max-width: 480px){
 		.project.copy{ padding-top:25px;}
+		.graphic1{ max-width: 80% !important; }
 		
 	}
 
@@ -71,7 +72,7 @@ require('../../inc/header.php'); ?>
 	<div class="row-fluid width-tablet">
 		
 		<div class="span6">
-			<img class="" src="../../imgs/projects/facebook-3.png">
+			<img src="../../imgs/projects/facebook-3.png" class="graphic1" />
 		</div>
 		
 		<div class="span6 relative">
@@ -113,12 +114,12 @@ require('../../inc/header.php'); ?>
 	
 	<div class="shim-40"></div>
 	
-	<div class="row-fluid width-tablet">
+	<div class="row-fluid width-tablet hide-mobile">
 		<div class="span6 graphic no-marg"><img src="../../imgs/projects/facebook-6.jpg" /></div>
 		<div class="span6 graphic last no-marg"><img src="../../imgs/projects/facebook-7.jpg"/></div>
 	</div>
 	
-	<div class="no-pad"><em>Alternative Exhibition Mode designs</em></div>
+	<div class="no-pad hide-mobile"><em>Alternative Exhibition Mode designs</em></div>
 		
 	<div class="shim-120"></div>
 	
@@ -138,7 +139,7 @@ require('../../inc/header.php'); ?>
 		
 			<div class="shim-40" style="height:10px"></div>
 		
-			<img class="graphic hide-tablet right" src="../../imgs/projects/facebook-10.png" />
+			<img class="graphic hide-tablet hide-mobile right" src="../../imgs/projects/facebook-10.png" />
 		
 		</div>
 	</div>

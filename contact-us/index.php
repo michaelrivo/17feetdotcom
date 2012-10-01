@@ -25,12 +25,12 @@ require('../inc/header.php');
 
 </style>
 
-<div class="container project contact-us">
+<div class="container static contact-us">
 	
 	<div class="header">
-	<h2>Contact Us</h2>
+		<h2>Contact Us</h2>
+		<hr class="up" />
 	</div>
-	<hr class="up" />
 	
 	<div class="row-fluid width-tablet">
 		

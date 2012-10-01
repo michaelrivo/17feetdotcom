@@ -1,7 +1,40 @@
 if (!window.console) console = {log: function() {}};
 
-
 $(function() {
+	
+	// Hide address bar on devices like the iPhone
+	//---------------------------------------------
+	function hideAddressBar() {
+		// Big screen. Fixed chrome likely.
+		if(screen.width > 960 || screen.height > 960) return;
+
+		// Standalone (full screen webapp) mode
+		if(window.navigator.standalone === true) return;
+
+		// Page zoom or vertical scrollbars
+		if(window.innerWidth !== document.documentElement.clientWidth) {
+			// Sometimes one pixel too much. Compensate.
+			if((window.innerWidth - 1) !== document.documentElement.clientWidth) return;
+
+		}
+
+		setTimeout(function() {
+			// Already scrolled?
+			if(window.pageYOffset !== 0) return;
+
+			// Perform autoscroll
+			window.scrollTo(0, 1);
+
+			// Reset body height and scroll
+			if(bodyTag !== undefined) bodyTag.style.height = window.innerHeight + 'px';
+			window.scrollTo(0, 0);
+
+		}, 1000);
+
+	}
+	
+	hideAddressBar();
+	
 	// IF slider initialize it
 	//alert($('html').width());
 	var rootFolder = 'http://www.17feet.com/';

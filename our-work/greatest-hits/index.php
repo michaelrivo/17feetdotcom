@@ -5,7 +5,7 @@ require('../../inc/header.php');
 
 <style type="text/css">
 	
-	.graphic1{ max-width: 265%; float:right; }
+	.graphic1{ max-width: 265%; float:right; margin-top:15%; }
 	.graphic2{ max-width: 185%; margin-left: -5%; z-index:0; }
 	.graphic3{ max-width: 120%; float:right; }
 	.graphic4{  }
@@ -17,18 +17,29 @@ require('../../inc/header.php');
 	.awards{ margin-left:0; }
 	
 	@media all and (max-width: 959px){
-		.graphic1{ margin-top:30%; }
+		.graphic1{ margin:35% -10% 0 0; max-width: 180%; }
 		.padLeft{ padding-left:0; }
 	}
 
 	@media all and (max-width: 767px){
-		.graphic1{ max-width:110%; margin:-10% 0 0 -5% !important; display:block; }
+		.copy .width-tablet img.graphic1{ max-width:100%; margin:-12% 0 0 0 !important; float:right !important; }
+		
+		.copy .width-lg-tablet .graphic2{ margin: -10% 0 -20% 0 !important; }
+		
 	}
 	
 	@media all and (max-width: 600px){
+		.copy .width-tablet img.graphic1{ /*max-width:165% !important;*/ margin:-20% 0 0 0 !important; }	
+		.copy .width-lg-tablet .graphic2{ max-width: 170% !important; margin: -15% 0 -30% 0 !important; }
+		
+		.container.project .awards{ margin-bottom: 30px !important; }
 	}
 	
 	@media all and (max-width: 480px){
+		.awards li span { display:none; }
+		.container.project .awards{ height:auto; }
+		.container.project .awards li{ display:block; width:150px; height:45px; padding:0; float:left; margin:0 0 0 0;}
+		.width-tablet .hide-overflow{ margin-top:-20% !important; }
 	}
 	
 	@media all and (max-width: 320px){
@@ -69,13 +80,13 @@ require('../../inc/header.php');
 				<p>With a cast of crazy characters and tons of video content the concept was a no brainer &mdash; road trip! Well, that was also the concept of TV campaign led by Creative Directors John Zissimos and Greg Rowan at McCann Erickson San Francisco. <a href="http://clients.17feet.com/mikeshard/" class="carat" target="_blank">Launch Site</a></p>
 		
 				<ul class="awards" style="margin-left:0;">
-					<li class="horizon">2007 Gold Medal Award</li>
+					<li class="horizon"><span>2007 Gold Medal Award</span></li>
 				</ul>
 			
 			</div>
 		</div>
 		
-		<div class="span5 relative" style="z-index:1;">
+		<div class="span5 relative hide-overflow" style="z-index:1;">
 			<img src="../../imgs/projects/mikes-lemonade.png" class="graphic1" />
 		</div>
 	</div>
@@ -93,8 +104,8 @@ require('../../inc/header.php');
 				<p>A breakthrough in online Alternate Reality Gaming, Eagle Eye Free Fall is an immersive experience integrating voice recognition and Flash that served as a prequel to the Paramount Pictures feature film Eagle Eye. After entering your phone number, the site calls you and the journey to find the fleeing Phil Mourra begins. We won't spoil the ending but it doesn't look good for Phil&hellip;</p>
 		
 				<ul class="awards" >
-					<li class="comm-arts">2009 Interactive Annual</li>
-					<li class="ima">2009 Best in Class</li>
+					<li class="comm-arts"><span>2009 Interactive Annual</span></li>
+					<li class="ima"><span>2009 Best in Class</span></li>
 				</ul>
 			</div>
 		</div>
@@ -104,8 +115,6 @@ require('../../inc/header.php');
 		</div>
 		
 	</div>
-
-	<!-- row -->
 	
 	<div class="shim-40 hide-lg-tablet"></div>
 	
@@ -117,8 +126,8 @@ require('../../inc/header.php');
 			<p>Working with branding and design agency Voicebox Creative, we created an immersive experience for the launch of the Spanish Quarter Wine from Spanish wine giant Cordineu. Voicebox created a whimsical label that captured the warmth and friendliness of Spain with a richly illustrated storybook square incorporating unique Spanish icons such as the Columbus Statue as focal points. <a href="http://thespanishquarter.com/" target="_blank" class="external">Launch Site</a></p>
 		
 			<ul class="awards" style="margin-left:0;">
-				<li class="ima">2007 Outstanding Achievement</a>
-				<li class="horizon">2007 Flash Site of the Year</a>
+				<li class="ima"><span>2007 Outstanding Achievement</span></li>
+				<li class="horizon"><span>2007 Flash Site of the Year</span></li>
 			</ul>
 			
 		</div>
@@ -129,8 +138,6 @@ require('../../inc/header.php');
 		</div>
 		
 	</div>
-		
-	<!-- row -->
 	
 	<div class="shim-120"></div>
 	

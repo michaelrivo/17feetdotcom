@@ -2,13 +2,16 @@
 @import 'variables.less';
 
 @media (max-width: 320px) {
-	#logo{ float:right; margin:0; }
-	
 	
 	.project, .projects{
 		h2{ font-size:2.2em}
-		
 	}
+	
+	.second-tier{
+		h2{ font-size:1.75em; }
+	}
+	
+	h3{ font-size: 1.75em; font-weight: 300; }
 	
 	/* About Us */
 	
@@ -22,4 +25,13 @@
 		
 		.service .pad h3 { font-size:1.5em; /*font-weight:500;*/}
 	}
+	
+	/* Project Pages */
+	
+	.project.copy h4{ font-size:1.5em; font-weight:300;}
+	.project.header h2{ font-size: 2em; }
+}
+
+@media (max-width:280px){
+	#logo{ float:right; margin:0; }
 }

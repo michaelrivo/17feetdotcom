@@ -56,9 +56,11 @@
 }
 .mobile-btn:link {
   color: #FFF;
+  text-decoration: none;
 }
 .mobile-btn:hover {
   color: #69AABA;
+  text-decoration: none;
 }
 .mobile-btn:visited {
   color: #FFF;
@@ -100,6 +102,9 @@
     display: none;
     margin: 0;
     position: static;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
   }
   .mobile-menu #nav li {
     display: block !important;
@@ -123,19 +128,24 @@
     margin: 0 5%;
   }
   /* Project Pages */
+  .project.header h2 {
+    font-size: 3em;
+  }
   .hero {
     height: 360px;
   }
   .hero h2 {
     font-size: 3.75em;
   }
-  .hero h2.long-ttl {
-    font-size: 3.25em;
-  }
   .hero h3 {
     font-size: 1.2em;
   }
-  .project-control {
+  .project.header h2 {
+    font-size: 3em;
+    font-weight: 500;
+  }
+  .project-control,
+  .project-controls {
     display: none;
   }
   #header .span7 {
@@ -220,9 +230,11 @@
   }
   .our-work #nav li.our-work a:link {
     color: #FFF;
+    text-decoration: none;
   }
   .our-work #nav li.our-work a:hover {
     color: #69AABA;
+    text-decoration: none;
   }
   .our-work #nav li.our-work a:visited {
     color: #FFF;
@@ -275,10 +287,27 @@
     max-width: 100% !important;
   }
   .about-us .service .pad .graphic {
-    display: none;
+    width: 45px;
+    float: left;
+    height: auto;
+    padding: 0;
+    margin: 0 !important;
+    position: relative !important;
+    top: -10px;
   }
-  .about-us .service .pad h3,
-  .about-us .service .pad p,
+  .about-us .service .pad .graphic img {
+    margin: 0 !important;
+  }
+  .about-us .service .pad h3 {
+    float: left;
+    width: auto;
+    margin: 0 0 0 15px;
+  }
+  .about-us .service .pad p {
+    clear: left;
+    margin: 0;
+    padding: 15px 0 !important;
+  }
   .about-us .service .pad ul {
     margin-left: 0;
   }
@@ -296,6 +325,26 @@
   }
 }
 @media (max-width: 480px) {
+  h3 {
+    font-size: 1.75em;
+    font-weight: 300;
+  }
+  .static .header h2,
+  .blog .header h2 {
+    font-size: 3em;
+  }
+  .static .header h3,
+  .blog .header h3 {
+    font-size: 1.1em;
+  }
+  .static .header br.hold,
+  .blog .header br.hold {
+    display: none;
+  }
+  .static .header hr.up,
+  .blog .header hr.up {
+    margin-bottom: 20px;
+  }
   #header .twitter {
     display: none;
   }
@@ -306,11 +355,6 @@
     display: none !important;
   }
   /* Our Work */
-  .projects h2,
-  .project h2 {
-    font-size: 3em;
-    font-weight: 300;
-  }
   .projects h3,
   .project h3 {
     font-size: 1.15em;
@@ -326,12 +370,18 @@
   .project img {
     margin: 10px 0;
   }
+  .container .project h5 {
+    font-size: 1.75em;
+  }
   /* About Us */
+  .about-us h3 {
+    margin: 1em 0 1em 0;
+  }
   .about-us .service .pad {
     padding: 15px 20px;
   }
   .about-us .partners {
-    padding: 20px 0;
+    padding: 20px 0 0 0;
   }
   .about-us .partners p {
     margin-left: 0;
@@ -342,6 +392,10 @@
     -o-background-size: 170%;
     background-size: 170%;
     height: 200px;
+  }
+  /* Join Us*/
+  .join-us .jobs h3 {
+    font-size: 1.75em;
   }
   /* End Nav */
   .hide-mobile {
@@ -360,7 +414,7 @@
   }
   #slider {
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   #slider .slide0 h3 {
     margin: 0;
@@ -380,8 +434,8 @@
     background-image: none;
   }
   .second-tier h2 {
-    font-size: 2.3em;
-    margin-bottom: 18px;
+    font-size: 2.25em;
+    margin-bottom: 15px;
   }
   .second-tier .span4 {
     padding: 0;
@@ -407,12 +461,12 @@
   }
   .second-tier,
   .third-tier {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
   /* Work overview */
   .projects .span4 {
     height: auto !important;
-    margin-top: 35px;
+    margin: 0 0 75px 0;
     width: 100%;
     margin-left: 0;
   }
@@ -423,9 +477,10 @@
   }
   .projects .span4 div {
     height: auto !important;
+    position: relative !important;
   }
   .projects .span4 a {
-    position: relative;
+    position: static !important;
     left: inherit !important;
   }
   .projects .span4 h5 {
@@ -433,24 +488,21 @@
   }
   .projects .span4 h5,
   .projects .span4 p {
-    padding-left: 10% !important;
+    padding-left: 0 10% 0 10% !important;
   }
   /* Project Pages */
   .shim-40,
   .shim-80,
   .shim-120,
   .shim-160 {
-    display: none;
+    display: none !important;
   }
   #hero-graphic {
     position: static;
     margin: inherit auto;
   }
   .hero {
-    height: 320px;
-  }
-  .hero h2 {
-    font-size: 3.25em;
+    height: 280px;
   }
   .hero h2.long-ttl {
     font-size: 2.5em;
@@ -458,11 +510,23 @@
   .hero h3 {
     font-size: 1.2em;
   }
+  .project.header h2 {
+    font-size: 2.25em;
+    font-weight: 300;
+  }
   .project.copy {
     padding: 10px 0 30px 0;
   }
+  .project.copy .row-fluid blockquote {
+    font-size: 1.4em;
+    margin-top: 0 !important;
+  }
   .project.copy img {
     position: static !important;
+  }
+  .project.copy h4 {
+    font-size: 1.75em;
+    font-weight: 300;
   }
   .project.copy p {
     font-size: 105%;
@@ -480,7 +544,7 @@
   .project.copy .span10,
   .project.copy .span11,
   .project.copy .span12 {
-    margin: 1.5em 0 0 0;
+    margin: 1em 0;
     height: auto !important;
   }
   .project.copy .clear-pad {
@@ -646,11 +710,19 @@
   h1.entry-title {
     font-size: 1.75em;
   }
-  .entry-meta .social_btns {
-    display: none;
-  }
   .entry-content p {
     font-size: 100%;
+  }
+  .entry-meta p {
+    float: none;
+    margin: 0 0 0 45px;
+    padding-top: 10px;
+  }
+  .entry-meta img {
+    position: absolute;
+  }
+  .entry-meta .social_btns {
+    display: none;
   }
   #nav-below .meta-nav {
     display: none !important;
@@ -669,62 +741,4 @@
     padding-right: 5%;
     width: 90%;
   }
-  /*
-  	// Original bootstrap styles
-  	
-    // Smooth out the collapsing/expanding nav
-    .nav-collapse {
-      -webkit-transform: translate3d(0, 0, 0); // activate the GPU
-    }
-  
-    // Block level the page header small tag for readability
-    .page-header h1 small {
-      display: block;
-      line-height: @baseLineHeight;
-    }
-  
-    // Update checkboxes for iOS
-    input[type="checkbox"],
-    input[type="radio"] {
-      border: 1px solid #ccc;
-    }
-  
-    // Remove the horizontal form styles
-    .form-horizontal {
-      .control-label {
-        float: none;
-        width: auto;
-        padding-top: 0;
-        text-align: left;
-      }
-      // Move over all input controls and content
-      .controls {
-        margin-left: 0;
-      }
-      // Move the options list down to align with labels
-      .control-list {
-        padding-top: 0; // has to be padding because margin collaspes
-      }
-      // Move over buttons in .form-actions to align with .controls
-      .form-actions {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-    }
-  
-    // Modals
-    .modal {
-      top:   10px;
-      left:  10px;
-      right: 10px;
-    }
-    .modal-header .close {
-      padding: 10px;
-      margin: -10px;
-    }
-  
-    // Carousel
-    .carousel-caption {
-      position: static;
-    } */
 }

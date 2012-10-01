@@ -24,8 +24,8 @@
 	top:11px;
 	left:5%;
 	
- 	&:link{ color:#FFF; }
-	&:hover{ color:#69AABA; }
+ 	&:link{ color:#FFF; text-decoration:none; }
+	&:hover{ color:#69AABA;text-decoration:none; }
 	&:visited{ color:#FFF; }
 	&:active{ color:#69AABA; }
 }
@@ -55,6 +55,7 @@
 		display:none;
 		margin:0;
 		position:static;
+		.border-radius( 0 0 4px 4px );
 	}
 	
 	.mobile-menu #nav li{
@@ -78,14 +79,21 @@
 	
 	/* Project Pages */
 	
+	.project.header{
+		h2{ font-size: 3em; }
+	}
+	
 	.hero{ 
 		height: 360px; 
 		h2{ font-size: 3.75em; }
-		h2.long-ttl{ font-size: 3.25em;}
+		//h2.long-ttl{ font-size: 3.25em;}
 		h3{ font-size: 1.2em; }
 	}
 	
-	.project-control{ display:none; }
+	.project.header h2{ font-size: 3em; font-weight:500; }
+	
+	.project-control, .project-controls{ display:none; }
+	
 	#header .span7{ width:auto; }
 	.projects .span4{
 		a{	}
@@ -169,8 +177,10 @@
 	.projects .span4{ 
 		height:315px; 		
 		img{ max-width:115%}
-		div{ height:200px !important; }
-		p{ white-space: normal !important; }
+		div{ height:200px !important;  }
+		//a{ position:static !important; }
+		
+		p{ white-space: normal !important;  }
 	}
 	
 	*{ float:none; }
@@ -180,8 +190,21 @@
 	.about-us{
 		
 		.service .pad{
-			.graphic{ display:none; }
-			h3,p,ul{ margin-left: 0; }
+			.graphic{ 
+				width:45px;
+				float:left;
+				height:auto; 
+				padding:0;
+				margin:0 !important;
+				position:relative !important;
+				top:-10px;
+				img{ margin:0 !important; }
+			}
+
+			h3{ float:left; width:auto; margin: 0 0 0 15px;  }
+			p{  clear:left; margin:0; padding:15px 0 !important; }
+			
+			ul{  margin-left: 0; }
 		}
 		
 		.clients{ /*width: 306px;*/ .background-size(127%); }
@@ -196,16 +219,24 @@
 
 @media (max-width: 480px) {
 	
+	h3{ font-size: 1.75em; font-weight: 300; }
+	
+	.static .header, .blog .header{
+		
+		h2{ font-size:3em; }
+		h3{ font-size:1.1em; }
+		
+		br.hold{ display:none; }
+		hr.up{ margin-bottom: 20px;  }
+	}
+	
 	#header .twitter{ display:none;}
 	.hide-tablet{ display:block !important; }
 	.hide-mobile{ display:none !important; }
 	
 	/* Our Work */
 	
-
-	
 	.projects, .project{
-		h2{ font-size:3em; font-weight:300; }
 		h3{
 			font-size:1.15em; 
 			padding-right:0;		
@@ -215,13 +246,22 @@
 		img{ margin: 10px 0;}
 	}
 	
+	.container .project h5{ font-size: 1.75em; }
+	
 	/* About Us */
 	
 	.about-us{
+		h3{ margin: 1em 0 1em 0; }
 		.service .pad{ padding:15px 20px; }
-		.partners { padding:20px 0; }
+		.partners { padding:20px 0 0 0; }
 		.partners p{ margin-left:0; }
 		.clients{ .background-size(170%); height:200px;}
+	}
+	
+	/* Join Us*/
+	
+	.join-us{
+		.jobs h3{ font-size:1.75em;}
 	}
 	
 	/* End Nav */
@@ -235,7 +275,7 @@
 	
 	#slider .item, #slider .banner{ height:auto; }
 	#slider .item { position:static; }
-	#slider{ height:auto; margin-bottom:20px; }	
+	#slider{ height:auto; margin-bottom:10px; }	
 	
 	#slider .slide0{
 		h3{ margin:0; font-size:1.3em }
@@ -247,7 +287,7 @@
 	
 	.second-tier{ 
 		
-		h2{ font-size: 2.3em; margin-bottom:18px;}
+		h2{ font-size: 2.25em; margin-bottom:15px;}
 		.span4{ 
 			padding:0;
 			margin: 8px 0;
@@ -265,49 +305,51 @@
 		.past-project{ position:static; padding:0; margin-top: 50px; }
 	}
 	
-	.second-tier, .third-tier{ padding-bottom:30px;}
+	.second-tier, .third-tier{ padding-bottom:50px;}
 	
 	
 	/* Work overview */
 		
 	.projects .span4{ 
 		height:auto !important; 
-		margin-top:35px;
+		margin:0 0 75px 0;
 		
 		width:100%;
 		margin-left:0;
 		
 		img{ max-width:100%; margin:0px auto !important; display:block; }
-		div{ height:auto !important; }
-		a{ position:relative; left:inherit !important; }
+		div{ height:auto !important; position:relative !important;  }
+		a{ position:static !important; left:inherit !important; }
 		h5{ margin-top:8px; }
-		h5,p{ padding-left: 10% !important;}
+		h5,p{ padding-left: 0 10% 0 10% !important;}
 	}
 
-	
 	/* Project Pages */
-	.shim-40, .shim-80, .shim-120, .shim-160{ display:none; }
+	.shim-40, .shim-80, .shim-120, .shim-160{ display:none !important; }
 	
 	#hero-graphic { position:static; margin:inherit auto;}
 	
 	.hero{ 
-		height: 320px; 
-		h2{ font-size: 3.25em; }
+		height: 280px; 
 		h2.long-ttl{ font-size: 2.5em;}
 		h3{ font-size: 1.2em; }
 	}
 	
+	.project.header h2{ font-size: 2.25em; font-weight:300; }
+	
 	.project.copy{ 
 		padding: 10px 0 30px 0; 
-		
+		.row-fluid blockquote{
+			font-size:1.4em; margin-top:0 !important;			
+		}
 		img{ position:static !important; }
-		
+		h4{ font-size:1.75em; font-weight:300;}
 		p{ font-size: 105%; line-height: 165%; }
 		
 		.span1, .span2, .span3, .span4, 
 		.span5, .span6, .span7, .span8, 
 		.span9, .span10, .span11, .span12{
-			margin: 1.5em 0 0 0;
+			margin: 1em 0;
 			height:auto !important;
 		}
 		.clear-pad{ padding:0px !important; margin:0px !important; }		
@@ -408,9 +450,14 @@
 	}
 	
 	h1.entry-title{ font-size:1.75em; }
-	.entry-meta .social_btns{ display:none; }
 	.entry-content p{ font-size:100%; }
 	
+	.entry-meta{
+		
+		p{ float:none; margin:0 0 0 45px; padding-top:10px;	}
+		img{ position:absolute; }
+		.social_btns{ display:none; }
+	}
 	
 	#nav-below .meta-nav{ display:none !important; }
 	
@@ -421,63 +468,4 @@
 			a{ padding-left:5%; padding-right:5%; width:90%; }
 		}
 	}
-	/*
-	// Original bootstrap styles
-	
-  // Smooth out the collapsing/expanding nav
-  .nav-collapse {
-    -webkit-transform: translate3d(0, 0, 0); // activate the GPU
-  }
-
-  // Block level the page header small tag for readability
-  .page-header h1 small {
-    display: block;
-    line-height: @baseLineHeight;
-  }
-
-  // Update checkboxes for iOS
-  input[type="checkbox"],
-  input[type="radio"] {
-    border: 1px solid #ccc;
-  }
-
-  // Remove the horizontal form styles
-  .form-horizontal {
-    .control-label {
-      float: none;
-      width: auto;
-      padding-top: 0;
-      text-align: left;
-    }
-    // Move over all input controls and content
-    .controls {
-      margin-left: 0;
-    }
-    // Move the options list down to align with labels
-    .control-list {
-      padding-top: 0; // has to be padding because margin collaspes
-    }
-    // Move over buttons in .form-actions to align with .controls
-    .form-actions {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-
-  // Modals
-  .modal {
-    top:   10px;
-    left:  10px;
-    right: 10px;
-  }
-  .modal-header .close {
-    padding: 10px;
-    margin: -10px;
-  }
-
-  // Carousel
-  .carousel-caption {
-    position: static;
-  } */
-
 }

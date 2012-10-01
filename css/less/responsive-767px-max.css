@@ -39,6 +39,23 @@
   transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
 }
 @media (max-width: 767px) {
+  .static .header h2,
+  .blog .header h2 {
+    font-size: 4.5em;
+  }
+  .static .header h3,
+  .blog .header h3 {
+    font-size: 1.2em;
+    padding-right: 0;
+  }
+  .static .header br.hold,
+  .blog .header br.hold {
+    display: none;
+  }
+  .static .header hr.up,
+  .blog .header hr.up {
+    margin-bottom: 20px;
+  }
   #header .twitter {
     display: none;
   }
@@ -101,6 +118,10 @@
   .project.copy .row-fluid blockquote {
     font-size: 1.75em;
     width: 100%;
+    margin: 20px 0 10px 0 !important;
+  }
+  .project.header h2 {
+    font-size: 4em;
   }
   .project.copy .cite {
     height: auto !important;
@@ -134,7 +155,7 @@
   /* Our Work */
   .projects .span4 {
     height: 345px;
-    width: 40%;
+    width: 45%;
     margin-right: 10%;
   }
   .projects .span4 img {
@@ -148,7 +169,7 @@
   }
   /* Join Page */
   .join-us .openings {
-    margin-bottom: 0;
+    margin: 0 !important;
   }
   .join-us .openings .selector {
     display: none;
@@ -224,8 +245,8 @@
   .about-us .service {
     margin: 0 0 15px 0;
   }
-  .about-us partners {
-    padding: 20px 0;
+  .about-us .partners {
+    padding: 20px 0 0 0;
   }
   .about-us .clients {
     /*width: 463px;*/

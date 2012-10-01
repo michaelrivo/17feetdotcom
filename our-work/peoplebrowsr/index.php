@@ -89,7 +89,8 @@ require('../../inc/header.php');
 	<div class="row-fluid width-lg-tablet">
 		
 		<div class="span4 last right">
-			<h4 style="margin-top:60px">See the Conversation</h4>
+			<div class="shim-40" style="height:60px"></div>
+			<h4>See the Conversation</h4>
 
 			<p>We developed a data hierarchy starting with an overview. From there, users go deeper to see realtime user-generated content from Twitter, Facebook friends, and blogs including photos, associated words, and top retweets within specific communities.</p>	
 		</div>

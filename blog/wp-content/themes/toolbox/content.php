@@ -11,13 +11,11 @@
 			<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<div class="one-line">
-					<div class="author-lockup">
 					<?php toolbox_posted_on(); ?>
 
-						<div class="social_btns">
-							<a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-text="<?php //default text? ?>" >Tweet</a>			
-							<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php the_permalink(); ?>" send="false" layout="button_count" width="70" show_faces="false" font="arial"></fb:like>
-						</div>
+					<div class="social_btns">
+						<a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-text="<?php //default text? ?>" >Tweet</a>			
+						<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php the_permalink(); ?>" send="false" layout="button_count" width="70" show_faces="false" font="arial"></fb:like>
 					</div>
 				</div>
 			</div><!-- .entry-meta -->

@@ -19,6 +19,14 @@
 
 @media (max-width: 767px) {
 	
+	.static .header, .blog .header{
+		
+		h2{ font-size:4.5em; }
+		h3{ font-size:1.2em; padding-right:0; }
+		
+		br.hold{ display:none; }
+		hr.up{ margin-bottom: 20px;  }
+	}
 	
 	#header .twitter{ display:none; }
 	#logo{ width:95px; }
@@ -67,7 +75,13 @@
 	.project.copy .row-fluid blockquote{ 
 		font-size:1.75em; 
 		width:100%;
+		margin: 20px 0 10px 0 !important;
 	}
+	
+	.project.header{
+		h2{ font-size: 4em; }
+	}
+	
 	.project.copy .cite{ 
 		height:auto !important; 
 		background-image:none; 
@@ -92,7 +106,7 @@
 	.projects .span4{ 
 		
 		height:345px; 
-		width: 40%; 
+		width: 45%; 
 		margin-right:10%;
 		
 		img{ max-width:110%}
@@ -106,7 +120,8 @@
 		.join-us{
 			
 			.openings{
-				margin-bottom:0;
+				
+				margin:0 !important;
 				
 				.selector{ display:none; }
 				li{ margin:10px 0; }
@@ -158,7 +173,7 @@
 			h3,p,ul{ margin-left:45%;}
 		}
 		.service{  margin: 0 0 15px 0; }
-		partners{ padding:20px 0; }
+		.partners{ padding:20px 0 0 0; }
 		
 		.clients{ /*width: 463px;*/ .background-size(95%); height:180px; }
 		.end h3{ margin-top:20px; }

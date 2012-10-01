@@ -240,10 +240,21 @@ a.carat{
 	
 	}
 	
+	h2{
+		line-height:100%;
+		span{ 
+			font-size: 0.25em; 
+			text-transform:uppercase; 
+			color:#CCC;
+			letter-spacing:.1em;
+			line-height:100%;
+		}
+	}
+	
 	h3{
 		font: 300 1.6em/135% @fontStack;
 		color:#FFF;
-		//position:absolute;
+		//position:absolute;		
 	}
 	
 	.item .bg{ 
@@ -320,7 +331,7 @@ a.carat{
 			width: 384px;
 			height: 236px;
 			position:absolute;
-			right:75px;
+			right:75px; 
 			top:115px;
 			z-index:0;
 			background: url('../imgs/slide-3-text-shadow.png') no-repeat scroll top left;
@@ -332,12 +343,12 @@ a.carat{
 		
 		.bg{ background:#000 url('../imgs/slide-4-bg.jpg') no-repeat scroll center bottom; }
 		
-		.banner .graphic{ margin-left:5%; max-width:90%; }
+		.banner .graphic{ left:5%; max-width:90%; position:absolute; bottom:0; }
 		
 		h2{
-			font: 500 3.5em/135% @fontStack;
+			font: 500 3.5em/100% @fontStack;
 			color:#FFF;
-			margin:100px 0 5px 0;
+			margin:6% 0 5px 0;
 		}
 		
 	}
@@ -473,24 +484,44 @@ a.carat{
 .project .project-controls{
 	position:absolute;
 	width:100%;
-	//height:100%;
+	height:100%;
+	left:0;
+	top:0;
+	
+	.hover-area{
+		height:100%;
+		width:46px;
+		
+		&:hover{
+			
+			.next{
+				right:0;.opacity(100);
+			}
+			.prev{
+				
+				left:0; .opacity(100); 
+			}
+			
+			
+		}
+		@offset: -5px;
+		.next{ right: @offset; }
+		.prev{ left: @offset; background-position: right top; }
+	}
 	
 	.next,.prev{
 		z-index:1000;
-		.opacity(50);
+		.opacity(0);
 		position:fixed;
 		top:45%;
+		cursor:pointer;
+		.transition(all .25s ease-out);
+		background:transparent url(../imgs/slider-arrows.png) no-repeat left top;
+		height:91px;
+		width:46px;
 	}
 	
-	@offset: -5px;
-	.next{
-		right:@offset;
-		&:hover{ right:0;.opacity(100); }
-	}
-	.prev{
-		left:@offset;
-		&:hover{ left:0; .opacity(100); }
-	}
+
 	
 }
 
@@ -514,6 +545,22 @@ a.carat{
 	}
 	
 	.cta{ margin:8px 0 0 5px; }
+	
+	.show-mobile{
+		
+		.blackBtn, .blueBtn{ width:47%; }
+		a{
+			width:100%;
+			display:block;
+			font-size: 115%;
+			line-height:100%;
+			padding:8px 0;
+			height:auto;
+			font-weight:500;
+		}
+		
+	}
+	
 }
 
 .third-tier{
@@ -978,7 +1025,7 @@ hr.down{
 	height:400px;
 	
 	div{ 
-		height:275px;
+		height:250px;
 		position:relative;
 		
 	}
@@ -1004,6 +1051,7 @@ hr.down{
 		position:absolute;
 		bottom:0;
 		left:0;
+		width:100%;
 		background-image:none !important;
 	}
 	
@@ -1115,7 +1163,7 @@ hr.down{
 	}
 }	
 
-.project, .projects, .blog .header{
+.project, .projects, .static .header, .blog .header{
 	h2{
 		font: normal normal 100 5.25em/100% @fontStack;
 		color:@blue;
@@ -1240,7 +1288,7 @@ blockquote{
 	}
 	
 	.cite{
-		padding:0 0 0 35px !important;
+		padding:0 0 0 35px /*!important*/;
 		color:#2f2f2f;
 		background: transparent url(../imgs/vert-divider.png) no-repeat 0 10px;
 		span, a{
@@ -1330,7 +1378,7 @@ blockquote{
 	}
 }
 
-.blueBtn{
+.blueBtn, .blackBtn{
 	a, input{
 	/*display:block;
 			float:left;*/
@@ -1371,7 +1419,23 @@ blockquote{
 	}
 }
 
-
+.blackBtn{
+	a{
+		background-color:#222;
+		&:link, &:visited {}
+		&:hover {color: #FFF; background-color: #111 ;}
+		&:focus{
+			@shadow: inset 0 1px 3px rgba(0,0,0,1), 0 0 8px rgba(105, 170, 186,.6);
+			  .box-shadow(@shadow);
+		}
+		&:active {
+			color:#FFF;
+			background-color:#111;
+			text-shadow:0 1px 1px rgba(0,0,0,1);
+			.inset-shadow(0px, 2px, 3px, 0px, rgba(0,0,0,1) );
+		}
+	}
+}
 
 /** 
 **   Contact Form styles
@@ -1603,15 +1667,16 @@ input.error, textarea.error{
 		margin:-3px 0 0 0 !important;
 	}
 	.header h3{
-		margin:.8em 0 1.4em 0;
+		margin: 0.8em 0 1.4em 0;
 		font-size:1.65em;
 		color:#252525;
 		line-height:145%;
 		
-		.quiet{
-			color:#9c9b9b;
-		}
+		.quiet{ color:#9c9b9b; } 
+		
 	}
+	
+	h3{ margin: 2em 0 1em 0; }
 	
 	.service{
 		
@@ -1622,7 +1687,7 @@ input.error, textarea.error{
 			height:150px;
 			img{ margin:0 auto; display:block; }
 		}
-		h3{ color:#252525; margin:0 0 .1em 0; text-shadow: 0 1px 0px #FFF;}
+		h3{ color:#252525; margin:0 0 0.1em 0; text-shadow: 0 1px 0px #FFF;}
 		p, li{ font: 300 1.05em/170% @fontStack; }
 		p{ margin: .5em 0 1em 0; }
 		
@@ -1827,9 +1892,9 @@ h1.entry-title{
 
 .entry-meta{
 	.one-line{ 
-		height:60px;
 		display:block; 
-		margin:10px 0 8px 0; 
+		margin:10px 0 0 0;
+		padding-bottom:12px; 
 		font-size:.90em; 
 		color:#676767; 
 		border-bottom: 1px solid #EAEAEA;
@@ -1838,13 +1903,14 @@ h1.entry-title{
 	iframe{ display:inline-block;}
 	time{ font-size: 85%;}
 	
-	.author-lockup p{  
+	p{  
 		font-size: 110%;
 		line-height:130%;
 		margin:5px 0 0 10px;
+		
 	}
 	img, p{ float:left }
-
+	
 	.social_btns{
 		float:right;
 		position:relative;

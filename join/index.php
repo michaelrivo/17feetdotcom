@@ -3,12 +3,13 @@ $parentPage = 'mobile-menu';
 require('../inc/header.php'); 
 ?>
 
-<div class="container project join-us">
+<div class="container static join-us">
 	
 	<div class="header">
-	<h2>Join the Team!</h2>
+		<h2>Join the Team!</h2>	
+		<hr class="up" />
 	</div>
-	<hr class="up" />
+	
 	<div class="row-fluid width-tablet">
 		<div class="span3 openings">
 		

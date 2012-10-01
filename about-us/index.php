@@ -3,7 +3,7 @@ $parentPage = 'mobile-menu';
 require('../inc/header.php'); 
 ?>
 
-<div class="container project about-us">
+<div class="container static about-us">
 	
 	<div class="header">
 		<h2>About Us</h2>
@@ -124,7 +124,7 @@ require('../inc/header.php');
 		<div class="span4 last">
 			<h3>Contact Us</h3>
 			<p>Phone: (415) 896-1738<br class="hold"/>
-			Address: 256 Sutter Street Floor 5<br class="hold"/>
+			256 Sutter Street Floor 5<br class="hold"/>
 			San Francisco, CA 94108<br class="hold"/>
 			<a href="../contact-us" class="carat">Send us a message</a></p>
 		</div>

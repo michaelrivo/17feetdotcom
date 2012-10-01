@@ -40,7 +40,7 @@
   position: static !important;
 }
 .width-stacking div {
-  margin: 10px 0 !important;
+  margin: 15px 0 !important;
 }
 .width-stacking h4,
 .width-stacking p {
@@ -59,7 +59,7 @@
     position: static !important;
   }
   .width-tablet div {
-    margin: 10px 0 !important;
+    margin: 15px 0 !important;
   }
   .width-tablet h4,
   .width-tablet p {
@@ -82,7 +82,7 @@
     display: none !important;
   }
   .copy .width-tablet img {
-    margin: 10px auto;
+    margin: 20px auto !important;
     display: block;
     float: none !important;
   }
@@ -103,7 +103,7 @@
     position: static !important;
   }
   .width-mobile div {
-    margin: 10px 0 !important;
+    margin: 15px 0 !important;
   }
   .width-mobile h4,
   .width-mobile p {
@@ -115,7 +115,7 @@
     margin-right: 0;
   }
   .copy .width-mobile img {
-    margin: 10px auto;
+    margin: 15px auto !important;
     display: block;
     float: none !important;
   }
@@ -136,7 +136,7 @@
     position: static !important;
   }
   .width-lg-tablet div {
-    margin: 10px 0 !important;
+    margin: 15px 0 !important;
   }
   .width-lg-tablet h4,
   .width-lg-tablet p {
@@ -154,7 +154,7 @@
     margin: 15px 0;
   }
   .copy .width-lg-tablet img {
-    margin: 15px auto;
+    margin: 15px auto !important;
     display: block;
     float: none !important;
   }

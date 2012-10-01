@@ -29,14 +29,14 @@ require('../../inc/header.php');
 	
 	@media all and (max-width: 959px){
 		.graphic4{ margin-bottom: 0.4% !important; }
-		.dark .container.project h2{ font-size: 3.5em ; margin-top:20px; }
-		.dark .container.project h3{ font-size: 1.2em; } 
+		/*.dark .container.project h2{ font-size: 3.5em ; margin-top:20px; }*/
+		.dark .container.project h3{ font-size: 1.2em; position:relative; z-index:10; text-shadow: 0 0 8px #000, 0 0 8px #000; } 
 		.hero-graphic{ margin:0 0 0 -5% !important; }
 	}
 
 	@media all and (max-width: 767px){
 		.graphic4{ margin-bottom: 1.1% !important; }
-		.dark .container.project h2{ font-size: 3.4em ; }
+		/*.dark .container.project h2{ font-size: 3.4em ; }*/
 		.dark .container.project h3{ font-size: 1.1em; }
 	}
 	

@@ -5,38 +5,64 @@ require('inc/header.php');
 
 <style type="text/css">
 
+.show-mobile{ display:none; }
+
 @media (max-width: 959px) { 
+	#slider br.newline{ display:inherit; }
 	#slider, #slider .banner, #slider .item{ height:480px; }
 	.bg img{ height:100%%;}
-	#slider .slide4 h2{ margin-top: 5%; }
-	#slider .slide4 .banner .graphic{ right: inherit; }
-	#slider .slide4 img{ max-width:95% !important;}
+
 	#slider .slide1 .graphic{ margin-top:25%; }
 	#slider .slide2 h3{ margin: 54% 0 0 9%; }
 	#slider .slide3 .textShadow{ display:none; }
 	#slider .slide3 .glow{ margin-left:0; }
-}
 
-@media (max-width: 767px) { 
-	#slider, #slider .banner, #slider .item{ height:400px; }
-	#slider .slide4 h2{ font-size:2.8em; }
-	#slider .slide4 h3{ font-size:1.4em;  }
-	#slider .slide4 img{ max-width:85% !important; margin:0px auto !important;}
-	#slider a{ background-position: right 1px; }
+	#slider .slide4 h2{ margin-top: 5%; }
+	#slider .slide4 .banner .graphic{ right: inherit; }
+	#slider .slide4 img{ max-width:90% !important; left:5%; position:absolute !important; bottom:0;}
 	
 }
 
+@media (max-width: 767px) { 
+	#slider, #slider .banner, #slider .item{ height:380px; }	
+	
+	#slider .slide4 h2{ font-size:2.8em; margin: 0; z-index:2; position:relative; }
+	#slider .slide4 h3{ font-size:1.4em; margin:0; z-index:1; position:relative; text-shadow: 0 0 20px #000, 0 0 20px #000, 0 0 20px #000;  }
+	#slider .slide4 .span8{  margin: 0 !important; }
+	
+	#slider .slide4 img{ margin:0px auto !important;}
+	#slider a{ background-position: right 1px; }
+	
+	.second-tier .show-mobile{ display:block; margin:25px 0 0 0; }
+	.show-mobile .blackBtn a, .show-mobile .blueBtn a{ font-size:145%; }	
+
+}
+
 @media (max-width: 600px) { 
-	#slider, #slider .banner, #slider .item{ height:390px; }
+	#slider, #slider .banner, #slider .item{ height:340px; }
+	#slider .slide4 img{ max-width:100% !important; left:0; }
+		
+	#slider br.newline{ display:none; }
 }
 
 @media (max-width: 480px) { 
-	#slider, #slider .banner, #slider .item{ height:340px; }
-	#slider .slide4 h2{ font-size:2.8em; }
-	#slider .slide4 h3{ font-size:1.3em;  }
+	#slider, #slider .banner, #slider .item{ height:290px; }
+	#slider .slide4 h2{ font-size:2.5em; }
+	#slider .slide4 h3{ font-size:1.2em; font-weight:500;   }
 	#slider a{ background-position: right 0px; }
+	
+	
 }
 
+@media (max-width: 320px){
+	
+	#slider, #slider .banner, #slider .item{ height:245px; }
+	#slider .slide4 h2{ font-size:2em; margin-top:-2%; }
+	#slider .slide4 h3{ font-size:1.1em; }
+
+	.second-tier .show-mobile{ margin:15px 0 0 0; }
+	.show-mobile .blackBtn a, .show-mobile .blueBtn a{ font-size:110%; }
+}
 
 </style>
 
@@ -48,13 +74,17 @@ require('inc/header.php');
 		<div class="banner container" project="our-work/simraceway">
 			<div class="row-fluid width-tablet">
 				<div class="span8">
-					<h2>Simraceway</h2>
-					<h3>Web integration and commerce for a <br class="hold"/>new kind of racing game.
-					<br class="hold"/><a class="cta" href="our-work/simraceway">View the project</a></h3>
+					<h2><span>Featured Project</span><br class="hold" />Simraceway</h2>
+					<h3>Web integration and commerce for a <br class="newline" />new kind of racing game.<br class="hold"/><a class="cta" href="our-work/simraceway">View the project</a></h3>
 				</div>
 				<img src="imgs/slide-4-car.png" class="graphic" />
 			</div>
 		</div>
+		<!-- <div class="container">
+			<div class="row-fluid">
+				<img src="imgs/slide-4-car-bottom.png" class="graphic" />
+			</div>
+		</div> -->
 	</div>
 
 	<div class="item slide0 responsive-transition" style="left:100%">
@@ -136,8 +166,12 @@ require('inc/header.php');
 	
 	<h2>We make things work. <br/><span>Beautifully.</span></h2>
 	
+	<div class="row-fluid show-mobile">
+		<div class="left blueBtn"><a href="our-work">See the Work</a></div>
+		<div class="right blackBtn"><a href="about-us">About Us</a></div>
+	</div>
 	
-	<div class="row-fluid width-tablet">
+	<div class="row-fluid hide-tablet hide-mobile">
 		<div class="span4 trans-black">
 			<div>
 				<h3>Design Thinking</h3>
@@ -161,12 +195,12 @@ require('inc/header.php');
 		
 	</div>
 	
-	<p class="cta"><a href="about-us" class="carat" >Learn More About Us</a></p>
+	<p class="cta hide-tablet hide-mobile"><a href="about-us" class="carat" >Learn More About Us</a></p>
 	
 		
 </div>
 
-<div class="third-tier">
+<div class="third-tier hide-mobile">
 	<div class="container">
 	
 		<div class="row-fluid width-tablet">

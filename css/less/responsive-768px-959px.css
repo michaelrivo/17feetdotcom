@@ -26,6 +26,10 @@
   box-sizing: border-box;
 }
 @media (max-width: 959px) {
+  .static .header hr.up,
+  .blog .header hr.up {
+    margin-bottom: 20px;
+  }
   .container {
     max-width: 728px;
     margin: 0 auto;
@@ -141,8 +145,8 @@
   }
   .projects .span4 {
     height: 350px;
-    width: 44%;
-    margin-right: 6%;
+    width: 46%;
+    margin-right: 8%;
   }
   .projects .span4:nth-child(even) {
     margin-right: 0;
@@ -168,9 +172,6 @@
     padding: 10px 20px 10px 20px;
   }
   /* About Us */
-  .about-us .header h3 {
-    font-size: 1.3em;
-  }
   .about-us .service .pad {
     padding: 10px 15px 25px 25px;
   }
@@ -189,6 +190,10 @@
   .about-us .partners p {
     margin-left: 110px;
     margin-bottom: 30px;
+  }
+  .about-us .end h3 {
+    font-size: 2em;
+    font-weight: 300;
   }
   .about-us .end p {
     font-size: 1em;

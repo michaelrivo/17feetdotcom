@@ -17,6 +17,7 @@ require('../../inc/header.php');
 	@media all and (max-width: 480px){
 /*		#hero-graphic{ max-width:105% !important; }
 		.project.copy{ padding-top:25px;}*/
+		.project.copy .graphic2{ max-width:75% !important; margin-bottom:0 !important; }
 	}	
 
 </style>
@@ -56,7 +57,7 @@ require('../../inc/header.php');
 		</div>
 		
 		<div class="span5">
-			<img src="../../imgs/projects/loyal3-2.png" />
+			<img src="../../imgs/projects/loyal3-2.png" class="graphic2" />
 		</div>
 	
 	</div>
