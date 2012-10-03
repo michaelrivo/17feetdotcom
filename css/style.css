@@ -2107,6 +2107,9 @@ body {
 .lectric-slider-touch {
   -webkit-transform: translate3d(0, 0, 0);
 }
+.lectric-slider-touch .project-control {
+  display: none;
+}
 .lectric-slider-touch .items {
   -webkit-transition-timing-function: cubic-bezier(0, 0, 0.4, 1);
   -webkit-font-smoothing: antialiased;
@@ -2504,7 +2507,7 @@ body {
   background-color: rgba(0, 0, 0, 0.03);
 }
 .second-tier .span4 div {
-  padding: 45px 20px 20px 30px;
+  padding: 20px 20px 20px 30px;
 }
 .second-tier .span4 h3 {
   font-weight: 300;

@@ -399,7 +399,7 @@
     var options = $.extend({animate: true, triggerSlide: true}, opts);
     if (options.animate) { this.decayOn(); }
 	
-	//alert('update '+ this.pageNum);
+	//$('#debug').text('update '+ this.pageNum);
 	
 	
 	this.element.css('left', -this.pageNum + '00%'); 
@@ -423,6 +423,7 @@
 	
 	this.element.css('left', this.position.x / this.itemWidth() * 100 +'%');
 	
+	$('#debug').text('updateTouch '+ this.position.x);
 
     if (options.triggerSlide) { this.element.trigger('slide.lectric'); }
   };
@@ -522,9 +523,11 @@
       window.removeEventListener('gestureend', this, false);
       window.removeEventListener('touchmove', this, false);
       window.removeEventListener('touchend', this, false);
-	
+		
+		//$('#debug').text('no move');
+	var dd = new Date();
       if (this.moved) {
-	
+	//$('#debug').text('moved '+dd.getSeconds());
 		// generate the speed of the end of the gesture
         var dx = this.position.x - this.lastPosition.x;
         var dt = (new Date()) - this.lastMoveTime + 1; 
@@ -547,25 +550,25 @@
 			this.pageNum = page;
 
 			this.position.x =  -this.pageNum * width;
-			//$('#debug').text('dx: '+dx +' \nthis.position.x: '+ this.position.x+ ' \npage: '+page + ' \nthis.pageNum: '+this.pageNum);
 			this.update();
 			
 			if(prev_page != this.pageNum){
+				
 				if( dx > 0 ){
-					//$('#debug').text('direction -1');
+					//$('#debug').text('dir: -1 pp:'+prev_page+' tp:'+this.pageNum+' pos.x:'+this.position.x);
 					this.cycleSlides( -1 ); 
 				} else if(dx < 0 ) {
-					//$('#debug').text('direction +1');
+					//$('#debug').text('direction +1 pp:'+prev_page+' tp:'+this.pageNum+' pos.x:'+this.position.x);
 					this.cycleSlides( 1 ); 
 				}
-			}
+			} 
 			
-        }
+        } 
 
         
         this.element.trigger('end.lectric');
       } else {
-		//$('#debug').text('no slide');
+		//$('#debug').text('no move');
         this.element.trigger('endNoSlide.lectric');
       }
 

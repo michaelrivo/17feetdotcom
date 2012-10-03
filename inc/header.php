@@ -29,6 +29,9 @@ if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 	<meta http-equiv="content-script-type" content="text/javascript" > 
 	<meta http-equiv="content-style-type" content="text/css" > 
 	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
+	
+	<meta name='description' content="We make things work. Beautifully. We partner with companies of all sizes to help them achieve great results. We're a digital design company. Our designs are used by people everyday.">
+	<meta name="keywords" content="Brandon Herring, Michael Rivo, San Francisco, California, 17feet, design, strategy, marketing, user experience, interaction design, usability, interactive, interactive agency, digital agency, technology, web, websites, design studio" />
 
 	<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
 	

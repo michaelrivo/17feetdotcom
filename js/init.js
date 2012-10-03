@@ -45,9 +45,11 @@ $(function() {
 		rootFolder = 'http://192.168.1.246/17feet/';
 	}
 	
+	
+	
 	if($('#slider .item').length > 1 && $(window).width() >= 768){
 			
-		//$('#slider').append('<pre id="debug" style="position:absolute; top:20px; color:#FFF;z-index:1000;background-color: rgba(0,0,0,.5);padding:10px"></pre>');
+		//$('#slider').append('<pre id="debug" style="position:absolute; top:20px; border:1px solid transparent; color:#FFF;z-index:1000;background-color: rgba(0,0,0,.5);padding:10px">debug</pre>');
 		//$('body').append($('<p id="console">test</p>'));
 		
 		var slider = new Lectric();
@@ -57,8 +59,10 @@ $(function() {
 		$(window).resize(function(){
 			// on window resize
 			slider.opts.animateDuration = ( $(window).width()-940 )/2 + 600;
-			slider.position.x = slider.pageNum * slider.itemWidth();
-			console.log(slider.position.x);
+			slider.position.x = -slider.pageNum * slider.itemWidth();
+			//$('#debug').text('slider.position.x: '+slider.position.x);
+			//console.log('slider.pageNum: '+slider.pageNum);
+			//console.log('slider.itemWidth: '+slider.itemWidth());
 			//console.log(slider.opts.animateDuration);
 			
 		}).trigger('resize');
@@ -240,12 +244,12 @@ $(function() {
 		$('#lastfm .song span, #lastfm .album span').each( function(index){
 				var thisWidth = $(this).innerWidth();
 				//console.log(thisWidth +' '+ $(this).parent().innerWidth());
-				if(thisWidth + 20 > $(this).parent().innerWidth()){
+				if(thisWidth + 20 > $(this).parent().innerWidth() ){
 					
 					$(this).mouseenter(
 						function(){
 							
-							if($(this).attr('animating') != 'yes'){
+							if($(this).attr('animating') != 'yes' && $(window).width() > 959){
 								$(this).attr('animating', 'yes');	
 								
 								var offset = '-'+((thisWidth - $(this).parent().innerWidth()) + 12) +'px';

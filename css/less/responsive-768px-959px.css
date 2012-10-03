@@ -90,6 +90,22 @@
     bottom: 10px;
     top: inherit;
   }
+  #footer #lastfm .details {
+    float: none;
+    width: auto;
+    margin: 0 15px 0 85px;
+  }
+  #footer #lastfm .details div {
+    width: auto;
+  }
+  #footer #lastfm .details .song,
+  #footer #lastfm .details .album {
+    -webkit-mask-box-image: none;
+  }
+  #footer #lastfm .details .song span,
+  #footer #lastfm .details .album span {
+    white-space: normal;
+  }
   .container.project .what-it-is p {
     display: block;
     margin: 45px 0 0 0;

@@ -630,20 +630,14 @@
   }
   #footer #lastfm .frame {
     width: 40%;
+    margin-right: 2%;
   }
   #footer #lastfm img {
     margin: 0 !important;
   }
   #footer #lastfm .details {
-    width: 60%;
-  }
-  #footer #lastfm .details div {
-    margin-left: 8%;
-    width: auto;
-  }
-  #footer #lastfm .details .song,
-  #footer #lastfm .details .album {
-    -webkit-mask-box-image: none;
+    width: 58%;
+    margin-left: 42%;
   }
   #footer .span3 {
     width: 100%;

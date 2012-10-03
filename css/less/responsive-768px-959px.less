@@ -50,6 +50,7 @@
 			width: 50%;//(@fluidGridColumnWidth*6)+( @fluidGridGutterWidth*3 ); 
 			margin:0; 
 			padding: 0 0 40px 0;
+			
 			.pad{ padding:0;} 
 		}
 		.blog, .weather{
@@ -63,6 +64,18 @@
 			right:0;
 			bottom:10px;
 			top:inherit;
+		}
+		
+		#lastfm{
+			.details{ 
+				float:none;
+				width: auto;
+				margin: 0 15px 0 85px;
+				div{  width:auto; }
+				.song, .album { -webkit-mask-box-image: none; }
+				.song span, .album span{ white-space: normal; }
+			}
+			
 		}
 		
 	}
@@ -114,7 +127,6 @@
 		}
 	}	
 
-	
 	/* About Us */
 	
 	.about-us{
