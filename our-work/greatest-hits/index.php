@@ -7,7 +7,7 @@ require('../../inc/header.php');
 	
 	.graphic1{ max-width: 265%; float:right; margin-top:15%; }
 	.graphic2{ max-width: 185%; margin-left: -5%; z-index:0; }
-	.graphic3{ max-width: 120%; float:right; }
+	.graphic3{ max-width: 120%; float:right; clear:both; }
 	.graphic4{  }
 	
 	.padLeft{ padding-left:40px; }
@@ -23,7 +23,6 @@ require('../../inc/header.php');
 
 	@media all and (max-width: 767px){
 		.copy .width-tablet img.graphic1{ max-width:100%; margin:-12% 0 0 0 !important; float:right !important; }
-		
 		.copy .width-lg-tablet .graphic2{ margin: -10% 0 -20% 0 !important; }
 		
 	}

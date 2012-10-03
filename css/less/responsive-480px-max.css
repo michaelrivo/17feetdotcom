@@ -142,7 +142,6 @@
   }
   .project.header h2 {
     font-size: 3em;
-    font-weight: 500;
   }
   .project-control,
   .project-controls {
@@ -195,6 +194,9 @@
     position: absolute;
     top: 0;
     left: 10px;
+  }
+  .our-work #nav {
+    overflow: visible;
   }
   .our-work #nav li.our-work {
     display: block !important;
@@ -318,6 +320,17 @@
     -o-background-size: 127%;
     background-size: 127%;
   }
+  .about-us .end .span4 {
+    float: none;
+  }
+  .about-us .end .blueBtn {
+    margin: 25px 0 0 0 !important;
+  }
+  .about-us .end .blueBtn a {
+    display: block;
+    padding: 4px 0 2px 0;
+    width: 100%;
+  }
   /* Blog */
   #comments form input,
   #comments form textarea {
@@ -393,6 +406,9 @@
     background-size: 170%;
     height: 200px;
   }
+  .about-us hr.down {
+    margin: 0;
+  }
   /* Join Us*/
   .join-us .jobs h3 {
     font-size: 1.75em;
@@ -400,6 +416,13 @@
   /* End Nav */
   .hide-mobile {
     display: none;
+  }
+  /* Contact Us */
+  .contact-us .header hr.up {
+    margin-bottom: 0;
+  }
+  .contact-us .left {
+    margin-top: 0 !important;
   }
   /* Home Page */
   .banner {

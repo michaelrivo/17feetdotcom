@@ -2241,7 +2241,7 @@ body {
 }
 #slider .slide1 .graphic {
   margin: 19% 0 -10% -2%;
-  max-width: 100%;
+  max-width: 132%;
 }
 #slider .slide2 .bg {
   background: #111111 url('../imgs/slide2-bg.png') repeat-x scroll 0 0;
@@ -4137,8 +4137,9 @@ ul.tags li a:active span.end {
 }
 #secondary .widget_recent_entries p {
   font-size: 1em;
-  line-height: 145%;
+  line-height: 150%;
   color: #454545;
+  margin-bottom: 1.25em;
 }
 #secondary .widget_recent_entries a {
   line-height: 150%;
@@ -4146,6 +4147,9 @@ ul.tags li a:active span.end {
 #secondary .widget_recent_entries .date {
   font: normal 0.8em/130% "Helvetica Neue", Arial, sans-serif;
   color: #666;
+}
+#secondary .wp-tag-cloud li {
+  margin: 0.5em 0;
 }
 #nav-below {
   margin-top: 20px;

@@ -10,7 +10,7 @@
 
 			<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
-				<div class="one-line">
+				<div class="one-line clearfix">
 					<?php toolbox_posted_on(); ?>
 
 					<div class="social_btns">

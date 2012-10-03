@@ -127,7 +127,7 @@ require('../../inc/header.php');
 	
 		<div class="span4 last no-pad">
 			
-			<div class="shim-80"></div>
+			<div class="shim-80 hide-mobile hide-tablet hide-lg-tablet"></div>
 			
 			<h4>Zune Store</h4>
 

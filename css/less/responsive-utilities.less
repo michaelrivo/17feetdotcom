@@ -56,10 +56,6 @@
   // Hide everything else
   .hidden-desktop    { display: inherit !important; }
   .visible-desktop   { display: none !important; }
-  // Show
-  .visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
-  // Hide
-  .hidden-phone      { display: none !important; }
 
 	.copy .width-tablet{
 		img { margin:20px auto !important; display:block; float:none !important; }
@@ -73,6 +69,12 @@
 		.width-stacking; 
 		[class*="span"]{ width:100%; margin-left:0; margin-right:0; }
 	}
+	
+	// Show
+  .visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
+  // Hide
+  .hidden-phone      { display: none !important; }
+  
 	
 	.copy .width-mobile{
 		img { margin:15px auto !important; display:block; float:none !important; }

@@ -10,7 +10,7 @@ require('../inc/header.php');
 		<hr class="up" />
 	</div>
 	
-	<div class="row-fluid width-tablet">
+	<div class="row-fluid width-lg-tablet">
 		<div class="span3 openings">
 		
 			<h4>Open Positions</h4>
@@ -20,9 +20,9 @@ require('../inc/header.php');
 					<li><a class="hide">&nbsp;</a><div class="carat"></div></li>
 				</ul>
 				<ul class="picker clearfix">
-					<li class="first"><a href="#senior-interactive-developer" class="active">Senior Interactive Developer</a></li>
-					<li><a href="#interaction-designer">Interaction Designer</a></li>
+					<li class="first"><a href="#interaction-designer">Interaction Designer</a></li>
 					<li><a href="#visual-designer">Visual Designer</a></li>
+					<li><a href="#senior-interactive-developer" class="active">Senior Interactive Developer</a></li>
 				</ul>
 			
 			</div>
@@ -32,35 +32,8 @@ require('../inc/header.php');
 		<div class="span8 offset1 last job-wrapper">
 		
 			<div class="jobs"> 
-				<!-- Senior Interactive Developer --> 
-				<div class="jobPosition first active" job="senior-interactive-developer"> 
-					<h3 class="nomargin">Senior Interactive Developer</h3> 
-
-					<p class="desc">Hello. We are seeking a Senior Interactive Developer to work full-time, in house, to create interface-driven applications and sites for web and mobile. The projects we take on focus on usability and user experience, and we try to learn something new with every project: new languages, new frameworks or a new approach to how things get done.</p> 
-
-					<h5 class="nomargin">Your Experience:</h5> 
-					<ul> 
-						<li>Strong grasp of OOP concepts</li>
-						<li>Understanding of design patterns and a passion for design excellence</li>
-						<li>Experience with C#, Ruby or other object-oriented web languages</li>
-						<li>Experience with Objective-C and UIKit experience</li>
-						<li>Experience with HTML5, CSS3, JS Frameworks</li>
-						<li>Understanding of cross-browser issues &amp; solutions</li>
-						<li>Comfort with agile and waterfall development methodologies</li>
-						<li>Able to lead technology definition with clients</li>
-						<li>Strong written and verbal communication skills</li>
-						<li>Courage in the face of the unknown</li>
-					</ul>
-				
-					<p>Sound good? Send us your information and we'll be in touch!</p> 
-
-					<p class="bold small">No phone calls<br /> 
-					Please provide a link to your portfolio</p>
-
-				</div> 
-
 				<!-- UI Designer --> 
-				<div class="jobPosition" job="interaction-designer"> 
+				<div class="jobPosition first active" job="interaction-designer"> 
 					<h4 class="nomargin">Interaction Designer</h4> 
 
 					<p class="desc">As an Interaction Designer at 17FEET you will concept ways to make technology and people connect in magical ways. Conduct research, create wireframes, user flows, process flows and site maps all while working closely with visual designers and developers.</p> 
@@ -80,7 +53,7 @@ require('../inc/header.php');
 
 					<p>Sound good? Send us your information and we'll be in touch!</p> 
 
-					<p class="bold small">No phone calls<br /> 
+					<p class="bold small">No phone calls<br class="hold" /> 
 					Please provide a link to your portfolio</p>
 				</div> 
 	        
@@ -108,10 +81,37 @@ require('../inc/header.php');
 
 					<p>Sound good? Send us your information and we'll be in touch!</p> 
 
-					<p class="bold small">No phone calls<br /> 
+					<p class="bold small">No phone calls<br class="hold" /> 
 					Please provide a link to your portfolio</p> 
 
-				</div> 
+				</div>
+				
+				<!-- Senior Interactive Developer --> 
+				<div class="jobPosition " job="senior-interactive-developer"> 
+					<h3 class="nomargin">Senior Interactive Developer</h3> 
+
+					<p class="desc">Hello. We are seeking a Senior Interactive Developer to work full-time, in house, to create interface-driven applications and sites for web and mobile. The projects we take on focus on usability and user experience, and we try to learn something new with every project: new languages, new frameworks or a new approach to how things get done.</p> 
+
+					<h5 class="nomargin">Your Experience:</h5> 
+					<ul> 
+						<li>Strong grasp of OOP concepts</li>
+						<li>Understanding of design patterns and a passion for design excellence</li>
+						<li>Experience with C#, Ruby or other object-oriented web languages</li>
+						<li>Experience with Objective-C and UIKit experience</li>
+						<li>Experience with HTML5, CSS3, JS Frameworks</li>
+						<li>Understanding of cross-browser issues &amp; solutions</li>
+						<li>Comfort with agile and waterfall development methodologies</li>
+						<li>Able to lead technology definition with clients</li>
+						<li>Strong written and verbal communication skills</li>
+						<li>Courage in the face of the unknown</li>
+					</ul>
+				
+					<p>Sound good? Send us your information and we'll be in touch!</p> 
+
+					<p class="bold small">No phone calls<br class="hold" /> 
+					Please provide a link to your portfolio</p>
+
+				</div>
 
 			</div>
 		

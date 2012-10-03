@@ -22,9 +22,13 @@ require('../../inc/header.php');
 		.graphic2{ max-width:100% !important; float:none; }
 		#hero-graphic{ margin:-55% 0 30px 0 !important; }
 	}
-
+	
+	@media all and (max-width: 600px){
+	/*	#hero-graphic{ margin:-20% 0 30px 0 !important; } */
+	}
+	
 	@media all and (max-width: 480px){
-		#hero-graphic{ margin:-56% 0 30px 0 !important; }
+		#hero-graphic{ margin:-48% 0 30px 0 !important; }
 	}
 	
 	@media all and (max-width: 320px){
@@ -64,7 +68,7 @@ require('../../inc/header.php');
 	
 		<div class="span10 last no-pad" style="margin:0 0 50px 0;">
 		
-			<h4>Social Search for the Rest of Us</h4>
+			<h4>Search Gets Social</h4>
 		
 			<p>Research.ly is great for marketers, but for consumers it needed to be simpler. Emphasizing local search and communities the app guides users to popular restaurants, movies and events in their area. In the user's first encounter with the application, the three primary columns gives product highlights. Once a search runs, search results data replaces the columns.</p>
 	

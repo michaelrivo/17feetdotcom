@@ -10,7 +10,7 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<div class="entry-meta">
-			<div class="one-line">
+			<div class="one-line clearfix">
 				<?php toolbox_posted_on(); ?>
 				
 				<div class="social_btns">

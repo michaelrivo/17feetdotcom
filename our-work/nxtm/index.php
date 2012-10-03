@@ -57,7 +57,7 @@ require('../../inc/header.php');
 				<p>To start, we used an iterative process to sketch designs quickly and get them in front of stakeholders and early testers, allowing us to rapidly develop an interaction model that mapped to the user experience and business goals.</p>
 			</div>
 		</div>
-		<div class="shim-80"></div>
+		<div class="shim-80 hide-mobile hide-tablet"></div>
 		<img src="../../imgs/projects/nxtm-2.png" class="right relative hide-tablet hide-mobile">
 	</div>
 	
@@ -76,7 +76,7 @@ require('../../inc/header.php');
 		</div>
 	</div>
 	
-	<div class="shim-80" style="height:100px;"></div>
+	<div class="shim-80 hide-mobile hide-tablet" style="height:100px;"></div>
 	
 	<!-- row -->
 	

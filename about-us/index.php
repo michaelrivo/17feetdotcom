@@ -121,12 +121,16 @@ require('../inc/header.php');
 			<a href="../join" class="carat">Check out available positions</a></p>
 		</div>
 
-		<div class="span4 last">
+		<div class="span4 last hide-mobile">
 			<h3>Contact Us</h3>
 			<p>Phone: (415) 896-1738<br class="hold"/>
 			256 Sutter Street Floor 5<br class="hold"/>
 			San Francisco, CA 94108<br class="hold"/>
 			<a href="../contact-us" class="carat">Send us a message</a></p>
+		</div>
+		
+		<div class="visible-phone hide width-mobile blueBtn">
+			<a href="../contact-us" class="blueBtn">Contact Us</a>
 		</div>
 		
 	</div>

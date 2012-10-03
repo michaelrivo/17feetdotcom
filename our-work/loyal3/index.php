@@ -18,6 +18,7 @@ require('../../inc/header.php');
 /*		#hero-graphic{ max-width:105% !important; }
 		.project.copy{ padding-top:25px;}*/
 		.project.copy .graphic2{ max-width:75% !important; margin-bottom:0 !important; }
+		.pad-top{ margin-top: 25px !important; }
 	}	
 
 </style>
@@ -33,7 +34,7 @@ require('../../inc/header.php');
 			<div class="span3 last what-it-is">
 				<p>What it is</p>
 				<abbr class="tablet" title="Touch devices"></abbr>
-				<abbr class="mobile on " title="Mobile devices"></abbr>
+				<abbr class="mobile on" title="Mobile devices"></abbr>
 				<abbr class="web on" title="Web"></abbr>
 			</div>
 		</div>
@@ -88,7 +89,7 @@ require('../../inc/header.php');
 				
 				<p>We designed LOYAL3's CSOP (Customer Stock Ownership Plan) to be as easy as buying anything else online. Pick the product you want, put in a credit card, submit and done. We created a streamlined, easy to use system for buying shares that truly had empathy for the end user - who's most likely never purchased a share of anything online.</p>
 			
-				<h4>The Future Looks Bright.</h4>
+				<h4 class="pad-top">The Future Looks Bright.</h4>
 
 				<p>The work is helping propel LOYAL3 into the future at an amazing pace. They're currently working with several companies to bring them online and continue to innovate how consumers and companies enter into a deeper relationship through ownership.</p>
 	

@@ -115,50 +115,6 @@
 	}
 	
 	
-	/* Join Page */
-	
-		.join-us{
-			
-			.openings{
-				
-				margin:0 !important;
-				
-				.selector{ display:none; }
-				li{ margin:10px 0; }
-				li, li.first{ border:none;}
-				a{ 
-					padding:10px 16px;
-					font-weight:bold;					
-					background-color:#FFF;
-					.border-radius(5px);
-					border:1px solid #DDD;
-					.inset-shadow(0, 0, 0, 0, rgba(0,0,0,0) );
-					.transition(all .1s ease-in-out);
-
-					&:link, &:visited {color: @blue;}
-					&:hover{ color: #FFF; background-color:saturate(@blue,15%); border-color:transparent; }
-					&:focus{
-						@shadow: inset 0 1px 3px rgba(0,0,0,.3), 0 0 8px rgba(105, 170, 186,.6);
-						  .box-shadow(@shadow);
-					}
-					&:active {
-						color:#FFF;
-						border-color:transparent;
-						background-color:saturate(@blue, 15%);
-						text-shadow:0 1px 1px rgba(0,0,0,.5);
-						.inset-shadow(0px, 2px, 3px, 0px, rgba(0,0,0,.5) );
-					}
-				}
-				a.active{
-					//#gradient .vertical( @blue, rgba(105,170,186, 0) ); 
-					background-color: @blue;
-					border-color:transparent;
-					&:link, &:visited { color:#FFF; }
-				}
-			}
-						
-		}
-	
 	/* About Us */
 	
 	.about-us{

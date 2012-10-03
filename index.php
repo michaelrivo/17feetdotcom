@@ -12,7 +12,7 @@ require('inc/header.php');
 	#slider, #slider .banner, #slider .item{ height:480px; }
 	.bg img{ height:100%%;}
 
-	#slider .slide1 .graphic{ margin-top:25%; }
+	#slider .slide1 .graphic{ margin-top:25%;  }
 	#slider .slide2 h3{ margin: 54% 0 0 9%; }
 	#slider .slide3 .textShadow{ display:none; }
 	#slider .slide3 .glow{ margin-left:0; }
@@ -28,6 +28,8 @@ require('inc/header.php');
 	
 	#slider .slide4 h2{ font-size:2.8em; margin: 0; z-index:2; position:relative; }
 	#slider .slide4 h3{ font-size:1.4em; margin:0; z-index:1; position:relative; text-shadow: 0 0 20px #000, 0 0 20px #000, 0 0 20px #000;  }
+	#slider a:hover{ background-position: right -23px;}
+	
 	#slider .slide4 .span8{  margin: 0 !important; }
 	
 	#slider .slide4 img{ margin:0px auto !important;}
@@ -50,7 +52,7 @@ require('inc/header.php');
 	#slider .slide4 h2{ font-size:2.5em; }
 	#slider .slide4 h3{ font-size:1.2em; font-weight:500;   }
 	#slider a{ background-position: right 0px; }
-	
+	#slider a:hover{ background-position: right -24px;}
 	
 }
 
