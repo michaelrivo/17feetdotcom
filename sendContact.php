@@ -20,19 +20,17 @@ if(!empty($_POST['contactMessage']) && !empty($_POST['contactEmail'])) {
 		$fromname = (empty($_POST['contactName'])) ? "" : $_POST['contactName'];
 		$message = $_POST['contactMessage'];
 		
-		$notification = "From: $fromname <$fromemail> \n\n$message";
+		$notification = "name: " . $fromname . "\nemail: " . $fromemail . "\nmessage:\n" . $message;
 		$notifyemail = array("brandon@17feet.com", "michael@17feet.com", "breana@17feet.com","pingme@17feet.com");
 		$notifysubject = "17FEET.com: Incoming Contact Inquiry";
 		
 		$mail = new htmlMimeMail5();
 	
-	    $mail->setFrom("$fromname <$fromemail>");
-		$mail->setReturnPath($fromemail);
-		
+	    $mail->setFrom($fromemail);
 	    $mail->setSubject($notifysubject);
 	    $mail->setPriority('high');
 	    $mail->setText($notification);
-		$result = $mail->send($notifyemail);
+		$result  = $mail->send($notifyemail);
 		
 		if (!$result) {
 			$error = "general|Failed to send mail. Please use pingme@17feet.com.%";
