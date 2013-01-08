@@ -25,7 +25,7 @@
 		
 		<div class="container">
 			
-			<div class="row-fluid">
+			<div class="row-fluid modules">
 			
 				<div class="span3 twitter">
 				
@@ -35,7 +35,7 @@
 					
 						<div class="content">
 						
-							<div class="tweet-wrap"><div id="tweet-txt"></div><div class="carat"></div></div>
+							<div class="tweet-wrap"><div id="tweet-txt"></div></div>
 						
 							<p class="via"><a href="http://twitter.com/17feet">@17feet</a>&nbsp;<span id="tweet-time"></span></p>
 						
@@ -108,16 +108,10 @@
 			
 			</div> <!-- row -->
 			
-		</div>
-		
-	</div>
-		
-	<div id="sub-footer">
-		
-		<div class="container">
+			<div class="rule white-dotted"></div>
 			
-			<div class="row">
-			
+			<div class="row-fluid sub-footer">
+				
 				<div class="span3">
 				
 					<a class="made-in-sf hide-txt" href="http://maps.google.com/maps?q=17feet+256+Sutter+St+%235+San+Francisco,+CA+94108&um=1&ie=UTF-8&sa=N&hl=en&tab=wl" target="_blank">Made in San Francisco</a>
@@ -130,16 +124,16 @@
 				
 					<input class="folio-url" type="text" value="http://" name="portfolioLink" title="http://" />
 				
-					<input type="submit" name="Submit" id="submit" value="Send">
+					<input type="submit" name="Submit" id="portfolioSubmit" class="inactive" value="Send">
 				
 				</form>
 				
 			</div>
 			
-		</div>
-		
-	</div>
+		</div> <!-- .container -->
 	
+	</div> <!-- #footer -->
+
 </div> <!-- #foot -->
 
 <?php if($ROOT == 'http://www.17feet.com'){ ?>

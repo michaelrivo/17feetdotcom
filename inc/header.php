@@ -1,6 +1,4 @@
 <?php 
-$isiPad = (bool) strpos($_SERVER['HTTP_USER_AGENT'],'iPad'); 
-$isiPad = false;
 $ROOT = "http://www.17feet.com";
 if($_SERVER['HTTP_HOST'] == '192.168.1.246' || $_SERVER['HTTP_HOST'] == 'localhost' ){
 	$ROOT = "/17feet";
@@ -9,14 +7,9 @@ if($_SERVER['HTTP_HOST'] == '192.168.1.246' || $_SERVER['HTTP_HOST'] == 'localho
 if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 	$ROOT = "/staging";
 }
-// require('mobile_detect.php');
-// 
-// if( $_SERVER['SCRIPT_NAME'] == '/index.php'){
-// 	if(ismobile() && $_COOKIE["ViewedMobile"] != 1){
-// 		setcookie("ViewedMobile",true, time()+3600*72);
-// 		header("Location: ".$ROOT.'/mobile/', true, 303);
-// 	}
-// }
+
+include( dirname(__FILE__).'/functions.php');
+
 ?>
 
 <!doctype html>
@@ -35,13 +28,13 @@ if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 
 	<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
 	
-	<title>17feet</title>
+	<title>17FEET. Small. Mighty.</title>
 	<?php //print_r($_SERVER); ?>
 	<!-- Framework CSS --> 
 	<!--[if lt IE 9]><link rel="stylesheet" href="<?php echo $ROOT ?>/css/ie.css" type="text/css" media="screen, projection, print"><![endif]-->
 	<link rel="stylesheet" href="<?php echo $ROOT ?>/css/style.css" type="text/css" media="screen, projection, print">
 	
-	<link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 960px)' href='<?php echo $ROOT ?>/css/less/responsive.css' />
+	<link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 979px)' href='<?php echo $ROOT ?>/css/less/responsive.css' />
 		
 	<link rel="shortcut icon" href="<?php echo $ROOT ?>/imgs/favicon.ico" />
 
@@ -55,7 +48,7 @@ if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
 	<script src="<?php echo $ROOT ?>/js/modernizr.js"></script>
-	<script src="<?php echo $ROOT ?>/js/lectric.js" type="text/javascript" charset="utf-8"></script>
+<!--	<script src="<?php echo $ROOT ?>/js/lectric.js" type="text/javascript" charset="utf-8"></script> -->
 	<script src="<?php echo $ROOT ?>/js/jquery.jsonp.js" type="text/javascript" charset="utf-8"></script>
 	<script src="<?php echo $ROOT ?>/js/hashchange.js" type="text/javascript" charset="utf-8"></script>
 	
@@ -82,15 +75,14 @@ if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 			<div class="row-fluid">
 	
 				<h1 id="logo" class="span2"><a href="<?php echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
+				
 				<ul class="span8" id="nav">
-					<li class="our-work"><a href="<?php echo $ROOT; ?>/our-work">Our Work</a></li>
 					<li class="about-us"><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>						
-					<li class="join"><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
-					<li class="blog"><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
-					<li class="contact-us"><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
-					
+					<li class="our-work"><a href="<?php echo $ROOT; ?>/our-work">The Work</a></li>
+					<li class="join"><a href="<?php echo $ROOT; ?>/join">Join Us!</a></li>
+					<li class="blog"><a href="<?php echo $ROOT; ?>/blog">Thoughts</a></li>
+					<li class="contact-us"><a href="<?php echo $ROOT; ?>/contact-us">Get in Touch</a></li>
 				</ul>
-				<div class="span2 last twitter"><a href="http://twitter.com/17feet" target="_blank"><span>We're on Twitter</span></a></div>
 	
 			</div> 
 		</div>

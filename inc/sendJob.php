@@ -51,7 +51,6 @@ if($error == '') {
 	$notification .= "jobid: " . $jobid . "\n";
 	$notification .= "message:\n" . $message;
 	$notifyemail = "brandon@17feet.com";
-	//$notifyemail = "gpolguere@gmail.com";
 	$notifysubject = "17FEET.com: Incoming Job Submission";
 	
 	$mail = new htmlMimeMail5();

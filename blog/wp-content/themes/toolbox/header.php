@@ -10,8 +10,6 @@
  */
 ?>
 <?php 
-$isiPad = (bool) strpos($_SERVER['HTTP_USER_AGENT'],'iPad'); 
-$isiPad = false;
 $ROOT = "http://www.17feet.com";
 if($_SERVER['HTTP_HOST'] == '192.168.1.246' || $_SERVER['HTTP_HOST'] == 'localhost' ){
 	$ROOT = "/17feet";

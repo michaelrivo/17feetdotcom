@@ -1,20 +1,29 @@
 <?php 
-$parentPage = 'mobile-menu';
+$parentPage = 'mobile-menu join';
 require('../inc/header.php'); 
 ?>
 
-<div class="container static join-us">
+<div class="dark-header">
+
+	<div class="container static join-us">
 	
-	<div class="header">
-		<h2>Join the Team!</h2>	
-		<hr class="up" />
+		<div class="header">
+			<h2>We are 17FEET.</h2>
+		
+			<h3 class="bottom">And we're looking for amazing people who want to do great work.</h3>
+			<h4>We believe that small teams can achieve monumental results and that when smart people are empowered to think critically the results can be, well&hellip; pretty badass. <span class="caps">See Open Positions<div class="open-positions-arrow"></span></h4>
+			
+		</div>
+	
 	</div>
+	<div class="dotted-grey"></div>
+</div>
+
+<div class="container static join-us">
 	
 	<div class="row-fluid width-lg-tablet">
 		<div class="span3 openings">
-		
-			<h4>Open Positions</h4>
-			
+					
 			<div id="picker-wrapper">
 				<ul class="selector">
 					<li><a class="hide">&nbsp;</a><div class="carat"></div></li>
@@ -34,11 +43,11 @@ require('../inc/header.php');
 			<div class="jobs"> 
 				<!-- UI Designer --> 
 				<div class="jobPosition first active" job="interaction-designer"> 
-					<h4 class="nomargin">Interaction Designer</h4> 
+					<h4 class="top">Interaction Designer</h4> 
 
 					<p class="desc">As an Interaction Designer at 17FEET you will concept ways to make technology and people connect in magical ways. Conduct research, create wireframes, user flows, process flows and site maps all while working closely with visual designers and developers.</p> 
 
-					<h5 class="nomargin">Your Experience:</h5> 
+					<h5>Your Experience:</h5> 
 					<ul> 
 						<li>Experience creating user experiences for web and mobile software applications.</li>
 						<li>Hands-on skills in developing wireframes, site maps, user flows, experience maps, personas, etc.</li>
@@ -59,11 +68,11 @@ require('../inc/header.php');
 	        
 				<!-- Visual Designer --> 
 				<div class="jobPosition" job="visual-designer"> 
-					<h4 class="nomargin">Visual Designer</h4> 
+					<h4 class="top">Visual Designer</h4> 
 				
 					<p class="desc">17FEET is looking for a designer to connect technology and people in magical ways through web experiences and mobile interfaces. You should have a solid understanding of user interface principles, rich visual communication skills.</p> 
 
-					<h5 class="nomargin">Your Experience:</h5> 
+					<h5>Your Experience:</h5> 
 					<ul> 
 						<li>Strong conceptual skills</li>
 						<li>Proven ability to translate wireframes into rich visual experiences</li>
@@ -72,7 +81,7 @@ require('../inc/header.php');
 						<li>3+ years of relevant experience</li>
 					</ul> 
 
-				  <h5 class="nomargin">Bonus points for:</h5> 
+				  <h5>Bonus points for:</h5> 
 					<ul> 
 						<li>UX experience</li>
 						<li>Mobile experience</li>
@@ -88,11 +97,11 @@ require('../inc/header.php');
 				
 				<!-- Senior Interactive Developer --> 
 				<div class="jobPosition " job="senior-interactive-developer"> 
-					<h3 class="nomargin">Senior Interactive Developer</h3> 
+					<h4 class="top">Senior Interactive Developer</h4> 
 
 					<p class="desc">Hello. We are seeking a Senior Interactive Developer to work full-time, in house, to create interface-driven applications and sites for web and mobile. The projects we take on focus on usability and user experience, and we try to learn something new with every project: new languages, new frameworks or a new approach to how things get done.</p> 
 
-					<h5 class="nomargin">Your Experience:</h5> 
+					<h5>Your Experience:</h5> 
 					<ul> 
 						<li>Strong grasp of OOP concepts</li>
 						<li>Understanding of design patterns and a passion for design excellence</li>

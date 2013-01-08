@@ -1,5 +1,5 @@
 <?php 
-$parentPage = 'our-work';
+$parentPage = 'our-work-btn';
 require('../../inc/header.php'); 
 ?>
 
@@ -7,56 +7,79 @@ require('../../inc/header.php');
 	#hero-graphic{ margin:20px 0 30px 0; }
 
 </style>
-<div class="hero hero-auto">
-	<div class="container project header">
-		<div class="row-fluid">
-			<div class="span9">
-				<h2 class="long-ttl">Salesforce Customer <br/>Success Stories</h2>
-				<h3>Gearing up for Dreamforce 2011, Salesforce came to 17FEET to create a more engaging experience around their customer success stories. <a class="external" href="http://www.salesforce.com/socialenterprise/showcase/" target="_blank">Launch Site</a></h3>
-			</div>
-	
-			<div class="span3 last what-it-is">
-				<p>What it is</p>
-				<abbr class="tablet on" title="Touch devices"></abbr>
-				<abbr class="mobile on " title="Mobile devices"></abbr>
-				<abbr class="web on" title="Web"></abbr>
-			</div>
-		</div>
-		<img src="../../imgs/projects/salesforce-1.png" id="hero-graphic" />
-	</div>
+
+<div class="container project header">
+
+	<h2 class="long-ttl">Salesforce Foundation</h2>
+	<h3>We helped The Salesforce.com Foundation communicate their mission and grow their relationships with nonprofits and higher-education institutions.</h3>
+
+	<img src="../../imgs/projects/salesforce-foundation-1.png" id="hero-graphic" />
 </div>
 
 <div class="container copy project" >
 	
-	<div class="row-fluid width-lg-tablet	">
+	<div class="row-fluid width-lg-tablet">
 		<div class="span4 no-pad last">
-			<h4>Multi-Campaign Platform</h4>
+			<h4>Building a Foundation</h4>
 
-			<p>The project began with a series of videos called &ldquo;CEOs on Chatter&rdquo;, highlighting how CEOs are using Chatter to revolutionize their companies. Rather than create a &ldquo;micros-site&rdquo; for the CEO success stories, we developed a plan to build a platform on which multiple campaigns could be developed over time to feature success stories as broad as the products Salesforce offers.</p>
+			<p>In addition to its philanthropic mission, the Foundation powers CRM solutions for more than 15,000 nonprofit and higher-ed institutions. In an effort to meet these two goals, this had caused content overload on the site. Our first objective: cut the clutter. We re-organized, prioritized and eliminated content to focus the message and the user experience.</p>
 		
 		</div>
 		<div class="span8">
-			<img src="../../imgs/projects/salesforce-2.png" class="right clearfix" />
+			<img src="../../imgs/projects/salesforce-foundation-2.png" class="right clearfix" />
+		</div>
+	</div>
+	
+	<div class="shim-120"></div>
+	
+	<div class="row-fluid">
+		<div class="span7 offset2">
+			<blockquote>17FEET was instrumental in transforming our web experience</blockquote>
+		</div>
+		
+		<p class="cite span3">&mdash;Judy Levine<br class="hold"><span>Director of Marketing<br class="hold">Salesforce.com Foundation</span></p>
+	</div>
+	<!-- row -->
+	
+	<div class="shim-80"></div>
+	
+	<div class="row-fluid width-lg-tablet">
+		<div class="span5 no-pad last right">
+			
+			<div class="shim-120 hide-lg-tablet"></div>
+			
+			<h4>Design, Test, Repeat</h4>
+
+			<p>To get the right balance we developed several interactive prototypes that were distributed to key constituents - Foundation stakeholders and key customers. Through an iterative feedback process we landed on a user-flow and presentation layout that got users where they needed to go easily.</p>
+		
+		</div>
+		<div class="span7 left">
+			<img src="../../imgs/projects/salesforce-foundation-3.png"  />
 		</div>
 	</div>
 	
 	<!-- row -->
-	<div class="row-fluid">
 	
-		<div class="span10 last no-pad">
-			<h4>Device Agnostic</h4>
+	<div class="shim-120"></div>
+	
+	<div class="row-fluid">
+		
+		<div class="span5 no-pad ">
+			
+			<div class="shim-40"></div>
+			
+			<h4>Visual Design</h4>
 
-			<p style="margin-bottom:0;">Well, sort of. A big imperative at Salesforce is that everything look great and work great on the iPad. Of course, it also has to look great on a desktop. We created a simple design solution that worked across screen sizes and device types. We also implemented touch functionality to maximize the experience when viewing on an iPad or iPhone. </p>	
-	
+			<p>Our goal with the visual design was to allude to the look-and-feel of the Salesforce brand while giving the Foundation a look of it’s own. We introduced hand drawn elements and a more organic color palette to the existing Salesforce brand to achieve a unique look for the Foundation.</p>
+			
+		</div>
+		
+		<div class="span7">
+			<img class="graphic block" src="../../imgs/projects/salesforce-foundation-4.png" style="margin:0px auto;" />
 		</div>
 	</div>
 	
-	<!-- <div class="shim-40"></div> -->
-	<div class="row-fluid">
-		<div class="span12">
-			<img class="graphic" src="../../imgs/projects/salesforce-3.png" />
-		</div>
-	</div>
+	<div class="shim-80"></div>
 	
 </div>
 	
@@ -67,7 +90,7 @@ require('../../inc/header.php');
 	
 	<?php 
 	$currentProject = 'salesforce';
-	require('../../inc/project-nav.php'); ?>
+	require('../../inc/project-cta.php'); ?>
 
 </div>
 

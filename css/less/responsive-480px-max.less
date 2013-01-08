@@ -13,11 +13,11 @@
 }
 
 .mobile-btn{
-	border:1px solid #000;
-	#gradient .vertical(#111, #000);
-	@shadow: inset 0 1px 1px #555 , 0 0 0 1px rgba(255,255,255,0.15), 0 2px 6px  rgba(255,255,255,0.15);
-	.cbox-shadow(@shadow );
-	border:1px solid #000;
+	border:1px solid #555;
+	background-color:transparent;
+	//#gradient .vertical(#111, #000);
+	//@shadow: inset 0 1px 1px #555 , 0 0 0 1px rgba(255,255,255,0.15), 0 2px 6px  rgba(255,255,255,0.15);
+	//.cbox-shadow(@shadow );
 	.border-radius(3px);
 	padding:7px 8px;
 	position:absolute;
@@ -39,7 +39,6 @@
 	
 	/*  Begin Nav */
 	.hide-full {  display:block; }
-	
 
 	#logo{ 
 		float:none; width:100px; margin:0 auto;
@@ -61,21 +60,84 @@
 	.mobile-menu #nav li{
 		display:block !important;
 		float:none;
+		text-align:left;
+		line-height:0%;
 		background:#000;
 		border-bottom:1px solid #222;
 		
 		a{
-			font-size:1.2em;
+			font-size:1.1em;
+			font-weight:700;
 			color:#FFF;
+			text-indent:3.5%;
+			padding:18px 0;
+			width:100%;
 		}
 	}
 	
-	
-	/* Deactivate Slider */
-	
-	#slider .item { display: none; }
-	#slider .init-slide{ display:block; }
 	.container{ width:90%; margin:0 5%; }
+	
+	.tier1 h2{ font-size:3.15em; }
+	.tier2{
+		img{ margin-top:20px !important; }
+		.content{ min-height:auto; }
+	}
+	
+	.tier3{
+		
+		.top-projects{
+			margin-bottom:0;
+			padding-bottom:0;
+		}
+		
+		.featured-logo-sprite{
+			height:auto;
+			text-indent:0;
+			font-weight:700;
+			font-size: 1.5em;
+			background-image:none;
+			color:#FFF;
+			margin:10px 0;
+			overflow:visible;
+		}
+		
+		.brand a{ padding: 0 18px;}
+		.cta-wrapper{
+			
+		}
+		.black-cta{ position:static; display:inline-block; float:none; margin:20px 0 0 0; }
+	}
+	
+	.project, .projects .header, .static .header, .blog .header{
+		
+		padding:20px 0 12px 0; //20px 0
+		
+		h2{ font-size:2.5em; }
+		h3{ font-size: 106%;
+		line-height: 150%;}
+	}
+	
+	/* About Us */
+	
+	.staff{
+		
+		.profile{ 
+			width: auto;
+/*			float:left;
+			display:block; 
+			clear:both;*/
+			margin-right: 3.83%;
+		}
+		
+		h5{ font-size:1.4em; }
+		.copy{ padding-top:0;}
+		
+	}
+	
+	.testimonials{
+		blockquote{ width:96%; }
+		img{ margin-right:15px !important;}
+	}
 	
 	/* Project Pages */
 	
@@ -92,7 +154,7 @@
 	
 	.project.header h2{ font-size: 3em; }
 	
-	.project-control, .project-controls{ display:none; }
+	.project-control{ display:none; }
 	
 	#header .span7{ width:auto; }
 	.projects .span4{
@@ -115,6 +177,12 @@
 			margin-left:0;
 		}
 		
+		.more-pad, .more-pad.last{
+			p, h4 { 
+				padding:0;
+			}
+		}
+		
 		img, .absolute { position:static !important; }
 	}
 		
@@ -124,7 +192,6 @@
 		.cbox-shadow(none);
 	}
 	
-	
 	#nav{ 
 		.box-shadow( 0 4px 25px #000 );
 		float:none;
@@ -132,19 +199,36 @@
 		top:0;
 		left:10px;		
 	}
-	.our-work #nav{ overflow:visible; }
-	.our-work #nav li.our-work{ 
+	.our-work-btn #nav{ overflow:visible; background:transparent; .box-shadow(none); }
+	.our-work-btn #nav li.our-work{ 
 		display:block !important; 
+		background-color:transparent;
+		&:hover a:before{
+			border-color:transparent saturate(@blue, 25%) transparent transparent;
+		}
 		a{
-			.mobile-btn;
+			//.mobile-btn;
 			position:relative;
 			left:3%; 
 			top:0px;
 			
-			font-size:1em;
-			font-weight:500;
+			font-size:.75em;
+			font-weight:900;
 			margin-top:11px;
-			padding:6px 8px;
+			padding:8px 8px 8px 3px;
+			
+			&:before{
+				content: "";
+				display:inline-block;
+				margin-right:5px;
+				width:0;
+				height:0;
+				top:50%;
+				border:4px solid transparent;
+				border-color:transparent #FFF transparent transparent;
+			}
+			
+			
 		}
 	}
 	
@@ -161,7 +245,7 @@
 			top:0px;
 			color:#FFF;
 			font-size:1.1em;
-			font-weight:500;
+			font-weight:700;
 			margin-top:9px;
 			padding:5px 7px;
 			
@@ -174,67 +258,81 @@
 	
 	#nav{ width:auto; }
 	
-	.projects .span4{ 
-		height:315px; 		
-		img{ max-width:115%}
-		div{ height:200px !important;  }
-		//a{ position:static !important; }
-		
-		p{ white-space: normal !important;  }
+	.client-list li{ 
+		width: 50%; 
+		height:120px;
+		//span{ max-width:auto;}
+		.cl-sprite{ 
+			margin:10px auto;
+			width:100%;
+			
+			//background-size:50% 50%; 
+		}
+		span{ max-width: 135px; }
 	}
 	
-	*{ float:none; }
+	//*{ float:none; }
 	img{ margin: 5px auto !important; max-width:100% !important; }
 	
-	
-	.about-us{
-		
-		.service .pad{
-			.graphic{ 
-				width:45px;
-				float:left;
-				height:auto; 
-				padding:0;
-				margin:0 !important;
-				position:relative !important;
-				top:-10px;
-				img{ margin:0 !important; }
-			}
-
-			h3{ float:left; width:auto; margin: 0 0 0 15px;  }
-			p{  clear:left; margin:0; padding:15px 0 !important; }
+	/* About Us */
+	/*
+		.about-us{
 			
-			ul{  margin-left: 0; }
-		}
-		
-		.clients{ /*width: 306px;*/ .background-size(127%); }
-		
-		.end .span4{
-			float:none;
-		}
-		.end{
-			.blueBtn{
-				margin: 25px 0 0 0 !important;
-				a{
-					display:block;
-					padding:4px 0 2px 0;
-					width:100%;
+			.service .pad{
+				.graphic{ 
+					width:45px;
+					float:left;
+					height:auto; 
+					padding:0;
+					margin:0 !important;
+					position:relative !important;
+					top:-10px;
+					img{ margin:0 !important; }
+				}
+
+				h3{ float:left; width:auto; margin: 0 0 0 15px;  }
+				p{  clear:left; margin:0; padding:15px 0 !important; }
+				
+				ul{  margin-left: 0; }
+			}
+			
+			.clients{ 
+			//width: 306px; 
+			.background-size(127%); }
+			
+			.end .span4{
+				float:none;
+			}
+			.end{
+				.blueBtn{
+					margin: 25px 0 0 0 !important;
+					a{
+						display:block;
+						padding:4px 0 2px 0;
+						width:100%;
+					}
 				}
 			}
-		}
-		
-	}
+			
+		}*/
 	
 	/* Blog */
 	
 	#comments form input, #comments form textarea{
 		width:95%;
 	}
+	
+	
+	/* Footer */
+	#footer .modules{  margin: 30px 0; }
+	 
 }
 
 @media (max-width: 480px) {
 	
-	h3{ font-size: 1.75em; font-weight: 300; }
+	blockquote{ font-size:1.5em; margin:20px 0; }
+	
+	//h3{ font-size: 1.75em; font-weight: 300; }
 	
 	.static .header, .blog .header{
 		
@@ -249,30 +347,19 @@
 	.hide-tablet{ display:block !important; }
 	.hide-mobile{ display:none !important; }
 	
-	/* Our Work */
+	/* Home */
 	
-	.projects, .project{
-		h3{
-			font-size:1.15em; 
-			padding-right:0;		
-		}
-		h4, p{ padding:0px !important; }
-		
-		img{ margin: 10px 0;}
+	.tier1{
+		padding:20px 0;
+		h2{ font-size: 2.5em }
+		h3{ font-size: 1.55em }
 	}
+	
+	/* Our Work */
 	
 	.container .project h5{ font-size: 1.75em; }
 	
 	/* About Us */
-	
-	.about-us{
-		h3{ margin: 1em 0 1em 0; }
-		.service .pad{ padding:15px 20px; }
-		.partners { padding:20px 0 0 0; }
-		.partners p{ margin-left:0; }
-		.clients{ .background-size(170%); height:200px;}
-		hr.down{ margin:0;}
-	}
 	
 	/* Join Us*/
 	
@@ -294,58 +381,36 @@
 	
 	/* Home Page */
 	
-	.banner{ width: auto; }
-	
-	#slider .item, #slider .banner{ height:auto; }
-	#slider .item { position:static; }
-	#slider{ height:auto; margin-bottom:10px; }	
-	
-	#slider .slide0{
-		h3{ margin:0; font-size:1.3em }
-		.slide-ttl{ margin:-10px 0 -25px -8%; max-width:110%; }
-		.graphic{ position: static; margin:15px 5% 0 8%; max-width:80%; float:none; }
-		.cta{ background-image:none;}
-		
-	}
-	
-	.second-tier{ 
-		
-		h2{ font-size: 2.25em; margin-bottom:15px;}
-		.span4{ 
-			padding:0;
-			margin: 8px 0;
-			div{ padding:5% 6% 4% 6%; }
-		}
-		
-		.cta{ margin: 15px 0 0 0; }
-	}
-	
-	.third-tier{
-		
-		.thumb-wrap{ height: auto; }
-		p{ padding:0; font-size: 1em; }
-		
-		.past-project{ position:static; padding:0; margin-top: 50px; }
-	}
-	
-	.second-tier, .third-tier{ padding-bottom:50px;}
-	
 	
 	/* Work overview */
-		
-	.projects .span4{ 
-		height:auto !important; 
-		margin:0 0 75px 0;
-		
-		width:100%;
-		margin-left:0;
-		
-		img{ max-width:100%; margin:0px auto !important; display:block; }
-		div{ height:auto !important; position:relative !important;  }
-		a{ position:static !important; left:inherit !important; }
-		h5{ margin-top:8px; }
-		h5,p{ padding-left: 0 10% 0 10% !important;}
+	
+	.featured-row{
+		.project-thumb{
+			margin-right:0;
+			max-width:300px;
+			width:auto;
+			float:left;
+			.label{ padding:21px 15px; background-image:none; }
+		}
 	}
+	
+	.project-grid {
+		.project-thumb{
+			width:auto;
+			float:left;
+			vertical-align:top;
+		}
+		.label{ padding-left: 15px; background-image:none; }
+		
+	}
+	
+	
+	.featured-row,.project-grid{
+		width:auto;
+		max-width:300px;
+		margin:0px auto;
+	}
+	
 
 	/* Project Pages */
 	.shim-40, .shim-80, .shim-120, .shim-160{ display:none !important; }
@@ -358,7 +423,7 @@
 		h3{ font-size: 1.2em; }
 	}
 	
-	.project.header h2{ font-size: 2.25em; font-weight:300; }
+	//.project.header h2{ font-size: 2.25em; font-weight:300; }
 	
 	.project.copy{ 
 		padding: 10px 0 30px 0; 
@@ -366,8 +431,8 @@
 			font-size:1.4em; margin-top:0 !important;			
 		}
 		img{ position:static !important; }
-		h4{ font-size:1.75em; font-weight:300;}
-		p{ font-size: 105%; line-height: 165%; }
+		h4{ font-size:1.75em; }
+		//p{ font-size: 105%; line-height: 165%; }
 		
 		.span1, .span2, .span3, .span4, 
 		.span5, .span6, .span7, .span8, 
@@ -392,10 +457,13 @@
 	.view-all-work{ display:none; }	
 	
 	/* Footer */
-	
+	//#footer{ background: red none;}
 	#footer, .collapse .container{ padding: 15px 0; }
 	
-	#footer{
+	#footer .modules{
+		margin:15px 0;
+		h5{ float:none; margin-right:2% }
+		
 		.twitter .bird{ left:inherit; right:0; }
 		@offset: right;
 		.blog h5	{ background-position: @offset -63px; }
@@ -427,22 +495,24 @@
 			&:after{
 				width:100%;
 				height:1px;
-				border-right:none;
-				border-bottom:1px solid #4D4D4D;
+				border:none;
+				background: transparent none repeat-x scroll 0 0;
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAQAAACx6dw/AAAADUlEQVQIHWM4858BCAAJygHMQVdwbQAAAABJRU5ErkJggg==);
+				
 				top:inherit;
 				bottom:0;
 			}
 		}
 		.twitter{ 
-			.tweet-wrap{ width:auto; }
-			#tweet-txt { height:auto; }
+			//.tweet-wrap{ width:auto; }
+			//#tweet-txt { height:auto; }
 		}
 		
 		.api-link{ position:static; clear:both; padding:10px 0; }
 	}
 	
 	
-	#sub-footer{ 
+	.sub-footer{ 
 		form{ display: none; }
 	}
 	/* 404 Page */

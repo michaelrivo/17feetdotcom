@@ -1,5 +1,5 @@
 <?php 
-$parentPage = 'our-work';
+$parentPage = 'our-work-btn';
 require('../../inc/header.php'); 
 ?>
 
@@ -8,7 +8,7 @@ require('../../inc/header.php');
 	.rockstar-graphic{ margin-left:5%;display:block; }
 	
 	
-	@media all and (max-width: 959px){
+	@media all and (max-width: 979px){
 		
 	}
 
@@ -26,21 +26,9 @@ require('../../inc/header.php');
 </style>
 
 
-
 <div class="container project header">
-	<div class="row-fluid">
-		<div class="span9 ">
-			<h2>NXTM</h2>
-			<h3>NXTM's WhoozNXT is a web application designed to help bands get more fans. We developed the user experience and visual presentation as well as the strategy for engaging new users.</h3>
-		</div>
-
-		<div class="span3 last what-it-is">
-			<p>What it is</p>
-			<abbr class="tablet" title="Touch devices"></abbr>
-			<abbr class="mobile" title="Mobile devices"></abbr>
-			<abbr class="web on" title="Web"></abbr>
-		</div>
-	</div>
+	<h2>NXTM</h2>
+	<h3>NXTM's WhoozNXT is a web application designed to help bands get more fans. We developed the user experience and visual presentation as well as the strategy for engaging new users.</h3>
 </div>
 
 <div class="container copy project">
@@ -134,7 +122,7 @@ require('../../inc/header.php');
 	
 	<?php 
 	$currentProject = 'nxtm';
-	require('../../inc/project-nav.php'); ?>
+	require('../../inc/project-cta.php'); ?>
 
 </div>
 

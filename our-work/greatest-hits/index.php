@@ -1,9 +1,10 @@
 <?php 
-$parentPage = 'our-work';
+$parentPage = 'our-work-btn';
 require('../../inc/header.php'); 
 ?>
 
 <style type="text/css">
+	
 	
 	.graphic1{ max-width: 265%; float:right; margin-top:15%; }
 	.graphic2{ max-width: 185%; margin-left: -5%; z-index:0; }
@@ -16,7 +17,7 @@ require('../../inc/header.php');
 	
 	.awards{ margin-left:0; }
 	
-	@media all and (max-width: 959px){
+	@media all and (max-width: 979px){
 		.graphic1{ margin:35% -10% 0 0; max-width: 180%; }
 		.padLeft{ padding-left:0; }
 	}
@@ -49,22 +50,13 @@ require('../../inc/header.php');
 
 
 <div class="container project header">
-	<div class="row-fluid">
-		<div class="span9">
-			<h2>Greatest Hits</h2>
-			<h3>Over the years we've been able to do some really fun work, from a website <br/>that talks back to you, to &ldquo;the worlds stupidest website.&rdquo; All in a days work.</h3>
-		</div>
-	
-		<div class="span3 last what-it-is header">
-			<p>What it is</p>
-			<abbr class="tablet" title="Touch devices"></abbr>
-			<abbr class="mobile " title="Mobile devices"></abbr>
-			<abbr class="web on" title="Web"></abbr>
-		</div>
-	</div>
+	<h2>Greatest Hits</h2>
+	<h3>Over the years we've been able to do some really fun work, from a website <br/>that talks back to you, to &ldquo;the worlds stupidest website.&rdquo; All in a days work.</h3>
 </div>
 
 <div class="container copy project">
+	
+	<div class="shim-40"></div>
 	
 	<div class="row-fluid width-tablet">
 	
@@ -160,7 +152,7 @@ require('../../inc/header.php');
 	
 	<?php 
 	$currentProject = 'greatest-hits';
-	require('../../inc/project-nav.php'); ?>
+	require('../../inc/project-cta.php'); ?>
 
 </div>
 

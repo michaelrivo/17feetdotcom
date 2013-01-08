@@ -22,8 +22,6 @@ if($error == '') {
 	
 	$notification = "Portfolio link sent in: " . $portfolioLink;
 	$notifyemail = "brandon@17feet.com"; //brandonherring
-	//$notifyemail = "arrel@17feet.com";
-	//$notifyemail = "gpolguere@gmail.com";
 	$notifysubject = "17FEET.com: Incoming Portfolio Link";
 	$header = "From: 17FEET <pingme@17feet.com>\r\n";
 	

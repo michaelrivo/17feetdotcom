@@ -2,6 +2,20 @@ if (!window.console) console = {log: function() {}};
 
 $(function() {
 	
+	if( location.hash == "#edit"){ console.log( $('p,h2,h3,h4,blockquote').attr('contentEditable', 'true') ) }
+	
+	
+	var testEl = document.createElement( "x-test" );
+	if( typeof testEl.style.webkitBackgroundClip !== "undefined" && ( testEl.style.webkitBackgroundClip = "text", testEl.style.webkitBackgroundClip === "text" ) ){
+		$('html').addClass('backgroundClipText');
+		//console.log('backgroundClipText')
+	} else{
+		$('html').addClass('no-backgroundClipText');
+		// console.log( $('html').attr('class') );
+		// console.log( Modernizr.cssgradients );
+	}
+	
+	
 	// Hide address bar on devices like the iPhone
 	//---------------------------------------------
 	function hideAddressBar() {
@@ -44,35 +58,6 @@ $(function() {
 	if(String(window.location.host) == '192.168.1.246'){
 		rootFolder = 'http://192.168.1.246/17feet/';
 	}
-	
-	
-	
-	if($('#slider .item').length > 1 && $(window).width() >= 768){
-			
-		//$('#slider').append('<pre id="debug" style="position:absolute; top:20px; border:1px solid transparent; color:#FFF;z-index:1000;background-color: rgba(0,0,0,.5);padding:10px">debug</pre>');
-		//$('body').append($('<p id="console">test</p>'));
-		
-		var slider = new Lectric();
-		
-		slider.init('#slider',{animateDuration: 600, slideThreshold: 20, reverse:true, next:'.next', previous: '.prev'});
-		
-		$(window).resize(function(){
-			// on window resize
-			slider.opts.animateDuration = ( $(window).width()-940 )/2 + 600;
-			slider.position.x = -slider.pageNum * slider.itemWidth();
-			//$('#debug').text('slider.position.x: '+slider.position.x);
-			//console.log('slider.pageNum: '+slider.pageNum);
-			//console.log('slider.itemWidth: '+slider.itemWidth());
-			//console.log(slider.opts.animateDuration);
-			
-		}).trigger('resize');
-		
-	}
-	
-	$('.banner').click(function(event){
-		event.preventDefault();
-		window.location = $(this).attr('project');			
-	})
 	
 // FOOTER
 
@@ -495,11 +480,23 @@ $(function() {
 			opacity: 1,
 			bottom: '24px'				
 		},300).delay(4000).animate({bottom:'-20px', opacity: 0}, 300, function(){
-				$(this).remove();
-				resetForm('portfolio_form');
-				$('#portfolio_form').animate({top: '0px', opacity:1}, 300);
-			});
+			$(this).remove();
+			resetForm('portfolio_form');
+			$('#portfolio_form').animate({top: '0px', opacity:1}, 300);
+		});
 	}
+	
+	$('#portfolio_form .folio-url').bind({
+		focus: function(){
+			//alert('got it');
+			$('#portfolioSubmit').removeClass('inactive');
+		},
+		blur: function(){
+			if( $(this).val() == $(this).attr('title') || $(this).val() == "" ){
+				$('#portfolioSubmit').addClass('inactive');
+			}
+		}
+	})
 
 	
 	//Blog Comments form
@@ -537,7 +534,7 @@ $(function() {
 		} else {
 			
 			var formdata=commentform.serialize();
-			console.log
+			//console.log
 			//Add a status message
 			//infodiv.html('<p class="wdpajax-loading">Processing...</p>');
 			//Extract action URL from commentform

@@ -1,19 +1,18 @@
 <?php 
-$parentPage = 'our-work';
+$parentPage = 'our-work-btn';
+$pageTitle = '';
 require('../../inc/header.php'); ?>
 
 <style type="text/css">
 	#hero-graphic{
-		position:absolute;
+		/*position:absolute;
 		bottom:-19%;
-		left:2%;
+		left:2%;*/
+		margin:15px 0 15px auto;
+		display:block;
 	}
 	
-	.hero{
-		background:#000 url(../../imgs/projects/simraceway-hero-background.jpg) no-repeat center top;
-	}
-	
-	@media all and (max-width: 959px){
+	@media all and (max-width: 979px){
 		#hero-graphic{ max-width:100%; left: 0; }
 	}
 	
@@ -26,40 +25,26 @@ require('../../inc/header.php'); ?>
 
 </style>
 
-<div class="hero dark responsive-transition bg-cover">
-	<div class="container project header">
-		<div class="row-fluid">
-			
-			<div class="span9">
-				<h2>Simraceway</h2>
-				<h3>We designed a new web platform for Simraceway, <br/>the leading PC simulation racing game.</h3>
-			</div>
-	
-			<div class="span3 last what-it-is">
-				<p>What it is</p>
-				<abbr class="tablet" title="Touch devices"></abbr>
-				<abbr class="mobile" title="Mobile devices"></abbr>
-				<abbr class="web on" title="Web"></abbr>
-			</div>
+<div class="container project header">
 		
-		</div>
+	<h2>Simraceway</h2>
+	<h3>We created a new web platform for the hottest simulated racing game made and played by Pros.</h3>	
 		
-		<img src="../../imgs/projects/simraceway-mclaren.png" id="hero-graphic" />
-		
-	</div>	
-</div>
+</div>	
 
 <div class="container copy project">
 	
-	<div class="shim-80"></div>
+	<img src="../../imgs/projects/simraceway-mclaren.png" id="hero-graphic" />
+	
+	<div class="shim-40"></div>
 	
 	<div class="row-fluid relative">
 			
-			<div class="span5 right">
+			<div class="span5 right no-pad">
 					
-				<h4>Marketing Meet Product</h4>
+				<h4>Bringing it All Back Home</h4>
 
-				<p>The site we designed serves as both a marketing vehicle to drive game downloads and an administrative hub where users buy cars and tracks, enter races, and manage their profile. In addition to getting potential users excited about the game, the information architecture also had to support data flowing between the game and the web for existing users in one simple interface.</p>
+				<p>Simraceway is revolutionizing the racing world by blurring the line between sim racing and reality. Drivers compete in a wide range of events to win big prizes, including racing hardware, cash, and unforgettable automotive experiences. The site serves as a marketing vehicle to drive game downloads and an administrative hub where users login to buy cars, tracks, enter races, and manage their profile. The information architecture keeps the data flowing between the PC game and the web in one simple interface.</p>
 				
 				<div class="shim-40"></div>
 				
@@ -97,7 +82,7 @@ require('../../inc/header.php'); ?>
 			</div>
 		</div>
 	
-	<div class="shim-120"></div>
+	<div class="shim-80"></div>
 	<?php /*
 	<!-- row -->
 	
@@ -125,7 +110,7 @@ require('../../inc/header.php'); ?>
 	
 	<?php 
 	$currentProject = 'simraceway';
-    require('../../inc/project-nav.php'); ?>
+    require('../../inc/project-cta.php'); ?>
 
 </div>
 

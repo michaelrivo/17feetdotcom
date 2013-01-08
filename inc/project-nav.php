@@ -39,19 +39,17 @@ while( true && $ct < 20){
 	<hr class="up nav-divider" />	
 	
 
-	<div class="project-controls hide-mobile">
-		<div class="hover-area absolute posRight">	
-			<a class="next absolute block" href="<?php echo "../$nextLink" ?>" title="Next Project (Right Arrow Key)"></a>
-		</div>
-		
-		<div class="hover-area absolute posLeft">
-			<a class="prev absolute block" href="<?php echo "../$prevLink" ?>" title="Previous Project (Left Arrow Key)"></a>
-		</div>
+	<div class="hover-area absolute posRight project-control">	
+		<a class="next absolute block" href="<?php echo "../$nextLink" ?>" title="Next Project (Right Arrow Key)"></a>
+	</div>
+	
+	<div class="hover-area absolute posLeft project-control">
+		<a class="prev absolute block" href="<?php echo "../$prevLink" ?>" title="Previous Project (Left Arrow Key)"></a>
 	</div>
 	
 	<div>
 		<div class="prev-project blueBtn">
-			<a href="<?php echo "../$prevLink" ?>" title="Previous Project (Left Arrow Key)" ><!-- <span></span> -->Previous</a>
+			<a href="<?php echo "../$prevLink" ?>" title="Previous Project (Left Arrow Key)" >Previous</a>
 		</div>
 		
 		<div class="next-project blueBtn last">

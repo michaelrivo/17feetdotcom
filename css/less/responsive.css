@@ -62,7 +62,7 @@
 .visible-desktop {
   display: inherit !important;
 }
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 768px) and (max-width: 979px) {
   .hidden-desktop {
     display: inherit !important;
   }
@@ -171,7 +171,7 @@
     padding: 0 !important;
   }
 }
-@media (max-width: 959px) {
+@media (max-width: 979px) {
   .width-lg-tablet {
     width: 100% !important;
     float: none;
@@ -249,40 +249,90 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (max-width: 959px) {
-  .static .header hr.up,
-  .blog .header hr.up {
-    margin-bottom: 20px;
+@media (max-width: 979px) {
+  .static .header,
+  .blog .header {
+    /*hr.up{ margin-bottom: 20px;  }*/
+  
+  }
+  .project,
+  .projects .header,
+  .static .header,
+  .blog .header {
+    padding: 30px 0 15px 0;
+  }
+  .project h2,
+  .projects .header h2,
+  .static .header h2,
+  .blog .header h2 {
+    font-size: 4.75em;
+  }
+  .project h3,
+  .projects .header h3,
+  .static .header h3,
+  .blog .header h3 {
+    font-size: 1.65em;
+  }
+  .cta-wrapper {
+    text-align: center;
+  }
+  .tier1 .pink-cta {
+    position: static;
+    display: inline-block;
+    float: none;
+  }
+  .tier1 .pink-cta span {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  .tier2 .description {
+    width: 70%;
+    float: left;
+  }
+  .tier2 .black-cta {
+    float: left;
+    margin: 0 0 0 15px;
+  }
+  .tier2 .caps {
+    margin-bottom: 0;
+  }
+  .tier2 .copy {
+    width: 100%;
+    padding-top: 0;
+    margin: 0 0 20px 0;
+  }
+  .tier2 .copy h3 {
+    margin: 10px 0 6px 0;
+    float: left;
+  }
+  .tier2 .white-dotted {
+    width: 100%;
+    margin-left: 0;
+  }
+  .tier2 .span9 {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  .tier2 img {
+    margin: 0 -15% 0 -15% !important;
+    max-width: 125% !important;
+    position: static;
+    float: none;
   }
   .container {
     max-width: 728px;
     margin: 0 auto;
   }
-  .hero {
-    height: 480px;
-  }
-  .hero h2 {
-    font-size: 4.5em;
-  }
-  .hero h2.long-ttl {
-    font-size: 4em;
-  }
-  #header .twitter {
-    width: 30px;
-    float: right;
-  }
-  #header .twitter span {
-    display: none;
-  }
-  #header .twitter a {
-    height: 51px;
-    padding: 0;
-    width: 30px;
+  .row-cta .quiet {
+    margin: 6px 0;
+    font-size: 1.70em;
+    text-align: right;
   }
   #nav {
     overflow: hidden;
     width: auto;
-    margin-left: 5%;
+    float: right;
   }
   br {
     display: none;
@@ -293,231 +343,68 @@
   #footer br {
     display: inherit;
   }
-  #footer .span3 {
+  #foot,
+  #footer {
+    height: auto;
+  }
+  #footer .modules .span3 {
     width: 50%;
     margin: 0;
     padding: 0 0 40px 0;
   }
-  #footer .span3 .pad {
+  #footer .modules .span3 .pad {
     padding: 0;
   }
-  #footer .blog .pad,
-  #footer .weather .pad {
-    margin-left: 6.382978723404255%;
+  #footer .modules .blog .pad,
+  #footer .modules .weather .pad {
+    margin-left: 7.5%;
   }
-  #footer .blog:after {
+  #footer .modules .blog:after {
     height: 1px;
     width: 200%;
     clear: both;
-    border-bottom: 1px solid #4D4D4D;
+    background: transparent none repeat-x scroll 0 0;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAQAAACx6dw/AAAADUlEQVQIHWM4858BCAAJygHMQVdwbQAAAABJRU5ErkJggg==);
     right: 0;
     bottom: 10px;
     top: inherit;
   }
-  #footer #lastfm .details {
+  #footer .modules #lastfm .details {
     float: none;
     width: auto;
     margin: 0 15px 0 85px;
   }
-  #footer #lastfm .details div {
+  #footer .modules #lastfm .details div {
     width: auto;
   }
-  #footer #lastfm .details .song,
-  #footer #lastfm .details .album {
+  #footer .modules #lastfm .details .song,
+  #footer .modules #lastfm .details .album {
     -webkit-mask-box-image: none;
   }
-  #footer #lastfm .details .song span,
-  #footer #lastfm .details .album span {
+  #footer .modules #lastfm .details .song span,
+  #footer .modules #lastfm .details .album span {
     white-space: normal;
   }
-  .container.project .what-it-is p {
-    display: block;
-    margin: 45px 0 0 0;
+  .sub-footer .span3 {
+    margin: 0;
+  }
+  .sub-footer .span9 {
+    text-align: left;
+    margin: 0 0 15px 0;
+    width: auto;
   }
   img {
     max-width: 100%;
   }
-  .next-project,
-  .prev-project {
-    margin-top: 0;
-    width: 120px !important;
+  /* Our Work */
+  .client-list li {
+    width: 25%;
   }
-  .next-project a,
-  .prev-project a {
-    width: 100% !important;
-    margin: 0 !important;
-    font-size: 150%;
-  }
-  .next-project {
-    float: right;
-  }
-  .view-all-work {
-    width: 100%;
-    margin: 0;
-  }
-  .bg-cover {
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
-    background-size: cover !important;
-  }
-  .bg-contain {
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -o-background-size: contain !important;
-    background-size: contain !important;
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -o-background-size: contain !important;
-    background-size: contain !important;
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -o-background-size: contain !important;
-    background-size: contain !important;
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -o-background-size: contain !important;
-    background-size: contain !important;
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -o-background-size: contain !important;
-    background-size: contain !important;
-  }
-  #hero-graphic {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  hr.up,
-  hr.down {
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -o-background-size: contain !important;
-    background-size: contain !important;
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -o-background-size: contain !important;
-    background-size: contain !important;
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -o-background-size: contain !important;
-    background-size: contain !important;
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -o-background-size: contain !important;
-    background-size: contain !important;
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -o-background-size: contain !important;
-    background-size: contain !important;
-  }
-  .projects {
-    padding-bottom: 50px;
-  }
-  .projects .span4 {
-    height: 350px;
-    width: 46%;
-    margin-right: 8%;
-  }
-  .projects .span4:nth-child(even) {
-    margin-right: 0;
+  .project .project-control {
+    display: none;
   }
   /* Home */
-  .second-tier {
-    padding-bottom: 60px;
-  }
-  .second-tier h2 {
-    margin-top: 0;
-    font-size: 3em;
-  }
-  .second-tier .span4 {
-    margin-bottom: 10px;
-  }
-  .second-tier .span4 h3 {
-    font-size: 1.7em;
-  }
-  .second-tier .span4 p {
-    font-size: 0.85em;
-  }
-  .second-tier .span4 div {
-    padding: 10px 20px 10px 20px;
-  }
   /* About Us */
-  .about-us .service .pad {
-    padding: 10px 15px 25px 25px;
-  }
-  .about-us .service h3 {
-    font-size: 1.8em;
-  }
-  .about-us .clients {
-    /*width:620px;*/
-    -webkit-background-size: 95%;
-    -moz-background-size: 95%;
-    -o-background-size: 95%;
-    background-size: 95%;
-    -webkit-background-size: 95%;
-    -moz-background-size: 95%;
-    -o-background-size: 95%;
-    background-size: 95%;
-    -webkit-background-size: 95%;
-    -moz-background-size: 95%;
-    -o-background-size: 95%;
-    background-size: 95%;
-    -webkit-background-size: 95%;
-    -moz-background-size: 95%;
-    -o-background-size: 95%;
-    background-size: 95%;
-    -webkit-background-size: 95%;
-    -moz-background-size: 95%;
-    -o-background-size: 95%;
-    background-size: 95%;
-    width: auto;
-    /*height:175px;*/
-  }
-  .about-us .partners p {
-    margin-left: 110px;
-    margin-bottom: 30px;
-  }
-  .about-us .end h3 {
-    font-size: 2em;
-    font-weight: 300;
-  }
-  .about-us .end p {
-    font-size: 1em;
-  }
   /* Join Page */
   .join-us .openings {
     margin: 0 !important;
@@ -666,11 +553,11 @@
     font-size: 1.2em;
     height: auto;
     line-height: 160%;
-    font-weight: 500;
+    font-weight: 700;
     padding: 5px 6px 4px 6px;
   }
 }
-@media (min-width: 481px) and (max-width: 959px) {
+@media (min-width: 481px) and (max-width: 979px) {
   .row {
     width: 100%;
   }
@@ -678,12 +565,12 @@
     width: 110px;
   }
 }
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 768px) and (max-width: 979px) {
   .about-us .service {
     min-height: 500px;
   }
 }
-@media (min-width: 601px) and (max-width: 959px) {
+@media (min-width: 601px) and (max-width: 979px) {
   #nav {
     display: block !important;
   }
@@ -757,25 +644,20 @@
   transition: height 0.15s ease-in-out, padding 0.15s ease-in-out, margin 0.15s ease-in-out;
 }
 @media (max-width: 767px) {
-  .static .header h2,
-  .blog .header h2 {
-    font-size: 4.5em;
-  }
-  .static .header h3,
-  .blog .header h3 {
-    font-size: 1.2em;
-    padding-right: 0;
+  .static .header,
+  .blog .header {
+    /*		h2{ font-size:4.5em; }
+  		h3{ font-size:1.2em; padding-right:0; }*/
+  
+    /*		hr.up{ margin-bottom: 20px;  }*/
+  
   }
   .static .header br.hold,
   .blog .header br.hold {
     display: none;
   }
-  .static .header hr.up,
-  .blog .header hr.up {
-    margin-bottom: 20px;
-  }
-  #header .twitter {
-    display: none;
+  blockquote {
+    font-size: 1.8em;
   }
   #logo {
     width: 95px;
@@ -785,42 +667,114 @@
     margin: 0;
   }
   #nav li a {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 78%;
   }
   .container {
     width: 560px;
     margin: 0 auto;
   }
-  .project.header .span9 {
-    width: 100%;
-  }
-  .what-it-is {
-    display: none !important;
-  }
-  .hero .span9 {
-    width: 100%;
-  }
-  .hero h3 {
-    padding-right: 0;
-  }
   .hide-tablet {
     display: none !important;
   }
-  #slider .project-control {
-    display: none;
+  .project,
+  .projects .header,
+  .static .header,
+  .blog .header {
+    padding: 35px 0 12px 0;
   }
-  #slider .slide0 h3 {
-    font-size: 115%;
+  .project h2,
+  .projects .header h2,
+  .static .header h2,
+  .blog .header h2 {
+    font-size: 3.75em;
   }
-  #slider .slide0 h3 .cta {
-    background-image: none;
+  .project h3,
+  .projects .header h3,
+  .static .header h3,
+  .blog .header h3 {
+    font-size: 1.45em;
+  }
+  /* Home */
+  .tier1 h2 {
+    font-size: 4.5em;
+  }
+  .tier2 .description,
+  .tier2 .copy h3 {
+    width: 100%;
+  }
+  .tier2 .description,
+  .tier2 .copy h3,
+  .tier2 .black-cta {
+    float: none;
+  }
+  .tier2 .black-cta {
+    margin: 15px 0;
+  }
+  .tier3 .top-projects {
+    width: 100%;
+    right: 0;
+    padding-bottom: 20px;
+  }
+  .tier3 .top-project {
+    background-color: #313F40;
+    margin: 0 0 15px 0;
+    width: 100%;
+    clear: both;
+    position: relative;
+    *zoom: 1;
+  }
+  .tier3 .top-project:before,
+  .tier3 .top-project:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  .tier3 .top-project:after {
+    clear: both;
+  }
+  .tier3 .p-image {
+    float: left;
+  }
+  .tier3 .p-image,
+  .tier3 .brand {
+    width: 50%;
+  }
+  .tier3 .brand {
+    right: 0;
+    background-color: transparent;
+    height: 100px;
+    margin-top: -50px;
+    position: absolute;
+    top: 50%;
+  }
+  .tier3 .brand a {
+    padding: 0 25px;
+  }
+  .sub-footer .span3 {
+    width: 100%;
+  }
+  .sub-footer .span9 label {
+    display: block;
+    text-align: left;
+    margin: 8px 0;
+  }
+  .sub-footer .span9 .folio-url {
+    margin-left: 0;
+  }
+  /* About Us */
+  .staff .profile {
+    width: 46.17%;
+    margin-right: 3.83%;
+  }
+  .staff h5 {
+    font-size: 1.4em;
+  }
+  .staff .copy {
+    padding-top: 0;
   }
   /* Project Pages */
-  .hero {
-    height: 380px;
-  }
   .projects h4,
   .project h4 {
     font-size: 2em;
@@ -870,51 +824,44 @@
   .shim-160 {
     height: 80px;
   }
+  .row-cta {
+    padding: 20px 0 !important;
+  }
+  .row-cta .quiet {
+    margin: 20px 0 15px 0 !important;
+    line-height: 130%;
+    text-align: center;
+    font-size: 1.70em;
+  }
+  .row-cta .span4 {
+    margin: 0 0 20px 0 !important;
+    text-align: center;
+  }
+  .row-cta .span4 .pink-cta {
+    float: none;
+    margin: 0 auto;
+    display: inline-block;
+  }
   /* Our Work */
-  .projects .span4 {
-    height: 345px;
-    width: 45%;
-    margin-right: 10%;
+  .featured-row .project-thumb .label {
+    padding: 21px 15px;
+    background-image: none;
   }
-  .projects .span4 img {
-    max-width: 110%;
+  .project-grid .project-thumb {
+    width: 47.5%;
+    vertical-align: top;
   }
-  .projects .span4 div {
-    height: 230px !important;
+  .project-grid .label {
+    padding-left: 15px;
+    background-image: none;
   }
-  .projects .span4 p {
-    white-space: normal !important;
+  .client-list li {
+    width: 33.33%;
   }
   /* About Us */
-  .about-us .service .pad {
-    padding: 25px;
-  }
-  .about-us .service .pad .graphic {
-    float: left;
-    width: 40%;
-    margin-left: 0;
-  }
-  .about-us .service .pad h3,
-  .about-us .service .pad p,
-  .about-us .service .pad ul {
-    margin-left: 45%;
-  }
-  .about-us .service {
-    margin: 0 0 15px 0;
-  }
-  .about-us .partners {
-    padding: 20px 0 0 0;
-  }
-  .about-us .clients {
-    /*width: 463px;*/
-    -webkit-background-size: 95%;
-    -moz-background-size: 95%;
-    -o-background-size: 95%;
-    background-size: 95%;
-    height: 180px;
-  }
-  .about-us .end h3 {
-    margin-top: 20px;
+  .selling-points .dotted-grey {
+    padding: 0;
+    background: none;
   }
   /* Home */
   .third-tier .past-project {
@@ -1099,63 +1046,8 @@
   background-color: #FFF;
 }
 .mobile-btn {
-  border: 1px solid #000;
-  background-color: #0a0a0a;
-  background-image: -moz-linear-gradient(top, #111111, #000000);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
-  background-image: -webkit-linear-gradient(top, #111111, #000000);
-  background-image: -o-linear-gradient(top, #111111, #000000);
-  background-image: linear-gradient(to bottom, #111111, #000000);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
-  background-color: #0a0a0a;
-  background-image: -moz-linear-gradient(top, #111111, #000000);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
-  background-image: -webkit-linear-gradient(top, #111111, #000000);
-  background-image: -o-linear-gradient(top, #111111, #000000);
-  background-image: linear-gradient(to bottom, #111111, #000000);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
-  background-color: #0a0a0a;
-  background-image: -moz-linear-gradient(top, #111111, #000000);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
-  background-image: -webkit-linear-gradient(top, #111111, #000000);
-  background-image: -o-linear-gradient(top, #111111, #000000);
-  background-image: linear-gradient(to bottom, #111111, #000000);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
-  background-color: #0a0a0a;
-  background-image: -moz-linear-gradient(top, #111111, #000000);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
-  background-image: -webkit-linear-gradient(top, #111111, #000000);
-  background-image: -o-linear-gradient(top, #111111, #000000);
-  background-image: linear-gradient(to bottom, #111111, #000000);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
-  background-color: #0a0a0a;
-  background-image: -moz-linear-gradient(top, #111111, #000000);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
-  background-image: -webkit-linear-gradient(top, #111111, #000000);
-  background-image: -o-linear-gradient(top, #111111, #000000);
-  background-image: linear-gradient(to bottom, #111111, #000000);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
-  box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-  border: 1px solid #000;
+  border: 1px solid #555;
+  background-color: transparent;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -1259,23 +1151,94 @@
   .mobile-menu #nav li {
     display: block !important;
     float: none;
+    text-align: left;
+    line-height: 0%;
     background: #000;
     border-bottom: 1px solid #222;
   }
   .mobile-menu #nav li a {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    font-weight: 700;
     color: #FFF;
-  }
-  /* Deactivate Slider */
-  #slider .item {
-    display: none;
-  }
-  #slider .init-slide {
-    display: block;
+    text-indent: 3.5%;
+    padding: 18px 0;
+    width: 100%;
   }
   .container {
     width: 90%;
     margin: 0 5%;
+  }
+  .tier1 h2 {
+    font-size: 3.15em;
+  }
+  .tier2 img {
+    margin-top: 20px !important;
+  }
+  .tier2 .content {
+    min-height: auto;
+  }
+  .tier3 .top-projects {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .tier3 .featured-logo-sprite {
+    height: auto;
+    text-indent: 0;
+    font-weight: 700;
+    font-size: 1.5em;
+    background-image: none;
+    color: #FFF;
+    margin: 10px 0;
+    overflow: visible;
+  }
+  .tier3 .brand a {
+    padding: 0 18px;
+  }
+  .tier3 .black-cta {
+    position: static;
+    display: inline-block;
+    float: none;
+    margin: 20px 0 0 0;
+  }
+  .project,
+  .projects .header,
+  .static .header,
+  .blog .header {
+    padding: 20px 0 12px 0;
+  }
+  .project h2,
+  .projects .header h2,
+  .static .header h2,
+  .blog .header h2 {
+    font-size: 2.5em;
+  }
+  .project h3,
+  .projects .header h3,
+  .static .header h3,
+  .blog .header h3 {
+    font-size: 106%;
+    line-height: 150%;
+  }
+  /* About Us */
+  .staff .profile {
+    width: auto;
+    /*			float:left;
+  			display:block; 
+  			clear:both;*/
+  
+    margin-right: 3.83%;
+  }
+  .staff h5 {
+    font-size: 1.4em;
+  }
+  .staff .copy {
+    padding-top: 0;
+  }
+  .testimonials blockquote {
+    width: 96%;
+  }
+  .testimonials img {
+    margin-right: 15px !important;
   }
   /* Project Pages */
   .project.header h2 {
@@ -1293,8 +1256,7 @@
   .project.header h2 {
     font-size: 3em;
   }
-  .project-control,
-  .project-controls {
+  .project-control {
     display: none;
   }
   #header .span7 {
@@ -1325,6 +1287,12 @@
     float: none;
     position: static;
     margin-left: 0;
+  }
+  .project.copy .more-pad p,
+  .project.copy .more-pad.last p,
+  .project.copy .more-pad h4,
+  .project.copy .more-pad.last h4 {
+    padding: 0;
   }
   .project.copy img,
   .project.copy .absolute {
@@ -1369,110 +1337,50 @@
     top: 0;
     left: 10px;
   }
-  .our-work #nav {
+  .our-work-btn #nav {
     overflow: visible;
+    background: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }
-  .our-work #nav li.our-work {
+  .our-work-btn #nav li.our-work {
     display: block !important;
+    background-color: transparent;
   }
-  .our-work #nav li.our-work a {
-    border: 1px solid #000;
-    background-color: #0a0a0a;
-    background-image: -moz-linear-gradient(top, #111111, #000000);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
-    background-image: -webkit-linear-gradient(top, #111111, #000000);
-    background-image: -o-linear-gradient(top, #111111, #000000);
-    background-image: linear-gradient(to bottom, #111111, #000000);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
-    background-color: #0a0a0a;
-    background-image: -moz-linear-gradient(top, #111111, #000000);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
-    background-image: -webkit-linear-gradient(top, #111111, #000000);
-    background-image: -o-linear-gradient(top, #111111, #000000);
-    background-image: linear-gradient(to bottom, #111111, #000000);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
-    background-color: #0a0a0a;
-    background-image: -moz-linear-gradient(top, #111111, #000000);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
-    background-image: -webkit-linear-gradient(top, #111111, #000000);
-    background-image: -o-linear-gradient(top, #111111, #000000);
-    background-image: linear-gradient(to bottom, #111111, #000000);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
-    background-color: #0a0a0a;
-    background-image: -moz-linear-gradient(top, #111111, #000000);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
-    background-image: -webkit-linear-gradient(top, #111111, #000000);
-    background-image: -o-linear-gradient(top, #111111, #000000);
-    background-image: linear-gradient(to bottom, #111111, #000000);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
-    background-color: #0a0a0a;
-    background-image: -moz-linear-gradient(top, #111111, #000000);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#111111), to(#000000));
-    background-image: -webkit-linear-gradient(top, #111111, #000000);
-    background-image: -o-linear-gradient(top, #111111, #000000);
-    background-image: linear-gradient(to bottom, #111111, #000000);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff000000', GradientType=0);
-    box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    -webkit-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    -moz-box-shadow: inset 0 1px 1px #555555, 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(255, 255, 255, 0.15);
-    border: 1px solid #000;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    padding: 7px 8px;
-    position: absolute;
-    top: 11px;
-    left: 5%;
+  .our-work-btn #nav li.our-work:hover a:before {
+    border-color: transparent #4ebbd5 transparent transparent;
+  }
+  .our-work-btn #nav li.our-work a {
     position: relative;
     left: 3%;
     top: 0px;
-    font-size: 1em;
-    font-weight: 500;
+    font-size: .75em;
+    font-weight: 900;
     margin-top: 11px;
-    padding: 6px 8px;
+    padding: 8px 8px 8px 3px;
   }
-  .our-work #nav li.our-work a:link {
-    color: #FFF;
-    text-decoration: none;
-  }
-  .our-work #nav li.our-work a:hover {
-    color: #69AABA;
-    text-decoration: none;
-  }
-  .our-work #nav li.our-work a:visited {
-    color: #FFF;
-  }
-  .our-work #nav li.our-work a:active {
-    color: #69AABA;
+  .our-work-btn #nav li.our-work a:before {
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    width: 0;
+    height: 0;
+    top: 50%;
+    border: 4px solid transparent;
+    border-color: transparent #FFF transparent transparent;
   }
   .back .back-btn {
     display: block;
@@ -1489,7 +1397,7 @@
     top: 0px;
     color: #FFF;
     font-size: 1.1em;
-    font-weight: 500;
+    font-weight: 700;
     margin-top: 9px;
     padding: 5px 7px;
   }
@@ -1499,94 +1407,76 @@
   #nav {
     width: auto;
   }
-  .projects .span4 {
-    height: 315px;
+  .client-list li {
+    width: 50%;
+    height: 120px;
   }
-  .projects .span4 img {
-    max-width: 115%;
+  .client-list li .cl-sprite {
+    margin: 10px auto;
+    width: 100%;
   }
-  .projects .span4 div {
-    height: 200px !important;
-  }
-  .projects .span4 p {
-    white-space: normal !important;
-  }
-  * {
-    float: none;
+  .client-list li span {
+    max-width: 135px;
   }
   img {
     margin: 5px auto !important;
     max-width: 100% !important;
   }
-  .about-us .service .pad .graphic {
-    width: 45px;
-    float: left;
-    height: auto;
-    padding: 0;
-    margin: 0 !important;
-    position: relative !important;
-    top: -10px;
-  }
-  .about-us .service .pad .graphic img {
-    margin: 0 !important;
-  }
-  .about-us .service .pad h3 {
-    float: left;
-    width: auto;
-    margin: 0 0 0 15px;
-  }
-  .about-us .service .pad p {
-    clear: left;
-    margin: 0;
-    padding: 15px 0 !important;
-  }
-  .about-us .service .pad ul {
-    margin-left: 0;
-  }
-  .about-us .clients {
-    /*width: 306px;*/
-    -webkit-background-size: 127%;
-    -moz-background-size: 127%;
-    -o-background-size: 127%;
-    background-size: 127%;
-    -webkit-background-size: 127%;
-    -moz-background-size: 127%;
-    -o-background-size: 127%;
-    background-size: 127%;
-    -webkit-background-size: 127%;
-    -moz-background-size: 127%;
-    -o-background-size: 127%;
-    background-size: 127%;
-    -webkit-background-size: 127%;
-    -moz-background-size: 127%;
-    -o-background-size: 127%;
-    background-size: 127%;
-    -webkit-background-size: 127%;
-    -moz-background-size: 127%;
-    -o-background-size: 127%;
-    background-size: 127%;
-  }
-  .about-us .end .span4 {
-    float: none;
-  }
-  .about-us .end .blueBtn {
-    margin: 25px 0 0 0 !important;
-  }
-  .about-us .end .blueBtn a {
-    display: block;
-    padding: 4px 0 2px 0;
-    width: 100%;
-  }
+  /* About Us */
+  /*
+  		.about-us{
+  			
+  			.service .pad{
+  				.graphic{ 
+  					width:45px;
+  					float:left;
+  					height:auto; 
+  					padding:0;
+  					margin:0 !important;
+  					position:relative !important;
+  					top:-10px;
+  					img{ margin:0 !important; }
+  				}
+  
+  				h3{ float:left; width:auto; margin: 0 0 0 15px;  }
+  				p{  clear:left; margin:0; padding:15px 0 !important; }
+  				
+  				ul{  margin-left: 0; }
+  			}
+  			
+  			.clients{ 
+  			//width: 306px; 
+  			.background-size(127%); }
+  			
+  			.end .span4{
+  				float:none;
+  			}
+  			.end{
+  				.blueBtn{
+  					margin: 25px 0 0 0 !important;
+  					a{
+  						display:block;
+  						padding:4px 0 2px 0;
+  						width:100%;
+  					}
+  				}
+  			}
+  			
+  		}*/
   /* Blog */
   #comments form input,
   #comments form textarea {
     width: 95%;
   }
+  /* Footer */
+  #footer .modules {
+    margin: 30px 0;
+  }
 }
 @media (max-width: 480px) {
-  h3 {
-    font-size: 1.75em;
-    font-weight: 300;
+  blockquote {
+    font-size: 1.5em;
+    margin: 20px 0;
   }
   .static .header h2,
   .blog .header h2 {
@@ -1613,64 +1503,21 @@
   .hide-mobile {
     display: none !important;
   }
+  /* Home */
+  .tier1 {
+    padding: 20px 0;
+  }
+  .tier1 h2 {
+    font-size: 2.5em;
+  }
+  .tier1 h3 {
+    font-size: 1.55em;
+  }
   /* Our Work */
-  .projects h3,
-  .project h3 {
-    font-size: 1.15em;
-    padding-right: 0;
-  }
-  .projects h4,
-  .project h4,
-  .projects p,
-  .project p {
-    padding: 0px !important;
-  }
-  .projects img,
-  .project img {
-    margin: 10px 0;
-  }
   .container .project h5 {
     font-size: 1.75em;
   }
   /* About Us */
-  .about-us h3 {
-    margin: 1em 0 1em 0;
-  }
-  .about-us .service .pad {
-    padding: 15px 20px;
-  }
-  .about-us .partners {
-    padding: 20px 0 0 0;
-  }
-  .about-us .partners p {
-    margin-left: 0;
-  }
-  .about-us .clients {
-    -webkit-background-size: 170%;
-    -moz-background-size: 170%;
-    -o-background-size: 170%;
-    background-size: 170%;
-    -webkit-background-size: 170%;
-    -moz-background-size: 170%;
-    -o-background-size: 170%;
-    background-size: 170%;
-    -webkit-background-size: 170%;
-    -moz-background-size: 170%;
-    -o-background-size: 170%;
-    background-size: 170%;
-    -webkit-background-size: 170%;
-    -moz-background-size: 170%;
-    -o-background-size: 170%;
-    background-size: 170%;
-    -webkit-background-size: 170%;
-    -moz-background-size: 170%;
-    -o-background-size: 170%;
-    background-size: 170%;
-    height: 200px;
-  }
-  .about-us hr.down {
-    margin: 0;
-  }
   /* Join Us*/
   .join-us .jobs h3 {
     font-size: 1.75em;
@@ -1687,93 +1534,31 @@
     margin-top: 0 !important;
   }
   /* Home Page */
-  .banner {
+  /* Work overview */
+  .featured-row .project-thumb {
+    margin-right: 0;
+    max-width: 300px;
     width: auto;
+    float: left;
   }
-  #slider .item,
-  #slider .banner {
-    height: auto;
-  }
-  #slider .item {
-    position: static;
-  }
-  #slider {
-    height: auto;
-    margin-bottom: 10px;
-  }
-  #slider .slide0 h3 {
-    margin: 0;
-    font-size: 1.3em;
-  }
-  #slider .slide0 .slide-ttl {
-    margin: -10px 0 -25px -8%;
-    max-width: 110%;
-  }
-  #slider .slide0 .graphic {
-    position: static;
-    margin: 15px 5% 0 8%;
-    max-width: 80%;
-    float: none;
-  }
-  #slider .slide0 .cta {
+  .featured-row .project-thumb .label {
+    padding: 21px 15px;
     background-image: none;
   }
-  .second-tier h2 {
-    font-size: 2.25em;
-    margin-bottom: 15px;
+  .project-grid .project-thumb {
+    width: auto;
+    float: left;
+    vertical-align: top;
   }
-  .second-tier .span4 {
-    padding: 0;
-    margin: 8px 0;
+  .project-grid .label {
+    padding-left: 15px;
+    background-image: none;
   }
-  .second-tier .span4 div {
-    padding: 5% 6% 4% 6%;
-  }
-  .second-tier .cta {
-    margin: 15px 0 0 0;
-  }
-  .third-tier .thumb-wrap {
-    height: auto;
-  }
-  .third-tier p {
-    padding: 0;
-    font-size: 1em;
-  }
-  .third-tier .past-project {
-    position: static;
-    padding: 0;
-    margin-top: 50px;
-  }
-  .second-tier,
-  .third-tier {
-    padding-bottom: 50px;
-  }
-  /* Work overview */
-  .projects .span4 {
-    height: auto !important;
-    margin: 0 0 75px 0;
-    width: 100%;
-    margin-left: 0;
-  }
-  .projects .span4 img {
-    max-width: 100%;
-    margin: 0px auto !important;
-    display: block;
-  }
-  .projects .span4 div {
-    height: auto !important;
-    position: relative !important;
-  }
-  .projects .span4 a {
-    position: static !important;
-    left: inherit !important;
-  }
-  .projects .span4 h5 {
-    margin-top: 8px;
-  }
-  .projects .span4 h5,
-  .projects .span4 p {
-    padding-left: 0 10% 0 10% !important;
+  .featured-row,
+  .project-grid {
+    width: auto;
+    max-width: 300px;
+    margin: 0px auto;
   }
   /* Project Pages */
   .shim-40,
@@ -1795,10 +1580,6 @@
   .hero h3 {
     font-size: 1.2em;
   }
-  .project.header h2 {
-    font-size: 2.25em;
-    font-weight: 300;
-  }
   .project.copy {
     padding: 10px 0 30px 0;
   }
@@ -1811,11 +1592,6 @@
   }
   .project.copy h4 {
     font-size: 1.75em;
-    font-weight: 300;
-  }
-  .project.copy p {
-    font-size: 105%;
-    line-height: 165%;
   }
   .project.copy .span1,
   .project.copy .span2,
@@ -1859,79 +1635,81 @@
   .collapse .container {
     padding: 15px 0;
   }
-  #footer .twitter .bird {
+  #footer .modules {
+    margin: 15px 0;
+  }
+  #footer .modules h5 {
+    float: none;
+    margin-right: 2%;
+  }
+  #footer .modules .twitter .bird {
     left: inherit;
     right: 0;
   }
-  #footer .blog h5 {
+  #footer .modules .blog h5 {
     background-position: right -63px;
   }
-  #footer .music h5 {
+  #footer .modules .music h5 {
     background-position: right -123px;
   }
-  #footer .weather h5 {
+  #footer .modules .weather h5 {
     background-position: 1000px 1000px;
   }
-  #footer .weather.sunny h5 {
+  #footer .modules .weather.sunny h5 {
     background-position: right -363px;
   }
-  #footer .weather.foggy h5 {
+  #footer .modules .weather.foggy h5 {
     background-position: right -183px;
   }
-  #footer .weather.cloudy h5 {
+  #footer .modules .weather.cloudy h5 {
     background-position: right -423px;
   }
-  #footer .weather.stormy h5 {
+  #footer .modules .weather.stormy h5 {
     background-position: right -243px;
   }
-  #footer .weather.partly h5 {
+  #footer .modules .weather.partly h5 {
     background-position: right -303px;
   }
-  #footer .weather.rainy h5 {
+  #footer .modules .weather.rainy h5 {
     background-position: right -483px;
   }
-  #footer #lastfm .frame {
+  #footer .modules #lastfm .frame {
     width: 40%;
     margin-right: 2%;
   }
-  #footer #lastfm img {
+  #footer .modules #lastfm img {
     margin: 0 !important;
   }
-  #footer #lastfm .details {
+  #footer .modules #lastfm .details {
     width: 58%;
     margin-left: 42%;
   }
-  #footer .span3 {
+  #footer .modules .span3 {
     width: 100%;
     margin: 0;
     padding-bottom: 15px;
   }
-  #footer .span3 .pad {
+  #footer .modules .span3 .pad {
     margin: 0 !important;
   }
-  #footer .span3 .content {
+  #footer .modules .span3 .content {
     height: auto;
   }
-  #footer .span3:after {
+  #footer .modules .span3:after {
     width: 100%;
     height: 1px;
-    border-right: none;
-    border-bottom: 1px solid #4D4D4D;
+    border: none;
+    background: transparent none repeat-x scroll 0 0;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAQAAACx6dw/AAAADUlEQVQIHWM4858BCAAJygHMQVdwbQAAAABJRU5ErkJggg==);
     top: inherit;
     bottom: 0;
   }
-  #footer .twitter .tweet-wrap {
-    width: auto;
-  }
-  #footer .twitter #tweet-txt {
-    height: auto;
-  }
-  #footer .api-link {
+  #footer .modules .api-link {
     position: static;
     clear: both;
     padding: 10px 0;
   }
-  #sub-footer form {
+  .sub-footer form {
     display: none;
   }
   /* 404 Page */
@@ -2165,6 +1943,45 @@
   box-sizing: border-box;
 }
 @media (max-width: 320px) {
+  .tier1 h2 {
+    font-size: 2.1em;
+  }
+  .tier1 h3 {
+    font-size: 1.25em;
+  }
+  .tier1 .pink-cta {
+    margin-top: 10px;
+  }
+  .tier3 .featured-logo-sprite {
+    height: auto;
+    text-indent: 0;
+    font-weight: 700;
+    font-size: 1.5em;
+    background-image: none;
+    color: #FFF;
+    margin: 10px 0;
+    overflow: visible;
+  }
+  .tier3 .brand a {
+    padding: 0 18px;
+  }
+  .tier3 .p-image {
+    float: none;
+  }
+  .tier3 .p-image,
+  .tier3 .brand {
+    width: 50%;
+  }
+  .tier3 .brand {
+    background-color: transparent;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    position: static;
+  }
+  .tier3 .brand a {
+    padding: 13px 25px 20px 25px;
+  }
   .project h2,
   .projects h2 {
     font-size: 2.2em;
@@ -2177,19 +1994,16 @@
     font-weight: 300;
   }
   /* About Us */
-  .about-us .heart {
-    height: 1.1em;
-  }
-  .about-us .header h3 {
-    font-size: 1.1em;
-  }
-  .about-us .clients {
-    height: 155px;
-  }
-  .about-us .service .pad h3 {
-    font-size: 1.5em;
-    /*font-weight:500;*/
-  }
+  /*	.about-us{
+  		.heart{ height:1.1em; }
+  		.header h3{
+  			font-size:1.1em;
+  		}
+  		
+  		.clients{ height:155px;}
+  		
+  		.service .pad h3 { font-size:1.5em; }
+  	}*/
   /* Project Pages */
   .project.copy h4 {
     font-size: 1.5em;

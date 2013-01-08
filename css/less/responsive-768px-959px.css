@@ -25,40 +25,90 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (max-width: 959px) {
-  .static .header hr.up,
-  .blog .header hr.up {
-    margin-bottom: 20px;
+@media (max-width: 979px) {
+  .static .header,
+  .blog .header {
+    /*hr.up{ margin-bottom: 20px;  }*/
+  
+  }
+  .project,
+  .projects .header,
+  .static .header,
+  .blog .header {
+    padding: 30px 0 15px 0;
+  }
+  .project h2,
+  .projects .header h2,
+  .static .header h2,
+  .blog .header h2 {
+    font-size: 4.75em;
+  }
+  .project h3,
+  .projects .header h3,
+  .static .header h3,
+  .blog .header h3 {
+    font-size: 1.65em;
+  }
+  .cta-wrapper {
+    text-align: center;
+  }
+  .tier1 .pink-cta {
+    position: static;
+    display: inline-block;
+    float: none;
+  }
+  .tier1 .pink-cta span {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  .tier2 .description {
+    width: 70%;
+    float: left;
+  }
+  .tier2 .black-cta {
+    float: left;
+    margin: 0 0 0 15px;
+  }
+  .tier2 .caps {
+    margin-bottom: 0;
+  }
+  .tier2 .copy {
+    width: 100%;
+    padding-top: 0;
+    margin: 0 0 20px 0;
+  }
+  .tier2 .copy h3 {
+    margin: 10px 0 6px 0;
+    float: left;
+  }
+  .tier2 .white-dotted {
+    width: 100%;
+    margin-left: 0;
+  }
+  .tier2 .span9 {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  .tier2 img {
+    margin: 0 -15% 0 -15% !important;
+    max-width: 125% !important;
+    position: static;
+    float: none;
   }
   .container {
     max-width: 728px;
     margin: 0 auto;
   }
-  .hero {
-    height: 480px;
-  }
-  .hero h2 {
-    font-size: 4.5em;
-  }
-  .hero h2.long-ttl {
-    font-size: 4em;
-  }
-  #header .twitter {
-    width: 30px;
-    float: right;
-  }
-  #header .twitter span {
-    display: none;
-  }
-  #header .twitter a {
-    height: 51px;
-    padding: 0;
-    width: 30px;
+  .row-cta .quiet {
+    margin: 6px 0;
+    font-size: 1.70em;
+    text-align: right;
   }
   #nav {
     overflow: hidden;
     width: auto;
-    margin-left: 5%;
+    float: right;
   }
   br {
     display: none;
@@ -69,151 +119,68 @@
   #footer br {
     display: inherit;
   }
-  #footer .span3 {
+  #foot,
+  #footer {
+    height: auto;
+  }
+  #footer .modules .span3 {
     width: 50%;
     margin: 0;
     padding: 0 0 40px 0;
   }
-  #footer .span3 .pad {
+  #footer .modules .span3 .pad {
     padding: 0;
   }
-  #footer .blog .pad,
-  #footer .weather .pad {
-    margin-left: 6.382978723404255%;
+  #footer .modules .blog .pad,
+  #footer .modules .weather .pad {
+    margin-left: 7.5%;
   }
-  #footer .blog:after {
+  #footer .modules .blog:after {
     height: 1px;
     width: 200%;
     clear: both;
-    border-bottom: 1px solid #4D4D4D;
+    background: transparent none repeat-x scroll 0 0;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAQAAACx6dw/AAAADUlEQVQIHWM4858BCAAJygHMQVdwbQAAAABJRU5ErkJggg==);
     right: 0;
     bottom: 10px;
     top: inherit;
   }
-  #footer #lastfm .details {
+  #footer .modules #lastfm .details {
     float: none;
     width: auto;
     margin: 0 15px 0 85px;
   }
-  #footer #lastfm .details div {
+  #footer .modules #lastfm .details div {
     width: auto;
   }
-  #footer #lastfm .details .song,
-  #footer #lastfm .details .album {
+  #footer .modules #lastfm .details .song,
+  #footer .modules #lastfm .details .album {
     -webkit-mask-box-image: none;
   }
-  #footer #lastfm .details .song span,
-  #footer #lastfm .details .album span {
+  #footer .modules #lastfm .details .song span,
+  #footer .modules #lastfm .details .album span {
     white-space: normal;
   }
-  .container.project .what-it-is p {
-    display: block;
-    margin: 45px 0 0 0;
+  .sub-footer .span3 {
+    margin: 0;
+  }
+  .sub-footer .span9 {
+    text-align: left;
+    margin: 0 0 15px 0;
+    width: auto;
   }
   img {
     max-width: 100%;
   }
-  .next-project,
-  .prev-project {
-    margin-top: 0;
-    width: 120px !important;
+  /* Our Work */
+  .client-list li {
+    width: 25%;
   }
-  .next-project a,
-  .prev-project a {
-    width: 100% !important;
-    margin: 0 !important;
-    font-size: 150%;
-  }
-  .next-project {
-    float: right;
-  }
-  .view-all-work {
-    width: 100%;
-    margin: 0;
-  }
-  .bg-cover {
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
-    background-size: cover !important;
-  }
-  .bg-contain {
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -o-background-size: contain !important;
-    background-size: contain !important;
-  }
-  #hero-graphic {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  hr.up,
-  hr.down {
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -o-background-size: contain !important;
-    background-size: contain !important;
-  }
-  .projects {
-    padding-bottom: 50px;
-  }
-  .projects .span4 {
-    height: 350px;
-    width: 46%;
-    margin-right: 8%;
-  }
-  .projects .span4:nth-child(even) {
-    margin-right: 0;
+  .project .project-control {
+    display: none;
   }
   /* Home */
-  .second-tier {
-    padding-bottom: 60px;
-  }
-  .second-tier h2 {
-    margin-top: 0;
-    font-size: 3em;
-  }
-  .second-tier .span4 {
-    margin-bottom: 10px;
-  }
-  .second-tier .span4 h3 {
-    font-size: 1.7em;
-  }
-  .second-tier .span4 p {
-    font-size: 0.85em;
-  }
-  .second-tier .span4 div {
-    padding: 10px 20px 10px 20px;
-  }
   /* About Us */
-  .about-us .service .pad {
-    padding: 10px 15px 25px 25px;
-  }
-  .about-us .service h3 {
-    font-size: 1.8em;
-  }
-  .about-us .clients {
-    /*width:620px;*/
-    -webkit-background-size: 95%;
-    -moz-background-size: 95%;
-    -o-background-size: 95%;
-    background-size: 95%;
-    width: auto;
-    /*height:175px;*/
-  }
-  .about-us .partners p {
-    margin-left: 110px;
-    margin-bottom: 30px;
-  }
-  .about-us .end h3 {
-    font-size: 2em;
-    font-weight: 300;
-  }
-  .about-us .end p {
-    font-size: 1em;
-  }
   /* Join Page */
   .join-us .openings {
     margin: 0 !important;
@@ -298,11 +265,11 @@
     font-size: 1.2em;
     height: auto;
     line-height: 160%;
-    font-weight: 500;
+    font-weight: 700;
     padding: 5px 6px 4px 6px;
   }
 }
-@media (min-width: 481px) and (max-width: 959px) {
+@media (min-width: 481px) and (max-width: 979px) {
   .row {
     width: 100%;
   }
@@ -310,12 +277,12 @@
     width: 110px;
   }
 }
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 768px) and (max-width: 979px) {
   .about-us .service {
     min-height: 500px;
   }
 }
-@media (min-width: 601px) and (max-width: 959px) {
+@media (min-width: 601px) and (max-width: 979px) {
   #nav {
     display: block !important;
   }

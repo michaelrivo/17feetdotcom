@@ -26,6 +26,45 @@
   box-sizing: border-box;
 }
 @media (max-width: 320px) {
+  .tier1 h2 {
+    font-size: 2.1em;
+  }
+  .tier1 h3 {
+    font-size: 1.25em;
+  }
+  .tier1 .pink-cta {
+    margin-top: 10px;
+  }
+  .tier3 .featured-logo-sprite {
+    height: auto;
+    text-indent: 0;
+    font-weight: 700;
+    font-size: 1.5em;
+    background-image: none;
+    color: #FFF;
+    margin: 10px 0;
+    overflow: visible;
+  }
+  .tier3 .brand a {
+    padding: 0 18px;
+  }
+  .tier3 .p-image {
+    float: none;
+  }
+  .tier3 .p-image,
+  .tier3 .brand {
+    width: 50%;
+  }
+  .tier3 .brand {
+    background-color: transparent;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    position: static;
+  }
+  .tier3 .brand a {
+    padding: 13px 25px 20px 25px;
+  }
   .project h2,
   .projects h2 {
     font-size: 2.2em;
@@ -38,19 +77,16 @@
     font-weight: 300;
   }
   /* About Us */
-  .about-us .heart {
-    height: 1.1em;
-  }
-  .about-us .header h3 {
-    font-size: 1.1em;
-  }
-  .about-us .clients {
-    height: 155px;
-  }
-  .about-us .service .pad h3 {
-    font-size: 1.5em;
-    /*font-weight:500;*/
-  }
+  /*	.about-us{
+  		.heart{ height:1.1em; }
+  		.header h3{
+  			font-size:1.1em;
+  		}
+  		
+  		.clients{ height:155px;}
+  		
+  		.service .pad h3 { font-size:1.5em; }
+  	}*/
   /* Project Pages */
   .project.copy h4 {
     font-size: 1.5em;

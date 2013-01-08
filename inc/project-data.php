@@ -1,25 +1,57 @@
-<?php	
+<?php
+	
+	$featuredArr = array(
+		array( 'pac-12', 			'Pac-12', 				'Conference website for the new PAC-12'),	
+		array( 'learnist', 			'Learnist', 			'Learning made Social. Anywhere')
+	);
 	
 	$projectArr = array(
 		
-		//array( 'pac-12', 			'Pac-12', 				'College athletic conference'),	
-		array( 'simraceway', 		'Simraceway', 			'Online racing world'),
-		//array( 'salesforce-foundation', 'Salesforce Foundation', 	'The philanthropic arm of Salesforce'),
-		//array( 'onelogin', 			'OneLogin', 			'Enterprise single sign-on' ),
-			
+		array( 'onelogin', 			'Onelogin', 			'Lorem ipsum dolor sit.'),
+		array( 'slashdot', 			'Geeknet / Slashdot', 	'Mobile site 15 years overdue'),
+		array( 'loyal3', 			'LOYAL3', 				'Investing actually made simple' ),
 		
-		array( 'webos-facebook', 	'WebOS Facebook', 		'A WebOS Facebook App for HP\'s TouchPad' ),
+		array( 'facebook', 			'Facebook', 			'Tablet app for the HP TouchPad' ),
+		array( 'nxtm', 				'NXTM',					'Social Tool for Musicians' ),
+		array( 'hp-palm', 			'HP / Palm', 			'Fun while it lasted'),
 		
-		array( 'loyal3', 			'LOYAL3', 				'Democratizing stock ownership one brand at a time' ),
-		array( 'salesforce', 		'Salesforce', 			'A new platform for highlighting customer stories' ),
-		array( 'clif-bar-lunachix', 'CLIF Bar LunaChix', 	'A community platform for Team LUNA Chix' ),
-		array( 'peoplebrowsr', 		'PeopleBrowsr',  		'Collective Intelligence at your fingertips'),
-		array( 'touchpad-apps', 	'Touchpad Apps', 		'Application designs for the HP TouchPad'),
-		array( 'nxtm', 				'NXTM',					'A new model to help bands find their fans' ),
-		array( 'hp-magazine-concepts', 'HP Magazine Concepts', 'A magazine to help find your favorite apps' ),
-		array( 'microsoft-zune', 	'Microsoft Zune', 		'A device customization and e-commerce shop'),
-		array( 'greatest-hits' , 	'Our Greatest Hits', 	'From festivals to Flash sites, some work of yore' ),
-		array( 'non-profit', 		'Nonprofit', 			'Doing our part in making the world a little bit better' )
+		array( 'lunachix', 			'CLIF Team LunaChix', 	'Website' ),
+		array( 'angies', 			'Angie\'s List',		'Your handyman\'s favorite tool.' ),
+		array( 'salesforce', 		'Salesforce', 			'Customer stories platform' ),
+		
+		array( 'simraceway', 		'Simraceway', 			'Online racing innovation'),
+		
+		array( 'microsoft-zune', 	'Microsoft Zune Originals', 		'Customize your Zune'),
+	//	array( 'greatest-hits' , 	'Our Greatest Hits', 	'Remember Flash? That was funny.' ),
+		array( 'non-profit', 		'Nonprofit', 			'The Good Stuff' )
+		
 		);
-
+		
+		$clientLogoArr = array(
+			'angies' => 'Angie\'s List',
+			'salesforce' => 'Salesforce',
+			'pac12' => 'Pac-12 Conference',
+			'geeknet' => 'Geeknet',
+			'hp' => 'Hewlett Packard',
+			'learnist' => 'Learnist',
+			'microsoft' => 'Microsoft',
+			'clifbar' => 'Clif Bar',
+			'loyal3' => 'Loyal 3',
+			'luna' => 'Luna',
+			'gopago' => 'GoPago',
+			'palm' => 'Palm',
+			'yahoo' => 'Yahoo',
+			'paramount' => 'Paramount',
+			'onelogin' => 'OneLogin',
+			'ignite' => 'Ignite Game Techonologies',
+			'simraceway' => 'Simraceway',
+			'sourceforge' => 'Sourceforge',
+			'sf-indie' => 'San Francisco Independent Film Festival',
+			'peoplebrowsr' => 'PeopleBrowsr',
+			'next10' => 'Next10',
+			'mikes-hard' => 'Mike\'s Hard Lemonade',
+			'seven' => 'Seven',
+			'aclu' => 'ACLU'
+		);
+	
 ?>

@@ -14,7 +14,7 @@
 .visible-desktop {
   display: inherit !important;
 }
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 768px) and (max-width: 979px) {
   .hidden-desktop {
     display: inherit !important;
   }
@@ -123,7 +123,7 @@
     padding: 0 !important;
   }
 }
-@media (max-width: 959px) {
+@media (max-width: 979px) {
   .width-lg-tablet {
     width: 100% !important;
     float: none;
