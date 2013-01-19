@@ -107,6 +107,13 @@
   .tier2 .black-cta {
     margin: 15px 0;
   }
+  .tier2 .span9 {
+    margin-top: 0;
+  }
+  .tier2 .tcenter .black-cta {
+    display: inline-block;
+    float: none;
+  }
   .tier3 .top-projects {
     width: 100%;
     right: 0;

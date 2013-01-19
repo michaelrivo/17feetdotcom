@@ -35,13 +35,15 @@ require('../../inc/header.php'); ?>
 	
 </div>	
 
+<div class="shim-40"></div>
+
 <div class="container copy project">
 		
 	<div class="row-fluid relative">
 		
 		<div class="span6 right">
 			
-			<div class="shim-40"></div>
+			<div class="shim-80"></div>
 			
 			<h4>Telling the <br>OneLogin Story</h4>
 
@@ -56,11 +58,11 @@ require('../../inc/header.php'); ?>
 		
 	</div>
 	
-	<div class="shim-40"></div>
+	<!-- <div class="shim-40"></div>
 	
 
 	<blockquote>17FEET was an indespensible partner bringing our vision to life.</blockquote>
-	<p class="cite tcenter">&mdash; Thomas Pederson<span>CEO, OneLogin</span></p>
+	<p class="cite tcenter">&mdash; Thomas Pederson<span>CEO, OneLogin</span></p> -->
 	
 	<div class="shim-80"></div>
 	

@@ -2,6 +2,8 @@ if (!window.console) console = {log: function() {}};
 
 $(function() {
 	
+	
+	
 	if( location.hash == "#edit"){ console.log( $('p,h2,h3,h4,blockquote').attr('contentEditable', 'true') ) }
 	
 	
@@ -57,7 +59,114 @@ $(function() {
 
 	if(String(window.location.host) == '192.168.1.246'){
 		rootFolder = 'http://192.168.1.246/17feet/';
+	} else if( String(window.location).indexOf("staging") != -1 ) {
+		rootFolder = 'http://www.17feet.com/staging/';
 	}
+	
+	
+	// BEGIN NAV EXPERIMENT
+	
+	$.navSlider = function( el ){
+		
+		var slider = this; 
+		
+		slider.el = el;
+		slider.strip = slider.el.find('.links');
+		slider.tileWidth = slider.el.find('a').first().outerWidth();
+		slider.numTiles = slider.el.find('a').length;
+		slider.controlWidth = slider.el.find('.slider-right').outerWidth();
+		slider.stripPos = 0;
+		slider.maxPos = slider.numTiles * slider.tileWidth;
+		
+		slider.init = function(){
+			
+			slider.el.find('.slider-left, .slider-right').click( function(){ 
+				
+				slider.moveStrip( $(this).attr('data-direction') );
+			});
+		}
+		
+		
+		slider.moveStrip = function( direction ){
+			
+			direction = parseInt( direction );
+			
+			console.log( slider.tileWidth )
+			
+			// how many on screen				
+			var tilesOnScreen = Math.floor(  ( $(window).width() - ( slider.controlWidth * 2 ) ) / slider.tileWidth );
+			var screenMaxPos = slider.maxPos - ( (tilesOnScreen + 1 )  * slider.tileWidth );
+			
+			slider.stripPos += tilesOnScreen * slider.tileWidth * direction;
+			
+			slider.stripPos = ( slider.stripPos < 0 ) ? 0 : slider.stripPos;
+			slider.stripPos = ( slider.stripPos > screenMaxPos ) ? screenMaxPos + slider.controlWidth : slider.stripPos;
+			
+			slider.strip.css( { right: slider.stripPos + 'px'} );
+			
+		}
+		
+		slider.moveTo = function (index){
+			
+			
+		}
+		
+	
+		return this;
+	};
+	
+	// var $overlay = $('#page_overlay');	
+	// 
+	// $('#nav .our-work a').click( function(event){
+	// 	event.preventDefault();
+	// 	
+	// 	if( $('body').hasClass('slidedown') ){
+	// 		exitNavMode();
+	// 	} else {
+	// 		enterNavMode();	
+	// 	}
+	// 			
+	// });
+	
+	// function enterNavMode(){
+	// 	
+	// 	$overlay.fadeTo(300, .85);
+	// 	$('body').addClass('slidedown');
+	// 	
+	// 	$(window).scroll( function(){ 
+	// 	
+	// 		if( $(document).scrollTop() >= 50 && $overlay.is(':visible') ){ exitNavMode(); }
+	// 	
+	// 	});
+	// }
+	// 
+	// function exitNavMode(){
+	// 	$overlay.fadeOut(300);
+	// 	$('body').removeClass('slidedown');
+	// 	$(window).unbind('scroll');
+	// }
+	
+	
+	//var projectSlider = $.navSlider( $('#experimental_nav') );
+	//projectSlider.init();
+
+	// var pathname = String( window.location );
+	// 
+	// $('#experimental_nav a').each(function(){
+	// 	
+	// 	if ( pathname.indexOf( String( $(this).attr('href') ).substring(3) ) != -1 ){
+	// 		$(this).addClass('active');
+	// 	}
+	// 	
+	// });
+	
+	// $('#page_overlay').click( function(){
+	// 	exitNavMode();
+	// })
+	
+	
+	// END NAV EXPERIMENT
+	
 	
 // FOOTER
 
@@ -304,7 +413,7 @@ $(function() {
 	addPortfolioFormEvents();
 	
 	// If on project detail page
-	if( $('.prev-project').length > 0 ){
+	if( $('.project-control').length > 0 ){
 	
 		$(document).keyup(function (event) {
 		    var direction = null;
@@ -313,11 +422,11 @@ $(function() {
 		    if (event.keyCode == 37) {
 		      // go left
 		      direction = 'prev';
-				window.location = $('.prev-project a').attr('href');
+				window.location = $('.project-control .prev').attr('href');
 		    } else if (event.keyCode == 39) {
 		      // go right
 		      direction = 'next';
-				window.location = $('.next-project a').attr('href');
+				window.location = $('.project-control .next').attr('href');
 		    }
 		});
 		
@@ -353,17 +462,17 @@ $(function() {
 		
 		//console.log('hit');
 		if (this.portfolioLink.value == this.portfolioLink.title || this.portfolioLink.value == "") return false;
-		console.log('test portfolio submission');
+		//console.log('test portfolio submission');
 		$("#send").val("Thanks!");
 		$("#url").val("http://");
 		
 		$.post(rootFolder + "inc/sendURL.php", {
 			portfolioLink: this.portfolioLink.value
 		}, function(data){	
-			console.log('sending portfolio submission');	
+			//console.log('sending portfolio submission');	
 			onFormSuccess("portfolio_form", data);
 		}, "json");
-		console.log('test portfolio submission2');
+		//console.log('test portfolio submission2');
 		return false;
 	}
 	
@@ -568,15 +677,15 @@ $(function() {
 				success: function(data, textStatus){
 					if(data.indexOf("success" != -1)){
 						//infodiv.html('<p class="wdpajax-success" >Thanks for your comment. We appreciate your response.</p>');
-						console.log('comment form ajax data');
-						console.log(data);
+						//console.log('comment form ajax data');
+						//console.log(data);
 						
 						//TO DO: update comment number count
 						var endCallback;
 						var expandTime = 500;
 						if($('#comments-title').length < 1){
 							// no comments yet
-							console.log('comments length < 1');
+							//console.log('comments length < 1');
 							endCallback = function(){ 
 								$('<div class="hide"><h4 id="comments-title" class="shadow-heading"><span>1 Comment</span></h4></div><ul class="commentlist"></ul>')
 								.prependTo( $('#comments') );
@@ -597,7 +706,7 @@ $(function() {
 							}
 						} else {
 							
-							console.log('comments length 1 or more');
+							//console.log('comments length 1 or more');
 							//update number of comments
 							endCallback = function(){
 								var str = $('#comments-title span').text();
@@ -628,8 +737,8 @@ $(function() {
 		var mssgHTML = '<h4 id="mssg" class="'+mssgClass+'"><span>'+heading+'</span><br/>'+message+'</h4>';
 		var animSpeed = 200;
 		var fieldset = $('#'+formID+ ' fieldset');
-		console.log('launch form message');
-		console.log(arguments);
+		// console.log('launch form message');
+		// console.log(arguments);
 		if($('.ie8,.ie6,.ie7').length >= 1){
 			
 			$('#'+formID+' fieldset').after(mssgHTML).hide(animSpeed, function(){
@@ -648,9 +757,9 @@ $(function() {
 						});
 				});			
 		}else{
-			console.log('FIELDSET?');
-			console.log($('#'+formID+' fieldset'));
-			console.log(mssgHTML);
+			// console.log('FIELDSET?');
+			// console.log($('#'+formID+' fieldset'));
+			// console.log(mssgHTML);
 			fieldset.after(mssgHTML);
 			fieldset.animate({top: '-50px', opacity:0 }, animSpeed, function(){
 					console.log('woot');

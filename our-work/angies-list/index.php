@@ -22,7 +22,7 @@ require('../../inc/header.php'); ?>
 <div class="container project header">
 	
 	<h2>Angie&lsquo;s List</h2>
-	<h3>17FEET built a comprehensive mobile Business Center for the <br>leader in consumer ratings for local service companies.</h3>
+	<h3>A comprehensive Mobile Business Center for the leader in trusted reviews.</h3>
 	
 	<img src="../../imgs/projects/angies-1.png" id="hero-graphic" class="center" />
 	
@@ -38,9 +38,9 @@ require('../../inc/header.php'); ?>
 			
 			<div class="shim-80"></div>
 		
-			<h4 class="">It's Business Time</h4>
+			<h4 class="">Helping Service Providers</h4>
 
-			<p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eu ismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>
+			<p class="">We worked with Angie's List to design a mobile application to help Service Providers serve their customers better. Within the mobile app we designed a custom messaging application to track bids and interactions with customers. We also integrated mobile payments, building a custom interface on top of the Square API. </p>
 			
 			<div class="shim-40 hide-lg-tablet"></div>
 			

@@ -38,17 +38,17 @@ require('../../inc/header.php'); ?>
 			
 			<div class="span10">
 				
-				<div class="shim-80"></div>
+				<div class="shim-40"></div>
 			
-				<h4 class="">Geeking Out</h4>
+				<h4>Geeking Out</h4>
 
-				<p class="">Building a mobile web platform lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eu ismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eu ismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+				<p>When it come to News for Nerds, we're a little bit old school. But that didn't mean we were in love with the look of the 15-year-old site venerable community tech site, Slashdot. To remedy that, we designed a new mobile version of Slashdot transporting them to the mobile age. For us, the key to the project was understanding the audience. Our primary research including face-to-face and phone interviews, surveys, and multiple prototype betas helped guide our design decisions. Working through multiple feedback cycles, we tweaked the experience eventually landing at a final product that's been accepted with a tough audience.</p>
 			
 				<div class="shim-40"></div>
 			
-				<blockquote>17FEET was tremendously engaged throughout the entire design process</blockquote>
+				<blockquote>We've seen a 5x increase in traffic right off the bat and are getting 3x more page views and 3x more time spent after the redesign.</blockquote>
 			
-				<p class="cite" style="padding-left:0; ">&mdash; Gaurav Kuchhal<br class="hold"><span>Head of Product, Online Media, Slashdot.org &amp; Sourceforge.net</span></p>
+				<p class="cite" style="padding-left:0; ">&mdash; Gaurav Kuchhal<br class="hold"><span>Head of Product, Online Media, Slashdot.org</span></p>
 			
 			</div>
 			
@@ -67,7 +67,7 @@ require('../../inc/header.php'); ?>
 		<div class="span5">
 			<h4>Stylin&lsquo; and Profilin&lsquo;</h4>
 
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eu ismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>
+			<p>Through our research we discovered an opportunity to drive considerable engagement through enhancing the profile experience. We developed a set of achievement-based badges and icons that can be used throughout the site to promote engagement between users and drive more engagement with the site. Plus they look really cool.</p>
 		
 		</div>
 		

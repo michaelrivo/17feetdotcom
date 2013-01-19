@@ -31,20 +31,20 @@ require('../../inc/header.php');
 
 <div class="container copy project">
 	
-	<div class="shim-40" ></div>
+	<div class="shim-80" ></div>
 	
-	<blockquote class="tcenter">17FEET was an indespensible partner bringing our vision to life.</blockquote>
+	<!-- <blockquote class="tcenter">17FEET was an indespensible partner bringing our vision to life.</blockquote>
 	
 	<p class="cite tcenter">&mdash; Farbood Nivi<span>Founder and CEO, Grockit</span></p>
 	
-	<div class="shim-80" ></div>
+	<div class="shim-80" ></div> -->
 	
 	<div class="row-fluid">
 		<div class="span3 last no-pad">
 						
 			<h4>Agile. Beautiful.</h4>
 
-			<p>We worked closely with Grockit, the parent company of Learnist, starting when the product was just getting started. Moving fast and working closely with a small development team we created high fidelity, living prototypes. The designs were immediately viewed by a beta testing community allowing for rapid iteration and improvement.</p>
+			<p>We worked closely with Grockit, the parent company of Learnist, starting when the product was just getting started. Moving fast and working closely with a small development team we created high fidelity, living prototypes. The designs were immediately viewed by a beta testing community, allowing for rapid iteration and improvement.</p>
 
 		</div>
 		
@@ -66,7 +66,7 @@ require('../../inc/header.php');
 
 			<p>We embraced a mobile first approach by starting the design process with the mobile app, followed by a tablet app, and ultimately the web. The constraints of this approach provided ample opportunity for simplification along the way.</p>	
 		
-		</div>w
+		</div>
 		<div class="span7 left">
 			<img src="../../imgs/projects/learnist-3.png" />
 		</div>
@@ -81,7 +81,7 @@ require('../../inc/header.php');
 		<div class="span7 offset1 last no-pad">
 			<h4>The Future Looks Bright</h4>
 
-			<p>In a matter of months we were able to achieve a very polished experience in a while adapting to the natural evolution of a new product. Moving forward, we're helping Learnist keep up with rapid growth following a new partnership and funding round with the Discovery Network.</p>
+			<p>In a matter of months we were able to achieve a very polished experience while adapting to the natural evolution of a new product. Moving forward, we're helping Learnist keep up with rapid growth following a new partnership and funding round with the Discovery Network.</p>
 		
 		</div>
 		

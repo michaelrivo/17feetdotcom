@@ -49,17 +49,6 @@ require('../inc/header.php');
 	
 	</div>
 	
-	<div class="header clients-header">
-			<h2>We love our clients.</h2>		
-			<h3>We partner with companies of all sizes to help them achieve great results.</h3>
-	</div>
-	
-	<div class="row-fluid row-grid dotted-dividers client-list">
-	
-	<ul class="unstyled">
-		<?php foreach( $clientLogoArr as $logo => $clientName ){ ?><li><span class="<?php echo 'cl-'.$logo ?> cl-sprite"><?php echo $clientName; ?></span><span class="vr"></span></li><?php } ?>
-		</ul>
-	</div>
 	
 	<?php require('../inc/project-cta.php'); ?>
 		

@@ -32,9 +32,9 @@ require('inc/header.php');
 				
 				<h3>Agile design, winning results.</h3>
 				
-				<p class="description">Working at warp startup speed we're helping Learnist create a new platform for learning just about anything.</p>
+				<p class="description">Working at warp startup speed, we're helping Learnist create a new platform for learning just about anything.</p>
 			
-				<?php black_cta("See Project", "our-work/learnist")?>
+				<div class="cta-wrapper clearfix tcenter"><?php black_cta("See Project", "our-work/learnist")?></div>
 			
 			</div>
 			
@@ -60,36 +60,36 @@ require('inc/header.php');
 		
 			<div class="top-project">
 			
-				<a href="#" class="p-image"><img src="imgs/00-v2/featured-geeknet.jpg" alt="Slashdot Mobile Site"></a>
+				<a href="our-work/slashdot" class="p-image"><img src="imgs/00-v2/featured-geeknet.jpg" alt="Slashdot Mobile Site"></a>
 			
 				<div class="brand">
-					<a href="#" class="" >
+					<a href="our-work/slashdot" class="" >
 						<span class="featured-logo-sprite geeknet">Geeknet</span>
-						<span class="block desc">Giving awesomeness to the geekiest site on the planet. </span>
+						<span class="block desc">Mobile site, 15 years overdue</span>
 					</a>
 				</div>
 			</div>
 		
 			<div class="top-project">
 			
-				<a href="#" class="p-image"><img src="imgs/00-v2/featured-pac12.jpg"  alt="Pac-12 Networks Website"></a>
+				<a href="our-work/pac-12" class="p-image"><img src="imgs/00-v2/featured-pac12.jpg"  alt="Pac-12 Networks Website"></a>
 			
 				<div class="brand">
-					<a href="#" class="" >
+					<a href="our-work/pac-12" class="" >
 						<span class="featured-logo-sprite pac12">Pac-12 Networks</span>
-						<span class="block desc">Bringing innovation to the PAC-12 Network</span>
+						<span class="block desc">Conference site for the new Pac-12</span>
 					</a>
 				</div>
 			</div>
 		
 			<div class="top-project last">
 			
-				<a href="#" class="p-image"><img src="imgs/00-v2/featured-ignite.jpg" alt="Simraceway Website"></a>
+				<a href="our-work/simraceway" class="p-image"><img src="imgs/00-v2/featured-ignite.jpg" alt="Simraceway Website"></a>
 			
 				<div class="brand">
-					<a href="#" class="" >
+					<a href="our-work/simraceway" class="" >
 						<span class="featured-logo-sprite ignite">Ignite Technologies</span>
-						<span class="block desc">Blurring the lines of gaming and the real world.</span>
+						<span class="block desc">Online racing innovation</span>
 					</a>
 				</div>
 			</div>

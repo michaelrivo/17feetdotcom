@@ -1,3 +1,6 @@
+	
+	<!-- <div id="page_overlay" class="overlay"></div> -->
+		
 	<div id="foot-push"></div>
 </div><!-- #body -->
 <div id="foot">

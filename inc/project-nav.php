@@ -3,8 +3,10 @@
 require('project-data.php');
 $ct = 0;
 $nextLinkTtl = "Next";
+
+
 while( true && $ct < 20){
-	$projectData = current($projectArr);
+	$projectData = current($masterArr);
 	if($projectData[0] == $currentProject){
 		break;
 	} else{
@@ -13,15 +15,15 @@ while( true && $ct < 20){
 	}
 }
 	
-	$previousProjectData = prev($projectArr);
+	$previousProjectData = prev($masterArr);
 	if(!$previousProjectData){ 
-		$previousProjectData = end($projectArr); reset($projectArr); 
+		$previousProjectData = end($masterArr); reset($masterArr); 
 	}else{
 		// if we're not at the beginning go back to current
-		next($projectArr);
+		next($masterArr);
 	}
 	
-	$nextProjectData = next($projectArr);
+	$nextProjectData = next($masterArr);
 	if(!$nextProjectData){ 
 		// if we're at the end go to About Us
 		

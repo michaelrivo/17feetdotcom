@@ -11,10 +11,12 @@ require('../../inc/header.php');
 <div class="container project header">
 
 	<h2 class="long-ttl">Salesforce Foundation</h2>
-	<h3>We helped The Salesforce.com Foundation communicate their mission and grow their relationships with nonprofits and higher-education institutions.</h3>
+	<h3>We helped Salesforce Foundation communicate their mission and grow their relationships with nonprofits and higher-education institutions.</h3>
 
 	<img src="../../imgs/projects/salesforce-foundation-1.png" id="hero-graphic" />
 </div>
+
+<div class="shim-40"></div>
 
 <div class="container copy project" >
 	
@@ -32,16 +34,16 @@ require('../../inc/header.php');
 	
 	<div class="shim-120"></div>
 	
-	<div class="row-fluid">
+	<!-- <div class="row-fluid">
 		<div class="span7 offset2">
 			<blockquote>17FEET was instrumental in transforming our web experience</blockquote>
 		</div>
 		
 		<p class="cite span3">&mdash;Judy Levine<br class="hold"><span>Director of Marketing<br class="hold">Salesforce.com Foundation</span></p>
-	</div>
+	</div> -->
 	<!-- row -->
 	
-	<div class="shim-80"></div>
+	<!-- <div class="shim-80"></div> -->
 	
 	<div class="row-fluid width-lg-tablet">
 		<div class="span5 no-pad last right">

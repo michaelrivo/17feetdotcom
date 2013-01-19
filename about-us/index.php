@@ -6,8 +6,8 @@ require('../inc/header.php');
 <div class="container static about-us">
 	
 	<div class="header">
-		<h2>Designed for Results</h2>
-		<h3>We partner with companies of all sizes to help move digital products forward through design, user experience, strategy and project management</h3>
+		<h2>Designed for Results.</h2>
+		<h3>We partner with companies of all sizes to help move digital products forward through design, user experience, strategy and project management.</h3>
 	</div>
 	
 	<img class="infographic" src="../imgs/00-v2/process-graphic.png">
@@ -144,15 +144,15 @@ require('../inc/header.php');
 					<img src="../imgs/00-v2/headshots/shaun.jpg" />
 					<div class="copy">
 						<h5 class="bottom">Shaun Tungseth</h5>
-						<p class="title">Senior Producer</p>
+						<p class="title">Designer</p>
 						<p>Shaun's a badass designer of the UX &amp; visual design variety. He drops his magic across a variety of projects making each one better as he goes. Shaun's also an avid deer hunter.</p>
 					</div>
 				</div><div class="profile">
 					<img src="../imgs/00-v2/headshots/tyler.jpg" />
 					<div class="copy">
 						<h5 class="bottom">Tyler Dorman</h5>
-						<p class="title">Business Development</p>
-						<p>Marc is a double-threat designer developer, working across multiple projects and platforms. In addition he's an avid cyclist and enjoys sleeping outdoors.</p>
+						<p class="title">Director, Business Development</p>
+						<p>Tyler helps us identify and develop relationships with our partners, peers and new business opportunities. He likes his coffee black and his music live.</p>
 					</div>
 				</div>
 			</div> <!-- .overflow -->
@@ -211,7 +211,7 @@ require('../inc/header.php');
 			
 			</div>
 		</div>
-	</div> */ ?>
+	</div> 
 	
 	<div class="row-fluid testimonials row-pad">
 		
@@ -222,74 +222,74 @@ require('../inc/header.php');
 			<div class="overflow">
 			
 				<blockquote>
-					<p class="quote">&ldquo;As far I'm concerned they are Rock Stars. 17FEET have been an integral and important part of my company's development. They've helped us with product design, user experience, truly moved the needle.&rdquo;</p>
+					<p class="quote">&ldquo;Working with you guys has been super fruitful and super fun. Thanks a lot for not only the great and consistent output, but being great fun to work with along the way.&rdquo;</p>
 			
 					<footer class="author">
 						
 						<div class="logo"><img src="../imgs/00-v2/testimonial-logos/learnist.png"></div>
 						
 						<p class="name">Farbood Nivi</p>
-						<p class="title">Founder, Grockit and Learnist</p>
+						<p class="title">Founder, President, Chairman, Chief Product Officer, Grockit and Learnist</p>
 					</footer>
 			
 				</blockquote>
 		
 				<blockquote>
-					<p class="quote">&ldquo;As far I'm concerned they are Rock Stars. 17FEET have been an integral and important part of my company's development. They've helped us with product design, user experience, truly moved the needle.&rdquo;</p>
+					<p class="quote">&ldquo;As far I'm concerned they are Rock Stars. 17FEET have been an integral and important part of my company's development. They've helped us with product design, user experience: truly moved the needle.&rdquo;</p>
 			
 					<footer class="author">
 						<div class="logo"><img src="../imgs/00-v2/testimonial-logos/geeknet.png"></div>
 						
-						<p class="name">Jeff Drobick</p>
-						<p class="title">CEO, Geeknet</p>
+						<p class="name">Stephen Klein</p>
+						<p class="title">Founder, Chief Creative Officer, LOYAL3</p>
 					</footer>
 			
 				</blockquote>
 		
 				<blockquote>
-					<p class="quote">&ldquo;As far I'm concerned they are Rock Stars. 17FEET have been an integral and important part of my company's development. They've helped us with product design, user experience, truly moved the needle.&rdquo;</p>
+					<p class="quote">&ldquo;17FEET has been a great partner in helping us to achieve our goals across multiple initiatives.&rdquo;</p>
 			
 					<footer class="author">
 						<div class="logo"><img src="../imgs/00-v2/testimonial-logos/loyal3.png"></div>
 						
-						<p class="name">Stephen Klein</p>
-						<p class="title">Chief Creative Officer, LOYAL3</p>
+						<p class="name">Whitney Vogel</p>
+						<p class="title">Chief of Staff - Engineering at Angie's List</p>
 					</footer>
 			
 				</blockquote>
 		
 				<blockquote>
-					<p class="quote">&ldquo;As far I'm concerned they are Rock Stars. 17FEET have been an integral and important part of my company's development. They've helped us with product design, user experience, truly moved the needle.&rdquo;</p>
+					<p class="quote">&ldquo;I continually receive great feedback on the design of this gorgeous mobile app, and the credit goes to our design partner at 17FEET.&rdquo;</p>
 			
 					<footer class="author">
 						<div class="logo"><img src="../imgs/00-v2/testimonial-logos/salesforce.png"></div>
 						
-						<p class="name">John Zissimos</p>
-						<p class="title">Executive Creative Director, Salesforce</p>
+						<p class="name">Jeff Drobick</p>
+						<p class="title">President and CEO, Geeknet Media</p>
 					</footer>
 			
 				</blockquote>
 				
 				<blockquote>
-					<p class="quote">&ldquo;As far I'm concerned they are Rock Stars. 17FEET have been an integral and important part of my company's development. They've helped us with product design, user experience, truly moved the needle.&rdquo;</p>
+					<p class="quote">&ldquo;17FEET has been an integral Salesforce partner for many years. They’re my go to team for all things digital and always a blast to work with.&rdquo;</p>
 			
 					<footer class="author">
 						<div class="logo"><img src="../imgs/00-v2/testimonial-logos/angies.png"></div>
 						
-						<p class="name">Whitney Vogel</p>
-						<p class="title">Product Manager, Angie's List</p>
+						<p class="name">John Zissimos</p>
+						<p class="title">Chief Creative Officer at salesforce.com</p>
 					</footer>
 			
 				</blockquote>
 		
 				<blockquote>
-					<p class="quote">&ldquo;As far I'm concerned they are Rock Stars. 17FEET have been an integral and important part of my company's development. They've helped us with product design, user experience, truly moved the needle.&rdquo;</p>
+					<p class="quote">&ldquo;Simply stated, the work is awesome. Thank you.&rdquo;</p>
 			
 					<footer class="author">
 						<div class="logo"><img src="../imgs/00-v2/testimonial-logos/ignite.png"></div>
 						
 						<p class="name">Jonathan Haswell</p>
-						<p class="title">Founder &amp; CEO, Ignite Gaming</p>
+						<p class="title">Founder &amp; CEO, Ignite Game Technologies, Inc</p>
 					</footer>
 			
 				</blockquote>
@@ -299,6 +299,24 @@ require('../inc/header.php');
 		</div> 
 		
 	</div>
+	*/ 
+	require('../inc/project-data.php'); 
+	
+	?>
+	<div class="projects">
+	<div class="header clients-header">
+			<h2>We love our clients.</h2>		
+			<h3>We partner with companies of all sizes to help them achieve great results.</h3>
+	</div>
+	</div>
+	<div class="row-fluid row-grid dotted-dividers client-list">
+	
+	<ul class="unstyled">
+		<?php foreach( $clientLogoArr as $logo => $clientName ){ ?><li><span class="<?php echo 'cl-'.$logo ?> cl-sprite"><?php echo $clientName; ?></span><span class="vr"></span></li><?php } ?>
+		</ul>
+	</div>
+	
+	
 	
 	<?php require('../inc/project-cta.php'); ?>
 	

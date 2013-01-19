@@ -42,7 +42,7 @@ if(!empty($_POST['contactMessage']) && !empty($_POST['contactEmail'])) {
 			$email_subject = "Thanks for the info!";
 			
 			$message_text = "Hi " . $fromname . " !\n\n";
-			$message_text .= "17FEET appreciates communication in all it's many forms. Thanks!\n\n";
+			$message_text .= "Thanks for contacting the studio. We'll be in touch soon.\n\n";
 			$message_text .= "-17FEET";
 			
 			$message_html = '<style>';
@@ -52,7 +52,7 @@ if(!empty($_POST['contactMessage']) && !empty($_POST['contactEmail'])) {
 			$message_html .= '	<tr>';
 			$message_html .= '		<td><font color="#333333" size="2" face="Arial, Helvetica, sans-serif">Hi ';
 			$message_html .= $fromname;
-			$message_html .= "!<br /><br />17FEET appreciates communication in all it's many forms.  Thanks!<br /><br />-17FEET</font></td>";
+			$message_html .= "!<br /><br />Thanks for contacting the studio. We'll be in touch soon.<br /><br />-17FEET</font></td>";
 			$message_html .= '	</tr>';
 			$message_html .= '</table>';
 			

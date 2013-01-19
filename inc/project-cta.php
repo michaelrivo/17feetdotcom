@@ -3,25 +3,36 @@
 require('project-data.php');
 $ct = 0;
 $nextLinkTtl = "Next";
+
+//var_dump($masterArr);
+//echo '<pre>';
+
+reset($masterArr); 
+
 while( true && $ct < 20){
-	$projectData = current($projectArr);
+	$projectData = current($masterArr);
+
 	if($projectData[0] == $currentProject){
 		break;
 	} else{
-		next($projectArr);
+		//echo 'next';
+		next($masterArr);
 		$ct++;		
 	}
-}
 	
-	$previousProjectData = prev($projectArr);
+}
+
+//echo '</pre>';
+	
+	$previousProjectData = prev($masterArr);
 	if(!$previousProjectData){ 
-		$previousProjectData = end($projectArr); reset($projectArr); 
+		$previousProjectData = end($masterArr); reset($masterArr); 
 	}else{
 		// if we're not at the beginning go back to current
-		next($projectArr);
+		next($masterArr);
 	}
 	
-	$nextProjectData = next($projectArr);
+	$nextProjectData = next($masterArr);
 	if(!$nextProjectData){ 
 		// if we're at the end go to About Us
 		

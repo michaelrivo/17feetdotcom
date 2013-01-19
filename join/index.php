@@ -45,11 +45,11 @@ require('../inc/header.php');
 				<div class="jobPosition first active" job="interaction-designer"> 
 					<h4 class="top">Interaction Designer</h4> 
 
-					<p class="desc">As an Interaction Designer at 17FEET you will concept ways to make technology and people connect in magical ways. Conduct research, create wireframes, user flows, process flows and site maps all while working closely with visual designers and developers.</p> 
+					<p class="desc">As an Interaction Designer at 17FEET, you will concept ways to make technology and people connect in magical ways: conduct research, create wireframes, user flows, process flows and site maps all while working closely with visual designers and developers.</p> 
 
 					<h5>Your Experience:</h5> 
 					<ul> 
-						<li>Experience creating user experiences for web and mobile software applications.</li>
+						<li>Creating user experiences for web and mobile software applications</li>
 						<li>Hands-on skills in developing wireframes, site maps, user flows, experience maps, personas, etc.</li>
 						<li>Solid knowledge of interaction design tools to create prototypes</li>
 						<li>Strong written and verbal communication skills</li>
@@ -99,7 +99,7 @@ require('../inc/header.php');
 				<div class="jobPosition " job="senior-interactive-developer"> 
 					<h4 class="top">Senior Interactive Developer</h4> 
 
-					<p class="desc">Hello. We are seeking a Senior Interactive Developer to work full-time, in house, to create interface-driven applications and sites for web and mobile. The projects we take on focus on usability and user experience, and we try to learn something new with every project: new languages, new frameworks or a new approach to how things get done.</p> 
+					<p class="desc">We are seeking a Senior Interactive Developer to work full-time, in house, to create interface-driven applications and sites for web and mobile. The projects we take on focus on usability and user experience, and we try to learn something new with every project: new languages, new frameworks or a new approach to how things get done.</p> 
 
 					<h5>Your Experience:</h5> 
 					<ul> 

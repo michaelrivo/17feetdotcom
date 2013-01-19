@@ -26,7 +26,9 @@ include( dirname(__FILE__).'/functions.php');
 	<meta name='description' content="We make things work. Beautifully. We partner with companies of all sizes to help them achieve great results. We're a digital design company. Our designs are used by people everyday.">
 	<meta name="keywords" content="Brandon Herring, Michael Rivo, San Francisco, California, 17feet, design, strategy, marketing, user experience, interaction design, usability, interactive, interactive agency, digital agency, technology, web, websites, design studio" />
 
-	<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0"> -->
+	
+	<meta name="viewport" content="width=1020">
 	
 	<title>17FEET. Small. Mighty.</title>
 	<?php //print_r($_SERVER); ?>
@@ -34,7 +36,7 @@ include( dirname(__FILE__).'/functions.php');
 	<!--[if lt IE 9]><link rel="stylesheet" href="<?php echo $ROOT ?>/css/ie.css" type="text/css" media="screen, projection, print"><![endif]-->
 	<link rel="stylesheet" href="<?php echo $ROOT ?>/css/style.css" type="text/css" media="screen, projection, print">
 	
-	<link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 979px)' href='<?php echo $ROOT ?>/css/less/responsive.css' />
+	<!-- <link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 979px)' href='<?php echo $ROOT ?>/css/less/responsive.css' /> -->
 		
 	<link rel="shortcut icon" href="<?php echo $ROOT ?>/imgs/favicon.ico" />
 
@@ -87,3 +89,29 @@ include( dirname(__FILE__).'/functions.php');
 			</div> 
 		</div>
 	</div> <!-- .header -->	
+	
+	<?php 
+	
+	/*
+	require( 'project-data.php' );
+	$masterArr = array_merge( $featuredArr, $projectArr);
+		
+	
+	
+	<!-- <div id="experimental_nav">
+		
+		<div class="no-overflow">
+			
+			<div class="links p-nav ribbon-sprites" style="right:0;"><?php foreach( $masterArr as $project ){ ?><a href="<?php echo $ROOT.'/our-work/'. $project[0]; ?>" class="block-link">
+				<span class="ribbon-sprite r-sprite-<?php echo $project[0]; ?>"></span>
+				<span class="title"><?php echo $project[1]; ?></span>
+				<span class="desc"><?php echo $project[2]; ?></span>
+			</a><?php } ?></div>
+		
+			<div class="slider-left" data-direction="-1">&#9664;</div>
+			<div class="slider-right" data-direction="1">&#9654;</div>
+		
+		</div>
+				
+	</div> -->
+		*/ ?>

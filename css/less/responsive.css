@@ -712,6 +712,13 @@
   .tier2 .black-cta {
     margin: 15px 0;
   }
+  .tier2 .span9 {
+    margin-top: 0;
+  }
+  .tier2 .tcenter .black-cta {
+    display: inline-block;
+    float: none;
+  }
   .tier3 .top-projects {
     width: 100%;
     right: 0;
@@ -1986,24 +1993,11 @@
   .projects h2 {
     font-size: 2.2em;
   }
-  .second-tier h2 {
-    font-size: 1.75em;
-  }
   h3 {
     font-size: 1.75em;
     font-weight: 300;
   }
   /* About Us */
-  /*	.about-us{
-  		.heart{ height:1.1em; }
-  		.header h3{
-  			font-size:1.1em;
-  		}
-  		
-  		.clients{ height:155px;}
-  		
-  		.service .pad h3 { font-size:1.5em; }
-  	}*/
   /* Project Pages */
   .project.copy h4 {
     font-size: 1.5em;

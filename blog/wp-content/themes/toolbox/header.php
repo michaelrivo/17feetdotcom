@@ -40,7 +40,9 @@ if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 	<meta http-equiv="content-style-type" content="text/css" /> 
 	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 	
-	<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0"> -->
+	
+	<meta name="viewport" content="width=1020">
 	
 <title><?php
 	/*
@@ -71,7 +73,7 @@ if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 <!--[if lt IE 8]><link rel="stylesheet" href="<?php echo $ROOT ?>/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
 <link rel="stylesheet" href="<?php echo $ROOT ?>/css/style.css" type="text/css" media="screen, projection">
 
-<link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 960px)' href='<?php echo $ROOT ?>/css/less/responsive.css' />
+<!-- <link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 960px)' href='<?php echo $ROOT ?>/css/less/responsive.css' /> -->
 
 <!-- Scripts -->
 
@@ -109,21 +111,20 @@ if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
 				</div>
 
 				<div class="back-btn">
-					<a class="mobile-btn" href="./">Back</a>
+					<button class="mobile-btn">Back</button>
 				</div>
 
 				<div class="row-fluid">
 
 					<h1 id="logo" class="span2"><a href="<?php echo $ROOT ?>/" class="hide-txt">17feet</a></h1>
 					<ul class="span8" id="nav">
-						<li class="our-work"><a href="<?php echo $ROOT; ?>/our-work">Our Work</a></li>
-						<li class="about-us"><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>						
-						<li class="join"><a href="<?php echo $ROOT; ?>/join">Join the Team!</a></li>
+						<li class="about-us"><a href="<?php echo $ROOT; ?>/about-us">About Us</a></li>
+						<li class="our-work"><a href="<?php echo $ROOT; ?>/our-work">The Work</a></li>					
+						<li class="join"><a href="<?php echo $ROOT; ?>/join">Join Us!</a></li>
 						<li class="blog"><a href="<?php echo $ROOT; ?>/blog">Our Blog</a></li>
 						<li class="contact-us"><a href="<?php echo $ROOT; ?>/contact-us">Contact Us!</a></li>
 
 					</ul>
-					<div class="span2 last twitter"><a href="http://twitter.com/17feet" target="_blank"><span>We're on Twitter</span></a></div>
 
 				</div> 
 			</div>
