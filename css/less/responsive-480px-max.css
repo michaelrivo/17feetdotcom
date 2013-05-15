@@ -25,6 +25,15 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.cover-bg {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /*   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale'); 
+     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale')";
+ */
+}
 .icon-bar {
   height: 2px;
   width: 18px;
@@ -33,7 +42,7 @@
   background-color: #FFF;
 }
 .mobile-btn {
-  border: 1px solid #555;
+  border: none;
   background-color: transparent;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -41,7 +50,7 @@
   padding: 7px 8px;
   position: absolute;
   top: 11px;
-  left: 5%;
+  left: 2%;
 }
 .mobile-btn:link {
   color: #FFF;
@@ -118,34 +127,11 @@
   .tier1 h2 {
     font-size: 3.15em;
   }
-  .tier2 img {
+  .tier2 .feature {
     margin-top: 20px !important;
   }
   .tier2 .content {
     min-height: auto;
-  }
-  .tier3 .top-projects {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  .tier3 .featured-logo-sprite {
-    height: auto;
-    text-indent: 0;
-    font-weight: 700;
-    font-size: 1.5em;
-    background-image: none;
-    color: #FFF;
-    margin: 10px 0;
-    overflow: visible;
-  }
-  .tier3 .brand a {
-    padding: 0 18px;
-  }
-  .tier3 .black-cta {
-    position: static;
-    display: inline-block;
-    float: none;
-    margin: 20px 0 0 0;
   }
   .project,
   .projects .header,
@@ -252,9 +238,6 @@
     -moz-box-shadow: none;
   }
   #nav {
-    -webkit-box-shadow: 0 4px 25px #000000;
-    -moz-box-shadow: 0 4px 25px #000000;
-    box-shadow: 0 4px 25px #000000;
     float: none;
     position: absolute;
     top: 0;
@@ -547,6 +530,7 @@
     padding: 15px 0;
   }
   #footer .modules {
+    display: none;
     margin: 15px 0;
   }
   #footer .modules h5 {

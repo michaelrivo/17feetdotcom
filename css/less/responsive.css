@@ -46,6 +46,15 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.cover-bg {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /*   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale'); 
+     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale')";
+ */
+}
 .hidden {
   display: none;
   visibility: hidden;
@@ -249,6 +258,15 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.cover-bg {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /*   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale'); 
+     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale')";
+ */
+}
 @media (max-width: 979px) {
   .static .header,
   .blog .header {
@@ -314,7 +332,7 @@
     width: 100%;
     margin: 20px 0 0 0;
   }
-  .tier2 img {
+  .tier2 .feature {
     margin: 0 -15% 0 -15% !important;
     max-width: 125% !important;
     position: static;
@@ -614,6 +632,15 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.cover-bg {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /*   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale'); 
+     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale')";
+ */
+}
 .icon-bar {
   height: 2px;
   width: 18px;
@@ -718,46 +745,6 @@
   .tier2 .tcenter .black-cta {
     display: inline-block;
     float: none;
-  }
-  .tier3 .top-projects {
-    width: 100%;
-    right: 0;
-    padding-bottom: 20px;
-  }
-  .tier3 .top-project {
-    background-color: #313F40;
-    margin: 0 0 15px 0;
-    width: 100%;
-    clear: both;
-    position: relative;
-    *zoom: 1;
-  }
-  .tier3 .top-project:before,
-  .tier3 .top-project:after {
-    display: table;
-    content: "";
-    line-height: 0;
-  }
-  .tier3 .top-project:after {
-    clear: both;
-  }
-  .tier3 .p-image {
-    float: left;
-  }
-  .tier3 .p-image,
-  .tier3 .brand {
-    width: 50%;
-  }
-  .tier3 .brand {
-    right: 0;
-    background-color: transparent;
-    height: 100px;
-    margin-top: -50px;
-    position: absolute;
-    top: 50%;
-  }
-  .tier3 .brand a {
-    padding: 0 25px;
   }
   .sub-footer .span3 {
     width: 100%;
@@ -902,6 +889,15 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+  .cover-bg {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /*   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale'); 
+       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale')";
+   */
+  }
   .twitter .bird.animating {
     -webkit-animation: flyawayMobile 2s;
     -webkit-animation-direction: normal;
@@ -1045,6 +1041,15 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.cover-bg {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /*   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale'); 
+     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale')";
+ */
+}
 .icon-bar {
   height: 2px;
   width: 18px;
@@ -1053,7 +1058,7 @@
   background-color: #FFF;
 }
 .mobile-btn {
-  border: 1px solid #555;
+  border: none;
   background-color: transparent;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1073,7 +1078,7 @@
   padding: 7px 8px;
   position: absolute;
   top: 11px;
-  left: 5%;
+  left: 2%;
 }
 .mobile-btn:link {
   color: #FFF;
@@ -1178,34 +1183,11 @@
   .tier1 h2 {
     font-size: 3.15em;
   }
-  .tier2 img {
+  .tier2 .feature {
     margin-top: 20px !important;
   }
   .tier2 .content {
     min-height: auto;
-  }
-  .tier3 .top-projects {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  .tier3 .featured-logo-sprite {
-    height: auto;
-    text-indent: 0;
-    font-weight: 700;
-    font-size: 1.5em;
-    background-image: none;
-    color: #FFF;
-    margin: 10px 0;
-    overflow: visible;
-  }
-  .tier3 .brand a {
-    padding: 0 18px;
-  }
-  .tier3 .black-cta {
-    position: static;
-    display: inline-block;
-    float: none;
-    margin: 20px 0 0 0;
   }
   .project,
   .projects .header,
@@ -1324,21 +1306,6 @@
     -moz-box-shadow: none;
   }
   #nav {
-    -webkit-box-shadow: 0 4px 25px #000000;
-    -moz-box-shadow: 0 4px 25px #000000;
-    box-shadow: 0 4px 25px #000000;
-    -webkit-box-shadow: 0 4px 25px #000000;
-    -moz-box-shadow: 0 4px 25px #000000;
-    box-shadow: 0 4px 25px #000000;
-    -webkit-box-shadow: 0 4px 25px #000000;
-    -moz-box-shadow: 0 4px 25px #000000;
-    box-shadow: 0 4px 25px #000000;
-    -webkit-box-shadow: 0 4px 25px #000000;
-    -moz-box-shadow: 0 4px 25px #000000;
-    box-shadow: 0 4px 25px #000000;
-    -webkit-box-shadow: 0 4px 25px #000000;
-    -moz-box-shadow: 0 4px 25px #000000;
-    box-shadow: 0 4px 25px #000000;
     float: none;
     position: absolute;
     top: 0;
@@ -1643,6 +1610,7 @@
     padding: 15px 0;
   }
   #footer .modules {
+    display: none;
     margin: 15px 0;
   }
   #footer .modules h5 {
@@ -1949,6 +1917,15 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.cover-bg {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /*   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale'); 
+     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale')";
+ */
+}
 @media (max-width: 320px) {
   .tier1 h2 {
     font-size: 2.1em;
@@ -1958,36 +1935,6 @@
   }
   .tier1 .pink-cta {
     margin-top: 10px;
-  }
-  .tier3 .featured-logo-sprite {
-    height: auto;
-    text-indent: 0;
-    font-weight: 700;
-    font-size: 1.5em;
-    background-image: none;
-    color: #FFF;
-    margin: 10px 0;
-    overflow: visible;
-  }
-  .tier3 .brand a {
-    padding: 0 18px;
-  }
-  .tier3 .p-image {
-    float: none;
-  }
-  .tier3 .p-image,
-  .tier3 .brand {
-    width: 50%;
-  }
-  .tier3 .brand {
-    background-color: transparent;
-    height: auto;
-    width: 100%;
-    margin: 0;
-    position: static;
-  }
-  .tier3 .brand a {
-    padding: 13px 25px 20px 25px;
   }
   .project h2,
   .projects h2 {

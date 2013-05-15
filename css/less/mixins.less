@@ -414,6 +414,17 @@
   filter: ~"alpha(opacity=@{opacity})";
 }
 
+.cover-bg{
+    //background: url(@abs_path_img) center center no-repeat transparent;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    //filters are not relative to css, they require a full server path
+ /*   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale'); 
+     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale')";
+ */}
+
 
 
 // BACKGROUNDS

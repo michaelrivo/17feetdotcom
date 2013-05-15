@@ -22,26 +22,18 @@ require('../inc/header.php');
 <div class="container static contact-us">
 	
 	<div class="header">
-		<h2>Contact Us</h2>
-
+		<h2>Say hello!</h2>
+		<div class="map-info-wrap">
+			<p id="map_contact">256 Sutter Street, 5th Floor<br class="hold"/>
+			San Francisco CA 94108<br class="hold"/>
+			Tel: 415.896.1738<br class="hold"/>
+			<a href="mailto:pingme@17feet">pingme@17feet.com</a></p>
+		</div>
 	</div>
 	
 	<div class="row-fluid width-tablet">
 		
-		<div class="span6 last right" >
-			<p class="address relative"><img src="../imgs/map-pin.png" class="pin" />
-				<strong><img src="../imgs/17feet-logo-black.png" width="76" height="13" alt="17feet Logo Black"></strong><br class="hold"/>
-				256 Sutter Street, 5th Floor<br class="hold"/>
-				San Francisco CA 94108<br class="hold"/>
-				Tel: 415.896.1738<br class="hold"/>
-				Fax: 415.896.1738<br class="hold"/>
-				
-				<br class="hold"/><!-- <a href="http://maps.google.com/maps?q=17feet+256+Sutter+St+%235+San+Francisco,+CA+94108&um=1&ie=UTF-8&sa=N&hl=en&tab=wl" title="17feet on Google Maps"><img class="map"  src="http://maps.google.com/maps/api/staticmap?center=37.789824,-122.404788&zoom=16&markers=icon:http://17feet.com/imgs/map-pin-4.png%7Cshadow:false|37.789824,-122.404788&size=350x140&sensor=false" /></a> -->
-			</p>			
-				
-		</div>
-		
-		<div class="span6 left relative" >
+		<div class="span6 offset3 relative" >
 		
 			<form action="#" id="contact_form" method="POST">
 				<div>
@@ -60,15 +52,15 @@ require('../inc/header.php');
 
 <div id="map_canvas"></div>
 
-<script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOYdo64MsVvVLX2ATEga_lwDsl3vZsFmg&sensor=false">
-    </script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOYdo64MsVvVLX2ATEga_lwDsl3vZsFmg&sensor=false"></script>
+
+<script type="text/javascript" src="../js/infobox.js"></script>
 
 <script type="text/javascript">
 
 // Google Maps API
 function initializeMap() {
-	var latlng = new google.maps.LatLng(37.789824,-122.404788);
+	var latlng = new google.maps.LatLng(37.795824,-122.404788);
 	var settings = {
 		zoom: 13,
 		center: latlng,
@@ -99,27 +91,27 @@ function initializeMap() {
 	  icon: image,
 	  // shadow: shadow,
 	  // shape: shape,
+	  animation: google.maps.Animation.DROP,
 	  map: map,
-	  position: point
-	});
-
+	  position: point,
+	  zIndex: 2
+	});	
 	
-	// var red_road_styles = [
-	//   {
-	//     featureType: "all",
-	//     stylers: [
-	// 	  { hue: "#69AABA" },
-	//       { saturation: 0 }
-	//     ]
-	//   },
-	//   {
-	//     featureType: "road.highway",
-	//     stylers: [
-	//       { hue: "#ED484E" },
-	//       { saturation: 100 }
-	//     ]
-	//   }
-	// ];
+	var infowindow = new InfoBox({
+	    content: document.getElementById("map_contact"),
+		disableAutoPan: false,
+		closeBoxURL: '',
+		alignBottom: true,
+
+		boxClass: "map-box"
+		
+	});
+	
+	setTimeout(function(){
+		infowindow.open(map,marker);
+	},500)
+	
+	
 
 	var map_styles = [
 	  {

@@ -2,21 +2,14 @@ if (!window.console) console = {log: function() {}};
 
 $(function() {
 	
-	
-	
 	if( location.hash == "#edit"){ console.log( $('p,h2,h3,h4,blockquote').attr('contentEditable', 'true') ) }
 	
-	
 	var testEl = document.createElement( "x-test" );
-	if( typeof testEl.style.webkitBackgroundClip !== "undefined" && ( testEl.style.webkitBackgroundClip = "text", testEl.style.webkitBackgroundClip === "text" ) ){
+	if( typeof testEl.style.webkitBackgroundClip !== "undefined" && ( testEl.style.webkitBackgroundClip = "text", testEl.style.webkitBackgroundClip === "text" ) && !navigator.userAgent.match(/(iPad|iPhone|iPod)/i) ){
 		$('html').addClass('backgroundClipText');
-		//console.log('backgroundClipText')
 	} else{
 		$('html').addClass('no-backgroundClipText');
-		// console.log( $('html').attr('class') );
-		// console.log( Modernizr.cssgradients );
 	}
-	
 	
 	// Hide address bar on devices like the iPhone
 	//---------------------------------------------
@@ -547,6 +540,10 @@ $(function() {
 		}
 	}
 	
+	// $(window).keyup(function (e){
+	//   if( e.keyCode == 72){ contactFormSuccess(); }
+	// })
+	
 	function contactFormSuccess(){
 	
 		if($('.ie8,.ie6,.ie7').length >= 1){
@@ -1034,3 +1031,7 @@ Array.prototype.inArray = function (value,caseSensitive)
 	}
 	return false;
 };
+// footer hack
+
+
+

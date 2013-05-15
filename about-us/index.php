@@ -52,7 +52,7 @@ require('../inc/header.php');
 			
 			<h4>The Proof is in the Pixels</h4>
 			
-			<p>We make stuff. Namely, actionable assets - PSD's, implementation guides and code that ensures that what we design together gets implemented, beautifully.</p>
+			<p>We make stuff. Namely, actionable assets - PSDs, implementation guides and code that ensures that what we design together gets implemented, beautifully.</p>
 			
 		</div>
 
@@ -96,7 +96,7 @@ require('../inc/header.php');
 					<div class="copy">
 						<h5 class="bottom">Brandon Herring</h5>
 						<p class="title">Founder, Design Director</p>
-						<p>Brandon leads the design practice at 17FEET and has been helping clients solve design problems for more than a decade. He also make a fine cup of coffee.</p>
+						<p>Brandon leads the design practice at 17FEET and has been helping clients solve design problems for more than a decade. He also makes a fine cup of coffee.</p>
 					</div>
 				</div><div class="profile">
 					<img src="../imgs/00-v2/headshots/michael.jpg" />
@@ -138,14 +138,14 @@ require('../inc/header.php');
 					<div class="copy">
 						<h5 class="bottom">Jacquelyn Smith</h5>
 						<p class="title">Producer</p>
-						<p>Jacquelyn runs operation as well as projects while maintaining calm throughout the office. A former floral designer and party planner, Jacquelyn always knows how to create a hospitable environment.</p>
+						<p>Jacquelyn runs operation and projects while maintaining calm throughout the office. A former floral designer and party planner, she always knows how to create a hospitable environment.</p>
 					</div>
 				</div><div class="profile">
 					<img src="../imgs/00-v2/headshots/shaun.jpg" />
 					<div class="copy">
 						<h5 class="bottom">Shaun Tungseth</h5>
 						<p class="title">Designer</p>
-						<p>Shaun's a badass designer of the UX &amp; visual design variety. He drops his magic across a variety of projects making each one better as he goes. Shaun's also an avid deer hunter.</p>
+						<p>Shaun drops his design magic across a variety of UX &amp; visual design projects, making each one better as he goes. He’s also an avid typo hunter and a solid low post presence.</p>
 					</div>
 				</div><div class="profile">
 					<img src="../imgs/00-v2/headshots/tyler.jpg" />

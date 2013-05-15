@@ -25,6 +25,15 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.cover-bg {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /*   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale'); 
+     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale')";
+ */
+}
 @media (max-width: 979px) {
   .static .header,
   .blog .header {
@@ -90,7 +99,7 @@
     width: 100%;
     margin: 20px 0 0 0;
   }
-  .tier2 img {
+  .tier2 .feature {
     margin: 0 -15% 0 -15% !important;
     max-width: 125% !important;
     position: static;

@@ -31,7 +31,7 @@ include( dirname(__FILE__).'/functions.php');
 	<meta name="viewport" content="width=1020">
 	
 	<title>17FEET. Small. Mighty.</title>
-	<?php //print_r($_SERVER); ?>
+
 	<!-- Framework CSS --> 
 	<!--[if lt IE 9]><link rel="stylesheet" href="<?php echo $ROOT ?>/css/ie.css" type="text/css" media="screen, projection, print"><![endif]-->
 	<link rel="stylesheet" href="<?php echo $ROOT ?>/css/style.css" type="text/css" media="screen, projection, print">
@@ -44,13 +44,14 @@ include( dirname(__FILE__).'/functions.php');
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	
-	<?php $typekitKey = ($ROOT != "/17feet" ? "phb6bnh" : "jnq7afd") ?>
+	<?php 
+	//	var_dump($_SERVER['HTTP_HOST']);
+	$typekitKey = ($ROOT != "/17feet" ? "phb6bnh" : "gpt6vuk");  // gpt6vuk - local    ?>
 	
 	<script type="text/javascript" src="http://use.typekit.com/<?php echo $typekitKey ?>.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
 	<script src="<?php echo $ROOT ?>/js/modernizr.js"></script>
-<!--	<script src="<?php echo $ROOT ?>/js/lectric.js" type="text/javascript" charset="utf-8"></script> -->
 	<script src="<?php echo $ROOT ?>/js/jquery.jsonp.js" type="text/javascript" charset="utf-8"></script>
 	<script src="<?php echo $ROOT ?>/js/hashchange.js" type="text/javascript" charset="utf-8"></script>
 	
@@ -89,29 +90,3 @@ include( dirname(__FILE__).'/functions.php');
 			</div> 
 		</div>
 	</div> <!-- .header -->	
-	
-	<?php 
-	
-	/*
-	require( 'project-data.php' );
-	$masterArr = array_merge( $featuredArr, $projectArr);
-		
-	
-	
-	<!-- <div id="experimental_nav">
-		
-		<div class="no-overflow">
-			
-			<div class="links p-nav ribbon-sprites" style="right:0;"><?php foreach( $masterArr as $project ){ ?><a href="<?php echo $ROOT.'/our-work/'. $project[0]; ?>" class="block-link">
-				<span class="ribbon-sprite r-sprite-<?php echo $project[0]; ?>"></span>
-				<span class="title"><?php echo $project[1]; ?></span>
-				<span class="desc"><?php echo $project[2]; ?></span>
-			</a><?php } ?></div>
-		
-			<div class="slider-left" data-direction="-1">&#9664;</div>
-			<div class="slider-right" data-direction="1">&#9654;</div>
-		
-		</div>
-				
-	</div> -->
-		*/ ?>

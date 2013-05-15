@@ -11,7 +11,7 @@ require('../inc/header.php');
 			<h2>We are 17FEET.</h2>
 		
 			<h3 class="bottom">And we're looking for amazing people who want to do great work.</h3>
-			<h4>We believe that small teams can achieve monumental results and that when smart people are empowered to think critically the results can be, well&hellip; pretty badass. <span class="caps">See Open Positions<div class="open-positions-arrow"></span></h4>
+			<h4>We believe that small teams can achieve monumental results and that when smart people are empowered to think critically the results can be, well&hellip; pretty badass. <span class="caps">See Open Positions</span><span class="open-positions-arrow"></span></h4>
 			
 		</div>
 	
@@ -45,19 +45,23 @@ require('../inc/header.php');
 				<div class="jobPosition first active" job="interaction-designer"> 
 					<h4 class="top">Interaction Designer</h4> 
 
-					<p class="desc">As an Interaction Designer at 17FEET, you will concept ways to make technology and people connect in magical ways: conduct research, create wireframes, user flows, process flows and site maps all while working closely with visual designers and developers.</p> 
+					<p class="desc">As an Interaction Designer at 17FEET, you will concept ways to make technology and people connect in magical ways: conduct research, create user flows, process flows and site maps, wireframes, prototypes, all while working closely with clients, producers, visual designers and developers.</p> 
 
 					<h5>Your Experience:</h5> 
 					<ul> 
-						<li>Creating user experiences for web and mobile software applications</li>
-						<li>Hands-on skills in developing wireframes, site maps, user flows, experience maps, personas, etc.</li>
+						<li>3 + years of experience</li>
+						<li>Background in UX design for web and mobile software applications</li>
+						<li>Hands-on skills in creating wireframes, site maps, user flows, experience maps, personas, etc.</li>
 						<li>Solid knowledge of interaction design tools to create prototypes</li>
 						<li>Strong written and verbal communication skills</li>
 						<li>Organized &amp; detail oriented</li>
+						<li>Capacity to understand client goals and requirements, technical constraints, as well as budget and schedule</li>
 						<li>Demonstrated knowledge of a variety web and software development technologies</li>
 						<li>Familiarity with the software development process</li>
 						<li>Ability to work both collaboratively and autonomously</li>
-						<li>3 + years of experience</li>
+						<li>Passion for concept development, ideation and sketching</li>
+						<li>Skill and excitement presenting to clients</li>
+						<li>Knowledge of current trends and technologies</li>
 					</ul> 
 
 					<p>Sound good? Send us your information and we'll be in touch!</p> 
@@ -70,21 +74,26 @@ require('../inc/header.php');
 				<div class="jobPosition" job="visual-designer"> 
 					<h4 class="top">Visual Designer</h4> 
 				
-					<p class="desc">17FEET is looking for a designer to connect technology and people in magical ways through web experiences and mobile interfaces. You should have a solid understanding of user interface principles, rich visual communication skills.</p> 
+					<p class="desc">17FEET is looking for an experienced designer to design digital experiences that connect technology and people in magical ways. Work with a small collaborative team that includes clients, producers, interaction designers and developers. You should have a solid understanding of user interface principles and rich visual communication skills.</p> 
 
 					<h5>Your Experience:</h5> 
-					<ul> 
-						<li>Strong conceptual skills</li>
-						<li>Proven ability to translate wireframes into rich visual experiences</li>
-						<li>Ability to work both collaboratively and autonomously</li>
-						<li>Killer portfolio</li>
+					<ul>
 						<li>3+ years of relevant experience</li>
-					</ul> 
+						<li>Strong conceptual skills - passion for concept development, ideation and sketching</li>
+						<li>Ability to rapidly explore multiple design directions</li>
+						<li>Proven ability to translate wireframes into rich visual experiences</li>
+						<li>Strong knowledge of HTML - understanding how page layouts translate to code</li>
+						<li>Experience designing cross-platform visual design systems for mobile and web</li>
+						<li>Capacity to understand client goals and requirements, usability, technical constraints, as well as budget and schedule</li>
+						<li>Ability to work both collaboratively and autonomously</li>
+						<li>Skill and excitement presenting to clients</li>
+						<li>Knowledge of current design trends and technologies</li>
+						<li>Killer portfolio</li>
+					</ul>
 
 				  <h5>Bonus points for:</h5> 
 					<ul> 
 						<li>UX experience</li>
-						<li>Mobile experience</li>
 						<li>Experience with HTML / CSS / JavaScript development</li>
 					</ul> 
 
@@ -97,19 +106,20 @@ require('../inc/header.php');
 				
 				<!-- Senior Interactive Developer --> 
 				<div class="jobPosition " job="senior-interactive-developer"> 
-					<h4 class="top">Senior Interactive Developer</h4> 
+					<h4 class="top">Interactive Developer</h4> 
 
-					<p class="desc">We are seeking a Senior Interactive Developer to work full-time, in house, to create interface-driven applications and sites for web and mobile. The projects we take on focus on usability and user experience, and we try to learn something new with every project: new languages, new frameworks or a new approach to how things get done.</p> 
+					<p class="desc">We are seeking a Interactive Developer to create interface-driven applications and sites for web and mobile. Our projects have a strong focus on usability, user experience and front-end polish and we always try to learn something new with every project: new languages, new frameworks or a new approach to how things get done.</p> 
 
 					<h5>Your Experience:</h5> 
-					<ul> 
+					<ul>
 						<li>Strong grasp of OOP concepts</li>
 						<li>Understanding of design patterns and a passion for design excellence</li>
 						<li>Experience with C#, Ruby or other object-oriented web languages</li>
-						<li>Experience with Objective-C and UIKit experience</li>
+						<li>Experience with Objective-C and UIKit</li>
 						<li>Experience with HTML5, CSS3, JS Frameworks</li>
-						<li>Understanding of cross-browser issues &amp; solutions</li>
+						<li>Understanding of cross-browser issues & solutions</li>
 						<li>Comfort with agile and waterfall development methodologies</li>
+						<li>Knowledge of responsive design implementation</li>
 						<li>Able to lead technology definition with clients</li>
 						<li>Strong written and verbal communication skills</li>
 						<li>Courage in the face of the unknown</li>

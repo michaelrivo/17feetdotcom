@@ -13,7 +13,7 @@
 }
 
 .mobile-btn{
-	border:1px solid #555;
+	border:none;
 	background-color:transparent;
 	//#gradient .vertical(#111, #000);
 	//@shadow: inset 0 1px 1px #555 , 0 0 0 1px rgba(255,255,255,0.15), 0 2px 6px  rgba(255,255,255,0.15);
@@ -22,7 +22,7 @@
 	padding:7px 8px;
 	position:absolute;
 	top:11px;
-	left:5%;
+	left:2%;
 	
  	&:link{ color:#FFF; text-decoration:none; }
 	&:hover{ color:#69AABA;text-decoration:none; }
@@ -79,33 +79,12 @@
 	
 	.tier1 h2{ font-size:3.15em; }
 	.tier2{
-		img{ margin-top:20px !important; }
+		.feature{ margin-top:20px !important; }
 		.content{ min-height:auto; }
 	}
 	
 	.tier3{
-		
-		.top-projects{
-			margin-bottom:0;
-			padding-bottom:0;
-		}
-		
-		.featured-logo-sprite{
-			height:auto;
-			text-indent:0;
-			font-weight:700;
-			font-size: 1.5em;
-			background-image:none;
-			color:#FFF;
-			margin:10px 0;
-			overflow:visible;
-		}
-		
-		.brand a{ padding: 0 18px;}
-		.cta-wrapper{
-			
-		}
-		.black-cta{ position:static; display:inline-block; float:none; margin:20px 0 0 0; }
+	
 	}
 	
 	.project, .projects .header, .static .header, .blog .header{
@@ -193,7 +172,7 @@
 	}
 	
 	#nav{ 
-		.box-shadow( 0 4px 25px #000 );
+		//.box-shadow( 0 4px 25px #000 );
 		float:none;
 		position:absolute;
 		top:0;
@@ -461,6 +440,10 @@
 	#footer, .collapse .container{ padding: 15px 0; }
 	
 	#footer .modules{
+		
+		// hidden on mobile
+		display:none; 
+		
 		margin:15px 0;
 		h5{ float:none; margin-right:2% }
 		
