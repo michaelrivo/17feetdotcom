@@ -4,7 +4,7 @@ if($_SERVER['HTTP_HOST'] == '192.168.1.246' || $_SERVER['HTTP_HOST'] == 'localho
 	$ROOT = "/17feet";
 }
 
-if( strpos($_SERVER['SCRIPT_NAME'], 'staging' )){
+if( strpos($_SERVER['SCRIPT_NAME'], 'staging' ) ){
 	$ROOT = "/staging";
 }
 

@@ -121,15 +121,15 @@
 				
 				</div>
 			
-				<form class="span9" action="#" id="portfolio_form">
-				
-					<label for="portfolioLink"><strong>Want to join the team?</strong> Send us your online portfolio:</label>
-				
-					<input class="folio-url" type="text" value="http://" name="portfolioLink" title="http://" />
-				
-					<input type="submit" name="Submit" id="portfolioSubmit" class="inactive" value="Send">
-				
-				</form>
+			<!-- 				<form class="span9" action="#" id="portfolio_form">
+							
+								<label for="portfolioLink"><strong>Want to join the team?</strong> Send us your online portfolio:</label>
+							
+								<input class="folio-url" type="text" value="http://" name="portfolioLink" title="http://" />
+							
+								<input type="submit" name="Submit" id="portfolioSubmit" class="inactive" value="Send">
+							
+							</form> -->
 				
 			</div>
 			
